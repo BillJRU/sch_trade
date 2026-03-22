@@ -1,0 +1,803 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ОК" id="8">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<DefaultItem>true</DefaultItem>
+				<CommandName>Form.Command.ОК</CommandName>
+				<ExtendedTooltip name="ОКExtendedTooltip" id="40"/>
+			</Button>
+			<Button name="ФормаОтмена" id="39">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Cancel</CommandName>
+				<ExtendedTooltip name="ФормаОтменаExtendedTooltip" id="41"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="157">
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ThroughAlign>Use</ThroughAlign>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="158"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаОтступОПФГ" id="76">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организационно-правовая форма хозяйствования:</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Організаційно-правова форма господарювання:</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа отступ ОПФГ</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Група відступ ОПФГ</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ThroughAlign>DontUse</ThroughAlign>
+					<ExtendedTooltip name="ГруппаОтступОПФГРасширеннаяПодсказка" id="77"/>
+					<ChildItems>
+						<LabelDecoration name="ОтступОПФГ" id="78">
+							<Width>1</Width>
+							<ContextMenu name="ОтступОПФГКонтекстноеМеню" id="79"/>
+							<ExtendedTooltip name="ОтступОПФГРасширеннаяПодсказка" id="80"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаОПФГ" id="81">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ОПФГ</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Група ОПФГ</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ОКОНХ</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Група ЗКГНГ</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОПФГРасширеннаяПодсказка" id="82"/>
+							<ChildItems>
+								<InputField name="КодОПФГ" id="83">
+									<DataPath>КодОПФГ</DataPath>
+									<ContextMenu name="КодОПФГКонтекстноеМеню" id="84"/>
+									<ExtendedTooltip name="КодОПФГРасширеннаяПодсказка" id="85"/>
+								</InputField>
+								<InputField name="ОПФГ" id="86">
+									<DataPath>ОПФГ</DataPath>
+									<ContextMenu name="ОПФГКонтекстноеМеню" id="87"/>
+									<ExtendedTooltip name="ОПФГРасширеннаяПодсказка" id="88"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаОтступКОАТУУ" id="89">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Классификатор объектов административно-территориального устройства Украины:</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Класифікатор об'єктів адміністративно-територіального устрою України:</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа отступ ОПФГ</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Група відступ ОПФГ</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ThroughAlign>DontUse</ThroughAlign>
+					<ExtendedTooltip name="ГруппаОтступКОАТУУРасширеннаяПодсказка" id="90"/>
+					<ChildItems>
+						<LabelDecoration name="ОтступКОАТУУ" id="91">
+							<Width>1</Width>
+							<ContextMenu name="ОтступКОАТУУКонтекстноеМеню" id="92"/>
+							<ExtendedTooltip name="ОтступКОАТУУРасширеннаяПодсказка" id="93"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаКОАТУУ" id="94">
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ОКОНХ</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Група ЗКГНГ</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКОАТУУРасширеннаяПодсказка" id="95"/>
+							<ChildItems>
+								<InputField name="КодКОАТУУ" id="96">
+									<DataPath>КодКОАТУУ</DataPath>
+									<ContextMenu name="КодКОАТУУКонтекстноеМеню" id="97"/>
+									<ExtendedTooltip name="КодКОАТУУРасширеннаяПодсказка" id="98"/>
+								</InputField>
+								<InputField name="Территория" id="99">
+									<DataPath>Территория</DataPath>
+									<ContextMenu name="ТерриторияКонтекстноеМеню" id="100"/>
+									<ExtendedTooltip name="ТерриторияРасширеннаяПодсказка" id="101"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаОтступКАТОТТГ" id="159">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Кодификатор административно-территориальных единиц и территорий территориальных общин</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Кодифікатор адміністративно-територіальних одиниць та територій територіальних громад</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа отступ КАТОТТГ</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Група відступ КАТОТТГ</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ExtendedTooltip name="ГруппаОтступКАТОТТГРасширеннаяПодсказка" id="160"/>
+					<ChildItems>
+						<LabelDecoration name="ОтступКАТОТТГ" id="161">
+							<Width>1</Width>
+							<ContextMenu name="ОтступКАТОТТГКонтекстноеМеню" id="162"/>
+							<ExtendedTooltip name="ОтступКАТОТТГРасширеннаяПодсказка" id="163"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаКАТОТТГ" id="164">
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа КАТОТТГ</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Група КАТОТТГ</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКАТОТТГРасширеннаяПодсказка" id="165"/>
+							<ChildItems>
+								<InputField name="КодКАТОТТГ" id="166">
+									<DataPath>КодКАТОТТГ</DataPath>
+									<ContextMenu name="КодКАТОТТГКонтекстноеМеню" id="167"/>
+									<ExtendedTooltip name="КодКАТОТТГРасширеннаяПодсказка" id="168"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаОтступКФВ" id="102">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Классификатор форм собственности:</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Класифікатор форм власності:</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа отступ КФВ</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Група відступ КФВ</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ThroughAlign>DontUse</ThroughAlign>
+					<ExtendedTooltip name="ГруппаОтступКФВРасширеннаяПодсказка" id="103"/>
+					<ChildItems>
+						<LabelDecoration name="ОтступКФВ" id="104">
+							<Width>1</Width>
+							<ContextMenu name="ОтступКФВКонтекстноеМеню" id="105"/>
+							<ExtendedTooltip name="ОтступКФВРасширеннаяПодсказка" id="106"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаКФВ" id="107">
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ОКОНХ</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Група ЗКГНГ</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКФВРасширеннаяПодсказка" id="108"/>
+							<ChildItems>
+								<InputField name="КодКФВ" id="109">
+									<DataPath>КодКФВ</DataPath>
+									<ContextMenu name="КодКФВКонтекстноеМеню" id="110"/>
+									<ExtendedTooltip name="КодКФВРасширеннаяПодсказка" id="111"/>
+								</InputField>
+								<InputField name="ФормаСобственности" id="112">
+									<DataPath>ФормаСобственности</DataPath>
+									<ContextMenu name="ФормаСобственностиКонтекстноеМеню" id="113"/>
+									<ExtendedTooltip name="ФормаСобственностиРасширеннаяПодсказка" id="114"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаОтступСПОДУ" id="115">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Система обозначений органов государственного управления:</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Система позначень органів державного управління:</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа отступ КФВ</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Група відступ КФВ</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ThroughAlign>DontUse</ThroughAlign>
+					<ExtendedTooltip name="ГруппаОтступСПОДУРасширеннаяПодсказка" id="116"/>
+					<ChildItems>
+						<LabelDecoration name="ОтступСПОДУ" id="117">
+							<Width>1</Width>
+							<ContextMenu name="ОтступСПОДУКонтекстноеМеню" id="118"/>
+							<ExtendedTooltip name="ОтступСПОДУРасширеннаяПодсказка" id="119"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаСПОДУ" id="120">
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ОКОНХ</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Група ЗКГНГ</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСПОДУРасширеннаяПодсказка" id="121"/>
+							<ChildItems>
+								<InputField name="КодСПОДУ" id="122">
+									<DataPath>КодСПОДУ</DataPath>
+									<ContextMenu name="КодСПОДУКонтекстноеМеню" id="123"/>
+									<ExtendedTooltip name="КодСПОДУРасширеннаяПодсказка" id="124"/>
+								</InputField>
+								<InputField name="ОрганГУ" id="125">
+									<DataPath>ОрганГУ</DataPath>
+									<ContextMenu name="ОрганГУКонтекстноеМеню" id="126"/>
+									<ExtendedTooltip name="ОрганГУРасширеннаяПодсказка" id="127"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаОтступЗКГНГ" id="128">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Классификатор отраслей народного хозяйства Украины:</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Класифікатор галузей народного господарства України:</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа отступ ЗКГНГ</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Група відступ ЗКГНГ</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ThroughAlign>DontUse</ThroughAlign>
+					<ExtendedTooltip name="ГруппаОтступЗКГНГРасширеннаяПодсказка" id="129"/>
+					<ChildItems>
+						<LabelDecoration name="ОтступЗКГНГ" id="130">
+							<Width>1</Width>
+							<ContextMenu name="ОтступЗКГНГКонтекстноеМеню" id="131"/>
+							<ExtendedTooltip name="ОтступЗКГНГРасширеннаяПодсказка" id="132"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаЗКГНГ" id="133">
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ЗКГНГ</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Група ЗКГНГ</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаЗКГНГРасширеннаяПодсказка" id="134"/>
+							<ChildItems>
+								<InputField name="КодЗКГНГ" id="135">
+									<DataPath>КодЗКГНГ</DataPath>
+									<ContextMenu name="КодЗКГНГКонтекстноеМеню" id="136"/>
+									<ExtendedTooltip name="КодЗКГНГРасширеннаяПодсказка" id="137"/>
+								</InputField>
+								<InputField name="Отрасль" id="138">
+									<DataPath>Отрасль</DataPath>
+									<ContextMenu name="ОтрасльКонтекстноеМеню" id="139"/>
+									<ExtendedTooltip name="ОтрасльРасширеннаяПодсказка" id="140"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаОтступКВЭД" id="141">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Классификатор видов экономической деятельности:</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Класифікатор видів економічної діяльності:</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа отступ КВЭД</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Група відступ КВЕД</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ThroughAlign>DontUse</ThroughAlign>
+					<ExtendedTooltip name="ГруппаОтступКВЭДРасширеннаяПодсказка" id="142"/>
+					<ChildItems>
+						<LabelDecoration name="ОтступКВЭД" id="143">
+							<Width>1</Width>
+							<ContextMenu name="ОтступКВЭДКонтекстноеМеню" id="144"/>
+							<ExtendedTooltip name="ОтступКВЭДРасширеннаяПодсказка" id="145"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаКВЭД" id="146">
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ОКОНХ</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Група ЗКГНГ</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКВЭДРасширеннаяПодсказка" id="147"/>
+							<ChildItems>
+								<InputField name="КодКВЕД" id="148">
+									<DataPath>КодКВЕД</DataPath>
+									<ContextMenu name="КодКВЕДКонтекстноеМеню" id="149"/>
+									<ExtendedTooltip name="КодКВЕДРасширеннаяПодсказка" id="150"/>
+								</InputField>
+								<InputField name="ВЭД" id="151">
+									<DataPath>ВЭД</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Вид экономической деятельности</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Вид економічної діяльності</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ВЭДКонтекстноеМеню" id="152"/>
+									<ExtendedTooltip name="ВЭДРасширеннаяПодсказка" id="153"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<InputField name="КлассПрофессиональногоРиска" id="154">
+					<DataPath>КлассПрофессиональногоРиска</DataPath>
+					<ContextMenu name="КлассПрофессиональногоРискаКонтекстноеМеню" id="155"/>
+					<ExtendedTooltip name="КлассПрофессиональногоРискаРасширеннаяПодсказка" id="156"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ВЭД" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ВЭД</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>ЗЕД</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>250</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="КлассПрофессиональногоРиска" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Класс профессионального риска</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Клас професійного ризику</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>2</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="КодЗКГНГ" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код ЗКГНГ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Код ЗКГНГ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>20</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="КодКВЕД" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код КВЕД</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Код КВЕД</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>20</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="КодКОАТУУ" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код КОАТУУ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Код КОАТУУ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>20</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="КодКФВ" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код КФВ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Код КФВ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>20</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="КодОПФГ" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код ОПФГ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Код ОПФГ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>3</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="КодСПОДУ" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код СПОДУ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Код СПОДУ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>20</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ОПФГ" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОПФГ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>ОПФГ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>250</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ОрганГУ" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Орган ГУ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Орган ДУ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>250</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Отрасль" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отрасль</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Галузь</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>250</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Территория" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Территория</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Територія</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>250</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ФормаСобственности" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Форма собственности</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Форма власності</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>250</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="КодКАТОТТГ" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код КАТОТТГ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Код КАТОТТГ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>19</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОК" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОК</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

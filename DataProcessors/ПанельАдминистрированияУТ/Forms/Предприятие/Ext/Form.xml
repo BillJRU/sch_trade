@@ -1,0 +1,1324 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<Customizable>false</Customizable>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаЗаголовок" id="2186">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заголовок</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Заголовок</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЗаголовокExtendedTooltip" id="2264"/>
+			<ChildItems>
+				<LabelDecoration name="ОписаниеРаздела" id="1561">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Управление параметрами организации и валютного учета.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Управління параметрами організації та валютного обліку.</v8:content>
+						</v8:item>
+					</Title>
+					<VerticalAlign>Top</VerticalAlign>
+					<ContextMenu name="ОписаниеРазделаКонтекстноеМеню" id="1562"/>
+					<ExtendedTooltip name="ОписаниеРазделаExtendedTooltip" id="2265"/>
+				</LabelDecoration>
+				<LabelDecoration name="ДекорацияЗаголовка" id="2189">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="ДекорацияЗаголовкаКонтекстноеМеню" id="2190"/>
+					<ExtendedTooltip name="ДекорацияЗаголовкаExtendedTooltip" id="2266"/>
+				</LabelDecoration>
+				<CommandBar name="ГруппаСправка" id="2191">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Справка</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Довідка</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаСправкаExtendedTooltip" id="2267"/>
+					<ChildItems>
+						<Button name="Справка" id="2192">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.StandardCommand.Help</CommandName>
+							<ExtendedTooltip name="СправкаExtendedTooltip" id="2268"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПояснениеБлокировки" id="2384">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пояснение блокировки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Пояснення блокування</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПояснениеБлокировкиРасширеннаяПодсказка" id="2385"/>
+			<ChildItems>
+				<PictureDecoration name="ДекорацияЗаголовкаОписанияБлокировки" id="2386">
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="ДекорацияЗаголовкаОписанияБлокировкиКонтекстноеМеню" id="2387"/>
+					<ExtendedTooltip name="ДекорацияЗаголовкаОписанияБлокировкиРасширеннаяПодсказка" id="2388"/>
+				</PictureDecoration>
+				<LabelDecoration name="ОписаниеБлокировкиРаздела" id="2389">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Изменение настроек учета возможно только в центральном узле распределенной информационной базы.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Зміна настройок обліку можлива тільки в центральному вузлі розподіленої інформаційної бази.</v8:content>
+						</v8:item>
+					</Title>
+					<VerticalAlign>Top</VerticalAlign>
+					<ContextMenu name="ОписаниеБлокировкиРазделаКонтекстноеМеню" id="2390"/>
+					<ExtendedTooltip name="ОписаниеБлокировкиРазделаРасширеннаяПодсказка" id="2391"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаНастройкиОрганизаций" id="2174">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организации</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Організації</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="ГруппаНастройкиОрганизацийExtendedTooltip" id="2276"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаГрафикРаботыИКалендари" id="2176">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>График работы и календари</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Графік роботи та календарі</v8:content>
+						</v8:item>
+					</Title>
+					<Height>5</Height>
+					<Group>Horizontal</Group>
+					<Representation>NormalSeparation</Representation>
+					<United>false</United>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаГрафикРаботыИКалендариExtendedTooltip" id="2269"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаОсновнойКалендарьПредприятия" id="2177">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Основной календарь предприятия</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Основний календар підприємства</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ChildItemsWidth>Equal</ChildItemsWidth>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОсновнойКалендарьПредприятияExtendedTooltip" id="2270">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<MaxWidth>40</MaxWidth>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Определяет количество рабочих дней при управлении запасами, расчете количества дней действия доверенностей, если не указан иной календарь.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>uk</v8:lang>
+										<v8:content>Визначає кількість робочих днів при управлінні запасами, розрахунку кількості днів дії довіреностей, якщо не зазначений інший календар.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<ChildItems>
+								<InputField name="ОсновнойКалендарьПредприятия" id="2178">
+									<DataPath>НаборКонстант.ОсновнойКалендарьПредприятия</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>График работы предприятия</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Графік роботи підприємства</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Wrap>false</Wrap>
+									<ContextMenu name="ОсновнойКалендарьПредприятияКонтекстноеМеню" id="2179"/>
+									<ExtendedTooltip name="ОсновнойКалендарьПредприятияExtendedTooltip" id="2271"/>
+									<Events>
+										<Event name="OnChange">ОсновнойКалендарьПредприятияПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПроизводственныеКалендари" id="2182">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Производственные календари</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Виробничі календарі</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<United>false</United>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПроизводственныеКалендариExtendedTooltip" id="2273"/>
+							<ChildItems>
+								<Button name="ОткрытьПроизводственныеКалендари" id="2183">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОткрытьПроизводственныеКалендари</CommandName>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="ОткрытьПроизводственныеКалендариExtendedTooltip" id="2274">
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<MaxWidth>40</MaxWidth>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Сведения о рабочих, выходных, праздничных днях, а также о переносах праздников.</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>uk</v8:lang>
+												<v8:content>Відомості про робочі, вихідні, святкові дні, а також про перенесення свят.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаИспользоватьНесколькоОрганизаций" id="2119">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Использовать несколько организаций</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Використовувати кілька організацій</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<United>false</United>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаИспользоватьНесколькоОрганизацийExtendedTooltip" id="2277"/>
+					<ChildItems>
+						<UsualGroup name="Группа5" id="2395">
+							<Width>40</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<United>false</United>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="2396"/>
+							<ChildItems>
+								<CheckBoxField name="ИспользоватьНесколькоОрганизаций" id="2120">
+									<DataPath>НаборКонстант.ИспользоватьНесколькоОрганизаций</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Несколько организаций</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Кілька організацій</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИспользоватьНесколькоОрганизацийКонтекстноеМеню" id="2121"/>
+									<ExtendedTooltip name="ИспользоватьНесколькоОрганизацийExtendedTooltip" id="2278"/>
+									<Events>
+										<Event name="OnChange">ПриИзмененииРеквизита</Event>
+									</Events>
+								</CheckBoxField>
+								<Pages name="ГруппаСтраницыИспользоватьНесколькоОрганизаций" id="2124">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страницы использовать несколько организаций</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Сторінки використовувати кілька організацій</v8:content>
+										</v8:item>
+									</Title>
+									<PagesRepresentation>None</PagesRepresentation>
+									<ExtendedTooltip name="ГруппаСтраницыИспользоватьНесколькоОрганизацийExtendedTooltip" id="2279"/>
+									<ChildItems>
+										<Page name="ГруппаОднаОрганизация" id="2125">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Одна организация</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Одна організація</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа версионируемые объекты</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Група об'єкти, що версіонуються</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="ГруппаОднаОрганизацияExtendedTooltip" id="2280"/>
+											<ChildItems>
+												<LabelDecoration name="ПояснениеОднаОрганизация" id="2127">
+													<TextColor>style:ПоясняющийТекст</TextColor>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Возможность ведения нескольких организаций.
+Для настройки необходимо перейти в раздел
+"НСИ и администрирование" — "Сведения о предприятии" — "Сведения об организации".</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>uk</v8:lang>
+															<v8:content>Можливість ведення декількох організацій. 
+Для настройки необхідно перейти в розділ 
+"НДІ і адміністрування" - "Відомості про підприємство" - "Відомості про організацію".</v8:content>
+														</v8:item>
+													</Title>
+													<VerticalAlign>Top</VerticalAlign>
+													<ContextMenu name="ПояснениеОднаОрганизацияКонтекстноеМеню" id="2128"/>
+													<ExtendedTooltip name="ПояснениеОднаОрганизацияExtendedTooltip" id="2281"/>
+												</LabelDecoration>
+											</ChildItems>
+										</Page>
+										<Page name="ГруппаНесколькоОрганизаций" id="2129">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Несколько организаций</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Кілька організацій</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ГруппаНесколькоОрганизацийExtendedTooltip" id="2282"/>
+											<ChildItems>
+												<LabelDecoration name="ПояснениеНесколькоОрганизаций" id="2131">
+													<TextColor>style:ПоясняющийТекст</TextColor>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Возможность ведения нескольких организаций.
+Для настройки необходимо перейти в раздел
+"НСИ и администрирование" — "Организации".</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>uk</v8:lang>
+															<v8:content>Можливість ведення декількох організацій. 
+Для встановлення необхідно перейти в розділ 
+"НДІ і адміністрування" - "Організації".</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ПояснениеНесколькоОрганизацийКонтекстноеМеню" id="2132"/>
+													<ExtendedTooltip name="ПояснениеНесколькоОрганизацийExtendedTooltip" id="2283"/>
+												</LabelDecoration>
+											</ChildItems>
+										</Page>
+									</ChildItems>
+								</Pages>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа6" id="2397">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<United>false</United>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="2398"/>
+							<ChildItems>
+								<CheckBoxField name="ИспользоватьПодразделения" id="2392">
+									<DataPath>НаборКонстант.ИспользоватьПодразделения</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Подразделения</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Підрозділи</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<WarningOnEditRepresentation>Show</WarningOnEditRepresentation>
+									<WarningOnEdit>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отключать возможность использования подразделений после начала работы с системой не рекомендуется</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Відключати можливість використання підрозділів після початку роботи з системою не рекомендується</v8:content>
+										</v8:item>
+									</WarningOnEdit>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИспользоватьПодразделенияКонтекстноеМеню" id="2393"/>
+									<ExtendedTooltip name="ИспользоватьПодразделенияРасширеннаяПодсказка" id="2394"/>
+									<Events>
+										<Event name="OnChange">ИспользоватьПодразделенияПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<UsualGroup name="ГруппаКомментарийИспользоватьПодразделения" id="2399">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Комментарий использовать подразделения</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Коментар використовувати підрозділи</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКомментарийИспользоватьПодразделенияРасширеннаяПодсказка" id="2400"/>
+									<ChildItems>
+										<PictureDecoration name="Декорация20" id="2401">
+											<Picture>
+												<xr:Ref>CommonPicture.ИнформацияПоНедоступнымПолям</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="Декорация20КонтекстноеМеню" id="2402"/>
+											<ExtendedTooltip name="Декорация20ExtendedTooltip" id="2403"/>
+										</PictureDecoration>
+										<LabelDecoration name="КомментарийИспользоватьПодразделения" id="2404">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>&lt;Текст заполняется в УстановитьДоступность()&gt;</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>&lt;Текст заповнюється в УстановитьДоступность()&gt;</v8:content>
+												</v8:item>
+											</Title>
+											<VerticalAlign>Top</VerticalAlign>
+											<ContextMenu name="КомментарийИспользоватьПодразделенияКонтекстноеМеню" id="2405"/>
+											<ExtendedTooltip name="КомментарийИспользоватьПодразделенияРасширеннаяПодсказка" id="2406"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаУправлениеФинансовымУчетомТоваровНесколькихОрганизаций" id="2133">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа управление финансовым учетом товаров</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Група управління фінансовим обліком товарів</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Локализация группа управление финансовым учетом товаров нескольких организаций</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Локалізація група управління фінансовим обліком товарів декількох організацій</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<United>false</United>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаУправлениеФинансовымУчетомТоваровНесколькихОрганизацийРасширеннаяПодсказка" id="2284"/>
+					<ChildItems>
+						<UsualGroup name="ЛокализацияГруппаИспользоватьУправленческуюОрганизацию" id="1144">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Использовать управленческую организацию</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Використовувати управлінську організацію</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<United>false</United>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаИспользоватьУправленческуюОрганизациюРасширеннаяПодсказка" id="2293"/>
+							<ChildItems>
+								<CheckBoxField name="ИспользоватьУправленческуюОрганизацию" id="480">
+									<DataPath>НаборКонстант.ИспользоватьУправленческуюОрганизацию</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Раздельные операции закупок и продаж для упр. и регл. 
+учета</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Роздільні операції купівель і продажів для упр. і регл. 
+обліку</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИспользоватьУправленческуюОрганизациюКонтекстноеМеню" id="481"/>
+									<ExtendedTooltip name="ИспользоватьУправленческуюОрганизациюРасширеннаяПодсказка" id="2294">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Возможность использования управленческой организации.</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>uk</v8:lang>
+												<v8:content>Можливість використання управлінської організації.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">ПриИзмененииРеквизита</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаКлассификацияЗадолженностей" id="2452">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Классификация задолженностей</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Класифікація заборгованостей</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<United>false</United>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКлассификацияЗадолженностейExtendedTooltip" id="2453"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаКлассификацияЗадолженностейЛево" id="2454">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Классификация задолженностей лево</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Класифікація заборгованостей ліво</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<United>false</United>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКлассификацияЗадолженностейЛевоРасширеннаяПодсказка" id="2455"/>
+							<ChildItems>
+								<CheckBoxField name="ИспользоватьНесколькоКлассификацийЗадолженности" id="2456">
+									<DataPath>НаборКонстант.ИспользоватьНесколькоКлассификацийЗадолженности</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Несколько вариантов классификации задолженности</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Кілька варіантів класифікації заборгованості</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИспользоватьНесколькоКлассификацийЗадолженностиКонтекстноеМеню" id="2428"/>
+									<ExtendedTooltip name="ИспользоватьНесколькоКлассификацийЗадолженностиExtendedTooltip" id="2429">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Возможность ведения нескольких вариантов классификации задолженности.</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>uk</v8:lang>
+												<v8:content>Можливість ведення декількох варіантів класифікації заборгованості.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">ИспользоватьНесколькоКлассификацийЗадолженностиПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<Pages name="ГруппаКлассификацияЗадолженностейПраво" id="2433">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа классификация задолженностей лево</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Група класифікація заборгованостей ліво</v8:content>
+								</v8:item>
+							</Title>
+							<PagesRepresentation>None</PagesRepresentation>
+							<ExtendedTooltip name="ГруппаКлассификацияЗадолженностейПравоРасширеннаяПодсказка" id="2434"/>
+							<ChildItems>
+								<Page name="ГруппаКлассификацияЗадолженностейПравоОдинВариант" id="2435">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Классификация задолженностей право один вариант</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Класифікація заборгованостей право один варіант</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ГруппаКлассификацияЗадолженностейПравоОдинВариантРасширеннаяПодсказка" id="2436"/>
+									<ChildItems>
+										<Button name="ВариантКлассификацииЗадолженности" id="2437">
+											<Type>Hyperlink</Type>
+											<CommandName>Form.Command.ОткрытьСвойстваКлассификацииЗадолженности</CommandName>
+											<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+											<ExtendedTooltip name="ВариантКлассификацииЗадолженностиExtendedTooltip" id="2438">
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Настройка стандартной классификации задолженности, применяемой на предприятии.</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>uk</v8:lang>
+														<v8:content>Настройка стандартної класифікації заборгованості, що застосовується на підприємстві.</v8:content>
+													</v8:item>
+												</Title>
+											</ExtendedTooltip>
+										</Button>
+									</ChildItems>
+								</Page>
+								<Page name="ГруппаКлассификацияЗадолженностейПравоНесколькоВариантов" id="2442">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа классификация задолженностей право один вариант</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Група класифікація заборгованостей право один варіант</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ГруппаКлассификацияЗадолженностейПравоНесколькоВариантовРасширеннаяПодсказка" id="2443"/>
+									<ChildItems>
+										<Button name="ВариантыКлассификацииЗадолженности" id="2444">
+											<Type>Hyperlink</Type>
+											<CommandName>Form.Command.ОткрытьВариантыКлассификацииЗадолженности</CommandName>
+											<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+											<ExtendedTooltip name="ВариантыКлассификацииЗадолженностиExtendedTooltip" id="2445">
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Добавление, редактирование, удаление интервалов классификации задолженности.</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>uk</v8:lang>
+														<v8:content>Додавання, редагування, вилучення інтервалів класифікації заборгованості.</v8:content>
+													</v8:item>
+												</Title>
+											</ExtendedTooltip>
+										</Button>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаНастройкиВалют" id="2200">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Валюты</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Валюти</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<Collapsed>true</Collapsed>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<Representation>NormalSeparation</Representation>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ExtendedTooltip name="ГруппаНастройкиВалютExtendedTooltip" id="2307"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаВалютыУчета" id="1121">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Валюты учета</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Валюти обліку</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<United>false</United>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВалютыУчетаExtendedTooltip" id="2308"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаВалютыУчетаЛево" id="1122">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Валюты учета лево</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Валюти обліку ліво</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<United>false</United>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаВалютыУчетаЛевоExtendedTooltip" id="2309"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаВалютыУправленческогоИРеглУчета" id="1130">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Валюты управленческого и регл учета</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Валюти управлінського і регл обліку</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<Group>Vertical</Group>
+									<Representation>NormalSeparation</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаВалютыУправленческогоИРеглУчетаExtendedTooltip" id="2310">
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<MaxWidth>40</MaxWidth>
+										<HorizontalStretch>false</HorizontalStretch>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Валюта управленческого учета — валюта для оценки деятельности предприятия в управленческом учете (вся выручка в программе независимо от валюты продажи пересчитывается в валюту управленческого учета).</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>uk</v8:lang>
+												<v8:content>Валюта управлінського обліку — валюта для оцінки діяльності підприємства в управлінському обліку (весь виторг в програмі незалежно від валюти продажу перераховується у валюту управлінського обліку).</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<ChildItems>
+										<InputField name="ВалютаУправленческогоУчета" id="15">
+											<DataPath>НаборКонстант.ВалютаУправленческогоУчета</DataPath>
+											<TitleLocation>Top</TitleLocation>
+											<WarningOnEditRepresentation>Show</WarningOnEditRepresentation>
+											<WarningOnEdit>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Изменять валюту после начала работы с системой не рекомендуется</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Змінювати валюту після початку роботи з системою не рекомендується</v8:content>
+												</v8:item>
+											</WarningOnEdit>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>30</MaxWidth>
+											<Wrap>false</Wrap>
+											<ContextMenu name="ВалютаУправленческогоУчетаКонтекстноеМеню" id="16"/>
+											<ExtendedTooltip name="ВалютаУправленческогоУчетаExtendedTooltip" id="2311"/>
+											<Events>
+												<Event name="OnChange">ВалютаУправленческогоУчетаПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаВалютыУчетаПраво" id="1123">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Валюты учета право</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Валюти обліку право</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаВалютыУчетаПравоExtendedTooltip" id="2313">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<MaxWidth>42</MaxWidth>
+								<HorizontalStretch>false</HorizontalStretch>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Валюта регламентированного учета. Для Украины  — гривна (для других государств — национальная валюта).</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>uk</v8:lang>
+										<v8:content>Валюта регламентованого обліку. Для України — гривня (для інших держав — національна валюта).</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<ChildItems>
+								<InputField name="ВалютаРегламентированногоУчета" id="1">
+									<DataPath>НаборКонстант.ВалютаРегламентированногоУчета</DataPath>
+									<TitleLocation>Top</TitleLocation>
+									<WarningOnEditRepresentation>Show</WarningOnEditRepresentation>
+									<WarningOnEdit>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Изменять валюту после начала работы с системой не рекомендуется</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Змінювати валюту після початку роботи з системою не рекомендується</v8:content>
+										</v8:item>
+									</WarningOnEdit>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>30</MaxWidth>
+									<Wrap>false</Wrap>
+									<ContextMenu name="ВалютаРегламентированногоУчетаКонтекстноеМеню" id="2"/>
+									<ExtendedTooltip name="ВалютаРегламентированногоУчетаExtendedTooltip" id="2314"/>
+									<Events>
+										<Event name="OnChange">ВалютаРегламентированногоУчетаПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаВалюты" id="2044">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Валюты</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Валюти</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа управление расчетами</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Група управління розрахунками</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<United>false</United>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВалютыExtendedTooltip" id="2316"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаНесколькоВалют" id="2045">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Несколько валют</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Кілька валют</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа открыть валюты</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Група відкрити валюти</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<United>false</United>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНесколькоВалютExtendedTooltip" id="2317"/>
+							<ChildItems>
+								<CheckBoxField name="ИспользоватьНесколькоВалют" id="2046">
+									<DataPath>НаборКонстант.ИспользоватьНесколькоВалют</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Несколько валют</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Кілька валют</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<WarningOnEditRepresentation>Show</WarningOnEditRepresentation>
+									<WarningOnEdit>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отключать возможность использования нескольких валют после начала работы с системой не рекомендуется</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Відключати можливість використання декількох валют після початку роботи з системою не рекомендується</v8:content>
+										</v8:item>
+									</WarningOnEdit>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИспользоватьНесколькоВалютКонтекстноеМеню" id="2047"/>
+									<ExtendedTooltip name="ИспользоватьНесколькоВалютExtendedTooltip" id="2318">
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Ведение списка валют, настройки валют.</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>uk</v8:lang>
+												<v8:content>Ведення списку валют, настройки валют.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">ИспользоватьНесколькоВалютПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<UsualGroup name="ГруппаКомментарийИспользоватьВалюты" id="2457">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Комментарий использовать валюты</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Коментар використовувати валюти</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКомментарийИспользоватьВалютыРасширеннаяПодсказка" id="2458"/>
+									<ChildItems>
+										<PictureDecoration name="Декорация21" id="2459">
+											<Picture>
+												<xr:Ref>CommonPicture.ИнформацияПоНедоступнымПолям</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="Декорация21КонтекстноеМеню" id="2460"/>
+											<ExtendedTooltip name="Декорация21РасширеннаяПодсказка" id="2461"/>
+										</PictureDecoration>
+										<LabelDecoration name="КомментарийИспользоватьВалюты" id="2462">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>&lt;Текст заполняется в УстановитьДоступность()&gt;</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>&lt;Текст заповнюється в УстановитьДоступность()&gt;</v8:content>
+												</v8:item>
+											</Title>
+											<VerticalAlign>Top</VerticalAlign>
+											<ContextMenu name="КомментарийИспользоватьВалютыКонтекстноеМеню" id="2463"/>
+											<ExtendedTooltip name="КомментарийИспользоватьВалютыРасширеннаяПодсказка" id="2464"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<Pages name="ГруппаСтраницыВалюты" id="2050">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страницы валюты</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Сторінки валюти</v8:content>
+								</v8:item>
+							</Title>
+							<PagesRepresentation>None</PagesRepresentation>
+							<ExtendedTooltip name="ГруппаСтраницыВалютыExtendedTooltip" id="2320"/>
+							<ChildItems>
+								<Page name="ГруппаОткрытьВалюты" id="2051">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Открыть валюты</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Відкрити валюти</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ГруппаОткрытьВалютыExtendedTooltip" id="2321"/>
+									<ChildItems>
+										<Button name="ОткрытьВалюты" id="2052">
+											<Type>Hyperlink</Type>
+											<CommandName>Form.Command.ОткрытьВалюты</CommandName>
+											<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+											<ExtendedTooltip name="ОткрытьВалютыExtendedTooltip" id="2322">
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Добавление, редактирование, удаление валют, используемых при расчетах на предприятии.</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>uk</v8:lang>
+														<v8:content>Додавання, редагування, вилучення валют, що використовуються при розрахунках на підприємстві.</v8:content>
+													</v8:item>
+												</Title>
+											</ExtendedTooltip>
+										</Button>
+									</ChildItems>
+								</Page>
+								<Page name="ГруппаПараметрыВалюты" id="2055">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа открыть валюты</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Група відкрити валюти</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ГруппаПараметрыВалютыExtendedTooltip" id="2324"/>
+									<ChildItems>
+										<Button name="ПараметрыВалюты" id="2056">
+											<Type>Hyperlink</Type>
+											<CommandName>Form.Command.ПараметрыВалюты</CommandName>
+											<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+											<ExtendedTooltip name="ПараметрыВалютыExtendedTooltip" id="2325">
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Настройка основных сведений, параметров прописи.</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>uk</v8:lang>
+														<v8:content>Настройка основних відомостей, параметрів пропису.</v8:content>
+													</v8:item>
+												</Title>
+											</ExtendedTooltip>
+										</Button>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НаборКонстант" id="1">
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>НаборКонстант.ВалютаРегламентированногоУчета</Field>
+				<Field>НаборКонстант.ВалютаУправленческогоУчета</Field>
+				<Field>НаборКонстант.ИспользоватьНесколькоВалют</Field>
+				<Field>НаборКонстант.ИспользоватьНесколькоКлассификацийЗадолженности</Field>
+				<Field>НаборКонстант.ИспользоватьНесколькоОрганизаций</Field>
+				<Field>НаборКонстант.ИспользоватьПодразделения</Field>
+				<Field>НаборКонстант.ИспользоватьПроизводство</Field>
+				<Field>НаборКонстант.ИспользоватьПроизводствоНаСтороне</Field>
+				<Field>НаборКонстант.КонтролироватьОстаткиТоваровОрганизаций</Field>
+				<Field>НаборКонстант.ОсновнойКалендарьПредприятия</Field>
+				<Field>НаборКонстант.УдалитьКонтролироватьТоварыОрганизацийПриОтменеПриходов</Field>
+				<Field>НаборКонстант.УправлениеПредприятием</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="РежимРаботы" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим работы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Режим роботи</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ПереоцениватьВалютныеСредстваПоДням" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переоценивать валютные средства по дням</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Переоцінювати валютні кошти по днях</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КонтролироватьОстаткиТоваровОрганизацийНаКонецДня" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контролировать остатки товаров организаций на конец дня</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Контролювати залишки товарів організацій на кінець дня</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗначенияДоИзменения" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Значения до изменения</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Значення до зміни</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ЗначенияПоУмолчанию" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Значения по умолчанию</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Значення по умовчанню</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОткрытьВалюты" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Валюты</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Валюти</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть справочник валют</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Відкрити довідник валют</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьВалюты</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПараметрыВалюты" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сведения о валюте учета</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Відомості про валюту обліку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сведения о валюте учета</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Відомості про валюту обліку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПараметрыВалюты</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьПроизводственныеКалендари" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Производственные календари</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Виробничі календарі</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть производственные календари</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Відкрити виробничі календарі</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьПроизводственныеКалендари</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьСвойстваКлассификацииЗадолженности" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка классификации задолженности</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Настройка класифікації заборгованості</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть свойства классификации задолженности</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Відкрити властивості класифікації заборгованості</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьСвойстваКлассификацииЗадолженности</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьВариантыКлассификацииЗадолженности" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Варианты классификации задолженности</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Варіанти класифікації заборгованості</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть варианты классификации задолженности</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Відкрити варіанти класифікації заборгованості</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьВариантыКлассификацииЗадолженности</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

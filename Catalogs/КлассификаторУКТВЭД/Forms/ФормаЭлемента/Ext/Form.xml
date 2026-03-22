@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Вид" id="10">
+			<DataPath>Объект.Вид</DataPath>
+			<ContextMenu name="ВидКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ВидРасширеннаяПодсказка" id="12"/>
+			<Events>
+				<Event name="OnChange">ВидПриИзменении</Event>
+				<Event name="ChoiceProcessing">ВидОбработкаВыбора</Event>
+			</Events>
+		</InputField>
+		<UsualGroup name="ГруппаКод" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа код</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Група код</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа код</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Група код</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКодРасширеннаяПодсказка" id="20"/>
+			<ChildItems>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодExtendedTooltip" id="7"/>
+					<Events>
+						<Event name="OnChange">КодПриИзменении</Event>
+					</Events>
+				</InputField>
+				<CheckBoxField name="ВыводитьПриПечатиЧека" id="16">
+					<DataPath>Объект.ВыводитьПриПечатиЧека</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВыводитьПриПечатиЧекаКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ВыводитьПриПечатиЧекаРасширеннаяПодсказка" id="18"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Наименование" id="3">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="НаименованиеExtendedTooltip" id="8"/>
+		</InputField>
+		<InputField name="НаименованиеПолное" id="5">
+			<DataPath>Объект.НаименованиеПолное</DataPath>
+			<TitleLocation>Left</TitleLocation>
+			<TitleHeight>1</TitleHeight>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеПолноеКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="НаименованиеПолноеExtendedTooltip" id="9"/>
+		</InputField>
+		<InputField name="КодСХДеятельности" id="13">
+			<DataPath>Объект.КодСХДеятельности</DataPath>
+			<ContextMenu name="КодСХДеятельностиКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="КодСХДеятельностиРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<CheckBoxField name="РежимЭкспортногоОбеспечения" id="21">
+			<DataPath>Объект.РежимЭкспортногоОбеспечения</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>К товару применяется режим экспортного обеспечения</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>До товару застосовується режим експортного забезпечення</v8:content>
+				</v8:item>
+			</Title>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="РежимЭкспортногоОбеспеченияКонтекстноеМеню" id="22"/>
+			<ExtendedTooltip name="РежимЭкспортногоОбеспеченияРасширеннаяПодсказка" id="23"/>
+		</CheckBoxField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.КлассификаторУКТВЭД</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

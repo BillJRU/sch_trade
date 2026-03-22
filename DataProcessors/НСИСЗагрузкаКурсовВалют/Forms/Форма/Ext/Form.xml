@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаЗагрузитьКурсыВФоне" id="49">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ЗагрузитьКурсыВФоне</CommandName>
+				<ExtendedTooltip name="ФормаЗагрузитьКурсыВФонеРасширеннаяПодсказка" id="50"/>
+			</Button>
+			<Button name="ЗагрузитьКурсы" id="39">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ЗагрузитьКурсы</CommandName>
+				<ExtendedTooltip name="ЗагрузитьКурсыРасширеннаяПодсказка" id="40"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаВыполнение" id="41">
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа выполнение</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Група виконання</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаВыполнениеРасширеннаяПодсказка" id="42"/>
+			<ChildItems>
+				<PictureDecoration name="КартинкаДлительнаяОперация" id="43">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Картинка длительная операция</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Картинка тривала операція</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>CommonPicture.ДлительнаяОперация48</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="КартинкаДлительнаяОперацияКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="КартинкаДлительнаяОперацияРасширеннаяПодсказка" id="45"/>
+				</PictureDecoration>
+				<LabelDecoration name="НадписьВыполняетсяЗагрузка" id="46">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выполняется загрузка...</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Виконується завантаження...</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НадписьВыполняетсяЗагрузкаКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="НадписьВыполняетсяЗагрузкаРасширеннаяПодсказка" id="48"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Период" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Період</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Період</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="8"/>
+			<ChildItems>
+				<InputField name="ДатаС" id="1">
+					<DataPath>Объект.ДатаС</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Загрузить с</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Завантажити з</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДатаСКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ДатаСРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="ДатаПо" id="4">
+					<DataPath>Объект.ДатаПо</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>по</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>по</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДатаПоКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ДатаПоРасширеннаяПодсказка" id="6"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ВалютыГруппа" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Валюты</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Валюти</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Валюты группа</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Валюти група</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ВалютыГруппаРасширеннаяПодсказка" id="10"/>
+			<ChildItems>
+				<Table name="Валюты" id="11">
+					<CommandBarLocation>None</CommandBarLocation>
+					<ChangeRowSet>false</ChangeRowSet>
+					<ChangeRowOrder>false</ChangeRowOrder>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>Объект.Валюты</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ВалютыКонтекстноеМеню" id="12"/>
+					<AutoCommandBar name="ВалютыКоманднаяПанель" id="13"/>
+					<ExtendedTooltip name="ВалютыРасширеннаяПодсказка" id="14"/>
+					<SearchStringAddition name="ВалютыСтрокаПоиска" id="15">
+						<AdditionSource>
+							<Item>Валюты</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ВалютыСтрокаПоискаКонтекстноеМеню" id="16"/>
+						<ExtendedTooltip name="ВалютыСтрокаПоискаРасширеннаяПодсказка" id="17"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ВалютыСостояниеПросмотра" id="18">
+						<AdditionSource>
+							<Item>Валюты</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ВалютыСостояниеПросмотраКонтекстноеМеню" id="19"/>
+						<ExtendedTooltip name="ВалютыСостояниеПросмотраРасширеннаяПодсказка" id="20"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ВалютыУправлениеПоиском" id="21">
+						<AdditionSource>
+							<Item>Валюты</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ВалютыУправлениеПоискомКонтекстноеМеню" id="22"/>
+						<ExtendedTooltip name="ВалютыУправлениеПоискомРасширеннаяПодсказка" id="23"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<CheckBoxField name="ВалютыПометка" id="33">
+							<DataPath>Объект.Валюты.Пометка</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Загружать</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Завантажувати</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ВалютыПометкаКонтекстноеМеню" id="34"/>
+							<ExtendedTooltip name="ВалютыПометкаРасширеннаяПодсказка" id="35"/>
+						</CheckBoxField>
+						<InputField name="ВалютыВалюта" id="27">
+							<DataPath>Объект.Валюты.Валюта</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВалютыВалютаКонтекстноеМеню" id="28"/>
+							<ExtendedTooltip name="ВалютыВалютаРасширеннаяПодсказка" id="29"/>
+						</InputField>
+						<InputField name="ВалютыКод" id="30">
+							<DataPath>Объект.Валюты.Код</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВалютыКодКонтекстноеМеню" id="31"/>
+							<ExtendedTooltip name="ВалютыКодРасширеннаяПодсказка" id="32"/>
+						</InputField>
+						<InputField name="ВалютыНаименованиеПолное" id="36">
+							<DataPath>Объект.Валюты.НаименованиеПолное</DataPath>
+							<ContextMenu name="ВалютыНаименованиеПолноеКонтекстноеМеню" id="37"/>
+							<ExtendedTooltip name="ВалютыНаименованиеПолноеРасширеннаяПодсказка" id="38"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.НСИСЗагрузкаКурсовВалют</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗагрузитьКурсы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить курсы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Завантажити курси</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить курсы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Завантажити курси</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьКурсы</Action>
+		</Command>
+		<Command name="ЗагрузитьКурсыВФоне" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить курсы в фоне</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Завантажити курси у фоні</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить курсы в фоне</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Завантажити курси у фоні</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьКурсыВФоне</Action>
+		</Command>
+	</Commands>
+</Form>

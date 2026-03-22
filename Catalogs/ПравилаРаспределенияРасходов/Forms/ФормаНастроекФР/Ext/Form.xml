@@ -1,0 +1,829 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Правило распределения между направлениями деятельности</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>uk</v8:lang>
+			<v8:content>Правило розподілу між напрямами діяльності</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandSet>
+		<ExcludedCommand>Delete</ExcludedCommand>
+	</CommandSet>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаКудаРаспределять" id="698">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Распределять</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Розподіляти</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ThroughAlign>DontUse</ThroughAlign>
+			<ExtendedTooltip name="ГруппаКудаРаспределятьРасширеннаяПодсказка" id="699"/>
+			<ChildItems>
+				<InputField name="Наименование" id="762">
+					<DataPath>Объект.Description</DataPath>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="763"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="764"/>
+				</InputField>
+				<UsualGroup name="ГруппаОтборПоПодразделениямПодразделения" id="135">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отбор по подразделениям подразделения</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Відбір за підрозділом підрозділу</v8:content>
+						</v8:item>
+					</Title>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаОтборПоПодразделениямПодразделенияРасширеннаяПодсказка" id="136"/>
+					<ChildItems>
+						<InputField name="НаправлениеРаспределения" id="140">
+							<DataPath>Объект.НаправлениеРаспределения</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>35</MaxWidth>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ChooseType>false</ChooseType>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Все направления деятельности по базе</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>uk</v8:lang>
+												<v8:content>Всі напрями діяльності за базою</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xr:DesignTimeRef">Enum.НаправлениеРаспределенияПоПодразделениям.EmptyRef</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Указанные направления деятельности по базе</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>uk</v8:lang>
+												<v8:content>Зазначені напрями діяльності за базою</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xr:DesignTimeRef">Enum.НаправлениеРаспределенияПоПодразделениям.EnumValue.Указанные</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Направления деятельности вручную</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>uk</v8:lang>
+												<v8:content>Напрями діяльності вручну</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xr:DesignTimeRef">Enum.НаправлениеРаспределенияПоПодразделениям.EnumValue.ПоКоэффициентам</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="НаправлениеРаспределенияКонтекстноеМеню" id="141"/>
+							<ExtendedTooltip name="НаправлениеРаспределенияРасширеннаяПодсказка" id="142"/>
+							<Events>
+								<Event name="OnChange">НаправлениеРаспределенияПриИзменении</Event>
+							</Events>
+						</InputField>
+						<LabelDecoration name="ПредставлениеУказанныхНаправленийДеятельности" id="143">
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;colorstyle 0:ad87bd29-0ad1-4da4-ac62-38e714e0cb9f&gt;Оптовые продажи
+и еще 3 направления&lt;/&gt;(&lt;link НаправленияДеятельности&gt;изменить&lt;/&gt;)</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>&lt;colorstyle 0:ad87bd29-0ad1-4da4-ac62-38e714e0cb9f&gt;Гуртові продажі і ще 3 напрямки&lt;/&gt; (&lt;link НаправленияДеятельности&gt; змінити&lt;/&gt; )</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ПредставлениеУказанныхНаправленийДеятельностиКонтекстноеМеню" id="144"/>
+							<ExtendedTooltip name="ПредставлениеУказанныхНаправленийДеятельностиРасширеннаяПодсказка" id="145"/>
+							<Events>
+								<Event name="URLProcessing">ОбработкаНавигационнойСсылки</Event>
+							</Events>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="ГруппаСтраницы" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отличия настроек</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Відмінності настройок</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>По базе</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>За базою</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<VerticalStretch>true</VerticalStretch>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="26"/>
+			<ChildItems>
+				<Page name="Правила" id="711">
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Правила</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Правила</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ПравилаРасширеннаяПодсказка" id="712"/>
+					<ChildItems>
+						<InputField name="ПоказательРаспределения" id="768">
+							<DataPath>ПоказательРаспределения</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>База распределения</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>База розподілу</v8:content>
+								</v8:item>
+							</Title>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>30</MaxWidth>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Прямые производственные затраты</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>uk</v8:lang>
+												<v8:content>Прямі виробничі витрати</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string"/>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Выручка от продаж</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>uk</v8:lang>
+												<v8:content>Виторг від продажів</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">ВыручкаОтПродаж</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Себестоимость продаж</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>uk</v8:lang>
+												<v8:content>Собівартість продажів</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">СебестоимостьПродаж</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Валовая прибыль</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>uk</v8:lang>
+												<v8:content>Валовий прибуток</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">ВаловаяПрибыль</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="ПоказательРаспределенияКонтекстноеМеню" id="769"/>
+							<ExtendedTooltip name="ПоказательРаспределенияРасширеннаяПодсказка" id="770"/>
+							<Events>
+								<Event name="OnChange">ПоказательРаспределенияПриИзменении</Event>
+							</Events>
+						</InputField>
+						<UsualGroup name="ГруппаБазаРаспределениеПоПартиям" id="89">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>По партиям</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>По партіях</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<ShowTitle>false</ShowTitle>
+							<ThroughAlign>Use</ThroughAlign>
+							<ExtendedTooltip name="ГруппаБазаРаспределениеПоПартиямРасширеннаяПодсказка" id="90"/>
+							<ChildItems>
+								<InputField name="БазаРаспределенияПоПартиям" id="93">
+									<DataPath>Объект.БазаРаспределенияПоПартиям</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Показатель</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Показник</v8:content>
+										</v8:item>
+									</Title>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>30</MaxWidth>
+									<ListChoiceMode>true</ListChoiceMode>
+									<QuickChoice>false</QuickChoice>
+									<AutoMarkIncomplete>false</AutoMarkIncomplete>
+									<ChoiceForm>a3d9ba72-36bd-4527-8162-c4a3c08052d7</ChoiceForm>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Стоимость материалов и сумма оплаты труда</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>uk</v8:lang>
+														<v8:content>Вартість матеріалів і сума оплати праці</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xr:DesignTimeRef">Enum.ТипыБазыРаспределенияРасходов.EnumValue.СуммаМатериальныхИТрудозатрат</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Стоимость материалов</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>uk</v8:lang>
+														<v8:content>Вартість матеріалів</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xr:DesignTimeRef">Enum.ТипыБазыРаспределенияРасходов.EnumValue.СуммаМатериальныхЗатрат</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Сумма оплаты труда</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>uk</v8:lang>
+														<v8:content>Сума оплати праці</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xr:DesignTimeRef">Enum.ТипыБазыРаспределенияРасходов.EnumValue.СуммаРасходовНаОплатуТруда</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Нормативная оплата труда</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>uk</v8:lang>
+														<v8:content>Нормативна оплата праці</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xr:DesignTimeRef">Enum.ТипыБазыРаспределенияРасходов.EnumValue.НормативыОплатыТруда</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Количество видов работ</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>uk</v8:lang>
+														<v8:content>Кількість видів робіт</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xr:DesignTimeRef">Enum.ТипыБазыРаспределенияРасходов.EnumValue.КоличествоРаботУказанныхВидов</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Количество материалов</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>uk</v8:lang>
+														<v8:content>Кількість матеріалів</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xr:DesignTimeRef">Enum.ТипыБазыРаспределенияРасходов.EnumValue.КоличествоУказанныхМатериалов</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Вес материалов</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>uk</v8:lang>
+														<v8:content>Вага матеріалів</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xr:DesignTimeRef">Enum.ТипыБазыРаспределенияРасходов.EnumValue.ВесУказанныхМатериалов</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Объем материалов</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>uk</v8:lang>
+														<v8:content>Об'єм матеріалів</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xr:DesignTimeRef">Enum.ТипыБазыРаспределенияРасходов.EnumValue.ОбъемУказанныхМатериалов</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="БазаРаспределенияПоПартиямКонтекстноеМеню" id="94"/>
+									<ExtendedTooltip name="БазаРаспределенияПоПартиямРасширеннаяПодсказка" id="95"/>
+									<Events>
+										<Event name="OnChange">БазаРаспределенияПоПартиямПриИзменении</Event>
+									</Events>
+								</InputField>
+								<UsualGroup name="ГруппаНастройкиОтбора" id="740">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Настройки отбора</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Настройки відбору</v8:content>
+										</v8:item>
+									</Title>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаНастройкиОтбораРасширеннаяПодсказка" id="741"/>
+									<ChildItems>
+										<LabelDecoration name="ОтступГруппаНастройкиОтбора" id="742">
+											<ContextMenu name="ОтступГруппаНастройкиОтбораКонтекстноеМеню" id="743"/>
+											<ExtendedTooltip name="ОтступГруппаНастройкиОтбораРасширеннаяПодсказка" id="744"/>
+										</LabelDecoration>
+										<UsualGroup name="ГруппаОтборПоУказаннымПозициям" id="690">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отбор по указанным позициям</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Відбір за зазначеними позиціями</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаОтборПоУказаннымПозициямРасширеннаяПодсказка" id="691"/>
+											<ChildItems>
+												<LabelDecoration name="ЗаголовокОтбораПоУказаннымПозициям" id="751">
+													<TextColor>style:ПоясняющийТекст</TextColor>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Без отбора по материалам</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>uk</v8:lang>
+															<v8:content>Без відбору за матеріалами</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ЗаголовокОтбораПоУказаннымПозициямКонтекстноеМеню" id="752"/>
+													<ExtendedTooltip name="ЗаголовокОтбораПоУказаннымПозициямРасширеннаяПодсказка" id="753"/>
+												</LabelDecoration>
+												<LabelDecoration name="ПредставлениеОтбораПоУказаннымПозициям" id="695">
+													<Title formatted="true">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>&lt;colorstyle 0:ad87bd29-0ad1-4da4-ac62-38e714e0cb9f&gt;Гвозди и еще 3 позиции&lt;/&gt; &lt;link ОтборБазы&gt;изменить&lt;/&gt;</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>uk</v8:lang>
+															<v8:content>&lt;colorstyle 0:ad87bd29-0ad1-4da4-ac62-38e714e0cb9f&gt;Цвяхи і ще 3 позиції&lt;/&gt;&lt;link ОтборБазы&gt; змінити&lt;/&gt;</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ПредставлениеОтбораПоУказаннымПозициямКонтекстноеМеню" id="696"/>
+													<ExtendedTooltip name="ПредставлениеОтбораПоУказаннымПозициямРасширеннаяПодсказка" id="697"/>
+													<Events>
+														<Event name="URLProcessing">ОбработкаНавигационнойСсылки</Event>
+													</Events>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаОтборПоГруппамПродукции" id="793">
+									<Visible>false</Visible>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отбор по группам продукции</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Відбір за групами продукції</v8:content>
+										</v8:item>
+									</Title>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОтборПоГруппамПродукцииРасширеннаяПодсказка" id="794"/>
+									<ChildItems>
+										<LabelDecoration name="ЗаголовокОтбораПоГруппамПродукции" id="795">
+											<TextColor>style:ПоясняющийТекст</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>На все группы продукции</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>На всі групи продукції</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ЗаголовокОтбораПоГруппамПродукцииКонтекстноеМеню" id="796"/>
+											<ExtendedTooltip name="ЗаголовокОтбораПоГруппамПродукцииРасширеннаяПодсказка" id="797"/>
+										</LabelDecoration>
+										<LabelDecoration name="ПредставлениеОтбораПоГруппамПродукции" id="798">
+											<Title formatted="true">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>&lt;colorstyle 0:ad87bd29-0ad1-4da4-ac62-38e714e0cb9f&gt;Группа продукции и еще 2 позиции &lt;/&gt;&lt;link ГруппыПродукции&gt;изменить&lt;/&gt;</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>&lt;colorstyle 0:ad87bd29-0ad1-4da4-ac62-38e714e0cb9f&gt;Група продукції і ще 2 позиції&lt;/&gt;&lt;link ГруппыПродукции&gt; змінити&lt;/&gt;</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ПредставлениеОтбораПоГруппамПродукцииКонтекстноеМеню" id="799"/>
+											<ExtendedTooltip name="ПредставлениеОтбораПоГруппамПродукцииРасширеннаяПодсказка" id="800"/>
+											<Events>
+												<Event name="URLProcessing">ОбработкаНавигационнойСсылки</Event>
+											</Events>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="Вручную" id="178">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Направления деятельности</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Напрями діяльності</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вручную</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Вручну</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ВручнуюРасширеннаяПодсказка" id="179"/>
+					<ChildItems>
+						<Table name="НаправленияДеятельности" id="771">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.НаправленияДеятельности</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="НаправленияДеятельностиКонтекстноеМеню" id="772"/>
+							<AutoCommandBar name="НаправленияДеятельностиКоманднаяПанель" id="773"/>
+							<ExtendedTooltip name="НаправленияДеятельностиРасширеннаяПодсказка" id="774"/>
+							<SearchStringAddition name="НаправленияДеятельностиСтрокаПоиска" id="775">
+								<AdditionSource>
+									<Item>НаправленияДеятельности</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НаправленияДеятельностиСтрокаПоискаКонтекстноеМеню" id="776"/>
+								<ExtendedTooltip name="НаправленияДеятельностиСтрокаПоискаРасширеннаяПодсказка" id="777"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="НаправленияДеятельностиСостояниеПросмотра" id="778">
+								<AdditionSource>
+									<Item>НаправленияДеятельности</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НаправленияДеятельностиСостояниеПросмотраКонтекстноеМеню" id="779"/>
+								<ExtendedTooltip name="НаправленияДеятельностиСостояниеПросмотраРасширеннаяПодсказка" id="780"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="НаправленияДеятельностиУправлениеПоиском" id="781">
+								<AdditionSource>
+									<Item>НаправленияДеятельности</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="НаправленияДеятельностиУправлениеПоискомКонтекстноеМеню" id="782"/>
+								<ExtendedTooltip name="НаправленияДеятельностиУправлениеПоискомРасширеннаяПодсказка" id="783"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="НаправленияДеятельностиНомерСтроки" id="784">
+									<DataPath>Объект.НаправленияДеятельности.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НаправленияДеятельностиНомерСтрокиКонтекстноеМеню" id="785"/>
+									<ExtendedTooltip name="НаправленияДеятельностиНомерСтрокиРасширеннаяПодсказка" id="786"/>
+								</LabelField>
+								<InputField name="НаправленияДеятельностиНаправлениеДеятельности" id="787">
+									<DataPath>Объект.НаправленияДеятельности.НаправлениеДеятельности</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НаправленияДеятельностиНаправлениеДеятельностиКонтекстноеМеню" id="788"/>
+									<ExtendedTooltip name="НаправленияДеятельностиНаправлениеДеятельностиРасширеннаяПодсказка" id="789"/>
+								</InputField>
+								<InputField name="НаправленияДеятельностиДоляСтоимости" id="790">
+									<DataPath>Объект.НаправленияДеятельности.ДоляСтоимости</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НаправленияДеятельностиДоляСтоимостиКонтекстноеМеню" id="791"/>
+									<ExtendedTooltip name="НаправленияДеятельностиДоляСтоимостиРасширеннаяПодсказка" id="792"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ОтборПоМатериалам" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отбор по материалам</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Відбір за матеріалами</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+			</Settings>
+		</Attribute>
+		<Attribute name="ОтборПоВидамРабот" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отбор по видам работ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Відбір за видами робіт</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+		<Attribute name="Объект" id="67">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Об'єкт</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogObject.ПравилаРаспределенияРасходов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПоказательРаспределения" id="74">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показатель распределения</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Показник розподілу</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтборПоНаправлениямДеятельности" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отбор по направлениям деятельности</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Відбір за напрямами діяльності</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.НаправленияДеятельности</v8:Type>
+			</Settings>
+		</Attribute>
+		<Attribute name="ОтборПоГруппамПродукции" id="75">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отбор по группам продукции</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Відбір за групами продукції</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.ГруппыАналитическогоУчетаНоменклатуры</v8:Type>
+			</Settings>
+		</Attribute>
+		<Attribute name="АналитическийУчетПоГруппамПродукции" id="76">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аналитический учет по группам продукции</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Аналітичний облік по групах продукції</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<CommandInterface>
+		<CommandBar>
+			<Item>
+				<Command>CommonCommand.ИнтеграцияС1СДокументооборотСоздатьПисьмо</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>CommonCommand.ИнтеграцияС1СДокументооборотСоздатьБизнесПроцесс</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>CommonCommand.СозданиеСвязанныхОбъектов</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>0:bfa90848-930f-433d-8f6f-c11ac2c5eba2</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</CommandBar>
+	</CommandInterface>
+</Form>

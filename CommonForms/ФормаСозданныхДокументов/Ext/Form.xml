@@ -1,0 +1,1189 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Созданные документы</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>uk</v8:lang>
+			<v8:content>Створені документи</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаПользовательскихНастроек" id="183">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Група користувацьких настройок</v8:content>
+				</v8:item>
+			</Title>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПользовательскихНастроекРасширеннаяПодсказка" id="184"/>
+		</UsualGroup>
+		<Table name="СписокСозданныеДокументы" id="1">
+			<Representation>List</Representation>
+			<SkipOnInput>false</SkipOnInput>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialListView>End</InitialListView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>СписокСозданныеДокументы</DataPath>
+			<RowPictureDataPath>СписокСозданныеДокументы.НестандартнаяКартинка</RowPictureDataPath>
+			<RowsPicture>
+				<xr:Ref>CommonPicture.СостоянияДокумента</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</RowsPicture>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список созданные документы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Список створені документи</v8:content>
+				</v8:item>
+			</Title>
+			<CommandSet>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>Create</ExcludedCommand>
+				<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+			</CommandSet>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>true</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>false</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>ГруппаПользовательскихНастроек</UserSettingsGroup>
+			<ContextMenu name="СписокСозданныеДокументыКонтекстноеМеню" id="2">
+				<ChildItems>
+					<ButtonGroup name="СписокКонтекстноеМенюГруппаОсновное" id="185">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Список контекстное меню группа основное</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
+								<v8:content>Список контекстне меню група основне</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="СписокКонтекстноеМенюГруппаОсновноеРасширеннаяПодсказка" id="186"/>
+						<ChildItems>
+							<Button name="СписокКонтекстноеМенюИзменить" id="189">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.СписокСозданныеДокументы.StandardCommand.Change</CommandName>
+								<ExtendedTooltip name="СписокКонтекстноеМенюИзменитьРасширеннаяПодсказка" id="190"/>
+							</Button>
+							<Button name="СписокКонтекстноеМенюУстановитьПометкуУдаления" id="191">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.СписокСозданныеДокументы.StandardCommand.Delete</CommandName>
+								<Picture>
+									<xr:Ref>StdPicture.MarkToDelete</xr:Ref>
+									<xr:LoadTransparent>true</xr:LoadTransparent>
+								</Picture>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Пометить на удаление / Снять пометку</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>uk</v8:lang>
+										<v8:content>Відмітити для вилучення / Зняти позначку</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="СписокКонтекстноеМенюУстановитьПометкуУдаленияРасширеннаяПодсказка" id="192"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+					<ButtonGroup name="СписокКонтекстноеМенюГруппаДополнительно" id="197">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Список контекстное меню группа дополнительно</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
+								<v8:content>Список контекстне меню група додатково</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="СписокКонтекстноеМенюГруппаДополнительноРасширеннаяПодсказка" id="198"/>
+						<ChildItems>
+							<Button name="СписокКонтекстноеМенюПровести" id="199">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.Провести</CommandName>
+								<ExtendedTooltip name="СписокКонтекстноеМенюПровестиРасширеннаяПодсказка" id="200"/>
+							</Button>
+							<Button name="СписокКонтекстноеМенюОтменаПроведения" id="201">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ОтменаПроведения</CommandName>
+								<ExtendedTooltip name="СписокКонтекстноеМенюОтменаПроведенияРасширеннаяПодсказка" id="202"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+					<ButtonGroup name="СписокГруппаПоискКонтекст" id="203">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Список группа поиск контекст</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
+								<v8:content>Список група пошук контекст</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="СписокГруппаПоискКонтекстРасширеннаяПодсказка" id="204"/>
+						<ChildItems>
+							<Button name="СписокПоискПоТекущемуЗначениюКонтекст" id="205">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.СписокСозданныеДокументы.StandardCommand.FindByCurrentValue</CommandName>
+								<ExtendedTooltip name="СписокПоискПоТекущемуЗначениюКонтекстРасширеннаяПодсказка" id="206"/>
+							</Button>
+							<Button name="СписокНайтиКонтекст" id="207">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.СписокСозданныеДокументы.StandardCommand.Find</CommandName>
+								<ExtendedTooltip name="СписокНайтиКонтекстРасширеннаяПодсказка" id="208"/>
+							</Button>
+							<Button name="СписокОтменитьПоискКонтекст" id="209">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.СписокСозданныеДокументы.StandardCommand.CancelSearch</CommandName>
+								<ExtendedTooltip name="СписокОтменитьПоискКонтекстРасширеннаяПодсказка" id="210"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+					<Button name="СписокКонтекстноеМенюКопироватьВБуферОбмена" id="211">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.СписокСозданныеДокументы.StandardCommand.CopyToClipboard</CommandName>
+						<ExtendedTooltip name="СписокКонтекстноеМенюКопироватьВБуферОбменаРасширеннаяПодсказка" id="212"/>
+					</Button>
+				</ChildItems>
+			</ContextMenu>
+			<AutoCommandBar name="СписокСозданныеДокументыКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<ButtonGroup name="ГруппаКомандыДокументов" id="109">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Команды документов</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
+								<v8:content>Команди документів</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ГруппаКомандыДокументовРасширеннаяПодсказка" id="110"/>
+						<ChildItems>
+							<Button name="СписокИзменить" id="111">
+								<Type>CommandBarButton</Type>
+								<Representation>Picture</Representation>
+								<CommandName>Form.Item.СписокСозданныеДокументы.StandardCommand.Change</CommandName>
+								<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+								<ExtendedTooltip name="СписокИзменитьРасширеннаяПодсказка" id="112"/>
+							</Button>
+							<Button name="СписокСозданныеДокументыУстановитьПометкуУдаления" id="151">
+								<Type>CommandBarButton</Type>
+								<Representation>Picture</Representation>
+								<CommandName>Form.Item.СписокСозданныеДокументы.StandardCommand.Delete</CommandName>
+								<Picture>
+									<xr:Ref>StdPicture.MarkToDelete</xr:Ref>
+									<xr:LoadTransparent>true</xr:LoadTransparent>
+								</Picture>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Пометить на удаление / Снять пометку</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>uk</v8:lang>
+										<v8:content>Відмітити для вилучення / Зняти позначку</v8:content>
+									</v8:item>
+								</Title>
+								<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+								<ExtendedTooltip name="СписокСозданныеДокументыУстановитьПометкуУдаленияРасширеннаяПодсказка" id="152"/>
+							</Button>
+							<ButtonGroup name="СписокГруппаПроведение" id="153">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Список группа проведение</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>uk</v8:lang>
+										<v8:content>Список група проведення</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="СписокГруппаПроведениеРасширеннаяПодсказка" id="154"/>
+								<ChildItems>
+									<Button name="СписокПровести" id="155">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.Провести</CommandName>
+										<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="СписокПровестиРасширеннаяПодсказка" id="156"/>
+									</Button>
+									<Button name="СписокОтменаПроведения" id="157">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ОтменаПроведения</CommandName>
+										<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="СписокОтменаПроведенияРасширеннаяПодсказка" id="158"/>
+									</Button>
+								</ChildItems>
+							</ButtonGroup>
+							<ButtonGroup name="СписокГруппаПоиск" id="159">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Список группа поиск</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>uk</v8:lang>
+										<v8:content>Список група пошук</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="СписокГруппаПоискРасширеннаяПодсказка" id="160"/>
+								<ChildItems>
+									<Button name="СписокНайти" id="161">
+										<Type>CommandBarButton</Type>
+										<Representation>Picture</Representation>
+										<CommandName>Form.Item.СписокСозданныеДокументы.StandardCommand.Find</CommandName>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="СписокНайтиРасширеннаяПодсказка" id="162"/>
+									</Button>
+									<Button name="СписокОтменитьПоиск" id="163">
+										<Type>CommandBarButton</Type>
+										<Representation>Picture</Representation>
+										<CommandName>Form.StandardCommand.CancelSearch</CommandName>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="СписокОтменитьПоискРасширеннаяПодсказка" id="164"/>
+									</Button>
+								</ChildItems>
+							</ButtonGroup>
+							<Button name="КопироватьВБуферОбмена" id="165">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.СписокСозданныеДокументы.StandardCommand.CopyToClipboard</CommandName>
+								<ExtendedTooltip name="КопироватьВБуферОбменаРасширеннаяПодсказка" id="166"/>
+							</Button>
+							<ButtonGroup name="ГруппаНайтиПоТекЗнач" id="167">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Найти по тек знач</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>uk</v8:lang>
+										<v8:content>Знайти за поточ знач</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="ГруппаНайтиПоТекЗначРасширеннаяПодсказка" id="168"/>
+								<ChildItems>
+									<Button name="СписокПоискПоТекущемуЗначению" id="169">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.СписокСозданныеДокументы.StandardCommand.FindByCurrentValue</CommandName>
+										<ExtendedTooltip name="СписокПоискПоТекущемуЗначениюРасширеннаяПодсказка" id="170"/>
+									</Button>
+								</ChildItems>
+							</ButtonGroup>
+							<Button name="СписокВывестиСписок" id="171">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.СписокСозданныеДокументы.StandardCommand.OutputList</CommandName>
+								<ExtendedTooltip name="СписокВывестиСписокРасширеннаяПодсказка" id="172"/>
+							</Button>
+							<ButtonGroup name="СписокГруппаНастройкиСписка" id="173">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Список группа настройки списка</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>uk</v8:lang>
+										<v8:content>Список група настройки списку</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="СписокГруппаНастройкиСпискаРасширеннаяПодсказка" id="174"/>
+								<ChildItems>
+									<Button name="СписокНастройкаСписка" id="175">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.СписокСозданныеДокументы.StandardCommand.ListSettings</CommandName>
+										<ExtendedTooltip name="СписокНастройкаСпискаРасширеннаяПодсказка" id="176"/>
+									</Button>
+									<Button name="СписокЗагрузитьНастройкиДинамическогоСписка" id="177">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.СписокСозданныеДокументы.StandardCommand.LoadDynamicListSettings</CommandName>
+										<ExtendedTooltip name="СписокЗагрузитьНастройкиДинамическогоСпискаРасширеннаяПодсказка" id="178"/>
+									</Button>
+									<Button name="СписокСохранитьНастройкиДинамическогоСписка" id="179">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.СписокСозданныеДокументы.StandardCommand.SaveDynamicListSettings</CommandName>
+										<ExtendedTooltip name="СписокСохранитьНастройкиДинамическогоСпискаРасширеннаяПодсказка" id="180"/>
+									</Button>
+									<Button name="СписокСтандартныеНастройкиДинамическогоСписка" id="181">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.СписокСозданныеДокументы.StandardCommand.DynamicListStandardSettings</CommandName>
+										<ExtendedTooltip name="СписокСтандартныеНастройкиДинамическогоСпискаРасширеннаяПодсказка" id="182"/>
+									</Button>
+								</ChildItems>
+							</ButtonGroup>
+						</ChildItems>
+					</ButtonGroup>
+					<Popup name="ПодменюСоздатьНаОсновании" id="113">
+						<Visible>false</Visible>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Создать на основании</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
+								<v8:content>Створити на підставі</v8:content>
+							</v8:item>
+						</Title>
+						<Picture>
+							<xr:Ref>CommonPicture.ЗаполнитьПоШаблону</xr:Ref>
+							<xr:LoadTransparent>false</xr:LoadTransparent>
+						</Picture>
+						<Representation>Picture</Representation>
+						<ExtendedTooltip name="ПодменюСоздатьНаОснованииРасширеннаяПодсказка" id="114"/>
+					</Popup>
+					<Popup name="ПодменюОтчеты" id="115">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Отчеты</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
+								<v8:content>Звіти</v8:content>
+							</v8:item>
+						</Title>
+						<Picture>
+							<xr:Ref>CommonPicture.Отчеты</xr:Ref>
+							<xr:LoadTransparent>false</xr:LoadTransparent>
+						</Picture>
+						<Representation>Picture</Representation>
+						<ExtendedTooltip name="ПодменюОтчетыРасширеннаяПодсказка" id="116"/>
+						<ChildItems>
+							<ButtonGroup name="ПодменюОтчетыВажное" id="117">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Подменю отчеты важное</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>uk</v8:lang>
+										<v8:content>Підменю звіти важливе</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="ПодменюОтчетыВажноеРасширеннаяПодсказка" id="118"/>
+							</ButtonGroup>
+							<ButtonGroup name="ПодменюОтчетыОбычное" id="119">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Подменю отчеты обычное</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>uk</v8:lang>
+										<v8:content>Підменю звіти звичайне</v8:content>
+									</v8:item>
+								</Title>
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Подменю отчеты важное</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>uk</v8:lang>
+										<v8:content>Підменю звіти важливе</v8:content>
+									</v8:item>
+								</ToolTip>
+								<ExtendedTooltip name="ПодменюОтчетыОбычноеРасширеннаяПодсказка" id="120"/>
+							</ButtonGroup>
+							<ButtonGroup name="ПодменюОтчетыСмТакже" id="121">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Подменю отчеты см также</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>uk</v8:lang>
+										<v8:content>Підменю звіти див також</v8:content>
+									</v8:item>
+								</Title>
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Подменю отчеты важное</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>uk</v8:lang>
+										<v8:content>Підменю звіти важливе</v8:content>
+									</v8:item>
+								</ToolTip>
+								<ExtendedTooltip name="ПодменюОтчетыСмТакжеРасширеннаяПодсказка" id="122"/>
+							</ButtonGroup>
+						</ChildItems>
+					</Popup>
+					<ButtonGroup name="ГруппаГлобальныеКоманды" id="85">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа команды формы</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
+								<v8:content>Група команди форми</v8:content>
+							</v8:item>
+						</Title>
+						<CommandSource>FormCommandPanelGlobalCommands</CommandSource>
+						<ExtendedTooltip name="ГруппаГлобальныеКомандыExtendedTooltip" id="86"/>
+						<ChildItems>
+							<Popup name="ПодменюПечать" id="48">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Печать</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>uk</v8:lang>
+										<v8:content>Друк</v8:content>
+									</v8:item>
+								</Title>
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Команды печати</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>uk</v8:lang>
+										<v8:content>Команди друку</v8:content>
+									</v8:item>
+								</ToolTip>
+								<Picture>
+									<xr:Ref>StdPicture.Print</xr:Ref>
+									<xr:LoadTransparent>true</xr:LoadTransparent>
+								</Picture>
+								<Representation>Picture</Representation>
+								<ExtendedTooltip name="ПодменюПечатьРасширеннаяПодсказка" id="49"/>
+							</Popup>
+							<Button name="СписокОбщаяКомандаДополнительныеСведенияКоманднаяПанель" id="89">
+								<Type>CommandBarButton</Type>
+								<CommandName>CommonCommand.ДополнительныеСведенияКоманднаяПанель</CommandName>
+								<DataPath>Items.СписокСозданныеДокументы.CurrentData.Ссылка</DataPath>
+								<ExtendedTooltip name="СписокОбщаяКомандаДополнительныеСведенияКоманднаяПанельРасширеннаяПодсказка" id="90"/>
+							</Button>
+							<Button name="ФормаОбработкаПомощникЗачетаОплатЗачетОплаты" id="91">
+								<Type>CommandBarButton</Type>
+								<UserVisible>
+									<xr:Common>false</xr:Common>
+								</UserVisible>
+								<CommandName>DataProcessor.ПомощникЗачетаОплат.Command.ЗачетОплаты</CommandName>
+								<DataPath>Items.СписокСозданныеДокументы.CurrentData.Ссылка</DataPath>
+								<ExtendedTooltip name="ФормаОбработкаПомощникЗачетаОплатЗачетОплатыРасширеннаяПодсказка" id="92"/>
+							</Button>
+							<Button name="ФормаРегистрБухгалтерииМеждународныйПроводкиДокументаОперативногоУчета" id="93">
+								<Type>CommandBarButton</Type>
+								<CommandName>0</CommandName>
+								<DataPath>Items.СписокСозданныеДокументы.CurrentData.Ссылка</DataPath>
+								<ExtendedTooltip name="ФормаРегистрБухгалтерииМеждународныйПроводкиДокументаОперативногоУчетаРасширеннаяПодсказка" id="94"/>
+							</Button>
+							<Button name="ФормаОбработкаОтражениеДокументовВРеглУчетеПроводкиРеглУчета" id="95">
+								<Type>CommandBarButton</Type>
+								<CommandName>0</CommandName>
+								<DataPath>Items.СписокСозданныеДокументы.CurrentData.Ссылка</DataPath>
+								<ExtendedTooltip name="ФормаОбработкаОтражениеДокументовВРеглУчетеПроводкиРеглУчетаРасширеннаяПодсказка" id="96"/>
+							</Button>
+							<Popup name="ГруппаОрганайзер" id="97">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Органайзер</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>uk</v8:lang>
+										<v8:content>Органайзер</v8:content>
+									</v8:item>
+								</Title>
+								<Picture>
+									<xr:Ref>CommonPicture.Органайзер</xr:Ref>
+									<xr:LoadTransparent>false</xr:LoadTransparent>
+								</Picture>
+								<Representation>Picture</Representation>
+								<ExtendedTooltip name="ГруппаОрганайзерРасширеннаяПодсказка" id="98"/>
+								<ChildItems>
+									<Button name="ФормаОбщаяКомандаНапомнить" id="99">
+										<Type>CommandBarButton</Type>
+										<CommandName>CommonCommand.Напомнить</CommandName>
+										<DataPath>Items.СписокСозданныеДокументы.CurrentData.Ссылка</DataPath>
+										<ExtendedTooltip name="ФормаОбщаяКомандаНапомнитьРасширеннаяПодсказка" id="100"/>
+									</Button>
+									<Button name="ФормаОбщаяКомандаОтправитьSMS" id="101">
+										<Type>CommandBarButton</Type>
+										<CommandName>CommonCommand.ОтправитьSMS</CommandName>
+										<DataPath>Items.СписокСозданныеДокументы.CurrentData.Ссылка</DataPath>
+										<ExtendedTooltip name="ФормаОбщаяКомандаОтправитьSMSРасширеннаяПодсказка" id="102"/>
+									</Button>
+									<Button name="ФормаОбщаяКомандаОтправитьПисьмо" id="103">
+										<Type>CommandBarButton</Type>
+										<CommandName>CommonCommand.ОтправитьПисьмо</CommandName>
+										<DataPath>Items.СписокСозданныеДокументы.CurrentData.Ссылка</DataPath>
+										<ExtendedTooltip name="ФормаОбщаяКомандаОтправитьПисьмоРасширеннаяПодсказка" id="104"/>
+									</Button>
+									<Button name="ФормаОбщаяКомандаСоздатьЗаметкуПоПредмету" id="105">
+										<Type>CommandBarButton</Type>
+										<CommandName>CommonCommand.СоздатьЗаметкуПоПредмету</CommandName>
+										<DataPath>Items.СписокСозданныеДокументы.CurrentData.Ссылка</DataPath>
+										<ExtendedTooltip name="ФормаОбщаяКомандаСоздатьЗаметкуПоПредметуРасширеннаяПодсказка" id="106"/>
+									</Button>
+								</ChildItems>
+							</Popup>
+						</ChildItems>
+					</ButtonGroup>
+					<ButtonGroup name="ГруппаОбновить" id="219">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Обновить</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
+								<v8:content>Оновити</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ГруппаОбновитьРасширеннаяПодсказка" id="220"/>
+						<ChildItems>
+							<Button name="Обновить" id="143">
+								<Type>CommandBarButton</Type>
+								<Representation>Picture</Representation>
+								<CommandName>Form.Item.СписокСозданныеДокументы.StandardCommand.Refresh</CommandName>
+								<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+								<ExtendedTooltip name="ОбновитьРасширеннаяПодсказка" id="144"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+					<SearchStringAddition name="СтрокаПоиска" id="213">
+						<AdditionSource>
+							<Item>СписокСозданныеДокументы</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Строка поиска</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
+								<v8:content>Рядок пошуку</v8:content>
+							</v8:item>
+						</Title>
+						<ContextMenu name="СтрокаПоискаКонтекстноеМеню" id="214"/>
+						<ExtendedTooltip name="СтрокаПоискаРасширеннаяПодсказка" id="215"/>
+					</SearchStringAddition>
+					<SearchControlAddition name="УправлениеПоиском" id="216">
+						<AdditionSource>
+							<Item>СписокСозданныеДокументы</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Управление поиском</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
+								<v8:content>Управління пошуком</v8:content>
+							</v8:item>
+						</Title>
+						<ContextMenu name="УправлениеПоискомКонтекстноеМеню" id="217"/>
+						<ExtendedTooltip name="УправлениеПоискомРасширеннаяПодсказка" id="218"/>
+					</SearchControlAddition>
+					<Button name="ИзменитьФормуКнопка" id="147">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+						<ExtendedTooltip name="ИзменитьФормуКнопкаРасширеннаяПодсказка" id="148"/>
+					</Button>
+					<Button name="СписокСозданныеДокументыСправка" id="149">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.StandardCommand.Help</CommandName>
+						<ExtendedTooltip name="СписокСозданныеДокументыСправкаРасширеннаяПодсказка" id="150"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокСозданныеДокументыРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="СписокСозданныеДокументыСтрокаПоиска" id="5">
+				<AdditionSource>
+					<Item>СписокСозданныеДокументы</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСозданныеДокументыСтрокаПоискаКонтекстноеМеню" id="6"/>
+				<ExtendedTooltip name="СписокСозданныеДокументыСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСозданныеДокументыСостояниеПросмотра" id="8">
+				<AdditionSource>
+					<Item>СписокСозданныеДокументы</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСозданныеДокументыСостояниеПросмотраКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="СписокСозданныеДокументыСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокСозданныеДокументыУправлениеПоиском" id="11">
+				<AdditionSource>
+					<Item>СписокСозданныеДокументы</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСозданныеДокументыУправлениеПоискомКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="СписокСозданныеДокументыУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">СписокСозданныеДокументыВыбор</Event>
+				<Event name="BeforeDeleteRow">СписокСозданныеДокументыПередУдалением</Event>
+				<Event name="OnActivateRow">СписокСозданныеДокументыПриАктивизацииСтроки</Event>
+				<Event name="BeforeRowChange">СписокСозданныеДокументыПередНачаломИзменения</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="Номер" id="61">
+					<DataPath>СписокСозданныеДокументы.Номер</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Номер</v8:content>
+						</v8:item>
+					</Title>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>11</MaxWidth>
+					<ContextMenu name="НомерКонтекстноеМеню" id="62"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="63"/>
+				</LabelField>
+				<LabelField name="Дата" id="58">
+					<DataPath>СписокСозданныеДокументы.Дата</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Дата</v8:content>
+						</v8:item>
+					</Title>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>7</MaxWidth>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="59"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="60"/>
+				</LabelField>
+				<ColumnGroup name="ГруппаОперацияТип" id="126">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид документа, хоз. операция</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Вид документа, госп. операція</v8:content>
+						</v8:item>
+					</Title>
+					<Group>InCell</Group>
+					<ExtendedTooltip name="ГруппаОперацияТипРасширеннаяПодсказка" id="127"/>
+					<ChildItems>
+						<LabelField name="ТипЗначения" id="70">
+							<DataPath>СписокСозданныеДокументы.ТипЗначения</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Вид документа</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Вид документу</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ТипЗначенияКонтекстноеМеню" id="71"/>
+							<ExtendedTooltip name="ТипЗначенияРасширеннаяПодсказка" id="72"/>
+						</LabelField>
+						<LabelField name="ХозяйственнаяОперация" id="128">
+							<DataPath>СписокСозданныеДокументы.ХозяйственнаяОперация</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Хоз. операция</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Госп. операція</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ХозяйственнаяОперацияКонтекстноеМеню" id="129"/>
+							<ExtendedTooltip name="ХозяйственнаяОперацияРасширеннаяПодсказка" id="130"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<LabelField name="СуммаДокумента" id="64">
+					<DataPath>СписокСозданныеДокументы.СуммаДокумента</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Сума</v8:content>
+						</v8:item>
+					</Title>
+					<Width>9</Width>
+					<ContextMenu name="СуммаДокументаКонтекстноеМеню" id="65"/>
+					<ExtendedTooltip name="СуммаДокументаРасширеннаяПодсказка" id="66"/>
+				</LabelField>
+				<LabelField name="Валюта" id="67">
+					<DataPath>СписокСозданныеДокументы.Валюта</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Валюта</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Валюта</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ВалютаКонтекстноеМеню" id="68"/>
+					<ExtendedTooltip name="ВалютаРасширеннаяПодсказка" id="69"/>
+				</LabelField>
+				<LabelField name="Партнер" id="79">
+					<DataPath>СписокСозданныеДокументы.Партнер</DataPath>
+					<ContextMenu name="ПартнерКонтекстноеМеню" id="80"/>
+					<ExtendedTooltip name="ПартнерРасширеннаяПодсказка" id="81"/>
+				</LabelField>
+				<LabelField name="Контрагент" id="82">
+					<DataPath>СписокСозданныеДокументы.Контрагент</DataPath>
+					<ContextMenu name="КонтрагентКонтекстноеМеню" id="83"/>
+					<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="84"/>
+				</LabelField>
+				<LabelField name="Договор" id="123">
+					<DataPath>СписокСозданныеДокументы.Договор</DataPath>
+					<ContextMenu name="ДоговорКонтекстноеМеню" id="124"/>
+					<ExtendedTooltip name="ДоговорРасширеннаяПодсказка" id="125"/>
+				</LabelField>
+				<LabelField name="Организация" id="45">
+					<DataPath>СписокСозданныеДокументы.Организация</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>16</Width>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="46"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="47"/>
+				</LabelField>
+				<LabelField name="Подразделение" id="131">
+					<DataPath>СписокСозданныеДокументы.Подразделение</DataPath>
+					<ContextMenu name="ПодразделениеКонтекстноеМеню" id="132"/>
+					<ExtendedTooltip name="ПодразделениеРасширеннаяПодсказка" id="133"/>
+				</LabelField>
+				<LabelField name="Склад" id="17">
+					<DataPath>СписокСозданныеДокументы.Склад</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Склад</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Склад</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СкладКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="СкладРасширеннаяПодсказка" id="19"/>
+				</LabelField>
+				<LabelField name="НаправлениеДеятельности" id="137">
+					<DataPath>СписокСозданныеДокументы.НаправлениеДеятельности</DataPath>
+					<ContextMenu name="НаправлениеДеятельностиКонтекстноеМеню" id="138"/>
+					<ExtendedTooltip name="НаправлениеДеятельностиРасширеннаяПодсказка" id="139"/>
+				</LabelField>
+				<LabelField name="Статус" id="140">
+					<DataPath>СписокСозданныеДокументы.Статус</DataPath>
+					<ContextMenu name="СтатусКонтекстноеМеню" id="141"/>
+					<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="142"/>
+				</LabelField>
+				<LabelField name="Дополнительно" id="134">
+					<DataPath>СписокСозданныеДокументы.Дополнительно</DataPath>
+					<ContextMenu name="ДополнительноКонтекстноеМеню" id="135"/>
+					<ExtendedTooltip name="ДополнительноРасширеннаяПодсказка" id="136"/>
+				</LabelField>
+				<LabelField name="Ссылка" id="14">
+					<DataPath>СписокСозданныеДокументы.Ссылка</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СсылкаКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="16"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+		<UsualGroup name="ГруппаПодвал" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подвал</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Підвал</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПодвалРасширеннаяПодсказка" id="28"/>
+			<ChildItems>
+				<CommandBar name="ГруппаПодвалЛево" id="38">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подвал лево</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>підвал ліво</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаПодвалЛевоРасширеннаяПодсказка" id="39"/>
+					<ChildItems>
+						<Button name="Назад" id="23">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.Назад</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отменить и удалить</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Скасувати і вилучити</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="НазадРасширеннаяПодсказка" id="24"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+				<CommandBar name="ГруппаПодвалПраво" id="40">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подвал право</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>підвал право</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalLocation>Right</HorizontalLocation>
+					<ExtendedTooltip name="ГруппаПодвалПравоРасширеннаяПодсказка" id="41"/>
+					<ChildItems>
+						<Button name="Принять" id="25">
+							<Type>CommandBarButton</Type>
+							<DefaultButton>true</DefaultButton>
+							<CommandName>Form.Command.Принять</CommandName>
+							<ExtendedTooltip name="ПринятьРасширеннаяПодсказка" id="26"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="СписокСозданныеДокументы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список созданные документы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Список створені документи</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>СписокСозданныеДокументы.ПометкаУдаления</Field>
+				<Field>СписокСозданныеДокументы.Ссылка</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	РеестрДокументов.Ссылка КАК Ссылка,
+	РеестрДокументов.Проведен КАК Проведен,
+	РеестрДокументов.ПометкаУдаления КАК ПометкаУдаления,
+	РеестрДокументов.НомерДокументаИБ КАК Номер,
+	РеестрДокументов.ДатаДокументаИБ КАК Дата,
+	РеестрДокументов.Сумма КАК СуммаДокумента,
+	РеестрДокументов.Валюта КАК Валюта,
+	РеестрДокументов.Организация КАК Организация,
+	РеестрДокументов.Подразделение КАК Подразделение,
+	РеестрДокументов.МестоХранения КАК Склад,
+	РеестрДокументов.Партнер КАК Партнер,
+	РеестрДокументов.Контрагент КАК Контрагент,
+	РеестрДокументов.Договор КАК Договор,
+	РеестрДокументов.ХозяйственнаяОперация КАК ХозяйственнаяОперация,
+	РеестрДокументов.НаправлениеДеятельности КАК НаправлениеДеятельности,
+	РеестрДокументов.Статус КАК Статус,
+	РеестрДокументов.Дополнительно КАК Дополнительно,
+	ТИПЗНАЧЕНИЯ(РеестрДокументов.Ссылка) КАК ТипЗначения,
+	ВЫБОР
+		КОГДА РеестрДокументов.Проведен
+			ТОГДА 0
+		ИНАЧЕ ВЫБОР
+				КОГДА РеестрДокументов.ПометкаУдаления
+					ТОГДА 1
+				ИНАЧЕ 2
+			КОНЕЦ
+	КОНЕЦ КАК НестандартнаяКартинка
+ИЗ
+	РегистрСведений.РеестрДокументов КАК РеестрДокументов
+ГДЕ
+	НЕ РеестрДокументов.ДополнительнаяЗапись</QueryText>
+				<MainTable>InformationRegister.РеестрДокументов</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Дата</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ЗакрытьБезВопроса" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть без вопроса</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Закрити без питання</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокДокументов" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список документов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Список документів</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<View>
+				<xr:Common>false</xr:Common>
+			</View>
+			<Edit>
+				<xr:Common>false</xr:Common>
+			</Edit>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+		<Attribute name="ПараметрыПодключаемыхКоманд" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры подключаемых команд</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Параметри команд, які підключаються</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="СобытияОбновления" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>События обновления</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Події оновлення</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Принять" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Принять и закрыть</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Прийняти і закрити</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Принять</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Прийняти</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Принять</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Назад" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назад</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Назад</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назад</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Назад</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Назад</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Провести" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Провести</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Провести</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Провести</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Провести</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Post</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Провести</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОтменаПроведения" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена проведения</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Скасування проведення</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена проведения</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Скасування проведення</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UndoPosting</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОтменаПроведения</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="КлючДанных">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+		<Parameter name="ВидимыеКолонки">
+			<Type/>
+		</Parameter>
+		<Parameter name="СобытияОбновления">
+			<Type/>
+		</Parameter>
+	</Parameters>
+</Form>

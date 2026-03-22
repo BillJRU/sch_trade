@@ -1,0 +1,1647 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Реквизиты печати</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>uk</v8:lang>
+			<v8:content>Реквізити друку</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>Close</ExcludedCommand>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаОК" id="34">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ОК</CommandName>
+				<ExtendedTooltip name="ФормаОКExtendedTooltip" id="104"/>
+			</Button>
+			<Button name="ФормаОтмена" id="35">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Отмена</CommandName>
+				<ExtendedTooltip name="ФормаОтменаExtendedTooltip" id="105"/>
+			</Button>
+			<Button name="ФормаСправка" id="149">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Help</CommandName>
+				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаСправкаРасширеннаяПодсказка" id="150"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаПечать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печать</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Друк</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПечатьExtendedTooltip" id="106"/>
+			<ChildItems>
+				<InputField name="МестоСоставленияДокумента" id="154">
+					<DataPath>МестоСоставленияДокумента</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Место составления</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Місце складання</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Место составления документа</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Місце складання документа</v8:content>
+						</v8:item>
+					</ToolTip>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<DropListButton>true</DropListButton>
+					<ChoiceListButton>true</ChoiceListButton>
+					<ContextMenu name="МестоСоставленияДокументаКонтекстноеМеню" id="155"/>
+					<ExtendedTooltip name="МестоСоставленияДокументаРасширеннаяПодсказка" id="156"/>
+				</InputField>
+				<UsualGroup name="ГруппаОснование" id="141">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основание</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Підстава</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ExtendedTooltip name="ГруппаОснованиеРасширеннаяПодсказка" id="142"/>
+				</UsualGroup>
+				<UsualGroup name="ГруппаРеквизитыПечати" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Реквизиты печати</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Реквізити друку</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаРеквизитыПечатиExtendedTooltip" id="108"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаПечатьЛево" id="5">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Печать лево</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Друк ліво</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПечатьЛевоExtendedTooltip" id="130"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаРеквизитыПоставщика" id="93">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Продавец</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Продавець</v8:content>
+										</v8:item>
+									</Title>
+									<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<United>false</United>
+									<ExtendedTooltip name="ГруппаРеквизитыПоставщикаExtendedTooltip" id="131"/>
+									<ChildItems>
+										<InputField name="БанковскийСчетОрганизации" id="102">
+											<DataPath>БанковскийСчетОрганизации</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Счет организации</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Рахунок організації</v8:content>
+												</v8:item>
+											</Title>
+											<ChoiceParameterLinks>
+												<xr:Link>
+													<xr:Name>Отбор.Владелец</xr:Name>
+													<xr:DataPath xsi:type="xs:string">Организация</xr:DataPath>
+													<xr:ValueChange>Clear</xr:ValueChange>
+												</xr:Link>
+											</ChoiceParameterLinks>
+											<ContextMenu name="БанковскийСчетОрганизацииКонтекстноеМеню" id="103"/>
+											<ExtendedTooltip name="БанковскийСчетОрганизацииExtendedTooltip" id="133"/>
+										</InputField>
+										<InputField name="Грузоотправитель" id="8">
+											<DataPath>Грузоотправитель</DataPath>
+											<ChoiceParameters>
+												<app:item name="Отбор.Партнер">
+													<app:value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation/>
+														<Value xsi:type="xr:DesignTimeRef">Catalog.Партнеры.НашеПредприятие</Value>
+													</app:value>
+												</app:item>
+											</ChoiceParameters>
+											<ContextMenu name="ГрузоотправительКонтекстноеМеню" id="9"/>
+											<ExtendedTooltip name="ГрузоотправительExtendedTooltip" id="134"/>
+											<Events>
+												<Event name="OnChange">ГрузоотправительПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="БанковскийСчетГрузоотправителя" id="30">
+											<DataPath>БанковскийСчетГрузоотправителя</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Счет грузоотправителя</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Рахунок вантажовідправника</v8:content>
+												</v8:item>
+											</Title>
+											<ChoiceParameterLinks>
+												<xr:Link>
+													<xr:Name>Отбор.Владелец</xr:Name>
+													<xr:DataPath xsi:type="xs:string">Грузоотправитель</xr:DataPath>
+													<xr:ValueChange>Clear</xr:ValueChange>
+												</xr:Link>
+											</ChoiceParameterLinks>
+											<ContextMenu name="БанковскийСчетГрузоотправителяКонтекстноеМеню" id="31"/>
+											<ExtendedTooltip name="БанковскийСчетГрузоотправителяExtendedTooltip" id="135"/>
+										</InputField>
+										<LabelDecoration name="ДекорацияОтступПечатьЛево" id="170">
+											<Height>1</Height>
+											<ContextMenu name="ДекорацияОтступПечатьЛевоКонтекстноеМеню" id="171"/>
+											<ExtendedTooltip name="ДекорацияОтступПечатьЛевоExtendedTooltip" id="172"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаПодписи" id="89">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Подписи</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Підписи</v8:content>
+										</v8:item>
+									</Title>
+									<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<GroupVerticalAlign>Bottom</GroupVerticalAlign>
+									<Group>Vertical</Group>
+									<VerticalAlign>Bottom</VerticalAlign>
+									<Representation>NormalSeparation</Representation>
+									<United>false</United>
+									<ExtendedTooltip name="ГруппаПодписиExtendedTooltip" id="136"/>
+								</UsualGroup>
+								<UsualGroup name="ГруппаПредставительОрганизации" id="157">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Представитель организации</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Представник організації</v8:content>
+										</v8:item>
+									</Title>
+									<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Представитель организации</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Представник організації</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Width>46</Width>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ExtendedTooltip name="ГруппаПредставительОрганизацииРасширеннаяПодсказка" id="158"/>
+									<ChildItems>
+										<InputField name="ПредставительОрганизации" id="159">
+											<DataPath>ПредставительОрганизации</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Ответственный</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Відповідальний</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ПредставительОрганизацииКонтекстноеМеню" id="160"/>
+											<ExtendedTooltip name="ПредставительОрганизацииРасширеннаяПодсказка" id="161"/>
+											<Events>
+												<Event name="OnChange">ПредставительОрганизацииПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ПредставительОрганизацииДолжность" id="162">
+											<DataPath>ПредставительОрганизацииДолжность</DataPath>
+											<Width>32</Width>
+											<DropListButton>true</DropListButton>
+											<ChoiceListButton>true</ChoiceListButton>
+											<ContextMenu name="ПредставительОрганизацииДолжностьКонтекстноеМеню" id="163"/>
+											<ExtendedTooltip name="ПредставительОрганизацииДолжностьРасширеннаяПодсказка" id="164"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПечатьПраво" id="27">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Печать лево</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Друк ліво</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПечатьПравоExtendedTooltip" id="109"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаРеквизитыПокупателя" id="92">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Покупатель</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Покупець</v8:content>
+										</v8:item>
+									</Title>
+									<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<United>false</United>
+									<ExtendedTooltip name="ГруппаРеквизитыПокупателяExtendedTooltip" id="110"/>
+									<ChildItems>
+										<InputField name="БанковскийСчетКонтрагента" id="28">
+											<DataPath>БанковскийСчетКонтрагента</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Счет покупателя</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Рахунок покупця</v8:content>
+												</v8:item>
+											</Title>
+											<ChoiceParameterLinks>
+												<xr:Link>
+													<xr:Name>Отбор.Владелец</xr:Name>
+													<xr:DataPath xsi:type="xs:string">Контрагент</xr:DataPath>
+													<xr:ValueChange>Clear</xr:ValueChange>
+												</xr:Link>
+											</ChoiceParameterLinks>
+											<ContextMenu name="БанковскийСчетКонтрагентаКонтекстноеМеню" id="29"/>
+											<ExtendedTooltip name="БанковскийСчетКонтрагентаExtendedTooltip" id="112"/>
+										</InputField>
+										<InputField name="БанковскийСчетОрганизацииПолучателя" id="47">
+											<DataPath>БанковскийСчетОрганизацииПолучателя</DataPath>
+											<Visible>false</Visible>
+											<ChoiceParameterLinks>
+												<xr:Link>
+													<xr:Name>Отбор.Владелец</xr:Name>
+													<xr:DataPath xsi:type="xs:string">ОрганизацияПолучатель</xr:DataPath>
+													<xr:ValueChange>Clear</xr:ValueChange>
+												</xr:Link>
+											</ChoiceParameterLinks>
+											<ContextMenu name="БанковскийСчетОрганизацииПолучателяКонтекстноеМеню" id="48"/>
+											<ExtendedTooltip name="БанковскийСчетОрганизацииПолучателяExtendedTooltip" id="113"/>
+										</InputField>
+										<InputField name="Грузополучатель" id="10">
+											<DataPath>Грузополучатель</DataPath>
+											<ChoiceParameterLinks>
+												<xr:Link>
+													<xr:Name>Отбор.Партнер</xr:Name>
+													<xr:DataPath xsi:type="xs:string">Партнер</xr:DataPath>
+													<xr:ValueChange>Clear</xr:ValueChange>
+												</xr:Link>
+											</ChoiceParameterLinks>
+											<ContextMenu name="ГрузополучательКонтекстноеМеню" id="11"/>
+											<ExtendedTooltip name="ГрузополучательExtendedTooltip" id="114"/>
+											<Events>
+												<Event name="OnChange">ГрузополучательПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="БанковскийСчетГрузополучателя" id="32">
+											<DataPath>БанковскийСчетГрузополучателя</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Счет грузополучателя</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Рахунок вантажоотримувача</v8:content>
+												</v8:item>
+											</Title>
+											<ChoiceParameterLinks>
+												<xr:Link>
+													<xr:Name>Отбор.Владелец</xr:Name>
+													<xr:DataPath xsi:type="xs:string">Грузополучатель</xr:DataPath>
+													<xr:ValueChange>Clear</xr:ValueChange>
+												</xr:Link>
+											</ChoiceParameterLinks>
+											<ContextMenu name="БанковскийСчетГрузополучателяКонтекстноеМеню" id="33"/>
+											<ExtendedTooltip name="БанковскийСчетГрузополучателяExtendedTooltip" id="115"/>
+										</InputField>
+										<InputField name="АдресДоставки" id="6">
+											<DataPath>АдресДоставки</DataPath>
+											<DropListButton>true</DropListButton>
+											<ChoiceListButton>true</ChoiceListButton>
+											<ContextMenu name="АдресДоставкиКонтекстноеМеню" id="7"/>
+											<ExtendedTooltip name="АдресДоставкиExtendedTooltip" id="111"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаПредставительПартнера" id="165">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Представитель контрагента</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Представник контрагента</v8:content>
+										</v8:item>
+									</Title>
+									<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Доверенность</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Довіреність</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Width>46</Width>
+									<Group>Vertical</Group>
+									<Representation>NormalSeparation</Representation>
+									<United>false</United>
+									<ExtendedTooltip name="ГруппаПредставительПартнераРасширеннаяПодсказка" id="166"/>
+									<ChildItems>
+										<InputField name="ПредставительКонтрагента" id="167">
+											<DataPath>ПредставительКонтрагента</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Должность и ФИО</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Посада та ПІБ</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Должность ФИО</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Посада ПІБ</v8:content>
+												</v8:item>
+											</ToolTip>
+											<DropListButton>true</DropListButton>
+											<ChoiceListButton>true</ChoiceListButton>
+											<ContextMenu name="ПредставительКонтрагентаКонтекстноеМеню" id="168"/>
+											<ExtendedTooltip name="ПредставительКонтрагентаРасширеннаяПодсказка" id="169"/>
+										</InputField>
+										<UsualGroup name="ГруппаПредставительОрганизацииПолучателя" id="201">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Представитель организации получателя</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Представник організації одержувача</v8:content>
+												</v8:item>
+											</Title>
+											<Width>39</Width>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПредставительОрганизацииПолучателяРасширеннаяПодсказка" id="202"/>
+											<ChildItems>
+												<InputField name="ПредставительОрганизацииПолучателя" id="203">
+													<DataPath>ПредставительОрганизацииПолучателя</DataPath>
+													<Visible>false</Visible>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Ответственный</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>uk</v8:lang>
+															<v8:content>Відповідальний</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ПредставительОрганизацииПолучателяКонтекстноеМеню" id="204"/>
+													<ExtendedTooltip name="ПредставительОрганизацииПолучателяРасширеннаяПодсказка" id="205"/>
+													<Events>
+														<Event name="OnChange">ПредставительОрганизацииПолучателяПриИзменении</Event>
+													</Events>
+												</InputField>
+												<InputField name="ПредставительОрганизацииПолучателяДолжность" id="206">
+													<DataPath>ПредставительОрганизацииПолучателяДолжность</DataPath>
+													<Visible>false</Visible>
+													<Width>32</Width>
+													<ChoiceListButton>true</ChoiceListButton>
+													<ContextMenu name="ПредставительОрганизацииПолучателяДолжностьКонтекстноеМеню" id="207"/>
+													<ExtendedTooltip name="ПредставительОрганизацииПолучателяДолжностьРасширеннаяПодсказка" id="208"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаДоверенность" id="17">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Документ подтверждающий право на получение ценностей</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Документ, що підтверджує право на одержання цінностей</v8:content>
+										</v8:item>
+									</Title>
+									<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<Group>Vertical</Group>
+									<Representation>NormalSeparation</Representation>
+									<United>false</United>
+									<ExtendedTooltip name="ГруппаДоверенностьExtendedTooltip" id="124"/>
+									<ChildItems>
+										<InputField name="ДоверенностьВидДокумента" id="175">
+											<DataPath>ДоверенностьВидДокумента</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Для доверенности поддерживается печать на 2-х языках
+Для документа печатается указанное представление</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Для довіреності підтримується друк на 2-х мовах
+Для документа друкується зазначене представлення</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ListChoiceMode>true</ListChoiceMode>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Доверенность</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>uk</v8:lang>
+																<v8:content>Довіреність</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Доверенность</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Документ удостоверяющий личность</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>uk</v8:lang>
+																<v8:content>Документ, що посвідчує особу</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Паспорт</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Другой документ</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>uk</v8:lang>
+																<v8:content>Інший документ</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Прочее</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="ДоверенностьВидДокументаКонтекстноеМеню" id="176"/>
+											<ExtendedTooltip name="ДоверенностьВидДокументаРасширеннаяПодсказка" id="177"/>
+											<Events>
+												<Event name="OnChange">ДоверенностьВидДокументаПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ДоверенностьАльтернативныйВидДокумента" id="178">
+											<DataPath>ДоверенностьАльтернативныйВидДокумента</DataPath>
+											<Enabled>false</Enabled>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Представление документа выводимое на печать</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Представлення документа, що друкується</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ContextMenu name="ДоверенностьАльтернативныйВидДокументаКонтекстноеМеню" id="179"/>
+											<ExtendedTooltip name="ДоверенностьАльтернативныйВидДокументаРасширеннаяПодсказка" id="180"/>
+										</InputField>
+										<UsualGroup name="ГруппаДоверенностьНомерДата" id="18">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Номер и дата доверенности</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Номер і дата довіреності</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаДоверенностьНомерДатаExtendedTooltip" id="125"/>
+											<ChildItems>
+												<InputField name="ДоверенностьСерия" id="151">
+													<DataPath>ДоверенностьСерия</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Серия</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>uk</v8:lang>
+															<v8:content>Серія</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ДоверенностьСерияКонтекстноеМеню" id="152"/>
+													<ExtendedTooltip name="ДоверенностьСерияРасширеннаяПодсказка" id="153"/>
+												</InputField>
+												<InputField name="ДоверенностьНомер" id="19">
+													<DataPath>ДоверенностьНомер</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Номер</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>uk</v8:lang>
+															<v8:content>Номер</v8:content>
+														</v8:item>
+													</Title>
+													<Width>14</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ContextMenu name="ДоверенностьНомерКонтекстноеМеню" id="20"/>
+													<ExtendedTooltip name="ДоверенностьНомерExtendedTooltip" id="126"/>
+												</InputField>
+												<InputField name="ДоверенностьДата" id="21">
+													<DataPath>ДоверенностьДата</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>от</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>uk</v8:lang>
+															<v8:content>від</v8:content>
+														</v8:item>
+													</Title>
+													<Width>9</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ContextMenu name="ДоверенностьДатаКонтекстноеМеню" id="22"/>
+													<ExtendedTooltip name="ДоверенностьДатаExtendedTooltip" id="127"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+										<InputField name="ДоверенностьВыдана" id="23">
+											<DataPath>ДоверенностьВыдана</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Кем выдана</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Ким видана</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДоверенностьВыданаКонтекстноеМеню" id="24"/>
+											<ExtendedTooltip name="ДоверенностьВыданаExtendedTooltip" id="128"/>
+										</InputField>
+										<InputField name="ДоверенностьПримечание" id="195">
+											<DataPath>МестоСоставленияДокумента</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Примечание</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Примітка</v8:content>
+												</v8:item>
+											</Title>
+											<Width>1</Width>
+											<ContextMenu name="ДоверенностьПримечаниеКонтекстноеМеню" id="196"/>
+											<ExtendedTooltip name="ДоверенностьПримечаниеРасширеннаяПодсказка" id="197"/>
+										</InputField>
+										<LabelDecoration name="ДоверенностьПримечаниеДекорация" id="198">
+											<Width>44</Width>
+											<TextColor>style:FieldSelectionBackColor</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Примечание - дополнительная информация выводимая на печать. Например, серия и номер свидетельства о регистрации СПД</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Примітка - додаткова інформація, що виводиться на друк. Наприклад, серія та номер свідоцтва про реєстрацію СПД</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДоверенностьПримечаниеДекорацияКонтекстноеМеню" id="199"/>
+											<ExtendedTooltip name="ДоверенностьПримечаниеДекорацияРасширеннаяПодсказка" id="200"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ОснованиеИзменено" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основание изменено</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Підстава змінено</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="АдресДоставки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес доставки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Адреса доставки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="БанковскийСчетГрузоотправителя" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Банковский счет грузоотправителя</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Банківський рахунок вантажовідправника</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.БанковскиеСчетаКонтрагентов</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="БанковскийСчетГрузополучателя" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Банковский счет грузоотправителя</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Банківський рахунок вантажовідправника</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.БанковскиеСчетаКонтрагентов</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="БанковскийСчетКонтрагента" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Банковский счет грузоотправителя</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Банківський рахунок вантажовідправника</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.БанковскиеСчетаКонтрагентов</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Грузоотправитель" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Грузоотправитель</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Відправник вантажу</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Грузополучатель" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Грузополучатель</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Вантажоодержувач</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ДоверенностьВыдана" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доверенность выдана</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Довіреність видана</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ДоверенностьДата" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доверенность дата</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Довіреність дата</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ДоверенностьНомер" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доверенность номер</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Довіреність номер</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>11</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Партнер" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Партнер</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Партнер</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Партнеры</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="СохранитьПараметры" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить параметры</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Зберегти параметри</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Контрагент" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Контрагент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ТипОбъекта" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип объекта</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Тип об'єкта</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПродажаПоЗаказам" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Продажа по заказам</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Продаж по замовленню</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РеализацияПоЗаказам" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реализация по заказам</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Реалізація по замовленнях</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="БанковскийСчетОрганизацииПолучателя" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Счет получателя</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Рахунок одержувача</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.БанковскиеСчетаОрганизаций</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ОрганизацияПолучатель" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация получатель</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Організація одержувач</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Организация" id="35">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Організація</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Дата" id="36">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Дата</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="БанковскийСчетОрганизации" id="39">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Банковский счет организации</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Банківський рахунок організації</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.БанковскиеСчетаОрганизаций</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗакрытьФормуПринудительно" id="44">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть форму принудительно</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Закрити форму примусово</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредставительКонтрагента" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Представитель контрагента</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Представник контрагента</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>250</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ТолькоПросмотр" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Только просмотр</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Тільки перегляд</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="АдресОбъектаВоВременномХранилище" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес объекта во временном хранилище</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Адреса об'єкта у тимчасовому сховищі</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДоверенностьСерия" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доверенность серия</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Довіреність серія</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>3</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПредставительОрганизации" id="15">
+			<Type>
+				<v8:Type>cfg:CatalogRef.ФизическиеЛица</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПредставительОрганизацииДолжность" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Должность</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Посада</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>150</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ДоверенностьВидДокумента" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доверенность вид документа</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Довіреність вид документа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ДоверенностьПримечание" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доверенность примечание</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Довіреність примітка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>250</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ДоверенностьАльтернативныйВидДокумента" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид документа</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Вид документу</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВидыДокументовФизическихЛиц</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="МестоСоставленияДокумента" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Место составления документа</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Місце складання документа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>300</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Склад" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Склад</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Склад</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Склады</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Менеджер" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Менеджер</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Менеджер</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредставительОрганизацииПолучателя" id="26">
+			<Type>
+				<v8:Type>cfg:CatalogRef.ФизическиеЛица</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПредставительОрганизацииПолучателяДолжность" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Должность</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Посада</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>150</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПолучилПоДругомуДокументу" id="33">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получил по другому документу</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Отримав по іншому документу</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОК" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОК</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Отмена" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Відмінити</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Відмінити</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Отмена</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="Партнер">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Партнеры</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="Грузоотправитель">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="Грузополучатель">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="БанковскийСчетГрузоотправителя">
+			<Type>
+				<v8:Type>cfg:CatalogRef.БанковскиеСчетаКонтрагентов</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="БанковскийСчетГрузополучателя">
+			<Type>
+				<v8:Type>cfg:CatalogRef.БанковскиеСчетаКонтрагентов</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="БанковскийСчетКонтрагента">
+			<Type>
+				<v8:Type>cfg:CatalogRef.БанковскиеСчетаКонтрагентов</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="ДоверенностьНомер">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>11</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="ДоверенностьДата">
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="ДоверенностьВыдана">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="Контрагент">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="ТолькоПросмотр">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="ТипОбъекта">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="ПродажаПоЗаказам">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="РеализацияПоЗаказам">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="НеПоказыватьРеквизиты">
+			<Type/>
+		</Parameter>
+		<Parameter name="БанковскийСчетОрганизацииПолучателя">
+			<Type>
+				<v8:Type>cfg:CatalogRef.БанковскиеСчетаОрганизаций</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="АдресДоставки">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>500</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="МестоСоставленияДокумента">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>300</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="ПредставительКонтрагента">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>250</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="Перевозчик">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="Автомобиль">
+			<Type>
+				<v8:Type>cfg:CatalogRef.ТранспортныеСредства</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="Водитель">
+			<Type>
+				<v8:Type>cfg:CatalogRef.ФизическиеЛица</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="АдресОбъектаВоВременномХранилище">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="ДоверенностьСерия">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>3</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="ДоверенностьПримечание">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>250</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="ПредставительОрганизации">
+			<Type>
+				<v8:Type>cfg:CatalogRef.ФизическиеЛица</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="ПредставительОрганизацииДолжность">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>150</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="Склад">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Склады</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="Менеджер">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="ДоверенностьАльтернативныйВидДокумента">
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВидыДокументовФизическихЛиц</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="ПредставительОрганизацииПолучателя">
+			<Type>
+				<v8:Type>cfg:CatalogRef.ФизическиеЛица</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="ПредставительОрганизацииДолжностьПолучателя">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>150</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="ПредставительОрганизацииПолучателяДолжность">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>150</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="ПолучилПоДругомуДокументу">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

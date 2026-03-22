@@ -1,0 +1,595 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<Customizable>false</Customizable>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<ChildItems>
+			<Button name="ФормаЗаполнитьПоУмолчанию" id="161">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ЗаполнитьПоУмолчанию</CommandName>
+				<ExtendedTooltip name="ФормаЗаполнитьПоУмолчаниюРасширеннаяПодсказка" id="162"/>
+			</Button>
+			<Button name="КнопкаОК" id="98">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>Form.Command.ОК</CommandName>
+				<ExtendedTooltip name="КнопкаОКExtendedTooltip" id="133"/>
+			</Button>
+			<Button name="Отмена" id="122">
+				<Type>CommandBarButton</Type>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>Form.StandardCommand.Cancel</CommandName>
+				<ExtendedTooltip name="ОтменаExtendedTooltip" id="134"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="96">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаExtendedTooltip" id="136"/>
+			<ChildItems>
+				<InputField name="Поле1" id="137">
+					<DataPath>Поле1</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поле 1</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Поле 1</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>печатается служебный код (знак) "*" (признак платежа);</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>друкується службовий код (знак) "*" (ознака платежу);</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<ContextMenu name="Поле1КонтекстноеМеню" id="138"/>
+					<ExtendedTooltip name="Поле1РасширеннаяПодсказка" id="139"/>
+					<Events>
+						<Event name="OnChange">ПолеПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="Поле2" id="140">
+					<DataPath>Поле2</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поле 2</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Поле 2</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>разделительный знак ";", печатается код вида уплаты (формат ссс - трехзначное число)</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>розділовий знак ";", друкується код виду сплати (формат ссс - тризначне число)</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<ChoiceListButton>true</ChoiceListButton>
+					<ContextMenu name="Поле2КонтекстноеМеню" id="141"/>
+					<ExtendedTooltip name="Поле2РасширеннаяПодсказка" id="142"/>
+					<Events>
+						<Event name="OnChange">ПолеПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="Поле3" id="143">
+					<DataPath>Поле3</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поле 3</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Поле 3</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>печатается разделительный знак ";";
+
+печатается один из нижеследующих реквизитов:
+
+а) код клиента по ЕДРПОУ (дополняется слева нулями до восьми цифр, если значащих цифр меньше 8);
+
+б) регистрационный номер учетной карточки налогоплательщика  - физического лица (всегда имеет 10 цифр) или серия и номер паспорта гражданина Украины, если плательщик через свои религиозные убеждения отказался от принятия регистрационного номера учетной карточки налогоплательщика  и сообщил об этом соответствующий орган Министерства доходов и собрания Украины (далее - Миндоходов) и имеет соответствующую отметку в паспорте;
+
+в) регистрационный (учетный) номер налогоплательщика , который присваивается Миндоходов (всегда имеет 9 цифр);
+
+в случае осуществления налогоплательщиком  - юридическим лицом уплаты за обособленое подразделение печатается код по ЕДРПОУ обособленого подразделения, за который осуществляется такая уплата
+</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>друкується розділовий знак ";";
+
+друкується один з наступних реквізитів:
+
+а) код клієнта за ЄДРПОУ (доповнюється зліва нулями до восьми цифр, якщо значущих цифр менше 8);
+
+б) реєстраційний номер облікової картки платника податків - фізичної особи (завжди має 10 цифр) або серія та номер паспорта громадянина України, якщо платник через свої релігійні переконання відмовився від прийняття реєстраційного номера облікової картки платника податків та повідомив про це відповідний орган Міністерства доходів і зборів України (далі - Міндоходів) і має відповідну відмітку у паспорті;
+
+в) реєстраційний (обліковий) номер платника податків , який присвоюється Міндоходів (завжди має 9 цифр);
+
+у разі здійснення платником податків - юридичною особою сплати за відокремлений підрозділ друкується код за ЄДРПОУ відокремленого підрозділу, за який здійснюється така сплата
+</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<ContextMenu name="Поле3КонтекстноеМеню" id="144"/>
+					<ExtendedTooltip name="Поле3РасширеннаяПодсказка" id="145"/>
+					<Events>
+						<Event name="OnChange">ПолеПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="Поле4" id="146">
+					<DataPath>Поле4</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поле 4</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Поле 4</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>печатается разделительный знак ";";
+
+печатается разъяснительная информация о назначении платежа в произвольной форме. Количество знаков, учитывая указанные выше поля и разделительные знаки, ограниченная длиной поля "Назначение платежа" электронного расчетного документа системы электронных платежей Национального банка Украины, при этом использование символа ";" не допускается;
+
+в случае уплаты платежа в бюджет в иностранной валюте обязательно указывается код классификации доходов бюджета.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>друкується розділовий знак ";";
+
+друкується роз'яснювальна інформація про призначення платежу в довільній формі. Кількість знаків, враховуючи зазначені вище поля і розділові знаки, обмежена довжиною поля "Призначення платежу" електронного розрахункового документа системи електронних платежів Національного банку України, при цьому використання символу ";" не допускається;
+
+у разі сплати платежу до бюджету в іноземній валюті обов'язково вказується код класифікації доходів бюджету.</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<ContextMenu name="Поле4КонтекстноеМеню" id="147"/>
+					<ExtendedTooltip name="Поле4РасширеннаяПодсказка" id="148"/>
+					<Events>
+						<Event name="OnChange">ПолеПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="Поле5" id="149">
+					<DataPath>Поле5</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поле 5</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Поле 5</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>печатается разделительный знак ";";
+
+печатается дата вывода, на основании которого осуществляется возмещения НДС или возвращение средств, по ошибке или чрезмерно зачисленных в бюджет (формат - ДД.ММ.ГГГГ). Налогоплательщиком  поле N 5 не заполняется;</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>друкується розділовий знак ";";
+
+друкується дата виведення, на підставі якого здійснюється відшкодування ПДВ або повернення коштів, помилково або надміру зарахованих до бюджету (формат - ДД.ММ.РРРР). Платником податків поле N 5 не заповнюється;</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<ContextMenu name="Поле5КонтекстноеМеню" id="150"/>
+					<ExtendedTooltip name="Поле5РасширеннаяПодсказка" id="151"/>
+					<Events>
+						<Event name="OnChange">ПолеПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="Поле6" id="152">
+					<DataPath>Поле6</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поле 6</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Поле 6</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>печатается разделительный знак ";";
+
+печатается номер вывода, на основании которого осуществляется возмещения НДС или возвращение средств, по ошибке или чрезмерно зачисленных в бюджет. Налогоплательщиком  поле N 6 не заполняется</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>друкується розділовий знак ";";
+
+друкується номер висновку, на підставі якого здійснюється відшкодування ПДВ або повернення коштів, помилково або надмірно зарахованих до бюджету. Платником податків поле N 6 не заповнюється</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<ContextMenu name="Поле6КонтекстноеМеню" id="153"/>
+					<ExtendedTooltip name="Поле6РасширеннаяПодсказка" id="154"/>
+					<Events>
+						<Event name="OnChange">ПолеПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="Поле7" id="155">
+					<DataPath>Поле7</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поле 7</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Поле 7</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>печатается разделительный знак ";";
+
+резервное поле. Заполняется налогоплательщиками  и/или органами Государственной казначейской службы Украины (органами Миндоходов) в случае осуществления расчетов согласно  отдельным решениям Кабинета Министров Украины ит.п. По обыкновению не заполняется</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>друкується розділовий знак ";";
+
+резервне поле. Заповнюється платниками податків та/або органами Державної казначейської служби України (органами Міндоходів) у разі здійснення розрахунків згідно з окремими рішеннями Кабінету Міністрів України та ін. Зазвичай не заповнюється</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<ContextMenu name="Поле7КонтекстноеМеню" id="156"/>
+					<ExtendedTooltip name="Поле7РасширеннаяПодсказка" id="157"/>
+					<Events>
+						<Event name="OnChange">ПолеПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="НазначениеПлатежа" id="158">
+					<DataPath>НазначениеПлатежа</DataPath>
+					<TitleLocation>Top</TitleLocation>
+					<MultiLine>true</MultiLine>
+					<ContextMenu name="НазначениеПлатежаКонтекстноеМеню" id="159"/>
+					<ExtendedTooltip name="НазначениеПлатежаРасширеннаяПодсказка" id="160"/>
+					<Events>
+						<Event name="OnChange">НазначениеПлатежаПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Поле1" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поле1</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Поле1</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Поле2" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поле2</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Поле2</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Поле3" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поле3</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Поле3</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Поле4" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поле4</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Поле4</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Поле5" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поле5</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Поле5</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Поле6" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поле6</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Поле6</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Поле7" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поле7</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Поле7</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="КодОрганизации" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код организации</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Код організації</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>15</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Счет" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Счет</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Рахунок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="НазначениеПлатежа" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назначение платежа</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Призначення платежу</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="СчетПолучателя" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Счет получателя</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Рахунок одержувача</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.БанковскиеСчетаКонтрагентов</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОК" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Use>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+			</Use>
+			<Action>ОК</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗаполнитьПоУмолчанию" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>По умолчанию</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>По умовчанню</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по умолчанию</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Заповнити по умовчанню</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Use>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+			</Use>
+			<Action>ЗаполнитьПоУмолчанию</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="Ссылка">
+			<Type>
+				<v8:TypeSet>cfg:DocumentRef</v8:TypeSet>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+	</Parameters>
+</Form>

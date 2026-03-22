@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<CommandsVisibility>
+		<Command name="CommonCommand.ПанельОтчетовЗакупки">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.ОтчетыМенеджераПоПродажам">true</xr:Value>
+				<xr:Value name="Role.ОтчетыМенеджераПоОбеспечениюПотребностей">true</xr:Value>
+				<xr:Value name="Role.ОтчетыРуководителяОтделаПродаж">true</xr:Value>
+				<xr:Value name="Role.ОтчетыИОбработкиБухгалтера">true</xr:Value>
+				<xr:Value name="Role.ОтчетыИОбработкиКладовщика">true</xr:Value>
+				<xr:Value name="Role.ОтчетыИОбработкиМенеджераПоЗакупкам">true</xr:Value>
+				<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+				<xr:Value name="Role.ОтчетыИОбработкиКазначея">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="DocumentJournal.РеестрТорговыхДокументов.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="CommonCommand.ДополнительныеОтчетыЗакупки">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.КонтактнаяИнформация.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.РеестрТорговыхДокументов.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="0:763393c8-1cc0-4b23-9d1d-6cb97d0ccd02">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="0:343cc7ff-097b-4398-ab8b-70b3ad55f5d8">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="0:5c066588-f698-4fa0-b0ce-f5a5098d2809">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+	</CommandsVisibility>
+	<CommandsPlacement>
+		<Command name="DocumentJournal.РеестрТорговыхДокументов.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+	</CommandsPlacement>
+	<CommandsOrder>
+		<Command name="CommonCommand.ПанельОтчетовЗакупки">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="0:f983a3ee-54af-4db9-80d3-7560dabdb359">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="DocumentJournal.РеестрТорговыхДокументов.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.ДополнительныеОбработкиЗакупки">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="0:67fe8a25-64bc-4167-b0e5-a8c1a69c1858">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="0:763393c8-1cc0-4b23-9d1d-6cb97d0ccd02">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="0:343cc7ff-097b-4398-ab8b-70b3ad55f5d8">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="0:5c066588-f698-4fa0-b0ce-f5a5098d2809">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+	</CommandsOrder>
+	<SubsystemsOrder>
+		<Subsystem>Subsystem.Закупки.Subsystem.НСИЗакупок</Subsystem>
+		<Subsystem>Subsystem.Закупки.Subsystem.УсловияЗакупок</Subsystem>
+		<Subsystem>Subsystem.Закупки.Subsystem.Закупки</Subsystem>
+		<Subsystem>Subsystem.Закупки.Subsystem.РасчетыСПоставщиками</Subsystem>
+		<Subsystem>Subsystem.Закупки.Subsystem.КомиссионныеЗакупки</Subsystem>
+		<Subsystem>ebe93eca-50e6-452a-a83e-8294ac2e7f24</Subsystem>
+		<Subsystem>Subsystem.Закупки.Subsystem.МногооборотнаяТара</Subsystem>
+		<Subsystem>Subsystem.Закупки.Subsystem.Запасы</Subsystem>
+		<Subsystem>Subsystem.Закупки.Subsystem.РаботаСПоставщиками</Subsystem>
+	</SubsystemsOrder>
+	<GroupsOrder>
+		<Group>NavigationPanelOrdinary</Group>
+		<Group>NavigationPanelSeeAlso</Group>
+		<Group>ActionsPanelTools</Group>
+	</GroupsOrder>
+</CommandInterface>

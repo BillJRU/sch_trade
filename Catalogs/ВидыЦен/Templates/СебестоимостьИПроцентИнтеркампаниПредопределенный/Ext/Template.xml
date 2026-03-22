@@ -1,0 +1,774 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>Запрос</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Номенклатура</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Номенклатура</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Характеристика</dataPath>
+			<field>Характеристика</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Характеристика</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Характеристика</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.ХарактеристикиНоменклатуры</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АналитикаУчетаНоменклатуры</dataPath>
+			<field>АналитикаУчетаНоменклатуры</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аналитика учета номенклатуры</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Аналітика обліку номенклатури</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОрганизацияВладелец</dataPath>
+			<field>ОрганизацияВладелец</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация владелец</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Організація власник</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Цена</dataPath>
+			<field>Цена</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цена</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Ціна</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>0</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Коэффициент</dataPath>
+			<field>Коэффициент</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Коэффициент</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Коефіцієнт</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>0</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Упаковка</dataPath>
+			<field>Упаковка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Упаковка</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Упаковка</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.УпаковкиЕдиницыИзмерения</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Валюта</dataPath>
+			<field>Валюта</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Валюта</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Валюта</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Валюты</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СегментНоменклатуры</dataPath>
+			<field>СегментНоменклатуры</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сегмент номенклатуры</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Сегмент номенклатури</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ХозяйственнаяОперация</dataPath>
+			<field>ХозяйственнаяОперация</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Хозяйственная операция</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Господарська операція</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НаправлениеДеятельностиКонтрагента</dataPath>
+			<field>НаправлениеДеятельностиКонтрагента</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Направление деятельности контрагента</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Напрям діяльності контрагента</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АналитикаУчетаНаборов</dataPath>
+			<field>АналитикаУчетаНаборов</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аналитика учета наборов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Аналітика обліку наборів</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Менеджер</dataPath>
+			<field>Менеджер</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Менеджер</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Менеджер</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОрганизацияПродавец</dataPath>
+			<field>ОрганизацияПродавец</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация продавец</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Організація продавець</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Соглашение</dataPath>
+			<field>Соглашение</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Соглашение</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Оферта</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Договор</dataPath>
+			<field>Договор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Договор</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Договір</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидЗапасов</dataPath>
+			<field>ВидЗапасов</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид запасов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Вид запасів</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Склад</dataPath>
+			<field>Склад</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Склад</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Склад</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаказКлиента</dataPath>
+			<field>ЗаказКлиента</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказ клиента</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Замовлення клієнта</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НаправлениеДеятельностиНоменклатуры</dataPath>
+			<field>НаправлениеДеятельностиНоменклатуры</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Направление деятельности номенклатуры</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Напрям діяльності номенклатури</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипЗапасов</dataPath>
+			<field>ТипЗапасов</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип запасов или услуга</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Тип запасів або послуга</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подразделение</dataPath>
+			<field>Подразделение</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подразделение</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Підрозділ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АналитикаУчетаПоПартнерам</dataPath>
+			<field>АналитикаУчетаПоПартнерам</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аналитика учета по партнерам</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Аналітика обліку за партнерами</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидДеятельностиНДС</dataPath>
+			<field>ВидДеятельностиНДС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид деятельности НДС</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Вид діяльності ПДВ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АналитикаУчетаПартий</dataPath>
+			<field>АналитикаУчетаПартий</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аналитика учета партий</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Аналітика обліку партій</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АналитикаФинансовогоУчета</dataPath>
+			<field>АналитикаФинансовогоУчета</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аналитика финансового учета</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Аналітика фінансового обліку</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Партия</dataPath>
+			<field>Партия</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Партия</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Партія</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РазделУчета</dataPath>
+			<field>РазделУчета</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Раздел учета</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Розділ обліку</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Організація</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗЛИЧНЫЕ
+	Сегменты.Номенклатура КАК Номенклатура,
+	Сегменты.Характеристика КАК Характеристика,
+	ИСТИНА КАК ИспользуетсяОтборПоСегментуНоменклатуры
+ПОМЕСТИТЬ ОтборПоСегментуНоменклатуры
+ИЗ
+	РегистрСведений.НоменклатураСегмента КАК Сегменты
+{ГДЕ
+	Сегменты.Сегмент.* КАК СегментНоменклатуры,
+	Сегменты.Номенклатура.* КАК Номенклатура,
+	Сегменты.Характеристика.* КАК Характеристика}
+
+ИНДЕКСИРОВАТЬ ПО
+	Сегменты.Номенклатура,
+	Сегменты.Характеристика,
+	ИспользуетсяОтборПоСегментуНоменклатуры
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Резервы.Регистратор КАК Регистратор,
+	Резервы.Организация КАК ОрганизацияВладелец,
+	Резервы.КорОрганизация КАК ОрганизацияПродавец,
+	Резервы.АналитикаУчетаНоменклатуры.Номенклатура КАК Номенклатура,
+	Резервы.АналитикаУчетаНоменклатуры.Характеристика КАК Характеристика,
+	Резервы.АналитикаУчетаНоменклатуры.МестоХранения КАК Склад,
+	СУММА(Резервы.Количество) КАК Количество
+ПОМЕСТИТЬ РезервыЗаПериод
+ИЗ
+	РегистрНакопления.РезервыТоваровОрганизаций КАК Резервы
+ГДЕ
+	Резервы.Количество &gt; 0
+	И Резервы.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Приход)
+	И НЕ &amp;ИспользуетсяОтборПоСегментуНоменклатуры
+	И Резервы.Период МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+
+СГРУППИРОВАТЬ ПО
+	Резервы.Регистратор,
+	Резервы.Организация,
+	Резервы.КорОрганизация,
+	Резервы.АналитикаУчетаНоменклатуры.Номенклатура,
+	Резервы.АналитикаУчетаНоменклатуры.Характеристика,
+	Резервы.АналитикаУчетаНоменклатуры.МестоХранения
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	Резервы.Регистратор,
+	Резервы.Организация,
+	Резервы.КорОрганизация,
+	Резервы.АналитикаУчетаНоменклатуры.Номенклатура,
+	Резервы.АналитикаУчетаНоменклатуры.Характеристика,
+	Резервы.АналитикаУчетаНоменклатуры.МестоХранения,
+	СУММА(Резервы.Количество)
+ИЗ
+	РегистрНакопления.РезервыТоваровОрганизаций КАК Резервы
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ОтборПоСегментуНоменклатуры КАК ОтборПоСегменту
+		ПО (Резервы.АналитикаУчетаНоменклатуры.Номенклатура = ОтборПоСегменту.Номенклатура)
+			И (Резервы.АналитикаУчетаНоменклатуры.Характеристика = ОтборПоСегменту.Характеристика)
+ГДЕ
+	Резервы.Количество &gt; 0
+	И Резервы.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Приход)
+	И &amp;ИспользуетсяОтборПоСегментуНоменклатуры
+	И Резервы.Период МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+
+СГРУППИРОВАТЬ ПО
+	Резервы.Регистратор,
+	Резервы.Организация,
+	Резервы.КорОрганизация,
+	Резервы.АналитикаУчетаНоменклатуры.Номенклатура,
+	Резервы.АналитикаУчетаНоменклатуры.Характеристика,
+	Резервы.АналитикаУчетаНоменклатуры.МестоХранения
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Резервы.ОрганизацияВладелец КАК ОрганизацияВладелец,
+	Резервы.ОрганизацияПродавец КАК ОрганизацияПродавец,
+	Резервы.Номенклатура КАК Номенклатура,
+	Резервы.Характеристика КАК Характеристика,
+	Резервы.Склад КАК Склад,
+	СУММА(Резервы.Количество) КАК Количество,
+	СУММА(Резервы.Количество) * МАКСИМУМ(ВЫБОР
+			КОГДА ЕСТЬNULL(ВидыЦен.ЦенаВключаетНДС, ЛОЖЬ)
+				ТОГДА Выручка.СуммаВыручкиОборот
+			ИНАЧЕ Выручка.СуммаВыручкиБезНДСОборот
+		КОНЕЦ) / МАКСИМУМ(Выручка.КоличествоОборот) КАК СуммаВыручки
+ПОМЕСТИТЬ Выручка
+ИЗ
+	РегистрНакопления.ВыручкаИСебестоимостьПродаж.Обороты({(&amp;НачалоПериода)}, {(&amp;КонецПериода)}, Авто, {((АналитикаУчетаНоменклатуры.Номенклатура, АналитикаУчетаНоменклатуры.Характеристика) В
+			    (ВЫБРАТЬ
+			        ОтборПоСегментуНоменклатуры.Номенклатура,
+			        ОтборПоСегментуНоменклатуры.Характеристика
+			    ИЗ
+			        ОтборПоСегментуНоменклатуры
+			    ГДЕ
+			        ОтборПоСегментуНоменклатуры.ИспользуетсяОтборПоСегментуНоменклатуры = &amp;ИспользуетсяОтборПоСегментуНоменклатуры))}) КАК Выручка
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РезервыЗаПериод КАК Резервы
+		ПО Выручка.Регистратор = Резервы.Регистратор
+			И (Выручка.АналитикаУчетаНоменклатуры.Номенклатура = Резервы.Номенклатура)
+			И (Выручка.АналитикаУчетаНоменклатуры.Характеристика = Резервы.Характеристика)
+			И (Выручка.АналитикаУчетаНоменклатуры.МестоХранения = Резервы.Склад)
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ВидыЦен КАК ВидыЦен
+		ПО (ВидыЦен.Ссылка = &amp;ВидЦены)
+
+СГРУППИРОВАТЬ ПО
+	Резервы.ОрганизацияВладелец,
+	Резервы.ОрганизацияПродавец,
+	Резервы.Номенклатура,
+	Резервы.Характеристика,
+	Резервы.Склад
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	1 КАК Коэффициент,
+	Выручка.Номенклатура КАК Номенклатура,
+	Выручка.Характеристика КАК Характеристика,
+	ЗНАЧЕНИЕ(Справочник.УпаковкиЕдиницыИзмерения.ПустаяСсылка) КАК Упаковка,
+	Константы.ВалютаУправленческогоУчета КАК Валюта,
+	ВЫБОР
+		КОГДА ВидыЦен.ЦенаВключаетНДС
+			ТОГДА ЕСТЬNULL(СтоимостьТоваровСрезПоследних.Стоимость, 0) + ЕСТЬNULL(СтоимостьТоваровСрезПоследних.СтоимостьЗабалансовая, 0) + ЕСТЬNULL(СтоимостьТоваровСрезПоследних.СтоимостьДопРасходы, 0) + ЕСТЬNULL(СтоимостьТоваровСрезПоследних.Трудозатраты, 0) + ЕСТЬNULL(СтоимостьТоваровСрезПоследних.ПостатейныеПостоянныеСНДС, 0) + ЕСТЬNULL(СтоимостьТоваровСрезПоследних.ПостатейныеПеременныеСНДС, 0)
+		ИНАЧЕ ЕСТЬNULL(СтоимостьТоваровСрезПоследних.СтоимостьБезНДС, 0) + ЕСТЬNULL(СтоимостьТоваровСрезПоследних.СтоимостьДопРасходыБезНДС, 0) + ЕСТЬNULL(СтоимостьТоваровСрезПоследних.Трудозатраты, 0) + ЕСТЬNULL(СтоимостьТоваровСрезПоследних.ПостатейныеПостоянныеБезНДС, 0) + ЕСТЬNULL(СтоимостьТоваровСрезПоследних.ПостатейныеПеременныеБезНДС, 0) + (ВЫРАЗИТЬ(ЕСТЬNULL(СтоимостьТоваровСрезПоследних.СтоимостьЗабалансовая, 0) - ЕСТЬNULL(СтоимостьТоваровСрезПоследних.СтоимостьЗабалансовая, 0) * (Выручка.Номенклатура.СтавкаНДС.Ставка / Выручка.Номенклатура.СтавкаНДС.Ставка + 100) КАК ЧИСЛО(31,2)))
+	КОНЕЦ * (100 + &amp;Процент) / 100 КАК Цена
+{ВЫБРАТЬ
+	Коэффициент,
+	Цена,
+	Номенклатура.*,
+	Характеристика.*,
+	Упаковка.*,
+	Валюта.*}
+ИЗ
+	Выручка КАК Выручка
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.СтоимостьТоваров.СрезПоследних({(&amp;ДатаДокумента)}, {((АналитикаУчетаНоменклатуры.Номенклатура, АналитикаУчетаНоменклатуры.Характеристика) В
+				    (ВЫБРАТЬ
+				        ОтборПоСегментуНоменклатуры.Номенклатура,
+				        ОтборПоСегментуНоменклатуры.Характеристика
+				    ИЗ
+				        ОтборПоСегментуНоменклатуры
+				    ГДЕ
+				        ОтборПоСегментуНоменклатуры.ИспользуетсяОтборПоСегментуНоменклатуры = &amp;ИспользуетсяОтборПоСегментуНоменклатуры))}) КАК СтоимостьТоваровСрезПоследних
+		ПО Выручка.ОрганизацияПродавец = СтоимостьТоваровСрезПоследних.Организация
+			И Выручка.Номенклатура = СтоимостьТоваровСрезПоследних.АналитикаУчетаНоменклатуры.Номенклатура
+			И Выручка.Характеристика = СтоимостьТоваровСрезПоследних.АналитикаУчетаНоменклатуры.Характеристика
+			И Выручка.Склад = СтоимостьТоваровСрезПоследних.АналитикаУчетаНоменклатуры.МестоХранения
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Константы КАК Константы
+		ПО (ИСТИНА)
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ВидыЦен КАК ВидыЦен
+		ПО (ВидыЦен.Ссылка = &amp;ВидЦены)
+{ГДЕ
+	Выручка.Номенклатура.*,
+	Выручка.Характеристика.*,
+	Выручка.ОрганизацияВладелец.*,
+	Выручка.ОрганизацияПродавец.*,
+	Выручка.Склад.*}</query>
+	</dataSet>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>Початок періоду</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<expression>&amp;ПериодПоУмолчанию.ДатаНачала</expression>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>Кінець періоду</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<expression>&amp;ПериодПоУмолчанию.ДатаОкончания</expression>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>Процент</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Процент</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>Відсоток</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:type="xs:decimal">0</value>
+		<useRestriction>false</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ИспользуетсяОтборПоСегментуНоменклатуры</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Используется отбор по сегменту номенклатуры</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>Використовується відбір за сегментом номенклатури</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ВидЦены</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Вид цены</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>Вид ціни</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ВидыЦен</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ДатаДокумента</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата документа</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>Дата документа</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ПериодПоУмолчанию</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период по умолчанию</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>Період по умовчанню</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Основной</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>Основний</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows"/>
+	</settingsVariant>
+</DataCompositionSchema>

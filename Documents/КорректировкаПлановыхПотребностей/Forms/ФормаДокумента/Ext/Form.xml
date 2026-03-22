@@ -1,0 +1,2078 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<CommandSet>
+		<ExcludedCommand>Copy</ExcludedCommand>
+		<ExcludedCommand>Post</ExcludedCommand>
+		<ExcludedCommand>PostAndClose</ExcludedCommand>
+		<ExcludedCommand>Write</ExcludedCommand>
+	</CommandSet>
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаПровестиИЗакрыть" id="137">
+				<Type>CommandBarButton</Type>
+				<Representation>Text</Representation>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ПровестиИЗакрыть</CommandName>
+				<RepresentationInContextMenu>None</RepresentationInContextMenu>
+				<ExtendedTooltip name="ФормаПровестиИЗакрытьРасширеннаяПодсказка" id="138"/>
+			</Button>
+			<Button name="ФормаЗаписать" id="139">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<CommandName>Form.Command.ЗаписатьДокумент</CommandName>
+				<RepresentationInContextMenu>None</RepresentationInContextMenu>
+				<ExtendedTooltip name="ФормаЗаписатьРасширеннаяПодсказка" id="140"/>
+			</Button>
+			<Button name="ФормаПровести" id="141">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<CommandName>Form.Command.ПровестиДокумент</CommandName>
+				<RepresentationInContextMenu>None</RepresentationInContextMenu>
+				<ExtendedTooltip name="ФормаПровестиРасширеннаяПодсказка" id="142"/>
+			</Button>
+			<Popup name="ПодменюСоздатьНаОсновании" id="143">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Создать на основании</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>uk</v8:lang>
+						<v8:content>Створити на підставі</v8:content>
+					</v8:item>
+				</Title>
+				<Picture>
+					<xr:Ref>CommonPicture.ЗаполнитьПоШаблону</xr:Ref>
+					<xr:LoadTransparent>false</xr:LoadTransparent>
+				</Picture>
+				<Representation>Picture</Representation>
+				<ExtendedTooltip name="ПодменюСоздатьНаОснованииРасширеннаяПодсказка" id="144"/>
+				<ChildItems>
+					<ButtonGroup name="ПодменюСоздатьНаОснованииВажное" id="173">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Создать на основании (Важное)</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
+								<v8:content>Створити на підставі (Важливе)</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ПодменюСоздатьНаОснованииВажноеРасширеннаяПодсказка" id="174"/>
+					</ButtonGroup>
+					<ButtonGroup name="ПодменюСоздатьНаОснованииОбычное" id="175">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Создать на основании (Обычное)</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
+								<v8:content>Створити на підставі (Звичайне)</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ПодменюСоздатьНаОснованииОбычноеРасширеннаяПодсказка" id="176"/>
+					</ButtonGroup>
+					<ButtonGroup name="ПодменюСоздатьНаОснованииСмТакже" id="177">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Создать на основании (См. также)</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
+								<v8:content>Створити на підставі (Див. також)</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ПодменюСоздатьНаОснованииСмТакжеРасширеннаяПодсказка" id="178"/>
+					</ButtonGroup>
+				</ChildItems>
+			</Popup>
+			<ButtonGroup name="ФормаГлобальныеКоманды" id="145">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Форма глобальные команды</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>uk</v8:lang>
+						<v8:content>Форма глобальні команди</v8:content>
+					</v8:item>
+				</Title>
+				<CommandSource>FormCommandPanelGlobalCommands</CommandSource>
+				<ExtendedTooltip name="ФормаГлобальныеКомандыРасширеннаяПодсказка" id="146"/>
+			</ButtonGroup>
+			<Popup name="ПодменюОтчеты" id="147">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Отчеты</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>uk</v8:lang>
+						<v8:content>Звіти</v8:content>
+					</v8:item>
+				</Title>
+				<Picture>
+					<xr:Ref>CommonPicture.Отчеты</xr:Ref>
+					<xr:LoadTransparent>false</xr:LoadTransparent>
+				</Picture>
+				<Representation>PictureAndText</Representation>
+				<ExtendedTooltip name="ПодменюОтчетыРасширеннаяПодсказка" id="148"/>
+				<ChildItems>
+					<ButtonGroup name="ПодменюОтчетыВажное" id="149">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Подменю отчеты важное</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
+								<v8:content>Підменю звіти важливе</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ПодменюОтчетыВажноеРасширеннаяПодсказка" id="150"/>
+					</ButtonGroup>
+					<ButtonGroup name="ПодменюОтчетыОбычное" id="151">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Подменю отчеты обычное</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
+								<v8:content>Підменю звіти звичайне</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Подменю отчеты важное</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
+								<v8:content>Підменю звіти важливе</v8:content>
+							</v8:item>
+						</ToolTip>
+						<ExtendedTooltip name="ПодменюОтчетыОбычноеРасширеннаяПодсказка" id="152"/>
+					</ButtonGroup>
+					<ButtonGroup name="ПодменюОтчетыСмТакже" id="153">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Подменю отчеты см также</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
+								<v8:content>Підменю звіти див також</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Подменю отчеты важное</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
+								<v8:content>Підменю звіти важливе</v8:content>
+							</v8:item>
+						</ToolTip>
+						<ExtendedTooltip name="ПодменюОтчетыСмТакжеРасширеннаяПодсказка" id="154"/>
+					</ButtonGroup>
+				</ChildItems>
+			</Popup>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="54">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаExtendedTooltip" id="82"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаШапкаПраво" id="53">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шапка право</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Шапка право</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШапкаПравоExtendedTooltip" id="88"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаСтатус" id="159">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Статус</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Статус</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСтатусРасширеннаяПодсказка" id="160"/>
+							<ChildItems>
+								<InputField name="Статус" id="21">
+									<DataPath>Объект.Статус</DataPath>
+									<TitleLocation>Left</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>15</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>28</MaxWidth>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="СтатусКонтекстноеМеню" id="22"/>
+									<ExtendedTooltip name="СтатусExtendedTooltip" id="89"/>
+								</InputField>
+								<LabelDecoration name="Декорация1" id="521">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Height>1</Height>
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>&lt;img 0:ea868745-71fc-483c-aa6e-f242c06c673f/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;Статус был изменен автоматически при изменении потребности в номенклатуре&lt;/&gt;</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>&lt;img 0:ea868745-71fc-483c-aa6e-f242c06c673f/&gt;&lt;fontsize 10&gt; Статус був змінений автоматично при зміні потреби в номенклатурі &lt;/&gt;</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Декорация1КонтекстноеМеню" id="522"/>
+									<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="523"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="ГруппаСтраницы" id="155">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Сторінки</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="156"/>
+			<ChildItems>
+				<Page name="СтраницаОсновное" id="157">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основное</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Основне</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаОсновноеРасширеннаяПодсказка" id="158"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаОснования" id="200">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Основания</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Підстави</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОснованияРасширеннаяПодсказка" id="201"/>
+							<ChildItems>
+								<LabelField name="ПредставлениеДокументаОснования" id="202">
+									<DataPath>ПредставлениеДокументаОснования</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Основание</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Підстава</v8:content>
+										</v8:item>
+									</Title>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Hiperlink>true</Hiperlink>
+									<ContextMenu name="ПредставлениеДокументаОснованияКонтекстноеМеню" id="203"/>
+									<ExtendedTooltip name="ПредставлениеДокументаОснованияExtendedTooltip" id="204"/>
+									<Events>
+										<Event name="Click">ПредставлениеДокументаОснованияНажатие</Event>
+									</Events>
+								</LabelField>
+								<InputField name="Сценарий" id="205">
+									<DataPath>Объект.Сценарий</DataPath>
+									<TitleLocation>Left</TitleLocation>
+									<Width>30</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="СценарийКонтекстноеМеню" id="206"/>
+									<ExtendedTooltip name="СценарийExtendedTooltip" id="207"/>
+									<Events>
+										<Event name="OnChange">СценарийПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ВидПлана" id="208">
+									<DataPath>Объект.ВидПлана</DataPath>
+									<TitleLocation>Left</TitleLocation>
+									<Width>30</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="ВидПланаКонтекстноеМеню" id="209"/>
+									<ExtendedTooltip name="ВидПланаExtendedTooltip" id="210"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаНомерДата" id="55">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Номер дата</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Номер дата</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНомерДатаExtendedTooltip" id="84"/>
+							<ChildItems>
+								<InputField name="Номер" id="1">
+									<DataPath>Объект.Number</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>10</MaxWidth>
+									<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+									<ExtendedTooltip name="НомерExtendedTooltip" id="85"/>
+								</InputField>
+								<InputField name="Дата" id="3">
+									<DataPath>Объект.Date</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>14</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="ДатаКонтекстноеМеню" id="4"/>
+									<ExtendedTooltip name="ДатаExtendedTooltip" id="86"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="Период" id="272">
+							<DataPath>Объект.Период</DataPath>
+							<ContextMenu name="ПериодКонтекстноеМеню" id="273"/>
+							<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="274"/>
+						</InputField>
+						<InputField name="Ответственный" id="25">
+							<DataPath>Объект.Ответственный</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Ответственный</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Відповідальний</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>29</MaxWidth>
+							<ContextMenu name="ОтветственныйКонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="ОтветственныйExtendedTooltip" id="87"/>
+						</InputField>
+						<UsualGroup name="ГруппаДополнительныеРеквизиты" id="117">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дополнительные реквизиты</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Додаткові реквізити</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаДополнительныеРеквизитыExtendedTooltip" id="118"/>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаКорректировкаПотребностей" id="211">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Корректировка потребностей</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Коригування потреб</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница корректировка потребностей</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Сторінка коригування потреб</v8:content>
+						</v8:item>
+					</ToolTip>
+					<TitleDataPath>54</TitleDataPath>
+					<ExtendedTooltip name="СтраницаКорректировкаПотребностейРасширеннаяПодсказка" id="212"/>
+					<ChildItems>
+						<RadioButtonField name="РежимВводаКорректировки" id="440">
+							<DataPath>РежимВводаКорректировки</DataPath>
+							<RadioButtonType>Tumbler</RadioButtonType>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Один к одному</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>uk</v8:lang>
+												<v8:content>Один до одного</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">0</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Многострочный</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>uk</v8:lang>
+												<v8:content>Багаторядковий</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">1</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="РежимВводаКорректировкиКонтекстноеМеню" id="441"/>
+							<ExtendedTooltip name="РежимВводаКорректировкиРасширеннаяПодсказка" id="442"/>
+							<Events>
+								<Event name="OnChange">РежимВводаКорректировкиПриИзменении</Event>
+							</Events>
+						</RadioButtonField>
+						<UsualGroup name="ГруппаУпрощенныйРежим" id="443">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа упрощенный режим</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Група спрощений режим</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа упрощенный режим</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Група спрощений режим</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаУпрощенныйРежимРасширеннаяПодсказка" id="444"/>
+							<ChildItems>
+								<UsualGroup name="Группа2" id="449">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Уменьшить потребность</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Зменшити потребу</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>NormalSeparation</Representation>
+									<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="450"/>
+									<ChildItems>
+										<InputField name="Номенклатура" id="451">
+											<DataPath>Номенклатура</DataPath>
+											<Width>27</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+											<ContextMenu name="НоменклатураКонтекстноеМеню" id="452"/>
+											<ExtendedTooltip name="НоменклатураРасширеннаяПодсказка" id="453"/>
+											<Events>
+												<Event name="OnChange">НоменклатураПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="Характеристика" id="454">
+											<DataPath>Характеристика</DataPath>
+											<Width>27</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ChoiceParameterLinks>
+												<xr:Link>
+													<xr:Name>Номенклатура</xr:Name>
+													<xr:DataPath xsi:type="xs:string">Номенклатура</xr:DataPath>
+													<xr:ValueChange>Clear</xr:ValueChange>
+												</xr:Link>
+											</ChoiceParameterLinks>
+											<ContextMenu name="ХарактеристикаКонтекстноеМеню" id="455"/>
+											<ExtendedTooltip name="ХарактеристикаРасширеннаяПодсказка" id="456"/>
+											<Events>
+												<Event name="OnChange">ХарактеристикаПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="Назначение" id="457">
+											<DataPath>Назначение</DataPath>
+											<Width>27</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<InputHint>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>&lt;без назначения&gt;</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>&lt;без призначення&gt;</v8:content>
+												</v8:item>
+											</InputHint>
+											<ContextMenu name="НазначениеКонтекстноеМеню" id="458"/>
+											<ExtendedTooltip name="НазначениеРасширеннаяПодсказка" id="459"/>
+											<Events>
+												<Event name="OnChange">НазначениеПриИзменении</Event>
+											</Events>
+										</InputField>
+										<UsualGroup name="ГруппаТекущаяПотребность" id="495">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа текущая потребность</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Група поточна потреба</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа текущая потребность</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Група поточна потреба</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>AlwaysHorizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаТекущаяПотребностьРасширеннаяПодсказка" id="496"/>
+											<ChildItems>
+												<InputField name="Потребность" id="460">
+													<DataPath>Потребность</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<ContextMenu name="ПотребностьКонтекстноеМеню" id="461"/>
+													<ExtendedTooltip name="ПотребностьРасширеннаяПодсказка" id="462"/>
+												</InputField>
+												<LabelField name="НоменклатураЕдиницаИзмерения" id="497">
+													<DataPath>Номенклатура.ЕдиницаИзмерения</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<Width>5</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ContextMenu name="НоменклатураЕдиницаИзмеренияКонтекстноеМеню" id="498"/>
+													<ExtendedTooltip name="НоменклатураЕдиницаИзмеренияРасширеннаяПодсказка" id="499"/>
+												</LabelField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаКЗамене" id="463">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа к замене</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Група до заміни</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа к замене</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Група до заміни</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<BackColor>style:ToolTipBackColor</BackColor>
+											<ExtendedTooltip name="ГруппаКЗаменеРасширеннаяПодсказка" id="464"/>
+											<ChildItems>
+												<InputField name="КЗамене" id="465">
+													<DataPath>ККорректировке</DataPath>
+													<ContextMenu name="КЗаменеКонтекстноеМеню" id="466"/>
+													<ExtendedTooltip name="КЗаменеРасширеннаяПодсказка" id="467"/>
+													<Events>
+														<Event name="OnChange">КЗаменеПриИзменении</Event>
+													</Events>
+												</InputField>
+												<LabelField name="НоменклатураЕдиницаИзмерения1" id="500">
+													<DataPath>Номенклатура.ЕдиницаИзмерения</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<Width>5</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ContextMenu name="НоменклатураЕдиницаИзмерения1КонтекстноеМеню" id="501"/>
+													<ExtendedTooltip name="НоменклатураЕдиницаИзмерения1РасширеннаяПодсказка" id="502"/>
+												</LabelField>
+												<Button name="Перенести" id="468">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.Перенести</CommandName>
+													<RepresentationInContextMenu>None</RepresentationInContextMenu>
+													<ExtendedTooltip name="ПеренестиРасширеннаяПодсказка" id="469"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаКонечнаяПотребность" id="503">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа конечная потребность</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Група кінцева потреба</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа конечная потребность</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Група кінцева потреба</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>AlwaysHorizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаКонечнаяПотребностьРасширеннаяПодсказка" id="504"/>
+											<ChildItems>
+												<InputField name="Обеспечить" id="470">
+													<DataPath>КОбеспечению</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Конечная потребность</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>uk</v8:lang>
+															<v8:content>Кінцева потреба</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ОбеспечитьКонтекстноеМеню" id="471"/>
+													<ExtendedTooltip name="ОбеспечитьРасширеннаяПодсказка" id="472"/>
+													<Events>
+														<Event name="OnChange">ОбеспечитьПриИзменении</Event>
+													</Events>
+												</InputField>
+												<LabelField name="НоменклатураЕдиницаИзмерения2" id="505">
+													<DataPath>Номенклатура.ЕдиницаИзмерения</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<Width>5</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ContextMenu name="НоменклатураЕдиницаИзмерения2КонтекстноеМеню" id="506"/>
+													<ExtendedTooltip name="НоменклатураЕдиницаИзмерения2РасширеннаяПодсказка" id="507"/>
+												</LabelField>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаУвеличитьПотребность" id="473">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Увеличить потребность</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Збільшити потребу</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа увеличить потребность</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Група збільшити потребу</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>NormalSeparation</Representation>
+									<ExtendedTooltip name="ГруппаУвеличитьПотребностьРасширеннаяПодсказка" id="474"/>
+									<ChildItems>
+										<InputField name="НоменклатураКорректировка" id="475">
+											<DataPath>НоменклатураКорректировка</DataPath>
+											<Width>27</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+											<ContextMenu name="НоменклатураКорректировкаКонтекстноеМеню" id="476"/>
+											<ExtendedTooltip name="НоменклатураКорректировкаРасширеннаяПодсказка" id="477"/>
+											<Events>
+												<Event name="OnChange">НоменклатураКорректировкаПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ХарактеристикаКорректировка" id="478">
+											<DataPath>ХарактеристикаКорректировка</DataPath>
+											<Enabled>false</Enabled>
+											<Width>27</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ChoiceParameterLinks>
+												<xr:Link>
+													<xr:Name>Номенклатура</xr:Name>
+													<xr:DataPath xsi:type="xs:string">НоменклатураКорректировка</xr:DataPath>
+													<xr:ValueChange>Clear</xr:ValueChange>
+												</xr:Link>
+											</ChoiceParameterLinks>
+											<ContextMenu name="ХарактеристикаКорректировкаКонтекстноеМеню" id="479"/>
+											<ExtendedTooltip name="ХарактеристикаКорректировкаРасширеннаяПодсказка" id="480"/>
+											<Events>
+												<Event name="OnChange">ХарактеристикаКорректировкаПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="НазначениеКорректировка" id="481">
+											<DataPath>НазначениеКорректировка</DataPath>
+											<Width>27</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<InputHint>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>&lt;без назначения&gt;</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>&lt;без призначення&gt;</v8:content>
+												</v8:item>
+											</InputHint>
+											<ContextMenu name="НазначениеКорректировкаКонтекстноеМеню" id="482"/>
+											<ExtendedTooltip name="НазначениеКорректировкаРасширеннаяПодсказка" id="483"/>
+											<Events>
+												<Event name="OnChange">НазначениеКорректировкаПриИзменении</Event>
+											</Events>
+										</InputField>
+										<UsualGroup name="ГруппаОстаток" id="508">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа остаток</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Група залишок</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа остаток</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Група залишок</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>AlwaysHorizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаОстатокРасширеннаяПодсказка" id="509"/>
+											<ChildItems>
+												<InputField name="Остаток" id="484">
+													<DataPath>Остаток</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<ContextMenu name="ОстатокКонтекстноеМеню" id="485"/>
+													<ExtendedTooltip name="ОстатокРасширеннаяПодсказка" id="486"/>
+												</InputField>
+												<LabelField name="НоменклатураКорректировкаЕдиницаИзмерения" id="510">
+													<DataPath>НоменклатураКорректировка.ЕдиницаИзмерения</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<Width>5</Width>
+													<ContextMenu name="НоменклатураКорректировкаЕдиницаИзмеренияКонтекстноеМеню" id="511"/>
+													<ExtendedTooltip name="НоменклатураКорректировкаЕдиницаИзмеренияРасширеннаяПодсказка" id="512"/>
+												</LabelField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаККорректировкеКорректировка" id="493">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа к корректировке корректировка</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Група до коректування коригування</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа к корректировке корректировка</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Група до коректування коригування</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>AlwaysHorizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<BackColor>style:ToolTipBackColor</BackColor>
+											<ExtendedTooltip name="ГруппаККорректировкеКорректировкаРасширеннаяПодсказка" id="494"/>
+											<ChildItems>
+												<InputField name="ККорректировкеКорректировка" id="487">
+													<DataPath>ККорректировкеКорректировка</DataPath>
+													<ContextMenu name="ККорректировкеКорректировкаКонтекстноеМеню" id="488"/>
+													<ExtendedTooltip name="ККорректировкеКорректировкаРасширеннаяПодсказка" id="489"/>
+													<Events>
+														<Event name="OnChange">ККорректировкеКорректировкаПриИзменении</Event>
+													</Events>
+												</InputField>
+												<LabelField name="НоменклатураКорректировкаЕдиницаИзмерения1" id="513">
+													<DataPath>НоменклатураКорректировка.ЕдиницаИзмерения</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<Width>5</Width>
+													<ContextMenu name="НоменклатураКорректировкаЕдиницаИзмерения1КонтекстноеМеню" id="514"/>
+													<ExtendedTooltip name="НоменклатураКорректировкаЕдиницаИзмерения1РасширеннаяПодсказка" id="515"/>
+												</LabelField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаКонечныйОстаток" id="516">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа конечный остаток</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Група кінцевий залишок</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа конечный остаток</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Група кінцевий залишок</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаКонечныйОстатокРасширеннаяПодсказка" id="517"/>
+											<ChildItems>
+												<InputField name="КОбеспечениюКорректировка" id="490">
+													<DataPath>КОбеспечениюКорректировка</DataPath>
+													<ContextMenu name="КОбеспечениюКорректировкаКонтекстноеМеню" id="491"/>
+													<ExtendedTooltip name="КОбеспечениюКорректировкаРасширеннаяПодсказка" id="492"/>
+													<Events>
+														<Event name="OnChange">КОбеспечениюКорректировкаПриИзменении</Event>
+													</Events>
+												</InputField>
+												<LabelField name="НоменклатураКорректировкаЕдиницаИзмерения2" id="518">
+													<DataPath>НоменклатураКорректировка.ЕдиницаИзмерения</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<Width>5</Width>
+													<ContextMenu name="НоменклатураКорректировкаЕдиницаИзмерения2КонтекстноеМеню" id="519"/>
+													<ExtendedTooltip name="НоменклатураКорректировкаЕдиницаИзмерения2РасширеннаяПодсказка" id="520"/>
+												</LabelField>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаУменьшениеПотребностей" id="275">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Уменьшение потребностей</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Зменшення потреб</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа уменьшение потребностей</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Група зменшення потреб</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаУменьшениеПотребностейРасширеннаяПодсказка" id="276"/>
+							<ChildItems>
+								<Table name="УменьшениеПотребностей" id="277">
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>Объект.УменьшениеПотребностей</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="УменьшениеПотребностейКонтекстноеМеню" id="278">
+										<ChildItems>
+											<Button name="УменьшениеПотребностейКонтекстноеМенюУменьшениеПотребностей_СкопироватьСтроки" id="320">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.УменьшениеПотребностей_СкопироватьСтроки</CommandName>
+												<RepresentationInContextMenu>None</RepresentationInContextMenu>
+												<ExtendedTooltip name="УменьшениеПотребностейКонтекстноеМенюУменьшениеПотребностей_СкопироватьСтрокиРасширеннаяПодсказка" id="321"/>
+											</Button>
+											<Button name="УменьшениеПотребностейКонтекстноеМенюУменьшениеПотребностей_ВставитьСтроки" id="322">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.УменьшениеПотребностей_ВставитьСтроки</CommandName>
+												<RepresentationInContextMenu>None</RepresentationInContextMenu>
+												<ExtendedTooltip name="УменьшениеПотребностейКонтекстноеМенюУменьшениеПотребностей_ВставитьСтрокиРасширеннаяПодсказка" id="323"/>
+											</Button>
+										</ChildItems>
+									</ContextMenu>
+									<AutoCommandBar name="УменьшениеПотребностейКоманднаяПанель" id="279">
+										<ChildItems>
+											<Button name="УменьшениеПотребностейУменьшениеПотребностей_СкопироватьСтроки" id="318">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.УменьшениеПотребностей_СкопироватьСтроки</CommandName>
+												<RepresentationInContextMenu>None</RepresentationInContextMenu>
+												<ExtendedTooltip name="УменьшениеПотребностейУменьшениеПотребностей_СкопироватьСтрокиРасширеннаяПодсказка" id="319"/>
+											</Button>
+											<Button name="УменьшениеПотребностейУменьшениеПотребностей_ВставитьСтроки" id="316">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.УменьшениеПотребностей_ВставитьСтроки</CommandName>
+												<RepresentationInContextMenu>None</RepresentationInContextMenu>
+												<ExtendedTooltip name="УменьшениеПотребностейУменьшениеПотребностей_ВставитьСтрокиРасширеннаяПодсказка" id="317"/>
+											</Button>
+										</ChildItems>
+									</AutoCommandBar>
+									<ExtendedTooltip name="УменьшениеПотребностейРасширеннаяПодсказка" id="280"/>
+									<SearchStringAddition name="УменьшениеПотребностейСтрокаПоиска" id="281">
+										<AdditionSource>
+											<Item>УменьшениеПотребностей</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="УменьшениеПотребностейСтрокаПоискаКонтекстноеМеню" id="282"/>
+										<ExtendedTooltip name="УменьшениеПотребностейСтрокаПоискаРасширеннаяПодсказка" id="283"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="УменьшениеПотребностейСостояниеПросмотра" id="284">
+										<AdditionSource>
+											<Item>УменьшениеПотребностей</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="УменьшениеПотребностейСостояниеПросмотраКонтекстноеМеню" id="285"/>
+										<ExtendedTooltip name="УменьшениеПотребностейСостояниеПросмотраРасширеннаяПодсказка" id="286"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="УменьшениеПотребностейУправлениеПоиском" id="287">
+										<AdditionSource>
+											<Item>УменьшениеПотребностей</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="УменьшениеПотребностейУправлениеПоискомКонтекстноеМеню" id="288"/>
+										<ExtendedTooltip name="УменьшениеПотребностейУправлениеПоискомРасширеннаяПодсказка" id="289"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<LabelField name="УменьшениеПотребностейНомерСтроки" id="290">
+											<DataPath>Объект.УменьшениеПотребностей.LineNumber</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="УменьшениеПотребностейНомерСтрокиКонтекстноеМеню" id="291"/>
+											<ExtendedTooltip name="УменьшениеПотребностейНомерСтрокиРасширеннаяПодсказка" id="292"/>
+										</LabelField>
+										<InputField name="УменьшениеПотребностейНоменклатура" id="293">
+											<DataPath>Объект.УменьшениеПотребностей.Номенклатура</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="УменьшениеПотребностейНоменклатураКонтекстноеМеню" id="294"/>
+											<ExtendedTooltip name="УменьшениеПотребностейНоменклатураРасширеннаяПодсказка" id="295"/>
+											<Events>
+												<Event name="OnChange">УменьшениеПотребностейНоменклатураПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="УменьшениеПотребностейХарактеристика" id="296">
+											<DataPath>Объект.УменьшениеПотребностей.Характеристика</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="УменьшениеПотребностейХарактеристикаКонтекстноеМеню" id="297"/>
+											<ExtendedTooltip name="УменьшениеПотребностейХарактеристикаРасширеннаяПодсказка" id="298"/>
+										</InputField>
+										<InputField name="УменьшениеПотребностейНазначение" id="308">
+											<DataPath>Объект.УменьшениеПотребностей.Назначение</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="УменьшениеПотребностейНазначениеКонтекстноеМеню" id="309"/>
+											<ExtendedTooltip name="УменьшениеПотребностейНазначениеРасширеннаяПодсказка" id="310"/>
+										</InputField>
+										<ColumnGroup name="УменьшениеПотребностейЕдиницаИзмерения" id="311">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Уменьшение потребностей единица измерения</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Зменшення потреб одиниця вимірювання</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Уменьшение потребностей единица измерения</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Зменшення потреб одиниця вимірювання</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Width>8</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<Group>InCell</Group>
+											<ExtendedTooltip name="УменьшениеПотребностейЕдиницаИзмеренияРасширеннаяПодсказка" id="312"/>
+											<ChildItems>
+												<InputField name="УменьшениеПотребностейУпаковка" id="305">
+													<DataPath>Объект.УменьшениеПотребностей.Упаковка</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ShowInHeader>false</ShowInHeader>
+													<Width>8</Width>
+													<ContextMenu name="УменьшениеПотребностейУпаковкаКонтекстноеМеню" id="306"/>
+													<ExtendedTooltip name="УменьшениеПотребностейУпаковкаРасширеннаяПодсказка" id="307"/>
+													<Events>
+														<Event name="OnChange">УменьшениеПотребностейУпаковкаПриИзменении</Event>
+													</Events>
+												</InputField>
+												<LabelField name="УменьшениеПотребностейНоменклатураЕдиницаИзмерения" id="417">
+													<DataPath>Объект.УменьшениеПотребностей.Номенклатура.ЕдиницаИзмерения</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Ед. изм.</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>uk</v8:lang>
+															<v8:content>Од. вим.</v8:content>
+														</v8:item>
+													</Title>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="УменьшениеПотребностейНоменклатураЕдиницаИзмеренияКонтекстноеМеню" id="418"/>
+													<ExtendedTooltip name="УменьшениеПотребностейНоменклатураЕдиницаИзмеренияРасширеннаяПодсказка" id="419"/>
+												</LabelField>
+											</ChildItems>
+										</ColumnGroup>
+										<InputField name="УменьшениеПотребностейКоличествоУпаковок" id="299">
+											<DataPath>Объект.УменьшениеПотребностей.КоличествоУпаковок</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Количество</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Кількість</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="УменьшениеПотребностейКоличествоУпаковокКонтекстноеМеню" id="300"/>
+											<ExtendedTooltip name="УменьшениеПотребностейКоличествоУпаковокРасширеннаяПодсказка" id="301"/>
+											<Events>
+												<Event name="OnChange">УменьшениеПотребностейКоличествоУпаковокПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаУвеличениеПотребностей" id="324">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Увеличение потребностей</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Збільшення потреб</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа уменьшение потребностей</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Група зменшення потреб</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаУвеличениеПотребностейРасширеннаяПодсказка" id="325"/>
+							<ChildItems>
+								<Table name="УвеличениеПотребностей" id="370">
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>Объект.УвеличениеПотребностей</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="УвеличениеПотребностейКонтекстноеМеню" id="371">
+										<ChildItems>
+											<Button name="УвеличениеПотребностейКонтекстноеМенюУвеличениеПотребностей_СкопироватьСтроки" id="413">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.УвеличениеПотребностей_СкопироватьСтроки</CommandName>
+												<RepresentationInContextMenu>None</RepresentationInContextMenu>
+												<ExtendedTooltip name="УвеличениеПотребностейКонтекстноеМенюУвеличениеПотребностей_СкопироватьСтрокиРасширеннаяПодсказка" id="414"/>
+											</Button>
+											<Button name="УвеличениеПотребностейКонтекстноеМенюУвеличениеПотребностей_ВставитьСтроки" id="415">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.УвеличениеПотребностей_ВставитьСтроки</CommandName>
+												<RepresentationInContextMenu>None</RepresentationInContextMenu>
+												<ExtendedTooltip name="УвеличениеПотребностейКонтекстноеМенюУвеличениеПотребностей_ВставитьСтрокиРасширеннаяПодсказка" id="416"/>
+											</Button>
+										</ChildItems>
+									</ContextMenu>
+									<AutoCommandBar name="УвеличениеПотребностейКоманднаяПанель" id="372">
+										<ChildItems>
+											<Button name="УвеличениеПотребностейУвеличениеПотребностей_СкопироватьСтроки" id="411">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.УвеличениеПотребностей_СкопироватьСтроки</CommandName>
+												<RepresentationInContextMenu>None</RepresentationInContextMenu>
+												<ExtendedTooltip name="УвеличениеПотребностейУвеличениеПотребностей_СкопироватьСтрокиРасширеннаяПодсказка" id="412"/>
+											</Button>
+											<Button name="УвеличениеПотребностейУвеличениеПотребностей_ВставитьСтроки" id="409">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.УвеличениеПотребностей_ВставитьСтроки</CommandName>
+												<RepresentationInContextMenu>None</RepresentationInContextMenu>
+												<ExtendedTooltip name="УвеличениеПотребностейУвеличениеПотребностей_ВставитьСтрокиРасширеннаяПодсказка" id="410"/>
+											</Button>
+										</ChildItems>
+									</AutoCommandBar>
+									<ExtendedTooltip name="УвеличениеПотребностейРасширеннаяПодсказка" id="373"/>
+									<SearchStringAddition name="УвеличениеПотребностейСтрокаПоиска" id="374">
+										<AdditionSource>
+											<Item>УвеличениеПотребностей</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="УвеличениеПотребностейСтрокаПоискаКонтекстноеМеню" id="375"/>
+										<ExtendedTooltip name="УвеличениеПотребностейСтрокаПоискаРасширеннаяПодсказка" id="376"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="УвеличениеПотребностейСостояниеПросмотра" id="377">
+										<AdditionSource>
+											<Item>УвеличениеПотребностей</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="УвеличениеПотребностейСостояниеПросмотраКонтекстноеМеню" id="378"/>
+										<ExtendedTooltip name="УвеличениеПотребностейСостояниеПросмотраРасширеннаяПодсказка" id="379"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="УвеличениеПотребностейУправлениеПоиском" id="380">
+										<AdditionSource>
+											<Item>УвеличениеПотребностей</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="УвеличениеПотребностейУправлениеПоискомКонтекстноеМеню" id="381"/>
+										<ExtendedTooltip name="УвеличениеПотребностейУправлениеПоискомРасширеннаяПодсказка" id="382"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<LabelField name="УвеличениеПотребностейНомерСтроки" id="383">
+											<DataPath>Объект.УвеличениеПотребностей.LineNumber</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="УвеличениеПотребностейНомерСтрокиКонтекстноеМеню" id="384"/>
+											<ExtendedTooltip name="УвеличениеПотребностейНомерСтрокиРасширеннаяПодсказка" id="385"/>
+										</LabelField>
+										<InputField name="УвеличениеПотребностейНоменклатура" id="386">
+											<DataPath>Объект.УвеличениеПотребностей.Номенклатура</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="УвеличениеПотребностейНоменклатураКонтекстноеМеню" id="387"/>
+											<ExtendedTooltip name="УвеличениеПотребностейНоменклатураРасширеннаяПодсказка" id="388"/>
+											<Events>
+												<Event name="OnChange">УвеличениеПотребностейНоменклатураПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="УвеличениеПотребностейХарактеристика" id="389">
+											<DataPath>Объект.УвеличениеПотребностей.Характеристика</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="УвеличениеПотребностейХарактеристикаКонтекстноеМеню" id="390"/>
+											<ExtendedTooltip name="УвеличениеПотребностейХарактеристикаРасширеннаяПодсказка" id="391"/>
+										</InputField>
+										<InputField name="УвеличениеПотребностейНазначение" id="401">
+											<DataPath>Объект.УвеличениеПотребностей.Назначение</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="УвеличениеПотребностейНазначениеКонтекстноеМеню" id="402"/>
+											<ExtendedTooltip name="УвеличениеПотребностейНазначениеРасширеннаяПодсказка" id="403"/>
+										</InputField>
+										<ColumnGroup name="УвеличениеПотребностейЕдиницаИзмерения" id="404">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Увеличение потребностей единица измерения</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Збільшення потреб одиниця вимірювання</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Увеличение потребностей единица измерения</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Збільшення потреб одиниця вимірювання</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>InCell</Group>
+											<ExtendedTooltip name="УвеличениеПотребностейЕдиницаИзмеренияРасширеннаяПодсказка" id="405"/>
+											<ChildItems>
+												<InputField name="УвеличениеПотребностейУпаковка" id="398">
+													<DataPath>Объект.УвеличениеПотребностей.Упаковка</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ShowInHeader>false</ShowInHeader>
+													<Width>8</Width>
+													<ContextMenu name="УвеличениеПотребностейУпаковкаКонтекстноеМеню" id="399"/>
+													<ExtendedTooltip name="УвеличениеПотребностейУпаковкаРасширеннаяПодсказка" id="400"/>
+													<Events>
+														<Event name="OnChange">УвеличениеПотребностейУпаковкаПриИзменении</Event>
+													</Events>
+												</InputField>
+												<LabelField name="УвеличениеПотребностейНоменклатураЕдиницаИзмерения" id="406">
+													<DataPath>Объект.УвеличениеПотребностей.Номенклатура.ЕдиницаИзмерения</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Ед. изм.</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>uk</v8:lang>
+															<v8:content>Од. вим.</v8:content>
+														</v8:item>
+													</Title>
+													<EditMode>EnterOnInput</EditMode>
+													<Width>8</Width>
+													<ContextMenu name="УвеличениеПотребностейНоменклатураЕдиницаИзмеренияКонтекстноеМеню" id="407"/>
+													<ExtendedTooltip name="УвеличениеПотребностейНоменклатураЕдиницаИзмеренияРасширеннаяПодсказка" id="408"/>
+												</LabelField>
+											</ChildItems>
+										</ColumnGroup>
+										<InputField name="УвеличениеПотребностейКоличествоУпаковок" id="392">
+											<DataPath>Объект.УвеличениеПотребностей.КоличествоУпаковок</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Количество</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Кількість</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="УвеличениеПотребностейКоличествоУпаковокКонтекстноеМеню" id="393"/>
+											<ExtendedTooltip name="УвеличениеПотребностейКоличествоУпаковокРасширеннаяПодсказка" id="394"/>
+											<Events>
+												<Event name="OnChange">УвеличениеПотребностейКоличествоУпаковокПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаЗамена" id="161">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Замена</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Заміна</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаЗаменаРасширеннаяПодсказка" id="162"/>
+				</Page>
+				<Page name="СтраницаДополнительно" id="195">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Коментар</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница дополнительно</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Сторінка додатково</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаДополнительноРасширеннаяПодсказка" id="196"/>
+					<ChildItems>
+						<InputField name="Комментарий" id="197">
+							<DataPath>Объект.Комментарий</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<MultiLine>true</MultiLine>
+							<ContextMenu name="КомментарийКонтекстноеМеню" id="198"/>
+							<ExtendedTooltip name="КомментарийExtendedTooltip" id="199"/>
+							<Events>
+								<Event name="OnChange">КомментарийПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.КорректировкаПлановыхПотребностей</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+			<Columns>
+				<AdditionalColumns table="Объект.УвеличениеПотребностей">
+					<Column name="ХарактеристикиИспользуются" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Характеристики используются</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
+								<v8:content>Характеристики використовуються</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:boolean</v8:Type>
+						</Type>
+					</Column>
+					<Column name="ТипНоменклатуры" id="2">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Тип номенклатуры</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
+								<v8:content>Тип номенклатури</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>cfg:EnumRef.ТипыНоменклатуры</v8:Type>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+				<AdditionalColumns table="Объект.УменьшениеПотребностей">
+					<Column name="ХарактеристикиИспользуются" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Характеристики используются</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
+								<v8:content>Характеристики використовуються</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:boolean</v8:Type>
+						</Type>
+					</Column>
+					<Column name="ТипНоменклатуры" id="2">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Тип номенклатуры</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
+								<v8:content>Тип номенклатури</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>cfg:EnumRef.ТипыНоменклатуры</v8:Type>
+						</Type>
+					</Column>
+					<Column name="ТекущаяПотребность" id="3">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Текущая потребность</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
+								<v8:content>Поточна потреба</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:decimal</v8:Type>
+							<v8:NumberQualifiers>
+								<v8:Digits>15</v8:Digits>
+								<v8:FractionDigits>3</v8:FractionDigits>
+								<v8:AllowedSign>Any</v8:AllowedSign>
+							</v8:NumberQualifiers>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПараметрыПодключаемыхКоманд" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры подключаемых команд</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Параметри команд, які підключаються</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ПредставлениеДокументаОснования" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Представление документа основания</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Представлення документа підстави</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РежимВводаКорректировки" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим ввода корректировки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Режим введення коригування</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ККорректировке" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уменьшите потребность на </v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Зменшіть потребу на</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>3</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ККорректировкеКорректировка" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Увеличить потребность на</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Збільшити потребу на</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>3</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КОбеспечению" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>К обеспечению</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>До забезпечення</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>3</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КОбеспечениюКорректировка" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Конечный остаток</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Кінцевий залишок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>3</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Корректировка" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Корректировка</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Коригування</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentRef.КорректировкаПлановыхПотребностей</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Назначение" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назначение</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Призначення</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Назначения</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НазначениеКорректировка" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назначение</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Призначення</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Назначения</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Номенклатура" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Номенклатура</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НоменклатураКорректировка" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Номенклатура</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Остаток" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остаток</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Залишок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>3</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Характеристика" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Характеристика</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Характеристика</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ХарактеристикиНоменклатуры</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ХарактеристикаКорректировка" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Характеристика</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Характеристика</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ХарактеристикиНоменклатуры</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Потребность" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущая потребность</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Поточна потреба</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>3</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПланированиеПоНазначениям" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Планирование по назначениям</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Планування за призначеннями</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="УправлениеПроцессомПланирования" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Планирование по назначениям</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Планування за призначеннями</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаполнятьПоДефициту" id="22">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПровестиИЗакрыть" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Провести и закрыть</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Провести і закрити</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Провести документ и закрыть форму</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Провести документ і закрити форму</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Ctrl+Enter</Shortcut>
+			<Action>ПровестиИЗакрыть</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗаписатьДокумент" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Записати</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать документ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Записати документ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Ctrl+S</Shortcut>
+			<Picture>
+				<xr:Ref>StdPicture.Write</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗаписатьДокумент</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПровестиДокумент" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Провести</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Провести</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Провести документ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Провести документ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Post</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПровестиДокумент</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УменьшениеПотребностей_ВставитьСтроки" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уменьшение потребностей вставить строки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Зменшення потреб вставити рядки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вставить строки из буфера обмена</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Вставити рядки з буфера обміну</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Ctrl+Shift+V</Shortcut>
+			<Picture>
+				<xr:Ref>CommonPicture.ВставкаСтрок</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>УменьшениеПотребностей_ВставитьСтроки</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УменьшениеПотребностей_СкопироватьСтроки" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уменьшение потребностей скопировать строки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Зменшення потреб скопіювати рядки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скопировать строки в буфер обмена</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Скопіювати рядки в буфер обміну</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Ctrl+Shift+C</Shortcut>
+			<Picture>
+				<xr:Ref>CommonPicture.КопированиеСтрок</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>УменьшениеПотребностей_СкопироватьСтроки</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УвеличениеПотребностей_СкопироватьСтроки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уменьшение потребностей скопировать строки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Зменшення потреб скопіювати рядки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скопировать строки в буфер обмена</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Скопіювати рядки в буфер обміну</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Ctrl+Shift+C</Shortcut>
+			<Picture>
+				<xr:Ref>CommonPicture.КопированиеСтрок</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>УвеличениеПотребностей_СкопироватьСтроки</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УвеличениеПотребностей_ВставитьСтроки" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уменьшение потребностей вставить строки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Зменшення потреб вставити рядки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вставить строки из буфера обмена</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Вставити рядки з буфера обміну</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Ctrl+Shift+V</Shortcut>
+			<Picture>
+				<xr:Ref>CommonPicture.ВставкаСтрок</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>УвеличениеПотребностей_ВставитьСтроки</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Перенести" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Перенести</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Перенести</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveRight</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Перенести</Action>
+			<Representation>Picture</Representation>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+		</NavigationPanel>
+		<CommandBar>
+			<Item>
+				<Command>CommonCommand.ИнтеграцияС1СДокументооборотСоздатьПисьмо</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>CommonCommand.ИнтеграцияС1СДокументооборотСоздатьБизнесПроцесс</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>CommonCommand.СозданиеСвязанныхОбъектов</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>0:bfa90848-930f-433d-8f6f-c11ac2c5eba2</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</CommandBar>
+	</CommandInterface>
+</Form>

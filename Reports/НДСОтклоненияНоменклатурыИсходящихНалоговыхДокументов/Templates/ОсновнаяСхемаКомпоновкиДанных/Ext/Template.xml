@@ -1,0 +1,1342 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Номенклатура</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерГТД</dataPath>
+			<field>НомерГТД</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер ГТД</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Номер ВМД</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Содержание</dataPath>
+			<field>Содержание</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Содержание</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Зміст</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтавкаНДС</dataPath>
+			<field>СтавкаНДС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ставка НДС</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Ставка ПДВ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Характеристика</dataPath>
+			<field>Характеристика</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Характеристика</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Характеристика</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Партнер</dataPath>
+			<field>Партнер</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Партнер</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Партнер</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СегментНоменклатуры</dataPath>
+			<field>СегментНоменклатуры</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сегмент номенклатуры</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Сегмент номенклатури</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СегментПартнеров</dataPath>
+			<field>СегментПартнеров</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сегмент партнеров</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Сегмент партнерів</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Організація</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Регистратор</dataPath>
+			<field>Регистратор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регистратор</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Реєстратор</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>1</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+			</role>
+			<orderExpression>
+				<dcscom:expression>ПериодСекунда</dcscom:expression>
+				<dcscom:orderType>Asc</dcscom:orderType>
+				<dcscom:autoOrder>false</dcscom:autoOrder>
+			</orderExpression>
+			<orderExpression>
+				<dcscom:expression>Регистратор</dcscom:expression>
+				<dcscom:orderType>Asc</dcscom:orderType>
+				<dcscom:autoOrder>false</dcscom:autoOrder>
+			</orderExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОбъектРасчетов</dataPath>
+			<field>ОбъектРасчетов</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект расчетов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Об'єкт розрахунків</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Контрагент</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УпаковкаЕдниницаИзмерения</dataPath>
+			<field>УпаковкаЕдниницаИзмерения</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Упаковка, Ед. изм.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Упаковка, Од. вим.</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодГод</dataPath>
+			<field>ПериодГод</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период год</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Період рік</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>11</dcscom:periodNumber>
+				<dcscom:periodType>Additional</dcscom:periodType>
+			</role>
+			<presentationExpression>Формат(ПериодГод, "ДФ = 'yyyy'")</presentationExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодДекада</dataPath>
+			<field>ПериодДекада</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период декада</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Період декада</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>7</dcscom:periodNumber>
+				<dcscom:periodType>Additional</dcscom:periodType>
+			</role>
+			<presentationExpression>Формат(КонецПериода(ПериодДекада, "Декада"), "ДФ=dd.MM.yy")</presentationExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодДень</dataPath>
+			<field>ПериодДень</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период день</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Період день</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>5</dcscom:periodNumber>
+				<dcscom:periodType>Additional</dcscom:periodType>
+			</role>
+			<presentationExpression>Формат(ПериодДень, "ДФ=dd.MM.yy")</presentationExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодКвартал</dataPath>
+			<field>ПериодКвартал</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период квартал</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Період квартал</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>9</dcscom:periodNumber>
+				<dcscom:periodType>Additional</dcscom:periodType>
+			</role>
+			<presentationExpression>ВЫБОР
+    КОГДА Квартал(ПериодКвартал) = 1 
+         ТОГДА Формат(ПериодКвартал, "ДФ = '""1 кв."" yy'")
+    КОГДА Квартал(ПериодКвартал) = 2 
+         ТОГДА Формат(ПериодКвартал, "ДФ = '""2 кв."" yy'")
+    КОГДА Квартал(ПериодКвартал) = 3 
+         ТОГДА Формат(ПериодКвартал, "ДФ = '""3 кв."" yy'")
+    КОГДА Квартал(ПериодКвартал) = 4 
+         ТОГДА Формат(ПериодКвартал, "ДФ = '""4 кв."" yy'")
+КОНЕЦ
+</presentationExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодМесяц</dataPath>
+			<field>ПериодМесяц</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период месяц</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Період місяць</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>8</dcscom:periodNumber>
+				<dcscom:periodType>Additional</dcscom:periodType>
+			</role>
+			<presentationExpression>Формат(ПериодМесяц, "ДФ = 'MMMM yyyy'")</presentationExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодМинута</dataPath>
+			<field>ПериодМинута</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период минута</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Період хвилина</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>3</dcscom:periodNumber>
+				<dcscom:periodType>Additional</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодНеделя</dataPath>
+			<field>ПериодНеделя</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период неделя</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Період тиждень</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>6</dcscom:periodNumber>
+				<dcscom:periodType>Additional</dcscom:periodType>
+			</role>
+			<presentationExpression>Формат(КонецПериода(ПериодНеделя, "Неделя"), "ДФ=dd.MM.yy")</presentationExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодПолугодие</dataPath>
+			<field>ПериодПолугодие</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период полугодие</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Період півріччя</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>10</dcscom:periodNumber>
+				<dcscom:periodType>Additional</dcscom:periodType>
+			</role>
+			<presentationExpression>ВЫБОР
+         КОГДА Квартал(ПериодПолугодие) &lt; 2 
+         ТОГДА Формат(ПериодПолугодие, "ДФ = '""1 "+НСтр("ru='полугодие';uk='півріччя'")+""" yy'")
+         ИНАЧЕ Формат(ПериодПолугодие, "ДФ = '""1 "+НСтр("ru='полугодие';uk='півріччя'")+""" yy'")
+КОНЕЦ</presentationExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодСекунда</dataPath>
+			<field>ПериодСекунда</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период секунда</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Період секунда</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>2</dcscom:periodNumber>
+				<dcscom:periodType>Additional</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодЧас</dataPath>
+			<field>ПериодЧас</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период час</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Період година</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>4</dcscom:periodNumber>
+				<dcscom:periodType>Additional</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоУпаковокВДокументе</dataPath>
+			<field>КоличествоУпаковокВДокументе</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество упаковок (в документе)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Кількість упаковок (в документі)</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>3</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоУпаковокРасчетное</dataPath>
+			<field>КоличествоУпаковокРасчетное</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество упаковок (расчетное)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Кількість упаковок (розрахункове)</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>3</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаСНДСВДокументе</dataPath>
+			<field>СуммаСНДСВДокументе</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма с НДС (в документе)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Сума з ПДВ (в документі)</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаСНДСРасчетная</dataPath>
+			<field>СуммаСНДСРасчетная</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма с НДС (расчетная)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Сума з ПДВ (розрахункова)</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Цена</dataPath>
+			<field>Цена</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цена</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Ціна</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Валюта</dataPath>
+			<field>Валюта</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Валюта</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Валюта</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоУпаковокРасхождение</dataPath>
+			<field>КоличествоУпаковокРасхождение</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество упаковок (расхождение)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Кількість упаковок (розбіжність)</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>3</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаСНДСРасхождение</dataPath>
+			<field>СуммаСНДСРасхождение</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма с НДС (расхождение)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Сума з ПДВ (розбіжність)</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+		</field>
+		<dataSource>ИсточникДанных</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	Сегменты.Партнер КАК Партнер,
+	ИСТИНА КАК ИспользуетсяОтборПоСегментуПартнеров
+ПОМЕСТИТЬ ОтборПоСегментуПартнеров
+{ВЫБРАТЬ
+	Партнер.*}
+ИЗ
+	РегистрСведений.ПартнерыСегмента КАК Сегменты
+{ГДЕ
+	Сегменты.Сегмент.* КАК СегментПартнеров,
+	Сегменты.Партнер.* КАК Партнер}
+
+ИНДЕКСИРОВАТЬ ПО
+	Сегменты.Партнер
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	Сегменты.Номенклатура,
+	Сегменты.Характеристика,
+	ИСТИНА КАК ИспользуетсяОтборПоСегментуНоменклатуры
+ПОМЕСТИТЬ ОтборПоСегментуНоменклатуры
+ИЗ
+	РегистрСведений.НоменклатураСегмента КАК Сегменты
+{ГДЕ
+	Сегменты.Сегмент.* КАК СегментНоменклатуры,
+	Сегменты.Номенклатура.* КАК Номенклатура,
+	Сегменты.Характеристика.* КАК Характеристика}
+
+ИНДЕКСИРОВАТЬ ПО
+	Сегменты.Номенклатура,
+	Сегменты.Характеристика,
+	ИспользуетсяОтборПоСегментуНоменклатуры
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВложенныйЗапрос.Ссылка КАК Регистратор,
+	ВложенныйЗапрос.Дата КАК ПериодСекунда,
+	НАЧАЛОПЕРИОДА(ВложенныйЗапрос.Дата, МИНУТА) КАК ПериодМинута,
+	НАЧАЛОПЕРИОДА(ВложенныйЗапрос.Дата, ЧАС) КАК ПериодЧас,
+	НАЧАЛОПЕРИОДА(ВложенныйЗапрос.Дата, ДЕНЬ) КАК ПериодДень,
+	НАЧАЛОПЕРИОДА(ВложенныйЗапрос.Дата, НЕДЕЛЯ) КАК ПериодНеделя,
+	НАЧАЛОПЕРИОДА(ВложенныйЗапрос.Дата, ДЕКАДА) КАК ПериодДекада,
+	НАЧАЛОПЕРИОДА(ВложенныйЗапрос.Дата, МЕСЯЦ) КАК ПериодМесяц,
+	НАЧАЛОПЕРИОДА(ВложенныйЗапрос.Дата, КВАРТАЛ) КАК ПериодКвартал,
+	НАЧАЛОПЕРИОДА(ВложенныйЗапрос.Дата, ПОЛУГОДИЕ) КАК ПериодПолугодие,
+	НАЧАЛОПЕРИОДА(ВложенныйЗапрос.Дата, ГОД) КАК ПериодГод,
+	ВложенныйЗапрос.Ссылка.Организация КАК Организация,
+	ВложенныйЗапрос.Ссылка.ОбъектРасчетов КАК ОбъектРасчетов,
+	ВложенныйЗапрос.Ссылка.Партнер КАК Партнер,
+	ВложенныйЗапрос.Ссылка.Контрагент КАК Контрагент,
+	ВложенныйЗапрос.Ссылка.Валюта КАК Валюта,
+	ВложенныйЗапрос.Номенклатура,
+	ВложенныйЗапрос.Содержание,
+	ВложенныйЗапрос.Характеристика,
+	ВЫБОР
+		КОГДА ВложенныйЗапрос.Упаковка &lt;&gt; ЗНАЧЕНИЕ(Справочник.УпаковкиЕдиницыИзмерения.ПустаяСсылка)
+			ТОГДА ВложенныйЗапрос.Упаковка
+		ИНАЧЕ ВложенныйЗапрос.Номенклатура.ЕдиницаИзмерения
+	КОНЕЦ КАК УпаковкаЕдниницаИзмерения,
+	ВложенныйЗапрос.НомерГТД,
+	ВложенныйЗапрос.Цена,
+	ВложенныйЗапрос.СтавкаНДС,
+	СУММА(ВложенныйЗапрос.КоличествоУпаковокРасчетное) КАК КоличествоУпаковокРасчетное,
+	СУММА(ВложенныйЗапрос.СуммаСНДСРасчетная) КАК СуммаСНДСРасчетная,
+	СУММА(ВложенныйЗапрос.КоличествоУпаковокВДокументе) КАК КоличествоУпаковокВДокументе,
+	СУММА(ВложенныйЗапрос.СуммаСНДСВДокументе) КАК СуммаСНДСВДокументе,
+	СУММА(ВложенныйЗапрос.КоличествоУпаковокРасхождение) КАК КоличествоУпаковокРасхождение,
+	СУММА(ВложенныйЗапрос.СуммаСНДСРасхождение) КАК СуммаСНДСРасхождение
+ИЗ
+	(ВЫБРАТЬ
+		НалоговаяНакладнаяТовары.Ссылка КАК Ссылка,
+		НалоговаяНакладнаяТовары.Ссылка.Дата КАК Дата,
+		НалоговаяНакладнаяТовары.Номенклатура КАК Номенклатура,
+		НалоговаяНакладнаяТовары.Содержание КАК Содержание,
+		НалоговаяНакладнаяТовары.Характеристика КАК Характеристика,
+		НалоговаяНакладнаяТовары.Упаковка КАК Упаковка,
+		НалоговаяНакладнаяТовары.НомерГТД КАК НомерГТД,
+		НалоговаяНакладнаяТовары.Цена КАК Цена,
+		НалоговаяНакладнаяТовары.СтавкаНДС КАК СтавкаНДС,
+		НалоговаяНакладнаяТовары.КоличествоУпаковок КАК КоличествоУпаковокРасчетное,
+		НалоговаяНакладнаяТовары.СуммаСНДС КАК СуммаСНДСРасчетная,
+		0 КАК КоличествоУпаковокВДокументе,
+		0 КАК СуммаСНДСВДокументе,
+		НалоговаяНакладнаяТовары.КоличествоУпаковок КАК КоличествоУпаковокРасхождение,
+		НалоговаяНакладнаяТовары.СуммаСНДС КАК СуммаСНДСРасхождение
+	ИЗ
+		Документ.НалоговаяНакладная.Товары КАК НалоговаяНакладнаяТовары
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		НалоговаяНакладнаяТоварыПоДаннымПользователя.Ссылка,
+		НалоговаяНакладнаяТоварыПоДаннымПользователя.Ссылка.Дата,
+		НалоговаяНакладнаяТоварыПоДаннымПользователя.Номенклатура,
+		НалоговаяНакладнаяТоварыПоДаннымПользователя.Содержание,
+		НалоговаяНакладнаяТоварыПоДаннымПользователя.Характеристика,
+		НалоговаяНакладнаяТоварыПоДаннымПользователя.Упаковка,
+		НалоговаяНакладнаяТоварыПоДаннымПользователя.НомерГТД,
+		НалоговаяНакладнаяТоварыПоДаннымПользователя.Цена,
+		НалоговаяНакладнаяТоварыПоДаннымПользователя.СтавкаНДС,
+		0,
+		0,
+		НалоговаяНакладнаяТоварыПоДаннымПользователя.КоличествоУпаковок,
+		НалоговаяНакладнаяТоварыПоДаннымПользователя.СуммаСНДС,
+		-НалоговаяНакладнаяТоварыПоДаннымПользователя.КоличествоУпаковок,
+		-НалоговаяНакладнаяТоварыПоДаннымПользователя.СуммаСНДС
+	ИЗ
+		Документ.НалоговаяНакладная.ТоварыПоДаннымПользователя КАК НалоговаяНакладнаяТоварыПоДаннымПользователя
+		
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		Приложение2КНалоговойНакладнойТовары.Ссылка,
+		Приложение2КНалоговойНакладнойТовары.Ссылка.Дата,
+		Приложение2КНалоговойНакладнойТовары.Номенклатура,
+		Приложение2КНалоговойНакладнойТовары.Содержание,
+		Приложение2КНалоговойНакладнойТовары.Характеристика,
+		Приложение2КНалоговойНакладнойТовары.Упаковка,
+		Приложение2КНалоговойНакладнойТовары.НомерГТД,
+		Приложение2КНалоговойНакладнойТовары.Цена,
+		Приложение2КНалоговойНакладнойТовары.СтавкаНДС,
+		Приложение2КНалоговойНакладнойТовары.КоличествоУпаковок,
+		Приложение2КНалоговойНакладнойТовары.СуммаСНДС,
+		0,
+		0,
+		Приложение2КНалоговойНакладнойТовары.КоличествоУпаковок,
+		Приложение2КНалоговойНакладнойТовары.СуммаСНДС
+	ИЗ
+		Документ.Приложение2КНалоговойНакладной.Товары КАК Приложение2КНалоговойНакладнойТовары
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		Приложение2КНалоговойНакладнойТоварыПоДаннымПользователя.Ссылка,
+		Приложение2КНалоговойНакладнойТоварыПоДаннымПользователя.Ссылка.Дата,
+		Приложение2КНалоговойНакладнойТоварыПоДаннымПользователя.Номенклатура,
+		Приложение2КНалоговойНакладнойТоварыПоДаннымПользователя.Содержание,
+		Приложение2КНалоговойНакладнойТоварыПоДаннымПользователя.Характеристика,
+		Приложение2КНалоговойНакладнойТоварыПоДаннымПользователя.Упаковка,
+		Приложение2КНалоговойНакладнойТоварыПоДаннымПользователя.НомерГТД,
+		Приложение2КНалоговойНакладнойТоварыПоДаннымПользователя.Цена,
+		Приложение2КНалоговойНакладнойТоварыПоДаннымПользователя.СтавкаНДС,
+		0,
+		0,
+		Приложение2КНалоговойНакладнойТоварыПоДаннымПользователя.КоличествоУпаковок,
+		Приложение2КНалоговойНакладнойТоварыПоДаннымПользователя.СуммаСНДС,
+		-Приложение2КНалоговойНакладнойТоварыПоДаннымПользователя.КоличествоУпаковок,
+		-Приложение2КНалоговойНакладнойТоварыПоДаннымПользователя.СуммаСНДС
+	ИЗ
+		Документ.Приложение2КНалоговойНакладной.ТоварыПоДаннымПользователя КАК Приложение2КНалоговойНакладнойТоварыПоДаннымПользователя
+		
+		) КАК ВложенныйЗапрос
+ГДЕ
+	ВложенныйЗапрос.Ссылка.Проведен
+	И ВложенныйЗапрос.Ссылка.СтатусАвтокорректировки = ЗНАЧЕНИЕ(Перечисление.СтатусыАвтокорректировкиНалоговыхДокументов.ИсправлятьТехническуюТЧ)
+	И НЕ ВложенныйЗапрос.Ссылка.ВидОперации В (ЗНАЧЕНИЕ(Перечисление.ВидыОперацийНалоговыхДокументов.УсловнаяПродажа), ЗНАЧЕНИЕ(Перечисление.ВидыОперацийНалоговыхДокументов.РаботыОтНерезидента), ЗНАЧЕНИЕ(Перечисление.ВидыОперацийНалоговыхДокументов.ПродажаНижеОбычнойЦены))
+{ГДЕ
+	(ВложенныйЗапрос.Ссылка.Партнер В
+			(ВЫБРАТЬ
+				ОтборПоСегментуПартнеров.Партнер
+			ИЗ
+				ОтборПоСегментуПартнеров
+			ГДЕ
+				ОтборПоСегментуПартнеров.ИспользуетсяОтборПоСегментуПартнеров = &amp;ИспользуетсяОтборПоСегментуПартнеров)),
+	ВложенныйЗапрос.Номенклатура.* КАК Номенклатура,
+	ВложенныйЗапрос.Характеристика.* КАК Характеристика,
+	((ВложенныйЗапрос.Номенклатура, ВложенныйЗапрос.Характеристика) В
+			(ВЫБРАТЬ
+				ОтборПоСегментуНоменклатуры.Номенклатура,
+				ОтборПоСегментуНоменклатуры.Характеристика
+			ИЗ
+				ОтборПоСегментуНоменклатуры
+			ГДЕ
+				ОтборПоСегментуНоменклатуры.ИспользуетсяОтборПоСегментуНоменклатуры = &amp;ИспользуетсяОтборПоСегментуНоменклатуры)),
+	(ВложенныйЗапрос.Дата &gt;= &amp;НачалоПериода),
+	(ВложенныйЗапрос.Дата &lt;= &amp;КонецПериода)}
+
+СГРУППИРОВАТЬ ПО
+	ВложенныйЗапрос.Ссылка,
+	ВложенныйЗапрос.Дата,
+	ВложенныйЗапрос.Номенклатура,
+	ВложенныйЗапрос.Содержание,
+	ВложенныйЗапрос.Характеристика,
+	ВложенныйЗапрос.Упаковка,
+	ВложенныйЗапрос.НомерГТД,
+	ВложенныйЗапрос.Цена,
+	ВложенныйЗапрос.СтавкаНДС,
+	ВложенныйЗапрос.Ссылка.Организация,
+	ВложенныйЗапрос.Ссылка.ОбъектРасчетов,
+	ВложенныйЗапрос.Ссылка.Партнер,
+	ВложенныйЗапрос.Ссылка.Контрагент,
+	ВЫБОР
+		КОГДА ВложенныйЗапрос.Упаковка &lt;&gt; ЗНАЧЕНИЕ(Справочник.УпаковкиЕдиницыИзмерения.ПустаяСсылка)
+			ТОГДА ВложенныйЗапрос.Упаковка
+		ИНАЧЕ ВложенныйЗапрос.Номенклатура.ЕдиницаИзмерения
+	КОНЕЦ,
+	ВложенныйЗапрос.Ссылка.Валюта
+
+ИМЕЮЩИЕ
+	(СУММА(ВложенныйЗапрос.КоличествоУпаковокРасхождение) &lt;&gt; 0
+		ИЛИ СУММА(ВложенныйЗапрос.СуммаСНДСРасхождение) &lt;&gt; 0)</query>
+	</dataSet>
+	<totalField>
+		<dataPath>КоличествоУпаковокВДокументе</dataPath>
+		<expression>Сумма(КоличествоУпаковокВДокументе)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоУпаковокРасхождение</dataPath>
+		<expression>Сумма(КоличествоУпаковокРасхождение)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоУпаковокРасчетное</dataPath>
+		<expression>Сумма(КоличествоУпаковокРасчетное)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаСНДСВДокументе</dataPath>
+		<expression>Сумма(СуммаСНДСВДокументе)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаСНДСРасхождение</dataPath>
+		<expression>Сумма(СуммаСНДСРасхождение)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаСНДСРасчетная</dataPath>
+		<expression>Сумма(СуммаСНДСРасчетная)</expression>
+	</totalField>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>Період</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">ThisYear</v8:variant>
+		</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ИспользуетсяОтборПоСегментуПартнеров</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Используется отбор по сегменту партнеров</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>Використовується відбір за сегментом партнерів</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>Початок періоду</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаНачала</expression>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>Кінець періоду</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаОкончания</expression>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ИспользуетсяОтборПоСегментуНоменклатуры</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Используется отбор по сегменту номенклатуры</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>Використовується відбір за сегментом номенклатури</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<template>
+		<name>Макет1</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">КоличествоУпаковокРасхождение</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=3</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xmlns:d8p1="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">d8p1:SpecialTextColor</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>КоличествоУпаковокРасхождение</dcsat:name>
+			<dcsat:expression>КоличествоУпаковокРасхождение</dcsat:expression>
+		</parameter>
+	</template>
+	<template>
+		<name>Макет2</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">СуммаСНДСРасхождение</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xmlns:d8p1="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">d8p1:SpecialTextColor</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>СуммаСНДСРасхождение</dcsat:name>
+			<dcsat:expression>СуммаСНДСРасхождение</dcsat:expression>
+		</parameter>
+	</template>
+	<fieldTemplate>
+		<field>КоличествоУпаковокРасхождение</field>
+		<template>Макет1</template>
+	</fieldTemplate>
+	<fieldTemplate>
+		<field>СуммаСНДСРасхождение</field>
+		<template>Макет2</template>
+	</fieldTemplate>
+	<settingsVariant>
+		<dcsset:name>ОтклоненияНоменклатурыНалоговыхДокументов</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Отклонения номенклатуры исходящих налоговых документов</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>Відхилення номенклатури вихідних податкових документів</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расчетные данные</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Розрахункові дані</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоличествоУпаковокРасчетное</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Количество</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
+								<v8:content>Кількість</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаСНДСРасчетная</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сумма с НДС</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
+								<v8:content>Сума з ПДВ</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Данные документа</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Дані документа</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоличествоУпаковокВДокументе</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Количество</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
+								<v8:content>Кількість</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаСНДСВДокументе</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сумма с НДС</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
+								<v8:content>Сума з ПДВ</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расхождение</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Розбіжність</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоличествоУпаковокРасхождение</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Количество</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
+								<v8:content>Кількість</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаСНДСРасхождение</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сумма с НДС</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
+								<v8:content>Сума з ПДВ</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Контрагент</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>c2259e8c-a494-4833-ac9a-09d6e58cba84</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Партнер</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>7a63f0b0-9239-4bb2-91e4-8340207d31e2</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">СегментПартнеров</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>e147caca-261c-4aed-90f1-eaa0a7a73cac</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">СегментНоменклатуры</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>98ee3098-925d-4e47-9cf1-99b7817da9cd</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Номенклатура</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>2853649b-bd28-4b03-ada7-b1beccbae3ed</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">LastMonth</v8:variant>
+					</dcscor:value>
+					<dcsset:userSettingID>e7d2142d-112d-44f1-8c62-e901e7e88cb6</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>КонецПериода</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType"/>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Организация</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Валюта</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Контрагент</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Партнер</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>ОбъектРасчетов</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+						<dcsset:item xsi:type="dcsset:StructureItemGroup">
+							<dcsset:groupItems>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>ПериодДень</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+							</dcsset:groupItems>
+							<dcsset:order>
+								<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+							</dcsset:order>
+							<dcsset:selection>
+								<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+							</dcsset:selection>
+							<dcsset:item xsi:type="dcsset:StructureItemGroup">
+								<dcsset:groupItems>
+									<dcsset:item xsi:type="dcsset:GroupItemField">
+										<dcsset:field>Регистратор</dcsset:field>
+										<dcsset:groupType>Items</dcsset:groupType>
+										<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+										<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+										<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+									</dcsset:item>
+								</dcsset:groupItems>
+								<dcsset:order>
+									<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+								</dcsset:order>
+								<dcsset:selection>
+									<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+								</dcsset:selection>
+								<dcsset:outputParameters>
+									<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+										<dcscor:use>false</dcscor:use>
+										<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+										<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+									</dcscor:item>
+								</dcsset:outputParameters>
+								<dcsset:item xsi:type="dcsset:StructureItemGroup">
+									<dcsset:groupItems>
+										<dcsset:item xsi:type="dcsset:GroupItemField">
+											<dcsset:field>Номенклатура</dcsset:field>
+											<dcsset:groupType>Items</dcsset:groupType>
+											<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+											<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+											<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+										</dcsset:item>
+										<dcsset:item xsi:type="dcsset:GroupItemField">
+											<dcsset:field>Содержание</dcsset:field>
+											<dcsset:groupType>Items</dcsset:groupType>
+											<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+											<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+											<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+										</dcsset:item>
+										<dcsset:item xsi:type="dcsset:GroupItemField">
+											<dcsset:field>Характеристика</dcsset:field>
+											<dcsset:groupType>Items</dcsset:groupType>
+											<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+											<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+											<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+										</dcsset:item>
+										<dcsset:item xsi:type="dcsset:GroupItemField">
+											<dcsset:field>НомерГТД</dcsset:field>
+											<dcsset:groupType>Items</dcsset:groupType>
+											<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+											<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+											<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+										</dcsset:item>
+										<dcsset:item xsi:type="dcsset:GroupItemField">
+											<dcsset:field>СтавкаНДС</dcsset:field>
+											<dcsset:groupType>Items</dcsset:groupType>
+											<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+											<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+											<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+										</dcsset:item>
+										<dcsset:item xsi:type="dcsset:GroupItemField">
+											<dcsset:field>УпаковкаЕдниницаИзмерения</dcsset:field>
+											<dcsset:groupType>Items</dcsset:groupType>
+											<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+											<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+											<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+										</dcsset:item>
+										<dcsset:item xsi:type="dcsset:GroupItemField">
+											<dcsset:field>Цена</dcsset:field>
+											<dcsset:groupType>Items</dcsset:groupType>
+											<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+											<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+											<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+										</dcsset:item>
+										<dcsset:item xsi:type="dcsset:GroupItemAuto"/>
+									</dcsset:groupItems>
+									<dcsset:order>
+										<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+									</dcsset:order>
+									<dcsset:selection>
+										<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+									</dcsset:selection>
+								</dcsset:item>
+							</dcsset:item>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+			<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+			<dcsset:itemsUserSettingID>b42ccc77-1304-4cba-8b21-786c898f881e</dcsset:itemsUserSettingID>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

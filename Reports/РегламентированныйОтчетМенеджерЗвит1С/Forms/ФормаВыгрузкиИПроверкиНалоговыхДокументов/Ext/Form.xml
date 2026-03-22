@@ -1,0 +1,2663 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<ScalingMode>Compact</ScalingMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Организация" id="12">
+			<DataPath>Организация</DataPath>
+			<Width>25</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="13"/>
+			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="132"/>
+			<Events>
+				<Event name="OnChange">ОрганизацияПриИзменении</Event>
+			</Events>
+		</InputField>
+		<UsualGroup name="ГруппаФильтры" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фильтр для заполнения таблицы налоговых документов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Фільтр для заповнення таблиці податкових документів</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа фильтры</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Група фільтри</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ExtendedTooltip name="ГруппаФильтрыРасширеннаяПодсказка" id="133"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаЛеваяКолонка" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа левая колонка</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Група ліва колонка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа левая колонка</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Група ліва колонка</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЛеваяКолонкаРасширеннаяПодсказка" id="134"/>
+					<ChildItems>
+						<UsualGroup name="РамкаПериод" id="10">
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Рамка период</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Рамка період</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="РамкаПериодРасширеннаяПодсказка" id="135"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияПериод" id="27">
+									<Width>7</Width>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Период:</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Період:</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияПериодКонтекстноеМеню" id="28"/>
+									<ExtendedTooltip name="ДекорацияПериодРасширеннаяПодсказка" id="136"/>
+								</LabelDecoration>
+								<InputField name="ПериодВариант" id="8">
+									<DataPath>Период.Variant</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<Width>20</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="ПериодВариантКонтекстноеМеню" id="9"/>
+									<ExtendedTooltip name="ПериодВариантРасширеннаяПодсказка" id="137"/>
+								</InputField>
+								<InputField name="ПериодДатаНачала" id="2">
+									<DataPath>Период.StartDate</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>с</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>з</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПериодДатаНачалаКонтекстноеМеню" id="3"/>
+									<ExtendedTooltip name="ПериодДатаНачалаРасширеннаяПодсказка" id="138"/>
+								</InputField>
+								<InputField name="ПериодДатаОкончания" id="6">
+									<DataPath>Период.EndDate</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content> по</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content> по</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПериодДатаОкончанияКонтекстноеМеню" id="7"/>
+									<ExtendedTooltip name="ПериодДатаОкончанияРасширеннаяПодсказка" id="139"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="Контрагент" id="17">
+							<DataPath>Контрагент</DataPath>
+							<OpenButton>true</OpenButton>
+							<ContextMenu name="КонтрагентКонтекстноеМеню" id="18"/>
+							<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="140"/>
+						</InputField>
+						<CheckBoxField name="ПропускатьЗарегистрированныеПоДанным1С" id="33">
+							<DataPath>ПропускатьЗарегистрированныеПоДанным1С</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПропускатьЗарегистрированныеПоДанным1СКонтекстноеМеню" id="34"/>
+							<ExtendedTooltip name="ПропускатьЗарегистрированныеПоДанным1СРасширеннаяПодсказка" id="141"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПраваяКолонка" id="29">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа правая колонка</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Група правий стовпчик</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа правая колонка</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Група правий стовпчик</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПраваяКолонкаРасширеннаяПодсказка" id="142"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияПробел" id="31">
+							<ContextMenu name="ДекорацияПробелКонтекстноеМеню" id="32"/>
+							<ExtendedTooltip name="ДекорацияПробелРасширеннаяПодсказка" id="143"/>
+						</LabelDecoration>
+						<InputField name="ОбособленноеПодразделение" id="14">
+							<DataPath>ОбособленноеПодразделение</DataPath>
+							<ClearButton>true</ClearButton>
+							<ChoiceParameterLinks>
+								<xr:Link>
+									<xr:Name>Отбор.Владелец</xr:Name>
+									<xr:DataPath xsi:type="xs:string">Организация</xr:DataPath>
+									<xr:ValueChange>Clear</xr:ValueChange>
+								</xr:Link>
+							</ChoiceParameterLinks>
+							<ContextMenu name="ОбособленноеПодразделениеКонтекстноеМеню" id="15"/>
+							<ExtendedTooltip name="ОбособленноеПодразделениеРасширеннаяПодсказка" id="144"/>
+						</InputField>
+						<UsualGroup name="РамкаСпецРежимНалогообложения" id="24">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Рамка спец режим налогообложения</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Рамка спец режим оподаткування</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Рамка спец режим налогообложения</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Рамка спец режим оподаткування</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="РамкаСпецРежимНалогообложенияРасширеннаяПодсказка" id="145"/>
+							<ChildItems>
+								<InputField name="СпецРежимНалогообложения" id="22">
+									<DataPath>СпецРежимНалогообложения</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Спец. режим налогообложения</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Спец. режим оподаткування</v8:content>
+										</v8:item>
+									</Title>
+									<ListChoiceMode>true</ListChoiceMode>
+									<ChooseType>false</ChooseType>
+									<ContextMenu name="СпецРежимНалогообложенияКонтекстноеМеню" id="23"/>
+									<ExtendedTooltip name="СпецРежимНалогообложенияРасширеннаяПодсказка" id="146"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаУточнениеПоказателей" id="221">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Корректировка показателей для точного соблюдения формулы "Кількість Х Ціна = Обсяг"</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Коригування показників для точного дотримання формули "Кількість Х Ціна = Обсяг"</v8:content>
+				</v8:item>
+			</Title>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="ГруппаУточнениеПоказателейРасширеннаяПодсказка" id="222"/>
+			<ChildItems>
+				<RadioButtonField name="РежимУточненияПоказателей" id="223">
+					<DataPath>РежимУточненияПоказателей</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<RadioButtonType>Tumbler</RadioButtonType>
+					<ColumnsCount>3</ColumnsCount>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Не используется</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>uk</v8:lang>
+										<v8:content>Не використовується</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">0</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Увеличивать количество знаков после запятой в количестве</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>uk</v8:lang>
+										<v8:content>Збільшувати кількість знаків після коми у кількості</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">1</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Увеличивать количество знаков после запятой в цене</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>uk</v8:lang>
+										<v8:content>Збільшувати кількість знаків після коми в ціні</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">2</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="РежимУточненияПоказателейКонтекстноеМеню" id="224"/>
+					<ExtendedTooltip name="РежимУточненияПоказателейРасширеннаяПодсказка" id="225"/>
+				</RadioButtonField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа1" id="226">
+			<ToolTipRepresentation>None</ToolTipRepresentation>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="227"/>
+			<ChildItems>
+				<InputField name="Статус" id="228">
+					<DataPath>Статус</DataPath>
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Статус</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СтатусКонтекстноеМеню" id="229"/>
+					<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="230"/>
+				</InputField>
+				<InputField name="ДатаРегистрации" id="231">
+					<DataPath>ДатаРегистрации</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="ДатаРегистрацииКонтекстноеМеню" id="232"/>
+					<ExtendedTooltip name="ДатаРегистрацииРасширеннаяПодсказка" id="233"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаНалоговыеДокументы" id="35">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Налоговые документы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Податкові документи</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа налоговые документы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Група податкові документи</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ГруппаНалоговыеДокументыРасширеннаяПодсказка" id="148"/>
+			<ChildItems>
+				<Table name="ТаблицаДокументов" id="36">
+					<Representation>List</Representation>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>ТаблицаДокументов</DataPath>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ТаблицаДокументовКонтекстноеМеню" id="37">
+						<ChildItems>
+							<Button name="ТаблицаДокументовОткрытьВ1С_1" id="102">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ОткрытьВ1С</CommandName>
+								<ExtendedTooltip name="ТаблицаДокументовОткрытьВ1С_1РасширеннаяПодсказка" id="149"/>
+							</Button>
+							<Button name="ТаблицаДокументовОткрытьВ1СЗвит_1" id="103">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ОткрытьВ1СЗвит</CommandName>
+								<ExtendedTooltip name="ТаблицаДокументовОткрытьВ1СЗвит_1РасширеннаяПодсказка" id="150"/>
+							</Button>
+						</ChildItems>
+					</ContextMenu>
+					<AutoCommandBar name="ТаблицаДокументовКоманднаяПанель" id="38">
+						<Autofill>false</Autofill>
+						<ChildItems>
+							<ButtonGroup name="ГруппаУправлениеСтроками" id="110">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Группа управление строками</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>uk</v8:lang>
+										<v8:content>Група управління рядками</v8:content>
+									</v8:item>
+								</Title>
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Группа управление строками</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>uk</v8:lang>
+										<v8:content>Група управління рядками</v8:content>
+									</v8:item>
+								</ToolTip>
+								<ExtendedTooltip name="ГруппаУправлениеСтрокамиРасширеннаяПодсказка" id="151"/>
+								<ChildItems>
+									<Button name="ТаблицаДокументовКнопкаДобавить" id="93">
+										<Type>CommandBarButton</Type>
+										<Representation>Picture</Representation>
+										<CommandName>Form.Item.ТаблицаДокументов.StandardCommand.Add</CommandName>
+										<ExtendedTooltip name="ТаблицаДокументовКнопкаДобавитьРасширеннаяПодсказка" id="152"/>
+									</Button>
+									<Button name="ТаблицаДокументовКнопкаУдалить" id="94">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.ТаблицаДокументов.StandardCommand.Delete</CommandName>
+										<ExtendedTooltip name="ТаблицаДокументовКнопкаУдалитьРасширеннаяПодсказка" id="153"/>
+									</Button>
+									<Button name="ТаблицаДокументовПереместитьВверх" id="116">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.ТаблицаДокументов.StandardCommand.MoveUp</CommandName>
+										<ExtendedTooltip name="ТаблицаДокументовПереместитьВверхРасширеннаяПодсказка" id="154"/>
+									</Button>
+									<Button name="ТаблицаДокументовПереместитьВниз" id="117">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.ТаблицаДокументов.StandardCommand.MoveDown</CommandName>
+										<ExtendedTooltip name="ТаблицаДокументовПереместитьВнизРасширеннаяПодсказка" id="155"/>
+									</Button>
+									<Button name="ТаблицаДокументовСортироватьСписокПоВозрастанию" id="114">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.ТаблицаДокументов.StandardCommand.SortListAsc</CommandName>
+										<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="ТаблицаДокументовСортироватьСписокПоВозрастаниюРасширеннаяПодсказка" id="156"/>
+									</Button>
+									<Button name="ТаблицаДокументовСортироватьСписокПоУбыванию" id="115">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.ТаблицаДокументов.StandardCommand.SortListDesc</CommandName>
+										<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="ТаблицаДокументовСортироватьСписокПоУбываниюРасширеннаяПодсказка" id="157"/>
+									</Button>
+								</ChildItems>
+							</ButtonGroup>
+							<Button name="ТаблицаДокументовСнятьВсеПометки" id="234">
+								<Type>CommandBarButton</Type>
+								<Representation>Picture</Representation>
+								<CommandName>Form.Command.СнятьВсеПометки</CommandName>
+								<Picture>
+									<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+									<xr:LoadTransparent>true</xr:LoadTransparent>
+								</Picture>
+								<ExtendedTooltip name="ТаблицаДокументовСнятьВсеПометкиРасширеннаяПодсказка" id="235"/>
+							</Button>
+							<Button name="ТаблицаДокументовОбновить" id="100">
+								<Type>CommandBarButton</Type>
+								<Representation>PictureAndText</Representation>
+								<CommandName>Form.Command.Обновить</CommandName>
+								<ExtendedTooltip name="ТаблицаДокументовОбновитьРасширеннаяПодсказка" id="158"/>
+							</Button>
+							<ButtonGroup name="ГруппаЗаполнение" id="107">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Группа заполнение</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>uk</v8:lang>
+										<v8:content>Група заповнення</v8:content>
+									</v8:item>
+								</Title>
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Группа заполнение</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>uk</v8:lang>
+										<v8:content>Група заповнення</v8:content>
+									</v8:item>
+								</ToolTip>
+								<ExtendedTooltip name="ГруппаЗаполнениеРасширеннаяПодсказка" id="159"/>
+								<ChildItems>
+									<Button name="ТаблицаДокументовЗаполнить" id="108">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.Заполнить</CommandName>
+										<ExtendedTooltip name="ТаблицаДокументовЗаполнитьРасширеннаяПодсказка" id="160"/>
+									</Button>
+									<Button name="ТаблицаДокументовПодбор" id="109">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.Подбор</CommandName>
+										<ExtendedTooltip name="ТаблицаДокументовПодборРасширеннаяПодсказка" id="161"/>
+									</Button>
+								</ChildItems>
+							</ButtonGroup>
+							<Popup name="ГруппаОткрыть" id="97">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Открыть</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>uk</v8:lang>
+										<v8:content>Відкрити</v8:content>
+									</v8:item>
+								</Title>
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Открыть документ</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>uk</v8:lang>
+										<v8:content>Відкрити документ</v8:content>
+									</v8:item>
+								</ToolTip>
+								<Picture>
+									<xr:Ref>StdPicture.InputFieldOpen</xr:Ref>
+									<xr:LoadTransparent>true</xr:LoadTransparent>
+								</Picture>
+								<ExtendedTooltip name="ГруппаОткрытьРасширеннаяПодсказка" id="162"/>
+								<ChildItems>
+									<Button name="ТаблицаДокументовОткрытьВ1С" id="98">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ОткрытьВ1С</CommandName>
+										<ExtendedTooltip name="ТаблицаДокументовОткрытьВ1СРасширеннаяПодсказка" id="163"/>
+									</Button>
+									<Button name="ТаблицаДокументовОткрытьВ1СЗвит" id="99">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ОткрытьВ1СЗвит</CommandName>
+										<ExtendedTooltip name="ТаблицаДокументовОткрытьВ1СЗвитРасширеннаяПодсказка" id="164"/>
+									</Button>
+								</ChildItems>
+							</Popup>
+							<ButtonGroup name="ГруппаОсновныеДействия" id="104">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Группа основные действия</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>uk</v8:lang>
+										<v8:content>Група основні дії</v8:content>
+									</v8:item>
+								</Title>
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Группа основные действия</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>uk</v8:lang>
+										<v8:content>Група основні дії</v8:content>
+									</v8:item>
+								</ToolTip>
+								<ExtendedTooltip name="ГруппаОсновныеДействияРасширеннаяПодсказка" id="165"/>
+								<ChildItems>
+									<Button name="ТаблицаДокументовВыгрузитьВ1СЗвит" id="105">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.ВыгрузитьВ1СЗвит</CommandName>
+										<Picture>
+											<xr:Ref>StdPicture.WriteChanges</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="ТаблицаДокументовВыгрузитьВ1СЗвитРасширеннаяПодсказка" id="166"/>
+									</Button>
+									<Button name="ТаблицаДокументовЗафиксироватьСостояниеРегистрацииВ1С" id="106">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.ЗафиксироватьСостояниеРегистрацииВ1С</CommandName>
+										<Picture>
+											<xr:Ref>StdPicture.ReadChanges</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="ТаблицаДокументовЗафиксироватьСостояниеРегистрацииВ1СРасширеннаяПодсказка" id="167"/>
+									</Button>
+								</ChildItems>
+							</ButtonGroup>
+							<ButtonGroup name="ТаблицаДокументовГруппа1" id="131">
+								<ExtendedTooltip name="ТаблицаДокументовГруппа1РасширеннаяПодсказка" id="168"/>
+								<ChildItems>
+									<Button name="ТаблицаДокументовСправка" id="130">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.StandardCommand.Help</CommandName>
+										<ExtendedTooltip name="ТаблицаДокументовСправкаРасширеннаяПодсказка" id="169"/>
+									</Button>
+								</ChildItems>
+							</ButtonGroup>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ТаблицаДокументовРасширеннаяПодсказка" id="170"/>
+					<SearchStringAddition name="ТаблицаДокументовСтрокаПоиска" id="171">
+						<AdditionSource>
+							<Item>ТаблицаДокументов</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаДокументовСтрокаПоискаКонтекстноеМеню" id="172"/>
+						<ExtendedTooltip name="ТаблицаДокументовСтрокаПоискаРасширеннаяПодсказка" id="173"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ТаблицаДокументовСостояниеПросмотра" id="174">
+						<AdditionSource>
+							<Item>ТаблицаДокументов</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаДокументовСостояниеПросмотраКонтекстноеМеню" id="175"/>
+						<ExtendedTooltip name="ТаблицаДокументовСостояниеПросмотраРасширеннаяПодсказка" id="176"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ТаблицаДокументовУправлениеПоиском" id="177">
+						<AdditionSource>
+							<Item>ТаблицаДокументов</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаДокументовУправлениеПоискомКонтекстноеМеню" id="178"/>
+						<ExtendedTooltip name="ТаблицаДокументовУправлениеПоискомРасширеннаяПодсказка" id="179"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="Selection">ТаблицаДокументовВыбор</Event>
+						<Event name="BeforeAddRow">ТаблицаДокументовПередНачаломДобавления</Event>
+						<Event name="ChoiceProcessing">ТаблицаДокументовОбработкаВыбора</Event>
+					</Events>
+					<ChildItems>
+						<CheckBoxField name="ТаблицаДокументовПометка_Выполнить" id="39">
+							<DataPath>ТаблицаДокументов.Пометка_Выполнить</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выгр. в FREDO Звіт</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Вив. у FREDO Звіт</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Пометка, указывает на то что документ должен учавствавать в групповой обработке</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Позначка, що вказує на те, що документ повинен брати участь у груповій обробці</v8:content>
+								</v8:item>
+							</ToolTip>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ТаблицаДокументовПометка_ВыполнитьКонтекстноеМеню" id="40"/>
+							<ExtendedTooltip name="ТаблицаДокументовПометка_ВыполнитьРасширеннаяПодсказка" id="180"/>
+						</CheckBoxField>
+						<CheckBoxField name="ТаблицаДокументовПометка_Синхронизировать" id="41">
+							<DataPath>ТаблицаДокументов.Пометка_Синхронизировать</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Синхр.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Синхр.</v8:content>
+								</v8:item>
+							</Title>
+							<TitleHeight>2</TitleHeight>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отметка, указывает на то что для документа  выполняется синхронизация признака  регистрации в ЕРНН</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Позначка, що вказує на те, що для документа  виконується синхронізація ознаки реєстрації в ЄРПН</v8:content>
+								</v8:item>
+							</ToolTip>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ТаблицаДокументовПометка_СинхронизироватьКонтекстноеМеню" id="42"/>
+							<ExtendedTooltip name="ТаблицаДокументовПометка_СинхронизироватьРасширеннаяПодсказка" id="181"/>
+						</CheckBoxField>
+						<InputField name="ТаблицаДокументовВидДокумента" id="43">
+							<DataPath>ТаблицаДокументов.ВидДокумента</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Вид</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Вид</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>НН - налоговая накладная
+РК - приложение 2 к налоговой накладной</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>ПН - податкова накладна
+РК - додаток 2 до податкової накладної</v8:content>
+								</v8:item>
+							</ToolTip>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТаблицаДокументовВидДокументаКонтекстноеМеню" id="44"/>
+							<ExtendedTooltip name="ТаблицаДокументовВидДокументаРасширеннаяПодсказка" id="182"/>
+						</InputField>
+						<ColumnGroup name="ТаблицаДокументовГруппаДатаНомер" id="92">
+							<ExtendedTooltip name="ТаблицаДокументовГруппаДатаНомерРасширеннаяПодсказка" id="183"/>
+							<ChildItems>
+								<ColumnGroup name="ТаблицаДокументовГруппаДатаНомерВходящие" id="129">
+									<HorizontalStretch>false</HorizontalStretch>
+									<ExtendedTooltip name="ТаблицаДокументовГруппаДатаНомерВходящиеРасширеннаяПодсказка" id="184"/>
+									<ChildItems>
+										<InputField name="ТаблицаДокументовНомерВходящегоДокумента" id="51">
+											<DataPath>ТаблицаДокументов.НомерВходящегоДокумента</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>13</Width>
+											<ContextMenu name="ТаблицаДокументовНомерВходящегоДокументаКонтекстноеМеню" id="52"/>
+											<ExtendedTooltip name="ТаблицаДокументовНомерВходящегоДокументаРасширеннаяПодсказка" id="185"/>
+										</InputField>
+										<InputField name="ТаблицаДокументовДатаВходящегоДокумента" id="49">
+											<DataPath>ТаблицаДокументов.ДатаВходящегоДокумента</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>13</Width>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ДФ=dd.MM.yyyy</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>ДФ=dd.MM.yyyy</v8:content>
+												</v8:item>
+											</Format>
+											<EditFormat>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ДФ=dd.MM.yyyy</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>ДФ=dd.MM.yyyy</v8:content>
+												</v8:item>
+											</EditFormat>
+											<ContextMenu name="ТаблицаДокументовДатаВходящегоДокументаКонтекстноеМеню" id="50"/>
+											<ExtendedTooltip name="ТаблицаДокументовДатаВходящегоДокументаРасширеннаяПодсказка" id="186"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ТаблицаДокументовГруппаПоЧастям" id="122">
+									<Visible>false</Visible>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Таблица документов группа по частям</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Таблиця документів група по частинах</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Таблица документов группа по частям</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Таблиця документів група по частинах</v8:content>
+										</v8:item>
+									</ToolTip>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Group>Horizontal</Group>
+									<ExtendedTooltip name="ТаблицаДокументовГруппаПоЧастямРасширеннаяПодсказка" id="187"/>
+									<ChildItems>
+										<InputField name="ТаблицаДокументовНомерПорядковый" id="123">
+											<DataPath>ТаблицаДокументов.НомерПорядковый</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>№</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>№</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТаблицаДокументовНомерПорядковыйКонтекстноеМеню" id="124"/>
+											<ExtendedTooltip name="ТаблицаДокументовНомерПорядковыйРасширеннаяПодсказка" id="188"/>
+										</InputField>
+										<InputField name="ТаблицаДокументовСпецРежимНалогообложения" id="127">
+											<DataPath>ТаблицаДокументов.СпецРежимНалогообложения</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>спец. реж.</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>спец. реж.</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТаблицаДокументовСпецРежимНалогообложенияКонтекстноеМеню" id="128"/>
+											<ExtendedTooltip name="ТаблицаДокументовСпецРежимНалогообложенияРасширеннаяПодсказка" id="189"/>
+										</InputField>
+										<InputField name="ТаблицаДокументовФилиал" id="125">
+											<DataPath>ТаблицаДокументов.Филиал</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>номер филиала</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>номер філії</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТаблицаДокументовФилиалКонтекстноеМеню" id="126"/>
+											<ExtendedTooltip name="ТаблицаДокументовФилиалРасширеннаяПодсказка" id="190"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+							</ChildItems>
+						</ColumnGroup>
+						<InputField name="ТаблицаДокументовТипПричиныНевыдачиПокупателю" id="215">
+							<DataPath>ТаблицаДокументов.ТипПричиныНевыдачиПокупателю</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТаблицаДокументовТипПричиныНевыдачиПокупателюКонтекстноеМеню" id="216"/>
+							<ExtendedTooltip name="ТаблицаДокументовТипПричиныНевыдачиПокупателюРасширеннаяПодсказка" id="217"/>
+						</InputField>
+						<ColumnGroup name="ТаблицаДокументовГруппаДатаНомер1С" id="91">
+							<ExtendedTooltip name="ТаблицаДокументовГруппаДатаНомер1СРасширеннаяПодсказка" id="191"/>
+							<ChildItems>
+								<InputField name="ТаблицаДокументовНомер" id="47">
+									<DataPath>ТаблицаДокументов.Номер</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>18</Width>
+									<ContextMenu name="ТаблицаДокументовНомерКонтекстноеМеню" id="48"/>
+									<ExtendedTooltip name="ТаблицаДокументовНомерРасширеннаяПодсказка" id="192"/>
+								</InputField>
+								<InputField name="ТаблицаДокументовДата" id="45">
+									<DataPath>ТаблицаДокументов.Дата</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>18</Width>
+									<ContextMenu name="ТаблицаДокументовДатаКонтекстноеМеню" id="46"/>
+									<ExtendedTooltip name="ТаблицаДокументовДатаРасширеннаяПодсказка" id="193"/>
+								</InputField>
+							</ChildItems>
+						</ColumnGroup>
+						<InputField name="ТаблицаДокументовКонтрагент" id="53">
+							<DataPath>ТаблицаДокументов.Контрагент</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>30</Width>
+							<ContextMenu name="ТаблицаДокументовКонтрагентКонтекстноеМеню" id="54"/>
+							<ExtendedTooltip name="ТаблицаДокументовКонтрагентРасширеннаяПодсказка" id="194"/>
+						</InputField>
+						<ColumnGroup name="ТаблицаДокументовГруппаОтветственные" id="112">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Таблица документов группа ответственные</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Таблиця документів група відповідальні</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Таблица документов группа ответственные</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Таблиця документів група відповідальні</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ТаблицаДокументовГруппаОтветственныеРасширеннаяПодсказка" id="195"/>
+							<ChildItems>
+								<InputField name="ТаблицаДокументовОтветственный" id="55">
+									<DataPath>ТаблицаДокументов.Ответственный</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>25</Width>
+									<ContextMenu name="ТаблицаДокументовОтветственныйКонтекстноеМеню" id="56"/>
+									<ExtendedTooltip name="ТаблицаДокументовОтветственныйРасширеннаяПодсказка" id="196"/>
+								</InputField>
+								<InputField name="ТаблицаДокументовКтоВыписалНалоговуюНакладную" id="57">
+									<DataPath>ТаблицаДокументов.КтоВыписалНалоговуюНакладную</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>25</Width>
+									<ContextMenu name="ТаблицаДокументовКтоВыписалНалоговуюНакладнуюКонтекстноеМеню" id="58"/>
+									<ExtendedTooltip name="ТаблицаДокументовКтоВыписалНалоговуюНакладнуюРасширеннаяПодсказка" id="197"/>
+								</InputField>
+								<InputField name="ТаблицаДокументовЗвит1С_КтоВыписалНалоговуюНакладную" id="120">
+									<DataPath>ТаблицаДокументов.Звит1С_КтоВыписалНалоговуюНакладную</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>31</Width>
+									<BackColor>style:ToolTipBackColor</BackColor>
+									<ContextMenu name="ТаблицаДокументовЗвит1С_КтоВыписалНалоговуюНакладнуюКонтекстноеМеню" id="121"/>
+									<ExtendedTooltip name="ТаблицаДокументовЗвит1С_КтоВыписалНалоговуюНакладнуюРасширеннаяПодсказка" id="198"/>
+								</InputField>
+							</ChildItems>
+						</ColumnGroup>
+						<InputField name="ТаблицаДокументовСостояниеСтр" id="59">
+							<DataPath>ТаблицаДокументов.СостояниеСтр</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>25</Width>
+							<BackColor>style:ToolTipBackColor</BackColor>
+							<ContextMenu name="ТаблицаДокументовСостояниеСтрКонтекстноеМеню" id="60"/>
+							<ExtendedTooltip name="ТаблицаДокументовСостояниеСтрРасширеннаяПодсказка" id="199"/>
+						</InputField>
+						<ColumnGroup name="ТаблицаДокументовГруппаРегистрация" id="113">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Таблица документов группа регистрация</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Таблиця група документів реєстрація</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Таблица документов группа регистрация</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Таблиця група документів реєстрація</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ТаблицаДокументовГруппаРегистрацияРасширеннаяПодсказка" id="200"/>
+							<ChildItems>
+								<InputField name="ТаблицаДокументовСтатусРегистрацииВЕРНН" id="118">
+									<DataPath>ТаблицаДокументов.СтатусРегистрацииВЕРНН</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаДокументовСтатусРегистрацииВЕРННКонтекстноеМеню" id="119"/>
+									<ExtendedTooltip name="ТаблицаДокументовСтатусРегистрацииВЕРННРасширеннаяПодсказка" id="201"/>
+								</InputField>
+								<InputField name="ТаблицаДокументовДатаВключенияВЕдиныйРеестрНалоговыхНакладных" id="67">
+									<DataPath>ТаблицаДокументов.ДатаВключенияВЕдиныйРеестрНалоговыхНакладных</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>15</Width>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=dd.MM.yyyy</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>ДФ=dd.MM.yyyy</v8:content>
+										</v8:item>
+									</Format>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=dd.MM.yyyy</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>ДФ=dd.MM.yyyy</v8:content>
+										</v8:item>
+									</EditFormat>
+									<ContextMenu name="ТаблицаДокументовДатаВключенияВЕдиныйРеестрНалоговыхНакладныхКонтекстноеМеню" id="68"/>
+									<ExtendedTooltip name="ТаблицаДокументовДатаВключенияВЕдиныйРеестрНалоговыхНакладныхРасширеннаяПодсказка" id="202"/>
+								</InputField>
+								<InputField name="ТаблицаДокументовЗвит1С_ДатаРегистрации" id="69">
+									<DataPath>ТаблицаДокументов.Звит1С_ДатаРегистрации</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>15</Width>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=dd.MM.yyyy</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>ДФ=dd.MM.yyyy</v8:content>
+										</v8:item>
+									</Format>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=dd.MM.yyyy</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>ДФ=dd.MM.yyyy</v8:content>
+										</v8:item>
+									</EditFormat>
+									<BackColor>style:ToolTipBackColor</BackColor>
+									<ContextMenu name="ТаблицаДокументовЗвит1С_ДатаРегистрацииКонтекстноеМеню" id="70"/>
+									<ExtendedTooltip name="ТаблицаДокументовЗвит1С_ДатаРегистрацииРасширеннаяПодсказка" id="203"/>
+								</InputField>
+							</ChildItems>
+						</ColumnGroup>
+						<ColumnGroup name="ТаблицаДокументовГруппаСуммаНДС" id="111">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Таблица документов группа сумма НДС</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Таблиця документів група сума ПДВ</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Таблица документов группа сумма НДС</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Таблиця документів група сума ПДВ</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ТаблицаДокументовГруппаСуммаНДСРасширеннаяПодсказка" id="204"/>
+							<ChildItems>
+								<InputField name="ТаблицаДокументовСуммаНДСДокумента" id="75">
+									<DataPath>ТаблицаДокументов.СуммаНДСДокумента</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>20</Width>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧДЦ=2; ЧН=</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>ЧДЦ=2; ЧН=</v8:content>
+										</v8:item>
+									</Format>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧДЦ=2; ЧН=</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>ЧДЦ=2; ЧН=</v8:content>
+										</v8:item>
+									</EditFormat>
+									<ContextMenu name="ТаблицаДокументовСуммаНДСДокументаКонтекстноеМеню" id="76"/>
+									<ExtendedTooltip name="ТаблицаДокументовСуммаНДСДокументаРасширеннаяПодсказка" id="205"/>
+								</InputField>
+								<InputField name="ТаблицаДокументовЗвит1С_СуммаНДСДокумента" id="77">
+									<DataPath>ТаблицаДокументов.Звит1С_СуммаНДСДокумента</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>10</Width>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>ЧДЦ=2</v8:content>
+										</v8:item>
+									</Format>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>ЧДЦ=2</v8:content>
+										</v8:item>
+									</EditFormat>
+									<BackColor>style:ToolTipBackColor</BackColor>
+									<ContextMenu name="ТаблицаДокументовЗвит1С_СуммаНДСДокументаКонтекстноеМеню" id="78"/>
+									<ExtendedTooltip name="ТаблицаДокументовЗвит1С_СуммаНДСДокументаРасширеннаяПодсказка" id="206"/>
+								</InputField>
+							</ChildItems>
+						</ColumnGroup>
+						<InputField name="ТаблицаДокументовТребуетВключенияВЕдиныйРеестрНалоговыхНакладных" id="61">
+							<DataPath>ТаблицаДокументов.ТребуетВключенияВЕдиныйРеестрНалоговыхНакладных</DataPath>
+							<Visible>false</Visible>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТаблицаДокументовТребуетВключенияВЕдиныйРеестрНалоговыхНакладныхКонтекстноеМеню" id="62"/>
+							<ExtendedTooltip name="ТаблицаДокументовТребуетВключенияВЕдиныйРеестрНалоговыхНакладныхРасширеннаяПодсказка" id="207"/>
+						</InputField>
+						<CheckBoxField name="ТаблицаДокументовТребуетПроверкиВключенияВЕдиныйРеестрНалоговыхНакладных" id="63">
+							<DataPath>ТаблицаДокументов.ТребуетПроверкиВключенияВЕдиныйРеестрНалоговыхНакладных</DataPath>
+							<Visible>false</Visible>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ТаблицаДокументовТребуетПроверкиВключенияВЕдиныйРеестрНалоговыхНакладныхКонтекстноеМеню" id="64"/>
+							<ExtendedTooltip name="ТаблицаДокументовТребуетПроверкиВключенияВЕдиныйРеестрНалоговыхНакладныхРасширеннаяПодсказка" id="208"/>
+						</CheckBoxField>
+						<InputField name="ТаблицаДокументовДокумент" id="79">
+							<DataPath>ТаблицаДокументов.Документ</DataPath>
+							<Visible>false</Visible>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТаблицаДокументовДокументКонтекстноеМеню" id="80"/>
+							<ExtendedTooltip name="ТаблицаДокументовДокументРасширеннаяПодсказка" id="209"/>
+						</InputField>
+						<CheckBoxField name="ТаблицаДокументовДокументКорректен" id="81">
+							<DataPath>ТаблицаДокументов.ДокументКорректен</DataPath>
+							<Visible>false</Visible>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ТаблицаДокументовДокументКорректенКонтекстноеМеню" id="82"/>
+							<ExtendedTooltip name="ТаблицаДокументовДокументКорректенРасширеннаяПодсказка" id="210"/>
+						</CheckBoxField>
+						<InputField name="ТаблицаДокументовЗвит1С_Состояние" id="83">
+							<DataPath>ТаблицаДокументов.Звит1С_Состояние</DataPath>
+							<Visible>false</Visible>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТаблицаДокументовЗвит1С_СостояниеКонтекстноеМеню" id="84"/>
+							<ExtendedTooltip name="ТаблицаДокументовЗвит1С_СостояниеРасширеннаяПодсказка" id="211"/>
+						</InputField>
+						<CheckBoxField name="ТаблицаДокументовЗвит1С_ДокументКорректен" id="85">
+							<DataPath>ТаблицаДокументов.Звит1С_ДокументКорректен</DataPath>
+							<Visible>false</Visible>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ТаблицаДокументовЗвит1С_ДокументКорректенКонтекстноеМеню" id="86"/>
+							<ExtendedTooltip name="ТаблицаДокументовЗвит1С_ДокументКорректенРасширеннаяПодсказка" id="212"/>
+						</CheckBoxField>
+						<CheckBoxField name="ТаблицаДокументовЗвит1С_СовпадаютКлючевыеПоля" id="87">
+							<DataPath>ТаблицаДокументов.Звит1С_СовпадаютКлючевыеПоля</DataPath>
+							<Visible>false</Visible>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ТаблицаДокументовЗвит1С_СовпадаютКлючевыеПоляКонтекстноеМеню" id="88"/>
+							<ExtendedTooltip name="ТаблицаДокументовЗвит1С_СовпадаютКлючевыеПоляРасширеннаяПодсказка" id="213"/>
+						</CheckBoxField>
+						<InputField name="ТаблицаДокументовЗвит1С_ДокументЗарегистрирован" id="89">
+							<DataPath>ТаблицаДокументов.Звит1С_СтатусРегистрацииВЕРНН</DataPath>
+							<Visible>false</Visible>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТаблицаДокументовЗвит1С_ДокументЗарегистрированКонтекстноеМеню" id="90"/>
+							<ExtendedTooltip name="ТаблицаДокументовЗвит1С_ДокументЗарегистрированРасширеннаяПодсказка" id="214"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Период" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Період</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:StandardPeriod</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Организация" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Організація</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОбособленноеПодразделение" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обособленное подразделение</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Відокремлений підрозділ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ОбособленныеПодразделенияОрганизаций</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Контрагент" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Контрагент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СпецРежимНалогообложения" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Спец режим налогообложения</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Спец режим оподаткування</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ПропускатьЗарегистрированныеПоДанным1С" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пропускать налоговые документы, включенные в ЕРНН </v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Пропускати податкові документи, включені до ЄРПН </v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТаблицаДокументов" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица документов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Таблица документів</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Пометка_Выполнить" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Запрос/</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Запит/</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Пометка_Синхронизировать" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Синхронизировать</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Синхронізувати</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ВидДокумента" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид документа</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Вид документу</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>2</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Дата" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата док. </v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Дата док. </v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Номер" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер док. </v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Номер док. </v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>20</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДатаВходящегоДокумента" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Дата</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="НомерВходящегоДокумента" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Номер</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>40</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Контрагент" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрагент</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Контрагент</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Ответственный" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ответственный</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Відповідальний</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+					</Type>
+				</Column>
+				<Column name="КтоВыписалНалоговуюНакладную" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Кто выписал налог. накл.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Хто виписав под. накл.</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>60</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СостояниеСтр" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Состояние регистрации в ЕРНН</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Стан реєстрації в ЄРПН</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ТребуетВключенияВЕдиныйРеестрНалоговыхНакладных" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подлежит включению в ЕРНН</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Підлягає включенню до ЄРПН</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ТребуетПроверкиВключенияВЕдиныйРеестрНалоговыхНакладных" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Требует проверки включения в ЕРНН</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Вимагає перевірки включення до ЄРПН</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="СтатусРегистрацииВЕРНН" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус регистр. из док. </v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Статус реєстр. з док. </v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.СтатусыРегистрацииВЕРНННалоговыхДокументов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ДатаВключенияВЕдиныйРеестрНалоговыхНакладных" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата регистр. из док. </v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Дата реєстр. з док. </v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Звит1С_ДатаРегистрации" id="16">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата регистр. в ЕРНН</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Дата реєстр. в ЄРПН</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="СуммаНДСДокумента" id="19">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма НДС из док. </v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Сума ПДВ з док. </v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Звит1С_СуммаНДСДокумента" id="20">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма НДС из ЕРНН</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Сума ПДВ з ЄРПН</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Документ" id="21">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Документ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DocumentRef</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="ДокументКорректен" id="22">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ корректен</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Документ коректний </v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Звит1С_Состояние" id="23">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>FREDO Звіт состояние</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>FREDO Звіт стан</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>2</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Звит1С_ДокументКорректен" id="24">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>FREDO Звіт документ корректен</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>FREDO Звіт коректний документ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Звит1С_СовпадаютКлючевыеПоля" id="25">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>FREDO Звіт совпадают ключевые поля</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>FREDO Звіт співпадають ключові поля</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Звит1С_СтатусРегистрацииВЕРНН" id="26">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>FREDO Звіт статус регистрации в ЕРНН</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>FREDO Звіт статус реєстрації в ЄРПН</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.СтатусыРегистрацииВЕРНННалоговыхДокументов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Контрагент_ИНН" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрагент ИНН</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Контрагент ІПН</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>12</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Звит1С_Контрагент_ИНН" id="18">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>FREDO Звіт контрагент ИНН</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>FREDO Звіт контрагент ІПН</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>12</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Организация_ЕДРПОУ" id="27">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация ЕДРПОУ</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Організація ЄДРПОУ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>10</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Звит1С_Организация_ЕДРПОУ" id="28">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>FREDO Звіт организация ЕДРПОУ</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>FREDO Звіт організація ЄДРПОУ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>10</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Звит1С_НомерПорядковый" id="29">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>FREDO Звіт номер порядковый</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>FREDO Звіт порядковий номер</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>12</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СпецРежимНалогообложения" id="30">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Спец режим налогообложения</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Спец режим оподаткування</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>1</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Звит1С_СпецРежимНалогообложения" id="31">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>FREDO Звіт спец режим налогообложения</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>FREDO Звіт спец режим оподаткування</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>1</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Филиал" id="32">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Филиал из налогового документа</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Філія з податкового документа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>5</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Звит1С_Филиал" id="33">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>FREDO Звіт филиал</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>FREDO Звіт філія</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>5</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Звит1С_Дата" id="34">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>FREDO Звіт дата</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>FREDO Звіт дата</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИДДокумента" id="35">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ИДДокумента</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>ИДДокумента</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Звит1С_КтоВыписалНалоговуюНакладную" id="36">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Кто выписал НН (по данным ЕРНН)</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Хто виписав ПН (за даними ЄРПН)</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="НомерПорядковый" id="37">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер порядковый</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Номер порядковий </v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>10</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Звит1С_ДокументЗарегистрирован" id="38">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>FREDO Звіт документ зарегистрирован</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>FREDO Звіт документ зареєстрований</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ДокументКорректен_ОписаниеОшибки" id="39">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ корректен/ описание ошибки</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Документ коректний/ опис помилки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ТипПричиныНевыдачиПокупателю" id="40">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип причины невыдачи покупателю</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Тип причини невидачі</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СоглашениеОРазделеПродукции" id="41">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Соглашение о разделе продукции</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Оферта про розподіл продукції</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="мЭтоИсходящиеНалоговыеДокументы" id="11">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="мПараметрыРаботыЗвит1С" id="12">
+			<Type/>
+		</Attribute>
+		<Attribute name="ТаблицаЗапроса" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица запроса</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Таблиця запиту</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Документ" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Документ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DocumentRef</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="НомерСтрокиЗапроса" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер строки запроса</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Номер рядка запиту</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ОписаниеОшибки" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Описание ошибки</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Опис помилки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="СтараяОрганизация" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Старая организация</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Стара організація</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокСвойствДокументов1С" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список свойств документов </v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Список властивостей документів </v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="СписокСвойствДокументов1СЗвит" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список свойств документов FREDO Звіт</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Список властивостей документів FREDO Звіт</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="Организация_ЕДРПОУ" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация ЕДРПОУ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Організація ЄДРПОУ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>10</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПериодичностьМесяц" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Периодичность месяц</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Періодичність місяць</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.Периодичность</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВозможностьОткрытияОтчетов" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Возможность открытия отчетов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Можливість відкриття звітів</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="мВалютаРегламентированногоУчета" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Валюта регламентированного учета</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Валюта регламентованого обліку</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Валюты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИдКонфигурации" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ид конфигурации</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Ід конфігурації</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РежимУточненияПоказателей" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим уточнения показателей</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Режим уточнення показників</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Статус" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статус</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Статус</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаРегистрации" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата регистрации</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Дата реєстрації</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ТаблицаДокументовСостояниеСтр</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ТаблицаДокументов.ДокументКорректен</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ТаблицаДокументовСостояниеСтр</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ТаблицаДокументов.Звит1С_ДокументКорректен</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ТаблицаДокументовЗвит1С_ДатаРегистрации</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ТаблицаДокументовДатаВключенияВЕдиныйРеестрНалоговыхНакладных</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ТаблицаДокументов.Звит1С_Состояние</dcsset:left>
+						<dcsset:comparisonType>Greater</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">-1</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ТаблицаДокументов.ДатаВходящегоДокумента</dcsset:left>
+						<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:Field">ТаблицаДокументов.Звит1С_ДатаРегистрации</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ТаблицаДокументов.Звит1С_ДатаРегистрации</dcsset:left>
+						<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+						<dcsset:right xsi:type="v8:StandardBeginningDate">
+							<v8:variant xsi:type="v8:StandardBeginningDateVariant">Custom</v8:variant>
+							<v8:date>0001-01-01T00:00:00</v8:date>
+						</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">мЭтоИсходящиеНалоговыеДокументы</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ТаблицаДокументовСостояниеСтр</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ТаблицаДокументов.Звит1С_Состояние</dcsset:left>
+						<dcsset:comparisonType>Greater</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">-1</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ТаблицаДокументов.Звит1С_СовпадаютКлючевыеПоля</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">мЭтоИсходящиеНалоговыеДокументы</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ТаблицаДокументовСостояниеСтр</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ТаблицаДокументовСтатусРегистрацииВЕРНН</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ТаблицаДокументов.Звит1С_Состояние</dcsset:left>
+						<dcsset:comparisonType>Greater</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">-1</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ТаблицаДокументов.Звит1С_СтатусРегистрацииВЕРНН</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.СтатусыРегистрацииВЕРНННалоговыхДокументов.ЗарегистрированВЕРНН</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">мЭтоИсходящиеНалоговыеДокументы</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ТаблицаДокументов.Звит1С_ДатаРегистрации</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="v8:StandardBeginningDate">
+							<v8:variant xsi:type="v8:StandardBeginningDateVariant">Custom</v8:variant>
+							<v8:date>0001-01-01T00:00:00</v8:date>
+						</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ТаблицаДокументовСуммаНДСДокумента</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ТаблицаДокументовЗвит1С_СуммаНДСДокумента</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ТаблицаДокументов.Звит1С_Состояние</dcsset:left>
+						<dcsset:comparisonType>Greater</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">-1</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ТаблицаДокументов.СуммаНДСДокумента</dcsset:left>
+						<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:Field">ТаблицаДокументов.Звит1С_СуммаНДСДокумента</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ОткрытьВ1С" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть документ в информационной базе</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Відкрити документ в інформаційній базі</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть документ в информационной базе</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Відкрити документ в інформаційній базі</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьВ1С</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьВ1СЗвит" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть документ в FREDO Звіт</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Відкрити документ у FREDO Звіт</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть документ в FREDO Звіт</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Відкрити документ у FREDO Звіт</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьВ1СЗвит</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Обновить" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Оновити</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить данные в строках таблицы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Оновити дані у рядках таблиці</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Обновить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВыгрузитьВ1СЗвит" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить док./запрос в FREDO Звіт</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Вивантажити док./запит до FREDO Звіт</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить документы/запрос в FREDO Звіт</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Вивантажити документи/запит до FREDO Звіт</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыгрузитьВ1СЗвит</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗафиксироватьСостояниеРегистрацииВ1С" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Синхронизировать состояние регистрации в </v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Синхронізувати стан реєстрації в </v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновление реквизитов документов предприятия, отображающих статус регистрации в ЕРНН, по данным "FREDO Звіт" о фактическом состоянии регистрации в реестре</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Оновлення реквізитів документів підприємства, що відображають статус реєстрації в ЄРПН, за даними "FREDO Звіт" про фактичний стан реєстрації в реєстрі</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗафиксироватьСостояниеРегистрацииВ1С</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Заполнить" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Заповнити</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Заповнити</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Заполнить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Подбор" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Підбір</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор документов в таблицу</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Підбір документів до таблиці</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Подбор</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СнятьВсеПометки" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все пометки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Зняти всі позначки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все пометки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Зняти всі позначки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СнятьВсеПометки</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="мЭтоИсходящиеНалоговыеДокументы">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

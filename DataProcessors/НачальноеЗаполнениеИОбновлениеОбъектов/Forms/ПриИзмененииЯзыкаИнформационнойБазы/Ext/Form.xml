@@ -1,0 +1,420 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>При изменении языка информационной базы</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>uk</v8:lang>
+			<v8:content>При зміні мови інформаційної бази</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="Перезаполнить" id="7">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.Заполнить</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Перезаполнить</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>uk</v8:lang>
+						<v8:content>Перезаповнити</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ПерезаполнитьРасширеннаяПодсказка" id="13"/>
+			</Button>
+			<Button name="Открыть" id="8">
+				<Type>CommandBarButton</Type>
+				<Visible>false</Visible>
+				<UserVisible>
+					<xr:Common>false</xr:Common>
+				</UserVisible>
+				<CommandName>Form.Command.ОткрытьФормуОбъекта</CommandName>
+				<ExtendedTooltip name="ОткрытьExtendedTooltip" id="14"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<LabelField name="ЯзыкИнформационнойБазы" id="23">
+			<DataPath>ЯзыкИнформационнойБазы</DataPath>
+			<ContextMenu name="ЯзыкИнформационнойБазыКонтекстноеМеню" id="24"/>
+			<ExtendedTooltip name="ЯзыкИнформационнойБазыРасширеннаяПодсказка" id="25"/>
+		</LabelField>
+		<LabelField name="ЯзыкПользователя" id="32">
+			<DataPath>ЯзыкПользователя</DataPath>
+			<ContextMenu name="ЯзыкПользователяКонтекстноеМеню" id="33"/>
+			<ExtendedTooltip name="ЯзыкПользователяРасширеннаяПодсказка" id="34"/>
+		</LabelField>
+		<LabelDecoration name="ДекорацияЯзыкиНеСовпадают" id="35">
+			<TextColor>style:SpecialTextColor</TextColor>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Язык информационной базы и язык пользователя не совпадают!</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Мова інформаційної бази і мова користувача не збігаються!</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ДекорацияЯзыкиНеСовпадаютКонтекстноеМеню" id="36"/>
+			<ExtendedTooltip name="ДекорацияЯзыкиНеСовпадаютРасширеннаяПодсказка" id="37"/>
+		</LabelDecoration>
+		<CheckBoxField name="ЗаполнитьСинонимы" id="26">
+			<DataPath>ЗаполнитьСинонимы</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ЗаполнитьСинонимыКонтекстноеМеню" id="27"/>
+			<ExtendedTooltip name="ЗаполнитьСинонимыРасширеннаяПодсказка" id="28"/>
+		</CheckBoxField>
+		<InputField name="ТипОбъекта" id="3">
+			<DataPath>ТипОбъекта</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Тип</v8:content>
+				</v8:item>
+			</Title>
+			<ListChoiceMode>true</ListChoiceMode>
+			<AutoMarkIncomplete>true</AutoMarkIncomplete>
+			<ChooseType>false</ChooseType>
+			<TextEdit>false</TextEdit>
+			<ContextMenu name="ТипОбъектаКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="ТипОбъектаExtendedTooltip" id="15"/>
+			<Events>
+				<Event name="OnChange">ТипОбъектаПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="НаименованиеОбъекта" id="5">
+			<DataPath>НаименованиеОбъекта</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Об'єкт</v8:content>
+				</v8:item>
+			</Title>
+			<ListChoiceMode>true</ListChoiceMode>
+			<AutoMarkIncomplete>true</AutoMarkIncomplete>
+			<ChooseType>false</ChooseType>
+			<TextEdit>false</TextEdit>
+			<ContextMenu name="НаименованиеОбъектаКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="НаименованиеОбъектаExtendedTooltip" id="16"/>
+			<Events>
+				<Event name="OnChange">НаименованиеОбъектаПриИзменении</Event>
+			</Events>
+		</InputField>
+		<CheckBoxField name="ЗаполнитьИдентификаторыОбъектовМетаданных" id="38">
+			<DataPath>ЗаполнитьИдентификаторыОбъектовМетаданных</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ЗаполнитьИдентификаторыОбъектовМетаданныхКонтекстноеМеню" id="39"/>
+			<ExtendedTooltip name="ЗаполнитьИдентификаторыОбъектовМетаданныхРасширеннаяПодсказка" id="40"/>
+		</CheckBoxField>
+		<CheckBoxField name="ЗаполнитьОписанияОтчетов" id="29">
+			<DataPath>ЗаполнитьОписанияОтчетов</DataPath>
+			<Visible>false</Visible>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ЗаполнитьОписанияОтчетовКонтекстноеМеню" id="30"/>
+			<ExtendedTooltip name="ЗаполнитьОписанияОтчетовРасширеннаяПодсказка" id="31"/>
+		</CheckBoxField>
+		<CheckBoxField name="ЗаполнитьОписанияПоставляемыхПрофилейГруппДоступа" id="41">
+			<DataPath>ЗаполнитьОписанияПоставляемыхПрофилейГруппДоступа</DataPath>
+			<Visible>false</Visible>
+			<UserVisible>
+				<xr:Common>false</xr:Common>
+			</UserVisible>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ЗаполнитьОписанияПоставляемыхПрофилейГруппДоступаКонтекстноеМеню" id="42"/>
+			<ExtendedTooltip name="ЗаполнитьОписанияПоставляемыхПрофилейГруппДоступаРасширеннаяПодсказка" id="43"/>
+		</CheckBoxField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="КешМетаданных" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кеш метаданных</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Кеш метаданных</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Имя" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Ім'я</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Представление" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Представление</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Представлення</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТипОбъекта" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Тип</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НаименованиеОбъекта" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование объекта</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Найменування об'єкта</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Объект" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Об'єкт</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.НачальноеЗаполнениеИОбновлениеОбъектов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ЯзыкИнформационнойБазы" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Язык информационной базы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Мова інформаційної бази</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>10</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаполнитьСинонимы" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перезаполнить синонимы предопределенных элементов на языке информационной базы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Перезаповнити синоніми напередвизначених елементів мовою інформаційної бази</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаполнитьОписанияОтчетов" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перезаполнить наименования и описания вариантов отчетов на текущем языке пользователя</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Перезаповнити найменування та описи варіантів звітів на поточній мові користувача</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЯзыкПользователя" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий язык пользователя</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Поточна мова користувача</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>10</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаполнитьИдентификаторыОбъектовМетаданных" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перезаполнить служебный справочник "Идентификаторы объектов метаданных" на текущем языке пользователя </v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Перезаповнити службовий довідник "Ідентифікатори об'єктів метаданих" на поточній мові користувача</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаполнитьОписанияПоставляемыхПрофилейГруппДоступа" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перезаполнить описания поставляемых профилей групп доступа на текущем языке пользователя</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Перезаповнити описи профілів груп доступу, що поставляються, на поточній мові користувача</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Заполнить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Заповнити</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Заповнити</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.GenerateReport</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаЗаполнить</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьФормуОбъекта" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть форму объекта</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Відкрити форму</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть форму объекта</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Відкрити форму</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ShowData</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаОткрытьФормуОбъекта</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

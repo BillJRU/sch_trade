@@ -1,0 +1,933 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаЗапустить" id="1">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.Запустить</CommandName>
+				<ExtendedTooltip name="ФормаЗапуститьРасширеннаяПодсказка" id="2"/>
+			</Button>
+			<Button name="ФормаЗакрыть" id="3">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<ExtendedTooltip name="ФормаЗакрытьРасширеннаяПодсказка" id="4"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="Страницы" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Сторінки</v8:content>
+				</v8:item>
+			</Title>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="31"/>
+			<ChildItems>
+				<Page name="ГруппаПараметры" id="32">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Параметры</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Параметри</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаПараметрыРасширеннаяПодсказка" id="33"/>
+					<ChildItems>
+						<LabelDecoration name="ПредупреждениеЗакрытиеМесяца" id="56">
+							<Visible>false</Visible>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<TextColor>style:SpecialTextColor</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Необходимо выполнить обработку закрытия месяца перед тестированием, так как не все месяца закрыты и будут зафиксированы ложные расхождения.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Необхідно виконати обробку закриття місяця перед тестуванням, так як не всі місяці закриті і будуть зафіксовані хибні розбіжності.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ПредупреждениеЗакрытиеМесяцаКонтекстноеМеню" id="57"/>
+							<ExtendedTooltip name="ПредупреждениеЗакрытиеМесяцаРасширеннаяПодсказка" id="58"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаПериод" id="59">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Период</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Період</v8:content>
+								</v8:item>
+							</Title>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПериодРасширеннаяПодсказка" id="60"/>
+							<ChildItems>
+								<InputField name="НачалоРасчета" id="18">
+									<DataPath>НачалоРасчетаСтрока</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Тестировать помесячно начиная с</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Тестувати помісячно починаючи з</v8:content>
+										</v8:item>
+									</Title>
+									<Width>15</Width>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ChoiceButton>true</ChoiceButton>
+									<SpinButton>true</SpinButton>
+									<TextEdit>false</TextEdit>
+									<ChoiceListHeight>14</ChoiceListHeight>
+									<ContextMenu name="НачалоРасчетаКонтекстноеМеню" id="19"/>
+									<ExtendedTooltip name="НачалоРасчетаРасширеннаяПодсказка" id="20"/>
+									<Events>
+										<Event name="StartChoice">НачалоРасчетаНачалоВыбора</Event>
+										<Event name="Tuning">НачалоРасчетаРегулирование</Event>
+									</Events>
+								</InputField>
+								<InputField name="КонецРасчета" id="61">
+									<DataPath>КонецРасчетаСтрока</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>по</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>по</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Left</TitleLocation>
+									<Width>15</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>15</MaxWidth>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<ChoiceButton>true</ChoiceButton>
+									<SpinButton>true</SpinButton>
+									<TextEdit>false</TextEdit>
+									<ChoiceListHeight>14</ChoiceListHeight>
+									<ContextMenu name="КонецРасчетаКонтекстноеМеню" id="62"/>
+									<ExtendedTooltip name="КонецРасчетаРасширеннаяПодсказка" id="63"/>
+									<Events>
+										<Event name="OnChange">КонецРасчетаПриИзменении</Event>
+										<Event name="StartChoice">КонецРасчетаНачалоВыбора</Event>
+										<Event name="Tuning">КонецРасчетаРегулирование</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<LabelField name="ПредставлениеЭтаповДляТестирования" id="87">
+							<DataPath>ПредставлениеЭтаповДляТестирования</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Hiperlink>true</Hiperlink>
+							<ContextMenu name="ПредставлениеЭтаповДляТестированияКонтекстноеМеню" id="88"/>
+							<ExtendedTooltip name="ПредставлениеЭтаповДляТестированияРасширеннаяПодсказка" id="89"/>
+							<Events>
+								<Event name="Click">ПредставлениеЭтаповДляТестированияНажатие</Event>
+							</Events>
+						</LabelField>
+						<UsualGroup name="НастройкиРасчета" id="26">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки расчета</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Настройки розрахунку</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="НастройкиРасчетаРасширеннаяПодсказка" id="27"/>
+							<ChildItems>
+								<CheckBoxField name="ОстанавливатьПоОшибке" id="23">
+									<DataPath>ОстанавливатьсяПриРасхождениях</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Останавливаться при расхождениях с исходными данными после тестирования месяца</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Зупинятися при розбіжностях з вихідними даними після тестування місяця</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОстанавливатьПоОшибкеКонтекстноеМеню" id="24"/>
+									<ExtendedTooltip name="ОстанавливатьПоОшибкеРасширеннаяПодсказка" id="25"/>
+								</CheckBoxField>
+								<CheckBoxField name="ВыполнятьСравнениеСНовойАрхитектуройВзаиморасчетов" id="90">
+									<DataPath>ВыполнятьСравнениеСНовойАрхитектуройВзаиморасчетов</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>При выключенной функциональной опции "Новая архитектура взаиморасчетов", будут выполнены в начале стандартные этапы тестирования, а после этого проведутся операции закрытия месяца с включенной опцией.</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>При вимкненій функціональної опції "Нова архітектура взаєморозрахунків", будуть виконані на початку стандартні етапи тестування, а після цього проведуться операції закриття місяця з включеною опцією.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ВыполнятьСравнениеСНовойАрхитектуройВзаиморасчетовКонтекстноеМеню" id="91"/>
+									<ExtendedTooltip name="ВыполнятьСравнениеСНовойАрхитектуройВзаиморасчетовРасширеннаяПодсказка" id="92"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="КаталогФайловОшибок" id="5">
+							<DataPath>РабочийКаталог</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Рабочий каталог</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Робочий каталог</v8:content>
+								</v8:item>
+							</Title>
+							<Width>50</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ChoiceButton>true</ChoiceButton>
+							<OpenButton>false</OpenButton>
+							<ContextMenu name="КаталогФайловОшибокКонтекстноеМеню" id="6"/>
+							<ExtendedTooltip name="КаталогФайловОшибокРасширеннаяПодсказка" id="7"/>
+							<Events>
+								<Event name="StartChoice">КаталогФайловОшибокНачалоВыбора</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаФоновоеЗадание" id="34">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Фоновое задание</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Фонове завдання</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаФоновоеЗаданиеРасширеннаяПодсказка" id="35"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаДлительныеОперации" id="36">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Длительные операции</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Тривалі операції</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаДлительныеОперацииРасширеннаяПодсказка" id="37"/>
+							<ChildItems>
+								<PictureDecoration name="Декорация217" id="38">
+									<Picture>
+										<xr:Ref>CommonPicture.ДлительнаяОперация48</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="Декорация217КонтекстноеМеню" id="39"/>
+									<ExtendedTooltip name="Декорация217РасширеннаяПодсказка" id="40"/>
+								</PictureDecoration>
+								<UsualGroup name="ГруппаПояснениеОперации" id="41">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Пояснение операции</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Пояснення операції</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПояснениеОперацииРасширеннаяПодсказка" id="42"/>
+									<ChildItems>
+										<LabelDecoration name="ЗаголовокРасчетаВФоне" id="46">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Height>3</Height>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Выполняются операции закрытия месяца ....</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Виконуються операції закриття місяця ....</v8:content>
+												</v8:item>
+											</Title>
+											<VerticalAlign>Center</VerticalAlign>
+											<ContextMenu name="ЗаголовокРасчетаВФонеКонтекстноеМеню" id="47"/>
+											<ExtendedTooltip name="ЗаголовокРасчетаВФонеРасширеннаяПодсказка" id="48"/>
+										</LabelDecoration>
+										<UsualGroup name="ГруппаОтменаОперации" id="49">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отмена операции</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Скасування операції</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаОтменаОперацииРасширеннаяПодсказка" id="50"/>
+											<ChildItems>
+												<CheckBoxField name="ОстанавливатьсяПоОшибке" id="51">
+													<DataPath>ОстанавливатьсяПриРасхождениях</DataPath>
+													<Visible>false</Visible>
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ОстанавливатьсяПоОшибкеКонтекстноеМеню" id="52"/>
+													<ExtendedTooltip name="ОстанавливатьсяПоОшибкеРасширеннаяПодсказка" id="53"/>
+												</CheckBoxField>
+												<Button name="ОтменитьЗадание" id="54">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.ОтменитьЗадание</CommandName>
+													<ExtendedTooltip name="ОтменитьЗаданиеРасширеннаяПодсказка" id="55"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<TextDocumentField name="СообщениеОбОшибке" id="8">
+			<DataPath>СообщениеОбОшибке</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результаты тестирования</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Результати тестування</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="СообщениеОбОшибкеКонтекстноеМеню" id="9"/>
+			<ExtendedTooltip name="СообщениеОбОшибкеРасширеннаяПодсказка" id="10"/>
+		</TextDocumentField>
+		<UsualGroup name="ГруппаПоказатьОтчет" id="80">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать отчет</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Показати звіт</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПоказатьОтчетРасширеннаяПодсказка" id="81"/>
+			<ChildItems>
+				<Button name="ПоказатьОтчет" id="28">
+					<Type>Hyperlink</Type>
+					<CommandName>Form.Command.ПоказатьОтчет</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Показать расхождения</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Показати розбіжності</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ПоказатьОтчетРасширеннаяПодсказка" id="29"/>
+				</Button>
+				<Button name="ПоказатьРасхожденияЭтапов" id="93">
+					<Type>Hyperlink</Type>
+					<CommandName>Form.Command.ПоказатьРасхожденияЭтапов</CommandName>
+					<ExtendedTooltip name="ПоказатьРасхожденияЭтаповРасширеннаяПодсказка" id="94"/>
+				</Button>
+				<Button name="ПоказатьРасхожденияЭтаповНовыхРасчетов" id="95">
+					<Type>Hyperlink</Type>
+					<Visible>false</Visible>
+					<CommandName>Form.Command.ПоказатьРасхожденияЭтаповНовыхРасчетов</CommandName>
+					<ExtendedTooltip name="ПоказатьРасхожденияЭтаповНовыхРасчетовРасширеннаяПодсказка" id="96"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаИнформация" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Информация</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Інформація</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаИнформацияРасширеннаяПодсказка" id="14"/>
+			<ChildItems>
+				<LabelDecoration name="ПараметрыЗапуска" id="15">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Height>7</Height>
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;b&gt;Параметры запуска:&lt;/&gt;
+&lt;colorstyle -14&gt;  НачалоРасчета &lt;/&gt;- необязательный параметр запуска, по умолчанию берется как начало месяца самого раннего движения по себестоимости. 
+&lt;colorstyle -14&gt;  ОстанавливатьсяПриРасхождениях&lt;/&gt;&lt;colorstyle -14&gt; &lt;/&gt;- необязательный параметр запуска, по умолчанию - ложь. Отвечает за переход к следующему месяцу после расчета текущего при наличии расхождений с исходными данными.
+&lt;colorstyle -14&gt;  &lt;/&gt;&lt;colorstyle -14&gt;РабочийКаталог &lt;/&gt;- обязательный параметр запуска, в который передается путь к каталогу ошибок.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>&lt;b&gt; Параметри запуску: &lt;/&gt;  
+&lt;colorstyle -14&gt; НачалоРасчета&lt;/&gt; - необов'язковий параметр запуску, по умовчанню береться як початок місяця самого раннього руху по собівартості.  
+&lt;colorstyle -14&gt; ОстанавливатьсяПриРасхождениях&lt;/&gt; &lt;colorstyle -14&gt; &lt;/&gt; - необов'язковий параметр запуску, по умовчанню - хибність. Відповідає за перехід до наступного місяця після розрахунку поточного при наявності розбіжностей з вихідними даними.  
+&lt;colorstyle -14&gt; &lt;/&gt; &lt;colorstyle -14&gt; РабочийКаталог&lt;/&gt; - обов'язковий параметр запуску, в який передається шлях до каталогу помилок.</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПараметрыЗапускаКонтекстноеМеню" id="16"/>
+					<ExtendedTooltip name="ПараметрыЗапускаРасширеннаяПодсказка" id="17"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ТестированиеОперацийЗакрытийМесяца</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="РабочийКаталог" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рабочий каталог</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Робочий каталог</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СообщениеОбОшибке" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сообщение об ошибке</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Повідомлення про помилку</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/txtedt">d5p1:TextDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НачалоРасчета" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начало расчета</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Початок розрахунку</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОстанавливатьсяПриРасхождениях" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Останавливаться при расхождениях</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Зупинятися при розбіжностях</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="АвтоТест" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Авто тест</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Авто тест</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="МенеджерВТ" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Менеджер ВТ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Менеджер ВТ</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="КонецРасчета" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Конец расчета</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Кінець розрахунку</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущийМесяц" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий месяц</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Поточний місяць</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НачалоЗамера" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начало замера</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Початок заміру</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>0</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресХранилища" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес хранилища</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Адреса сховища</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РасчетМесяцаНачатВ" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начало замера</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Початок заміру</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>0</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПутьКФайлу" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Путь к файлу</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Шлях до файлу</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НачалоРасчетаСтрока" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начало расчета строка</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Початок розрахунку рядок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоРасхождений" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество расхождений</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Кількість розбіжностей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КонецРасчетаСтрока" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Конец расчета строка</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Кінець розрахунку рядок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокЭтаповДляТестирования" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список этапов для тестирования</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Список етапів для тестування</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+		<Attribute name="ПредставлениеЭтаповДляТестирования" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тестируемые этапы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Тестовані етапи</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИдентификаторЗадания" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор задания</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Ідентифікатор завдання</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:UUID</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВыполнятьСравнениеСНовойАрхитектуройВзаиморасчетов" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнять сравнение с новой архитектурой взаиморасчетов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Виконувати порівняння з новою архітектурою взаєморозрахунків</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокРасхожденийЭтапов" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список расхождений этапов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Список розбіжностей етапів</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+		<Attribute name="СписокРасхожденийЭтаповНовыеРасчеты" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список расхождений этапов новые расчеты</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Список розбіжностей етапів нові розрахунки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Запустить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запустить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Запустити</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запустить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Запустити</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.GenerateReport</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Запустить</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПоказатьОтчет" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать отчет</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Показати звіт</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать отчет</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Показати звіт</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоказатьОтчет</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОтменитьЗадание" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить задание</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Скасувати завдання</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить задание</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Скасувати завдання</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтменитьЗадание</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПоказатьРасхожденияЭтапов" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать расхождения этапов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Показати розбіжності етапів</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать расхождения этапов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Показати розбіжності етапів</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоказатьРасхожденияЭтапов</Action>
+		</Command>
+		<Command name="ПоказатьРасхожденияЭтаповНовыхРасчетов" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать расхождения этапов новых расчетов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Показати розбіжності етапів нових розрахунків</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать расхождения этапов новых расчетов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Показати розбіжності етапів нових розрахунків</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоказатьРасхожденияЭтаповНовыхРасчетов</Action>
+		</Command>
+	</Commands>
+</Form>

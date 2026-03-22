@@ -1,0 +1,874 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>Close</ExcludedCommand>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаНазад" id="137">
+				<Type>CommandBarButton</Type>
+				<Enabled>false</Enabled>
+				<CommandName>Form.Command.Назад</CommandName>
+				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаНазадРасширеннаяПодсказка" id="138"/>
+			</Button>
+			<Button name="ФормаДалее" id="1">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.Далее</CommandName>
+				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаДалееРасширеннаяПодсказка" id="2"/>
+			</Button>
+			<Button name="ФормаСправка" id="139">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Help</CommandName>
+				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаСправкаРасширеннаяПодсказка" id="140"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ГруппаСтраницыПомощника" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы помощника</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Група сторінки помічника</v8:content>
+				</v8:item>
+			</Title>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаСтраницыПомощникаРасширеннаяПодсказка" id="6"/>
+			<ChildItems>
+				<Page name="ГруппаСтраницаВыборОрганизаций" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа страница выбор организаций</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Група сторінка вибір організацій</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаСтраницаВыборОрганизацийРасширеннаяПодсказка" id="10"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияОрганизации" id="141">
+							<TextColor>style:ПоясняющийТекст</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выберите организации для копирования:</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Виберіть організації для копіювання:</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияОрганизацииКонтекстноеМеню" id="142"/>
+							<ExtendedTooltip name="ДекорацияОрганизацииРасширеннаяПодсказка" id="143"/>
+						</LabelDecoration>
+						<Table name="ТаблицаОрганизации" id="62">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>ТаблицаОрганизации</DataPath>
+							<CommandSet>
+								<ExcludedCommand>Add</ExcludedCommand>
+								<ExcludedCommand>Change</ExcludedCommand>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+								<ExcludedCommand>Delete</ExcludedCommand>
+								<ExcludedCommand>EndEdit</ExcludedCommand>
+								<ExcludedCommand>MoveDown</ExcludedCommand>
+								<ExcludedCommand>MoveUp</ExcludedCommand>
+								<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+								<ExcludedCommand>SortListAsc</ExcludedCommand>
+								<ExcludedCommand>SortListDesc</ExcludedCommand>
+							</CommandSet>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТаблицаОрганизацииКонтекстноеМеню" id="63"/>
+							<AutoCommandBar name="ТаблицаОрганизацииКоманднаяПанель" id="64">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ТаблицаОрганизацииРасширеннаяПодсказка" id="65"/>
+							<SearchStringAddition name="ТаблицаОрганизацииСтрокаПоиска" id="66">
+								<AdditionSource>
+									<Item>ТаблицаОрганизации</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаОрганизацииСтрокаПоискаКонтекстноеМеню" id="67"/>
+								<ExtendedTooltip name="ТаблицаОрганизацииСтрокаПоискаРасширеннаяПодсказка" id="68"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТаблицаОрганизацииСостояниеПросмотра" id="69">
+								<AdditionSource>
+									<Item>ТаблицаОрганизации</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаОрганизацииСостояниеПросмотраКонтекстноеМеню" id="70"/>
+								<ExtendedTooltip name="ТаблицаОрганизацииСостояниеПросмотраРасширеннаяПодсказка" id="71"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТаблицаОрганизацииУправлениеПоиском" id="72">
+								<AdditionSource>
+									<Item>ТаблицаОрганизации</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаОрганизацииУправлениеПоискомКонтекстноеМеню" id="73"/>
+								<ExtendedTooltip name="ТаблицаОрганизацииУправлениеПоискомРасширеннаяПодсказка" id="74"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ТаблицаОрганизацииВыбор</Event>
+							</Events>
+							<ChildItems>
+								<CheckBoxField name="ТаблицаОрганизацииПометка" id="75">
+									<DataPath>ТаблицаОрганизации.Пометка</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ТаблицаОрганизацииПометкаКонтекстноеМеню" id="76"/>
+									<ExtendedTooltip name="ТаблицаОрганизацииПометкаРасширеннаяПодсказка" id="77"/>
+								</CheckBoxField>
+								<InputField name="ТаблицаОрганизацииОрганизация" id="78">
+									<DataPath>ТаблицаОрганизации.Организация</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаОрганизацииОрганизацияКонтекстноеМеню" id="79"/>
+									<ExtendedTooltip name="ТаблицаОрганизацииОрганизацияРасширеннаяПодсказка" id="80"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<UsualGroup name="ГруппаОтборОрганизацииПриемник" id="150">
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОтборОрганизацииПриемникРасширеннаяПодсказка" id="151"/>
+							<ChildItems>
+								<PictureDecoration name="ДекорацияИнфо" id="144">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Декорация инфо</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Декорація інфо</v8:content>
+										</v8:item>
+									</Title>
+									<Picture>
+										<xr:Ref>CommonPicture.Информация16</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="ДекорацияИнфоКонтекстноеМеню" id="145"/>
+									<ExtendedTooltip name="ДекорацияИнфоРасширеннаяПодсказка" id="146"/>
+								</PictureDecoration>
+								<LabelDecoration name="ДекорацияОтборОрганизаций" id="147">
+									<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Установлен отбор по организациям с системой налогообложения "%1"</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Встановлено відбір по організаціям з системою оподаткування "%1"</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияОтборОрганизацийКонтекстноеМеню" id="148"/>
+									<ExtendedTooltip name="ДекорацияОтборОрганизацийРасширеннаяПодсказка" id="149"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаСтраницаВыборНастроек" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа страница выбор настроек</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Група сторінка вибір налаштувань</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаСтраницаВыборНастроекРасширеннаяПодсказка" id="8"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияИнфоНастройки" id="20">
+							<TextColor>style:ПоясняющийТекст</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выберите настройки для копирования:</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Виберіть настройки для копіювання:</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияИнфоНастройкиКонтекстноеМеню" id="21"/>
+							<ExtendedTooltip name="ДекорацияИнфоНастройкиРасширеннаяПодсказка" id="22"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаСкопироватьНастройкиСистемыНалогообложения" id="183">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСкопироватьНастройкиСистемыНалогообложенияРасширеннаяПодсказка" id="184"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаНастройкиСистемыНалогообложения" id="188">
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаНастройкиСистемыНалогообложенияРасширеннаяПодсказка" id="189"/>
+									<ChildItems>
+										<LabelDecoration name="ОтступНастройкиСистемыНалогообложения" id="190">
+											<Width>1</Width>
+											<ContextMenu name="ОтступНастройкиСистемыНалогообложенияКонтекстноеМеню" id="191"/>
+											<ExtendedTooltip name="ОтступНастройкиСистемыНалогообложенияРасширеннаяПодсказка" id="192"/>
+										</LabelDecoration>
+										<LabelDecoration name="ОписаниеНастройкиСистемыНалогообложения" id="193">
+											<Visible>false</Visible>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<HorizontalStretch>true</HorizontalStretch>
+											<VerticalAlign>Top</VerticalAlign>
+											<ContextMenu name="ОписаниеНастройкиСистемыНалогообложенияКонтекстноеМеню" id="194"/>
+											<ExtendedTooltip name="ОписаниеНастройкиСистемыНалогообложенияРасширеннаяПодсказка" id="195"/>
+										</LabelDecoration>
+										<LabelDecoration name="ОписаниеНастройкиСистемыНалогообложенияСлужебный" id="196">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Система налогообложения: %1</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Система оподаткування: %1</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ОписаниеНастройкиСистемыНалогообложенияСлужебныйКонтекстноеМеню" id="197"/>
+											<ExtendedTooltip name="ОписаниеНастройкиСистемыНалогообложенияСлужебныйРасширеннаяПодсказка" id="198"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаСкопироватьУчетнаяПолитикаБухУчета" id="81">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСкопироватьУчетнаяПолитикаБухУчетаРасширеннаяПодсказка" id="82"/>
+							<ChildItems>
+								<CheckBoxField name="СкопироватьУчетнаяПолитикаБухУчета" id="17">
+									<DataPath>СкопироватьУчетнаяПолитикаБухУчета</DataPath>
+									<TitleTextColor>style:ОтметкаПоложительногоВыполненияЗадачи</TitleTextColor>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СкопироватьУчетнаяПолитикаБухУчетаКонтекстноеМеню" id="18"/>
+									<ExtendedTooltip name="СкопироватьУчетнаяПолитикаБухУчетаРасширеннаяПодсказка" id="19"/>
+								</CheckBoxField>
+								<UsualGroup name="ГруппаУчетнаяПолитикаБухУчетаОтступ" id="86">
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаУчетнаяПолитикаБухУчетаОтступРасширеннаяПодсказка" id="87"/>
+									<ChildItems>
+										<LabelDecoration name="ОтступУчетнаяПолитикаБухУчета" id="88">
+											<Width>1</Width>
+											<ContextMenu name="ОтступУчетнаяПолитикаБухУчетаКонтекстноеМеню" id="89"/>
+											<ExtendedTooltip name="ОтступУчетнаяПолитикаБухУчетаРасширеннаяПодсказка" id="90"/>
+										</LabelDecoration>
+										<LabelDecoration name="ОписаниеУчетнаяПолитикаБухУчета" id="91">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<HorizontalStretch>true</HorizontalStretch>
+											<VerticalAlign>Top</VerticalAlign>
+											<ContextMenu name="ОписаниеУчетнаяПолитикаБухУчетаКонтекстноеМеню" id="92"/>
+											<ExtendedTooltip name="ОписаниеУчетнаяПолитикаБухУчетаРасширеннаяПодсказка" id="93"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаСкопироватьУчетнаяПолитикаФинансовогоУчета" id="97">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСкопироватьУчетнаяПолитикаФинансовогоУчетаРасширеннаяПодсказка" id="98"/>
+							<ChildItems>
+								<CheckBoxField name="СкопироватьУчетнаяПолитикаФинансовогоУчета" id="11">
+									<DataPath>СкопироватьУчетнаяПолитикаФинансовогоУчета</DataPath>
+									<TitleTextColor>style:ОтметкаПоложительногоВыполненияЗадачи</TitleTextColor>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СкопироватьУчетнаяПолитикаФинансовогоУчетаКонтекстноеМеню" id="12"/>
+									<ExtendedTooltip name="СкопироватьУчетнаяПолитикаФинансовогоУчетаРасширеннаяПодсказка" id="13"/>
+								</CheckBoxField>
+								<UsualGroup name="ГруппаУчетнаяПолитикаФинансовогоУчетаОтступ" id="99">
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаУчетнаяПолитикаФинансовогоУчетаОтступРасширеннаяПодсказка" id="100"/>
+									<ChildItems>
+										<LabelDecoration name="ОтступУчетнаяПолитикаФинансовогоУчета" id="101">
+											<Width>1</Width>
+											<ContextMenu name="ОтступУчетнаяПолитикаФинансовогоУчетаКонтекстноеМеню" id="102"/>
+											<ExtendedTooltip name="ОтступУчетнаяПолитикаФинансовогоУчетаРасширеннаяПодсказка" id="103"/>
+										</LabelDecoration>
+										<LabelDecoration name="ОписаниеУчетнаяПолитикаФинансовогоУчета" id="104">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<HorizontalStretch>true</HorizontalStretch>
+											<VerticalAlign>Top</VerticalAlign>
+											<ContextMenu name="ОписаниеУчетнаяПолитикаФинансовогоУчетаКонтекстноеМеню" id="105"/>
+											<ExtendedTooltip name="ОписаниеУчетнаяПолитикаФинансовогоУчетаРасширеннаяПодсказка" id="106"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаСкопироватьНастройкиУчетаНалогаНаПрибыль" id="107">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСкопироватьНастройкиУчетаНалогаНаПрибыльРасширеннаяПодсказка" id="108"/>
+							<ChildItems>
+								<CheckBoxField name="СкопироватьНастройкиУчетаНалогаНаПрибыль" id="23">
+									<DataPath>СкопироватьНастройкиУчетаНалогаНаПрибыль</DataPath>
+									<TitleTextColor>style:ОтметкаПоложительногоВыполненияЗадачи</TitleTextColor>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СкопироватьНастройкиУчетаНалогаНаПрибыльКонтекстноеМеню" id="24"/>
+									<ExtendedTooltip name="СкопироватьНастройкиУчетаНалогаНаПрибыльРасширеннаяПодсказка" id="25"/>
+								</CheckBoxField>
+								<UsualGroup name="ГруппаНастройкиУчетаНалогаНаПрибыльОтступ" id="109">
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаНастройкиУчетаНалогаНаПрибыльОтступРасширеннаяПодсказка" id="110"/>
+									<ChildItems>
+										<LabelDecoration name="ОтступНастройкиУчетаНалогаНаПрибыль" id="111">
+											<Width>1</Width>
+											<ContextMenu name="ОтступНастройкиУчетаНалогаНаПрибыльКонтекстноеМеню" id="112"/>
+											<ExtendedTooltip name="ОтступНастройкиУчетаНалогаНаПрибыльРасширеннаяПодсказка" id="113"/>
+										</LabelDecoration>
+										<LabelDecoration name="ОписаниеНастройкиУчетаНалогаНаПрибыль" id="114">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<HorizontalStretch>true</HorizontalStretch>
+											<VerticalAlign>Top</VerticalAlign>
+											<ContextMenu name="ОписаниеНастройкиУчетаНалогаНаПрибыльКонтекстноеМеню" id="115"/>
+											<ExtendedTooltip name="ОписаниеНастройкиУчетаНалогаНаПрибыльРасширеннаяПодсказка" id="116"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаСкопироватьНастройкиУчетаНДС" id="117">
+							<Visible>false</Visible>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа скопировать настройки учета НДС</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Група скопіювати настройки обліку ПДВ</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСкопироватьНастройкиУчетаНДСРасширеннаяПодсказка" id="118"/>
+							<ChildItems>
+								<CheckBoxField name="СкопироватьНастройкиУчетаНДС" id="26">
+									<DataPath>СкопироватьНастройкиУчетаНДС</DataPath>
+									<TitleTextColor>style:ОтметкаПоложительногоВыполненияЗадачи</TitleTextColor>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СкопироватьНастройкиУчетаНДСКонтекстноеМеню" id="27"/>
+									<ExtendedTooltip name="СкопироватьНастройкиУчетаНДСРасширеннаяПодсказка" id="28"/>
+								</CheckBoxField>
+								<UsualGroup name="ГруппаНастройкиУчетаНДСОтступ" id="119">
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаНастройкиУчетаНДСОтступРасширеннаяПодсказка" id="120"/>
+									<ChildItems>
+										<LabelDecoration name="ОтступНастройкиУчетаНДС" id="121">
+											<Width>1</Width>
+											<ContextMenu name="ОтступНастройкиУчетаНДСКонтекстноеМеню" id="122"/>
+											<ExtendedTooltip name="ОтступНастройкиУчетаНДСРасширеннаяПодсказка" id="123"/>
+										</LabelDecoration>
+										<LabelDecoration name="ОписаниеНастройкиУчетаНДС" id="124">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<HorizontalStretch>true</HorizontalStretch>
+											<VerticalAlign>Top</VerticalAlign>
+											<ContextMenu name="ОписаниеНастройкиУчетаНДСКонтекстноеМеню" id="125"/>
+											<ExtendedTooltip name="ОписаниеНастройкиУчетаНДСРасширеннаяПодсказка" id="126"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаСкопироватьНастройкиУчетаЕН" id="127">
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа скопировать настройки учета ЕН</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Група скопіювати настройки обліку ЄП</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСкопироватьНастройкиУчетаЕНРасширеннаяПодсказка" id="128"/>
+							<ChildItems>
+								<CheckBoxField name="СкопироватьНастройкиУчетаЕН" id="94">
+									<DataPath>СкопироватьНастройкиУчетаЕН</DataPath>
+									<TitleTextColor>style:ОтметкаПоложительногоВыполненияЗадачи</TitleTextColor>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СкопироватьНастройкиУчетаЕНКонтекстноеМеню" id="95"/>
+									<ExtendedTooltip name="СкопироватьНастройкиУчетаЕНРасширеннаяПодсказка" id="96"/>
+								</CheckBoxField>
+								<UsualGroup name="ГруппаНастройкиУчетаЕНОтступ" id="129">
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа настройки учета ЕНОтступ</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Група настройки обліку ЕНОтступ</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаНастройкиУчетаЕНОтступРасширеннаяПодсказка" id="130"/>
+									<ChildItems>
+										<LabelDecoration name="ОтступНастройкиУчетаЕН" id="131">
+											<Width>1</Width>
+											<ContextMenu name="ОтступНастройкиУчетаЕНКонтекстноеМеню" id="132"/>
+											<ExtendedTooltip name="ОтступНастройкиУчетаЕНРасширеннаяПодсказка" id="133"/>
+										</LabelDecoration>
+										<LabelDecoration name="ОписаниеНастройкиУчетаЕН" id="134">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<HorizontalStretch>true</HorizontalStretch>
+											<VerticalAlign>Top</VerticalAlign>
+											<ContextMenu name="ОписаниеНастройкиУчетаЕНКонтекстноеМеню" id="135"/>
+											<ExtendedTooltip name="ОписаниеНастройкиУчетаЕНРасширеннаяПодсказка" id="136"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаСтраницаИтог" id="45">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа страница итог</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Група сторінка підсумок</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаСтраницаИтогРасширеннаяПодсказка" id="46"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаИтогОшибка" id="160">
+							<Visible>false</Visible>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаИтогОшибкаРасширеннаяПодсказка" id="161"/>
+							<ChildItems>
+								<PictureDecoration name="ДекорацияОшибка" id="162">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Декорация успех</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Декорація успіх</v8:content>
+										</v8:item>
+									</Title>
+									<Picture>
+										<xr:Ref>CommonPicture.КрасныйКрест</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="ДекорацияОшибкаКонтекстноеМеню" id="163"/>
+									<ExtendedTooltip name="ДекорацияОшибкаРасширеннаяПодсказка" id="164"/>
+								</PictureDecoration>
+								<LabelDecoration name="ДекорацияКопированиеОшибка" id="165">
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>&lt;fontsize 16&gt;Ошибка&lt;/&gt;&lt;fontsize 16&gt; &lt;/&gt;&lt;fontsize 16&gt;копирования&lt;/&gt;&lt;fontsize 16&gt; &lt;/&gt;&lt;fontsize 16&gt;настроек.&lt;/&gt;&lt;fontsize 16&gt;
+&lt;/&gt;</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>&lt;fontsize 16&gt;Помилка&lt;/&gt;&lt;fontsize 16&gt; копіювання&lt;/&gt;&lt;fontsize 16&gt; настройок.&lt;/&gt;</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияКопированиеОшибкаКонтекстноеМеню" id="166"/>
+									<ExtendedTooltip name="ДекорацияКопированиеОшибкаРасширеннаяПодсказка" id="167"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаИтогУспешно" id="158">
+							<Visible>false</Visible>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаИтогУспешноРасширеннаяПодсказка" id="159"/>
+							<ChildItems>
+								<PictureDecoration name="ДекорацияУспех" id="152">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Декорация успех</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Декорація успіх</v8:content>
+										</v8:item>
+									</Title>
+									<Picture>
+										<xr:Ref>CommonPicture.ЗеленаяГалка</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="ДекорацияУспехКонтекстноеМеню" id="153"/>
+									<ExtendedTooltip name="ДекорацияУспехРасширеннаяПодсказка" id="154"/>
+								</PictureDecoration>
+								<LabelDecoration name="ДекорацияКопированиеЗавершено" id="155">
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>&lt;fontsize 16&gt;Копирование завершено.&lt;/&gt;</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>&lt;fontsize 16&gt;Копіювання завершено.&lt;/&gt;</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияКопированиеЗавершеноКонтекстноеМеню" id="156"/>
+									<ExtendedTooltip name="ДекорацияКопированиеЗавершеноРасширеннаяПодсказка" id="157"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="ДекорацияИтоги" id="47">
+							<Visible>false</Visible>
+							<TextColor>style:ПоясняющийТекст</TextColor>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Итоги копирования настроек учетной политики.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Підсумки копіювання настройок облікової політики.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияИтогиКонтекстноеМеню" id="48"/>
+							<ExtendedTooltip name="ДекорацияИтогиРасширеннаяПодсказка" id="49"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ПомощникКопированияНастроекУчетныхПолитик</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="СкопироватьУчетнаяПолитикаФинансовогоУчета" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Учетная политика финансового учета</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Облікова політика фінансового обліку</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СкопироватьУчетнаяПолитикаБухУчета" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Учетная политика бухгалтерского учета</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Облікова політика бухгалтерського обліку</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СкопироватьНастройкиУчетаНалогаНаПрибыль" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки учета налога на прибыль</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Настройки обліку податку на прибуток</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СкопироватьНастройкиУчетаНДС" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки учета НДС</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Настройки обліку ПДВ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТаблицаОрганизации" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица организации</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Таблиця організації</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Пометка" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пометка</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Позначка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Организация" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Організація</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+					</Type>
+				</Column>
+				<Column name="КопироватьСистемуНалогообложения" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Копировать систему налогообложения</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Копіювати систему оподаткування</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="СкопироватьНастройкиУчетаЕН" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки учета ЕН</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Настройки обліку ЄП</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОрганизацияИсточник" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация источник</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Організація джерело</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОрганизацииПриемники" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организации приемники</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Організації приймачі</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+		<Attribute name="КопированиеИзДругойОрганизации" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Копирование из другой организации</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Копіювання з іншої організації</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СкопироватьНастройкиСистемыНалогообложения" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скопировать настройки системы налогообложения</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Скопіювати настройки системи оподаткування</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Далее" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Далее</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Далі</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Далее</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Далі</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Далее</Action>
+		</Command>
+		<Command name="Назад" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назад</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Назад</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назад</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Назад</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Назад</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="Организация">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="КопированиеИзДругойОрганизации">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

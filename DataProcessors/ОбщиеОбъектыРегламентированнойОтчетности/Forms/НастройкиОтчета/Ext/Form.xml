@@ -1,0 +1,962 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Настройки отчета</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>uk</v8:lang>
+			<v8:content>Настройки звіту</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="Закрыть" id="25">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<ExtendedTooltip name="ЗакрытьРасширеннаяПодсказка" id="63"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="Страницы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Сторінки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Сторінки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="64"/>
+			<ChildItems>
+				<Page name="Общие" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Общие</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Загальні</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Общие</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Загальні</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ОбщиеРасширеннаяПодсказка" id="65"/>
+					<ChildItems>
+						<UsualGroup name="ЕдиницаИзмеренияИТочность" id="49">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Единица измерения и точность</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Одиниця виміру і точність</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Единица измерения и точность</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Одиниця виміру і точність</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ЕдиницаИзмеренияИТочностьРасширеннаяПодсказка" id="66"/>
+							<ChildItems>
+								<LabelDecoration name="НадписьОтображатьСуммы" id="50">
+									<SkipOnInput>false</SkipOnInput>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отображать суммы</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Відображати суми</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьОтображатьСуммыКонтекстноеМеню" id="51"/>
+									<ExtendedTooltip name="НадписьОтображатьСуммыРасширеннаяПодсказка" id="67"/>
+								</LabelDecoration>
+								<InputField name="ПредставлениеЕдиницыИзмерения" id="60">
+									<DataPath>ПредставлениеЕдиницыИзмерения</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<Width>15</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<DropListButton>true</DropListButton>
+									<ClearButton>false</ClearButton>
+									<ListChoiceMode>true</ListChoiceMode>
+									<TextEdit>false</TextEdit>
+									<ChoiceListButton>true</ChoiceListButton>
+									<ContextMenu name="ПредставлениеЕдиницыИзмеренияКонтекстноеМеню" id="61"/>
+									<ExtendedTooltip name="ПредставлениеЕдиницыИзмеренияРасширеннаяПодсказка" id="68"/>
+									<Events>
+										<Event name="OnChange">ПредставлениеЕдиницыИзмеренияПриИзменении</Event>
+									</Events>
+								</InputField>
+								<LabelDecoration name="НадписьСТочностью" id="54">
+									<SkipOnInput>false</SkipOnInput>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>с точностью</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>з точністю</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьСТочностьюКонтекстноеМеню" id="55"/>
+									<ExtendedTooltip name="НадписьСТочностьюРасширеннаяПодсказка" id="69"/>
+								</LabelDecoration>
+								<InputField name="ТочностьЕдиницыИзмерения" id="58">
+									<DataPath>ТочностьЕдиницыИзмерения</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<SpinButton>true</SpinButton>
+									<ContextMenu name="ТочностьЕдиницыИзмеренияКонтекстноеМеню" id="59"/>
+									<ExtendedTooltip name="ТочностьЕдиницыИзмеренияРасширеннаяПодсказка" id="70"/>
+									<Events>
+										<Event name="OnChange">ТочностьЕдиницыИзмеренияПриИзменении</Event>
+									</Events>
+								</InputField>
+								<LabelDecoration name="НадписьЗнаковПослеЗапятой" id="56">
+									<SkipOnInput>false</SkipOnInput>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>знаков после запятой.</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>знаків після коми.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьЗнаковПослеЗапятойКонтекстноеМеню" id="57"/>
+									<ExtendedTooltip name="НадписьЗнаковПослеЗапятойРасширеннаяПодсказка" id="71"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<CheckBoxField name="ОтключитьАвтоматическийРасчет" id="47">
+							<DataPath>ОтключитьАвтоматическийРасчет</DataPath>
+							<Visible>false</Visible>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ОтключитьАвтоматическийРасчетКонтекстноеМеню" id="48"/>
+							<ExtendedTooltip name="ОтключитьАвтоматическийРасчетРасширеннаяПодсказка" id="72"/>
+							<Events>
+								<Event name="OnChange">ОтключитьАвтоматическийРасчетПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<CheckBoxField name="СохранятьРасшифровкуАвтозаполнения" id="95">
+							<DataPath>СохранятьРасшифровкуАвтозаполнения</DataPath>
+							<Visible>false</Visible>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="СохранятьРасшифровкуАвтозаполненияКонтекстноеМеню" id="96"/>
+							<ExtendedTooltip name="СохранятьРасшифровкуАвтозаполненияРасширеннаяПодсказка" id="97"/>
+							<Events>
+								<Event name="OnChange">СохранятьРасшифровкуАвтозаполненияПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<UsualGroup name="Автосохранение" id="41">
+							<Visible>false</Visible>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Автосохранение</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Автозберігання</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Автосохранение</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Автозберігання</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="АвтосохранениеРасширеннаяПодсказка" id="73"/>
+							<ChildItems>
+								<CheckBoxField name="ФлажокАвтосохранение" id="37">
+									<DataPath>ФлажокАвтосохранение</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ФлажокАвтосохранениеКонтекстноеМеню" id="38"/>
+									<ExtendedTooltip name="ФлажокАвтосохранениеРасширеннаяПодсказка" id="74"/>
+									<Events>
+										<Event name="OnChange">ФлажокАвтосохранениеПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<InputField name="ИнтервалАвтосохранения" id="39">
+									<DataPath>ИнтервалАвтосохранения</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<SpinButton>true</SpinButton>
+									<MinValue xsi:type="xs:decimal">1</MinValue>
+									<MaxValue xsi:type="xs:decimal">999</MaxValue>
+									<ContextMenu name="ИнтервалАвтосохраненияКонтекстноеМеню" id="40"/>
+									<ExtendedTooltip name="ИнтервалАвтосохраненияРасширеннаяПодсказка" id="75"/>
+									<Events>
+										<Event name="OnChange">ИнтервалАвтосохраненияПриИзменении</Event>
+									</Events>
+								</InputField>
+								<LabelDecoration name="НадписьМинут" id="45">
+									<SkipOnInput>false</SkipOnInput>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>минут</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>хвилин</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьМинутКонтекстноеМеню" id="46"/>
+									<ExtendedTooltip name="НадписьМинутРасширеннаяПодсказка" id="76"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СвойстваРазделов" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Свойства разделов</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Властивості розділів</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Свойства разделов</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Властивості розділів</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СвойстваРазделовРасширеннаяПодсказка" id="77"/>
+					<ChildItems>
+						<Table name="Дерево" id="4">
+							<Representation>Tree</Representation>
+							<SkipOnInput>false</SkipOnInput>
+							<Width>60</Width>
+							<HeightInTableRows>18</HeightInTableRows>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Дерево</DataPath>
+							<CommandSet>
+								<ExcludedCommand>Add</ExcludedCommand>
+								<ExcludedCommand>Change</ExcludedCommand>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+								<ExcludedCommand>Delete</ExcludedCommand>
+								<ExcludedCommand>EndEdit</ExcludedCommand>
+								<ExcludedCommand>HierarchicalList</ExcludedCommand>
+								<ExcludedCommand>List</ExcludedCommand>
+								<ExcludedCommand>MoveDown</ExcludedCommand>
+								<ExcludedCommand>MoveUp</ExcludedCommand>
+								<ExcludedCommand>OutputList</ExcludedCommand>
+								<ExcludedCommand>SelectAll</ExcludedCommand>
+								<ExcludedCommand>SortListAsc</ExcludedCommand>
+								<ExcludedCommand>SortListDesc</ExcludedCommand>
+								<ExcludedCommand>Tree</ExcludedCommand>
+							</CommandSet>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<ContextMenu name="ДеревоКонтекстноеМеню" id="5"/>
+							<AutoCommandBar name="ДеревоКоманднаяПанель" id="6">
+								<ChildItems>
+									<ButtonGroup name="УстановитьСнятьФлажки" id="44">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Установить снять флажки</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>uk</v8:lang>
+												<v8:content>Встановити зняти прапорці</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Установить снять флажки</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>uk</v8:lang>
+												<v8:content>Встановити зняти прапорці</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ExtendedTooltip name="УстановитьСнятьФлажкиРасширеннаяПодсказка" id="78"/>
+										<ChildItems>
+											<Button name="ДеревоУстановитьФлажки" id="27">
+												<Type>CommandBarButton</Type>
+												<SkipOnInput>false</SkipOnInput>
+												<CommandName>Form.Command.УстановитьФлажки</CommandName>
+												<ExtendedTooltip name="ДеревоУстановитьФлажкиРасширеннаяПодсказка" id="79"/>
+											</Button>
+											<Button name="ДеревоСнятьФлажки" id="28">
+												<Type>CommandBarButton</Type>
+												<SkipOnInput>false</SkipOnInput>
+												<CommandName>Form.Command.СнятьФлажки</CommandName>
+												<ExtendedTooltip name="ДеревоСнятьФлажкиРасширеннаяПодсказка" id="80"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ДеревоРасширеннаяПодсказка" id="81"/>
+							<SearchStringAddition name="ДеревоСтрокаПоиска" id="82">
+								<AdditionSource>
+									<Item>Дерево</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоСтрокаПоискаКонтекстноеМеню" id="83"/>
+								<ExtendedTooltip name="ДеревоСтрокаПоискаРасширеннаяПодсказка" id="84"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ДеревоСостояниеПросмотра" id="85">
+								<AdditionSource>
+									<Item>Дерево</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоСостояниеПросмотраКонтекстноеМеню" id="86"/>
+								<ExtendedTooltip name="ДеревоСостояниеПросмотраРасширеннаяПодсказка" id="87"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ДеревоУправлениеПоиском" id="88">
+								<AdditionSource>
+									<Item>Дерево</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоУправлениеПоискомКонтекстноеМеню" id="89"/>
+								<ExtendedTooltip name="ДеревоУправлениеПоискомРасширеннаяПодсказка" id="90"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="BeforeAddRow">ДеревоПередНачаломДобавления</Event>
+								<Event name="BeforeDeleteRow">ДеревоПередУдалением</Event>
+								<Event name="BeforeRowChange">ДеревоПередНачаломИзменения</Event>
+								<Event name="OnChange">ДеревоПриИзменении</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="ДеревоПредставление" id="7">
+									<DataPath>Дерево.Представление</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страницы</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Сторінки</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>18</Width>
+									<ContextMenu name="ДеревоПредставлениеКонтекстноеМеню" id="8"/>
+									<ExtendedTooltip name="ДеревоПредставлениеРасширеннаяПодсказка" id="91"/>
+								</InputField>
+								<CheckBoxField name="ДеревоПоказатьСтраницу" id="11">
+									<DataPath>Дерево.ПоказатьСтраницу</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Показывать</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Показувати</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ДеревоПоказатьСтраницуКонтекстноеМеню" id="12"/>
+									<ExtendedTooltip name="ДеревоПоказатьСтраницуРасширеннаяПодсказка" id="92"/>
+								</CheckBoxField>
+								<CheckBoxField name="ДеревоВыводНаПечать" id="13">
+									<DataPath>Дерево.ВыводНаПечать</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Печатать</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Друкувати</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ДеревоВыводНаПечатьКонтекстноеМеню" id="14"/>
+									<ExtendedTooltip name="ДеревоВыводНаПечатьРасширеннаяПодсказка" id="93"/>
+								</CheckBoxField>
+								<CheckBoxField name="ДеревоВыгрузитьСтраницу" id="29">
+									<DataPath>Дерево.ВыгрузитьСтраницу</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выгружать</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Вивантажувати</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ДеревоВыгрузитьСтраницуКонтекстноеМеню" id="30"/>
+									<ExtendedTooltip name="ДеревоВыгрузитьСтраницуРасширеннаяПодсказка" id="94"/>
+								</CheckBoxField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ОбщиеОбъектыРегламентированнойОтчетности</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Дерево" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Дерево</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Представление" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Представление</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Представлення</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ВыгрузитьСтраницу" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выгрузить страницу</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Вивантажити сторінку</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>1</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПоказатьСтраницу" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Показать страницу</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Показати сторінку</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>1</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ВыводНаПечать" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вывод на печать</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Виведення на друк</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>1</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ОриентацияСтраницы" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ориентация страницы</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Орієнтація сторінки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИмяОбластиТабличногоПоля" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя области табличного поля</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Ім'я області табличного поля</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИмяПоляТабличногоДокум" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя поля табличного докум</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Ім'я поля табличного докум</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИмяСтраницы" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя страницы</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Ім'я сторінки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ИнтервалАвтосохранения" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Интервал автосохранения</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Інтервал автозбереження</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтклВыборЗначений" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отключить выбор значений из списка</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Відключити вибір значень зі списку</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ФлажокАвтосохранение" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Автосохранение каждые</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Автозбереження кожні</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="мПараметры" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>М параметры</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>М параметри</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="мСпрашиватьОСохранении" id="11">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="мПрограммноеЗакрытие" id="12">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтключитьАвтоматическийРасчет" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отключить автоматический расчет вычисляемых ячеек</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Відключити автоматичний розрахунок обчислюваних комірок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЕдиницаИзмерения" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Единица измерения</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Одиниця виміру</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ПорядкиОкругленияОтчетности</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТочностьЕдиницыИзмерения" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Точность единицы измерения</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Точність одиниці виміру</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПеречислениеПорядкиОкругленияОтчетностиОкр1" id="16">
+			<Type>
+				<v8:Type>cfg:EnumRef.ПорядкиОкругленияОтчетности</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПеречислениеПорядкиОкругленияОтчетностиОкр1000" id="17">
+			<Type>
+				<v8:Type>cfg:EnumRef.ПорядкиОкругленияОтчетности</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПеречислениеПорядкиОкругленияОтчетностиОкр1000000" id="18">
+			<Type>
+				<v8:Type>cfg:EnumRef.ПорядкиОкругленияОтчетности</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредставлениеЕдиницыИзмерения" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Представление единицы измерения</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Представлення одиниці виміру</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СохранятьРасшифровкуАвтозаполнения" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранять расшифровку автоматического заполнения</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Зберігати розшифровку автоматичного заповнення</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Сохранить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Зберегти</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Зберегти</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Сохранить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УстановитьФлажки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить флажки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Встановити прапорці</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить все флажки в текущей колонке</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Встановити всі прапорці в поточному стовпчику</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьФлажки</Action>
+			<Representation>Picture</Representation>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СнятьФлажки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять флажки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Зняти прапорці</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все флажки в текущей колонке</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Зняти всі прапорці в поточному стовпчику</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СнятьФлажки</Action>
+			<Representation>Picture</Representation>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="мПечатьБезШтрихкодаРазрешена">
+			<Type/>
+		</Parameter>
+		<Parameter name="мСчетчикСтраниц">
+			<Type/>
+		</Parameter>
+		<Parameter name="мАвтоВыборКодов">
+			<Type/>
+		</Parameter>
+		<Parameter name="мИнтервалАвтосохранения">
+			<Type/>
+		</Parameter>
+		<Parameter name="мПроверятьСоотношенияПриПечатиИВыгрузки">
+			<Type/>
+		</Parameter>
+		<Parameter name="мОтключитьАвтоматическоеУправлениеВариантами">
+			<Type/>
+		</Parameter>
+		<Parameter name="мПараметры">
+			<Type/>
+		</Parameter>
+		<Parameter name="ФлажокОтклАвтоРасчет">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="ЕдиницаИзмерения">
+			<Type/>
+		</Parameter>
+		<Parameter name="ТочностьЕдиницыИзмерения">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

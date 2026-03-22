@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Период" id="1">
+			<DataPath>Запись.Period</DataPath>
+			<ContextMenu name="ПериодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ПериодExtendedTooltip" id="31"/>
+		</InputField>
+		<InputField name="Организация" id="3">
+			<DataPath>Запись.Организация</DataPath>
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="ОрганизацияExtendedTooltip" id="32"/>
+		</InputField>
+		<CheckBoxField name="ВыгрузкаПечатьНН_ПоФормеНаДатуДокумента" id="45">
+			<DataPath>Запись.ВыгрузкаПечатьНН_ПоФормеНаДатуДокумента</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ВыгрузкаПечатьНН_ПоФормеНаДатуДокументаКонтекстноеМеню" id="46"/>
+			<ExtendedTooltip name="ВыгрузкаПечатьНН_ПоФормеНаДатуДокументаРасширеннаяПодсказка" id="47"/>
+		</CheckBoxField>
+		<LabelDecoration name="ДекорацияВыгрузкаПечатьНН_ПоФормеНаДатуДокумента" id="48">
+			<TextColor>style:ПоясняющийТекст</TextColor>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>При снятом флаге налоговые документы печатаются и выгружаются в XML по форме, 
+действующей на текущую рабочую дату. 
+При установленном флаге - по форме, действовавшей на дату составления документа.
+Настройка применяется с рабочей даты: 01.04.2016 г.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>При знятому прапорці податкові документи друкуються і вивантажуються в XML за формою, 
+що діє на поточну робочу дату. 
+При встановленому прапорці - за формою, яка діяла на дату складання документа.
+Настройка застосовується з робочої дати: 01.04.2016 р.</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ДекорацияВыгрузкаПечатьНН_ПоФормеНаДатуДокументаКонтекстноеМеню" id="49"/>
+			<ExtendedTooltip name="ДекорацияВыгрузкаПечатьНН_ПоФормеНаДатуДокументаРасширеннаяПодсказка" id="50"/>
+		</LabelDecoration>
+		<CheckBoxField name="ДополнятьНаименованиеАдресДаннымиГоловнойОрганизацииВНН" id="27">
+			<DataPath>Запись.ДополнятьНаименованиеАдресДаннымиГоловнойОрганизацииВНН</DataPath>
+			<Enabled>false</Enabled>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ДополнятьНаименованиеАдресДаннымиГоловнойОрганизацииВННКонтекстноеМеню" id="28"/>
+			<ExtendedTooltip name="ДополнятьНаименованиеАдресДаннымиГоловнойОрганизацииВННExtendedTooltip" id="33"/>
+		</CheckBoxField>
+		<LabelDecoration name="ДекорацияДополнятьНаименованиеАдресДаннымиГоловнойОрганизацииВНН" id="29">
+			<Enabled>false</Enabled>
+			<TextColor>style:ПоясняющийТекст</TextColor>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Формировать наименование и адрес продавца с указанием данных головной организации (которая 
+зарегистрирована плательщиком НДС). При установленном флаге указанные данные выводятся
+в формате: &lt;данные головной организации&gt; - &lt;данные организации&gt;
+Данная настройка действует по 31.03.2016 г.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Формувати найменування та адресу продавця із зазначенням даних головної організації (яка 
+зареєстрована платником ПДВ). При встановленому прапорі зазначені дані виводяться
+у форматі: &lt;дані головної організації&gt; - &lt;дані організації&gt;
+Дана настройка діє по 31.03.2016 р.</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ДекорацияДополнятьНаименованиеАдресДаннымиГоловнойОрганизацииВННКонтекстноеМеню" id="30"/>
+			<ExtendedTooltip name="ДекорацияДополнятьНаименованиеАдресДаннымиГоловнойОрганизацииВННExtendedTooltip" id="34"/>
+		</LabelDecoration>
+		<CheckBoxField name="ПечататьТитульныйЛистДляПриложения2КНалоговойНакладной" id="11">
+			<DataPath>Запись.ПечататьТитульныйЛистДляПриложения2КНалоговойНакладной</DataPath>
+			<Enabled>false</Enabled>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ПечататьТитульныйЛистДляПриложения2КНалоговойНакладнойКонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="ПечататьТитульныйЛистДляПриложения2КНалоговойНакладнойExtendedTooltip" id="35"/>
+		</CheckBoxField>
+		<LabelDecoration name="ДекорацияПечататьТитульныйЛистДляПриложения2КНалоговойНакладной" id="21">
+			<Enabled>false</Enabled>
+			<TextColor>style:ПоясняющийТекст</TextColor>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>При печати документа "Приложение 2 к налоговой накладной" можно выводить реквизиты
+шапки на отдельном ("титульном") листе бумаги. При установке флажка в печатном документе
+между реквизитами шапки и основной таблицей будет вставлен "разрыв страницы".
+Данная настройка действует с 16.12.2011 г. по 31.03.2016 г.)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>При друку документа "Додаток 2 до податкової накладної" можна виводити реквізити
+шапки на окремому ("титульному") аркуші паперу. При установці прапорця в друкованому документі
+між реквізитами шапки і основною таблицею буде вставлений "розрив сторінки".
+Дана настройка діє з 16.12.2011 р. по 31.03.2016 р.</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ДекорацияПечататьТитульныйЛистДляПриложения2КНалоговойНакладнойКонтекстноеМеню" id="22"/>
+			<ExtendedTooltip name="ДекорацияПечататьТитульныйЛистДляПриложения2КНалоговойНакладнойExtendedTooltip" id="36"/>
+		</LabelDecoration>
+		<InputField name="СимволПустыхПоказателейВНалоговойНакладной" id="5">
+			<DataPath>Запись.СимволПустыхПоказателейВНалоговойНакладной</DataPath>
+			<Enabled>false</Enabled>
+			<ContextMenu name="СимволПустыхПоказателейВНалоговойНакладнойКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="СимволПустыхПоказателейВНалоговойНакладнойExtendedTooltip" id="37"/>
+		</InputField>
+		<LabelDecoration name="ДекорацияСимволПустыхПоказателейВНалоговойНакладной" id="17">
+			<Enabled>false</Enabled>
+			<TextColor>style:ПоясняющийТекст</TextColor>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>При печати документов "Налоговая накладная" и "Приложение 2" пустые показатели в таблице
+могут выделяться значком "X", "-" или оставаться незаполненными (данный символ действует
+только для документов с 2011 года по 28.02.2014 г.).</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>При друку документів "Податкова накладна" і "Додаток 2" порожні показники в таблиці
+можуть виділятися позначкою "X", "-" або залишатися незаповненими (цей символ діє
+тільки для документів з 2011 року по 28.02.2014 р.).</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ДекорацияСимволПустыхПоказателейВНалоговойНакладнойКонтекстноеМеню" id="18"/>
+			<ExtendedTooltip name="ДекорацияСимволПустыхПоказателейВНалоговойНакладнойExtendedTooltip" id="38"/>
+		</LabelDecoration>
+		<CheckBoxField name="ПечататьКодУКТВЭДБезПробелов" id="9">
+			<DataPath>Запись.ПечататьКодУКТВЭДБезПробелов</DataPath>
+			<Enabled>false</Enabled>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ПечататьКодУКТВЭДБезПробеловКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="ПечататьКодУКТВЭДБезПробеловExtendedTooltip" id="39"/>
+		</CheckBoxField>
+		<LabelDecoration name="ДекорацияПечататьКодУКТВЭДБезПробелов" id="19">
+			<Enabled>false</Enabled>
+			<TextColor>style:ПоясняющийТекст</TextColor>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>В печатных формах налоговых документов код товара по УКТ ВЭД может выводиться в
+формате, предусмотренном Таможенным тарифом (с пробелами: например, 2701 01 00 00), либо
+без разделителей (например, 2701010000). Данная настройка действует с 16.12.2011 г.
+по 28.02.2014 г.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>В друкованих формах податкових документів код товару за УКТ ЗЕД може виводитися в
+форматі, передбаченому Митним тарифом (із пробілами: наприклад, 2701 01 00 00), або
+без роздільників (наприклад, 2701010000). Дана настройка діє з 16.12.2011 р.
+за 28.02.2014 р.</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ДекорацияПечататьКодУКТВЭДБезПробеловКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ДекорацияПечататьКодУКТВЭДБезПробеловExtendedTooltip" id="40"/>
+		</LabelDecoration>
+		<CheckBoxField name="ПечататьДатыВНалоговыхНакладныхСРазделителями" id="13">
+			<DataPath>Запись.ПечататьДатыВНалоговыхНакладныхСРазделителями</DataPath>
+			<Enabled>false</Enabled>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ПечататьДатыВНалоговыхНакладныхСРазделителямиКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ПечататьДатыВНалоговыхНакладныхСРазделителямиExtendedTooltip" id="41"/>
+		</CheckBoxField>
+		<LabelDecoration name="ДекорацияПечататьДатыВНалоговыхНакладныхСРазделителями" id="23">
+			<Enabled>false</Enabled>
+			<TextColor>style:ПоясняющийТекст</TextColor>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>При печати документов "Налоговая накладная" и "Приложение 2"  дата оплаты в таблице
+с товарами может выводиться как в виде "12.02.12" так и без разделителей: "12022012".
+Настройка действует только для форм утвержденных Приказом № 1379 от 01.11.2011 г.
+до 28.02.2014 г.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>При друку документів "Податкова накладна" і "Додаток 2" дата оплати в таблиці
+з товарами може виводитися як у вигляді "12.02.12" так і без роздільників: "12022012".
+Настройка діє тільки для форм, затверджених Наказом № 1379 від 01.11.2011 р.
+до 28.02.2014 р.</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ДекорацияПечататьДатыВНалоговыхНакладныхСРазделителямиКонтекстноеМеню" id="24"/>
+			<ExtendedTooltip name="ДекорацияПечататьДатыВНалоговыхНакладныхСРазделителямиExtendedTooltip" id="42"/>
+		</LabelDecoration>
+		<CheckBoxField name="НеДополнятьНаименованиеНомеромГТДВНалоговыхДокументах" id="15">
+			<DataPath>Запись.НеДополнятьНаименованиеНомеромГТДВНалоговыхДокументах</DataPath>
+			<Enabled>false</Enabled>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="НеДополнятьНаименованиеНомеромГТДВНалоговыхДокументахКонтекстноеМеню" id="16"/>
+			<ExtendedTooltip name="НеДополнятьНаименованиеНомеромГТДВНалоговыхДокументахExtendedTooltip" id="43"/>
+		</CheckBoxField>
+		<LabelDecoration name="ДекорацияНеДополнятьНаименованиеНомеромГТДВНалоговыхДокументах" id="25">
+			<Enabled>false</Enabled>
+			<TextColor>style:ПоясняющийТекст</TextColor>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>При печати документов "Налоговая накладная" и "Приложение 2" в таблице с товарами,
+в дополнение к наименованию товара может быть выведен номер и дата ГТД. Настройка
+действует только для форм утвержденных Приказом № 1379 от 01.11.2011 г. до 28.02.2014 г.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>При друку документів "Податкова накладна" і "Додаток 2" в таблиці з товарами,
+в доповнення до найменування товару може бути виведений номер і дата ВМД. Насторйка
+діє тільки для форм, затверджених Наказом № 1379 від 01.11.2011 р. до 28.02.2014 р.</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ДекорацияНеДополнятьНаименованиеНомеромГТДВНалоговыхДокументахКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="ДекорацияНеДополнятьНаименованиеНомеромГТДВНалоговыхДокументахExtendedTooltip" id="44"/>
+		</LabelDecoration>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.НастройкаПечатиНалоговыхДокументов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

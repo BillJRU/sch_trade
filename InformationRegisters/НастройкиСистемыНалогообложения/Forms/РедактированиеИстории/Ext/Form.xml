@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="Список" id="57">
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Список</DataPath>
+			<CommandSet>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>Create</ExcludedCommand>
+			</CommandSet>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<ContextMenu name="СписокКонтекстноеМеню" id="59"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="58">
+				<ChildItems>
+					<Button name="ФормаВыбрать" id="53">
+						<Type>CommandBarButton</Type>
+						<DefaultButton>true</DefaultButton>
+						<CommandName>Form.Command.Выбрать</CommandName>
+						<ExtendedTooltip name="ФормаВыбратьРасширеннаяПодсказка" id="54"/>
+					</Button>
+					<Button name="ФормаДобавить" id="55">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Добавить</CommandName>
+						<ExtendedTooltip name="ФормаДобавитьРасширеннаяПодсказка" id="56"/>
+					</Button>
+					<Button name="СписокИзменитьФорму" id="97">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+						<ExtendedTooltip name="СписокИзменитьФормуРасширеннаяПодсказка" id="98"/>
+					</Button>
+					<Button name="СписокСправка" id="99">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.StandardCommand.Help</CommandName>
+						<ExtendedTooltip name="СписокСправкаРасширеннаяПодсказка" id="100"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="60"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="61">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="62"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="63"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="67">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="68"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="69"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="64">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="65"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="66"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">СписокВыбор</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="СписокПериод" id="70">
+					<DataPath>Список.Период</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Применяется с</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Застосовується з</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СписокПериодКонтекстноеМеню" id="71"/>
+					<ExtendedTooltip name="СписокПериодРасширеннаяПодсказка" id="72"/>
+				</InputField>
+				<InputField name="СписокСистемаНалогообложения" id="76">
+					<DataPath>Список.СистемаНалогообложения</DataPath>
+					<ContextMenu name="СписокСистемаНалогообложенияКонтекстноеМеню" id="77"/>
+					<ExtendedTooltip name="СписокСистемаНалогообложенияРасширеннаяПодсказка" id="78"/>
+				</InputField>
+				<CheckBoxField name="СписокРаздельныйУчетТоваровПоНалогообложениюНДС" id="101">
+					<DataPath>Список.РаздельныйУчетТоваровПоНалогообложениюНДС</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СписокРаздельныйУчетТоваровПоНалогообложениюНДСКонтекстноеМеню" id="102"/>
+					<ExtendedTooltip name="СписокРаздельныйУчетТоваровПоНалогообложениюНДСРасширеннаяПодсказка" id="103"/>
+				</CheckBoxField>
+				<CheckBoxField name="СписокРаздельныйУчетВНАПоНалогообложениюНДС" id="104">
+					<DataPath>Список.РаздельныйУчетВНАПоНалогообложениюНДС</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СписокРаздельныйУчетВНАПоНалогообложениюНДСКонтекстноеМеню" id="105"/>
+					<ExtendedTooltip name="СписокРаздельныйУчетВНАПоНалогообложениюНДСРасширеннаяПодсказка" id="106"/>
+				</CheckBoxField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Организация" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Організація</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Список" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Список</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	НастройкиСистемыНалогообложения.Период КАК Период,
+	НастройкиСистемыНалогообложения.Организация КАК Организация,
+	НастройкиСистемыНалогообложения.СистемаНалогообложения КАК СистемаНалогообложения,
+	НастройкиСистемыНалогообложения.РаздельныйУчетТоваровПоНалогообложениюНДС КАК РаздельныйУчетТоваровПоНалогообложениюНДС,
+	НастройкиСистемыНалогообложения.РаздельныйУчетВНАПоНалогообложениюНДС КАК РаздельныйУчетВНАПоНалогообложениюНДС
+ИЗ
+	РегистрСведений.НастройкиСистемыНалогообложения КАК НастройкиСистемыНалогообложения</QueryText>
+				<MainTable>InformationRegister.НастройкиСистемыНалогообложения</MainTable>
+				<ListSettings/>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Выбрать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Обрати</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Выбрать</Action>
+		</Command>
+		<Command name="Добавить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Додати</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Добавить</Action>
+			<Representation>TextPicture</Representation>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="Организация">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="ТолькоПросмотр">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

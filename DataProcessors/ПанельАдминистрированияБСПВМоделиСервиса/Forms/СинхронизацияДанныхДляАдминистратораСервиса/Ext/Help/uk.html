@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><style>TABLE {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; WIDTH: 98%; BORDER-TOP: 0px; BORDER-RIGHT: 0px; cellSpacing: 4; cellPadding: 0
+}
+TD {
+	VERTICAL-ALIGN: top
+}
+</style><meta localizatorhash="7BD30B31D2752803FD42DF9FB0ED28B3" content="text/html;charset=utf-8" http-equiv="content-type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta localizatorhash="7BD30B31D2752803FD42DF9FB0ED28B3" name="GENERATOR" content="MSHTML 11.00.9600.17344"></meta></head><body>
+<p>У даній панелі здійснюється настройка синхронізації даних для інформаційної бази.</p>
+<table><tbody><tr><td width="30%">
+<li><strong>Каталог тимчасових файлів Windows</strong></li></td>
+<td>Шлях до єдиного каталогу тимчасових файлів всіх серверів кластера, який буде використовуватися для серверів, що працюють під управлінням ОС Windows.</td></tr><tr><td>
+<li><strong>Каталог тимчасових файлів Linux</strong></li></td>
+<td>Шлях до єдиного каталогу тимчасових файлів всіх серверів кластера, який буде використовуватися для серверів, що працюють під управлінням ОС Linux.</td></tr><tr><td colspan="2">
+<p>Каталоги тимчасових файлів можна <strong>не заповнювати</strong>, коли в кластері BAF працює тільки <strong>один сервер</strong> або програма працює у <strong>файловому режимі</strong>.<br>Якщо всі сервери кластера працюють під управлінням операційних систем одного сімейства (Windows/Linux), то друге поле заповнювати не обов'язково.</p>
+<p>Каталог повинен бути <strong>доступний на читання і запис</strong> для всіх серверів кластера. В тому числі - для всіх користувачів операційних систем, від імені яких запускаються сервери платформи BAF. Так само UNC шлях до нього повинен бути однаковим для всіх серверів одного сімейства - для цього каталог необхідно підключати до серверів під одним ім'ям.</p>
+<p>У полі <strong>Каталог тимчасових файлів Linux</strong> можна зазначити лише локальний шлях, наприклад /home/path.</p>
+<p>Щоб використовувати UNC шлях, потрібно зробити на нього посилання. Для цього під правами адміністратора (root) зробіть наступне:</p>
+<p><strong>mkdir folder<br></strong>--- замість folder напишіть ім'я каталогу. наприклад, в каталозі /home ми робимо mkdir shared - створить каталог shared з повним шляхом /home/shared.</p>
+<p><strong>mount -t cifs //server/share folder -o //domain/user, password=pwd</strong><br>- де //server/share - UNC шлях до іншого комп'ютера, folder - шлях до каталогу на Linux комп'ютері, наприклад \home\shared , //domain/user - ім'я домену/користувача, при необхідності, pwd - пароль користувача (при необхідності).</p>
+<p>Якщо ім'я та пароль не потрібні, команда виглядає так:<br><strong>mount -t cifs //server/share folder</strong></p>
+<p>Після цього у шляху до тому вказуємо folder, наприклад, /home/shared</p>
+<p>Докладніше про адміністрування сервера платформи BAF див. документацію до платформи BAF.</p></td></tr></tbody></table><p> </p></body></html>

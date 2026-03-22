@@ -1,0 +1,1210 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоУпаковок</dataPath>
+			<field>КоличествоУпаковок</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Кількість</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>3</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыделятьОтрицательные</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Номенклатура</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерГТД</dataPath>
+			<field>НомерГТД</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер ГТД</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Номер ВМД</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Содержание</dataPath>
+			<field>Содержание</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Содержание</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Зміст</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Характеристика</dataPath>
+			<field>Характеристика</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Характеристика</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Характеристика</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтавкаНДС</dataPath>
+			<field>СтавкаНДС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ставка НДС</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Ставка ПДВ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Регистратор</dataPath>
+			<field>Регистратор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регистратор</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Реєстратор</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЦенаНН</dataPath>
+			<field>ЦенаНН</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цена</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Ціна</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыделятьОтрицательные</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УпаковкаЕдниницаИзмерения</dataPath>
+			<field>УпаковкаЕдниницаИзмерения</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Упаковка, Ед. изм.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Упаковка, Од. вим.</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаБезНДС</dataPath>
+			<field>СуммаБезНДС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма без НДС</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Сума без ПДВ</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыделятьОтрицательные</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаНДС</dataPath>
+			<field>СуммаНДС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма НДС</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Сума ПДВ</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыделятьОтрицательные</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭтоКорректировкаКоличества</dataPath>
+			<field>ЭтоКорректировкаКоличества</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это корректировка количества</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Це коригування кількості</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:boolean</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭтоКорректировкаЦены</dataPath>
+			<field>ЭтоКорректировкаЦены</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это корректировка цены</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Це коригування ціни</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:boolean</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоУпаковок_Справочно</dataPath>
+			<field>КоличествоУпаковок_Справочно</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество (справочно)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Кількість (довідково)</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЦенаНН_Справочно</dataPath>
+			<field>ЦенаНН_Справочно</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цена (справочно)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Ціна (довідково)</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПредыдущаяКорректировкаКоличествоУпаковок</dataPath>
+			<field>ПредыдущаяКорректировкаКоличествоУпаковок</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предыдущая корректировка, количество</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Попереднє коригування, кількість</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПредыдущаяКорректировкаКоличествоУпаковок_Справочно</dataPath>
+			<field>ПредыдущаяКорректировкаКоличествоУпаковок_Справочно</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предыдущая корректировка, количество (справочно)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Попереднє коригування, кількість (довідково)</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПредыдущаяКорректировкаСуммаБезНДС</dataPath>
+			<field>ПредыдущаяКорректировкаСуммаБезНДС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предыдущая корректировка, сумма без НДС</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Попереднє коригування, сума без ПДВ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПредыдущаяКорректировкаСуммаНДС</dataPath>
+			<field>ПредыдущаяКорректировкаСуммаНДС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предыдущая корректировка, сумма НДС</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Попереднє коригування, сума ПДВ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПредыдущаяКорректировкаЦенаНН</dataPath>
+			<field>ПредыдущаяКорректировкаЦенаНН</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предыдущая корректировка, цена</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Попереднє коригування, ціна</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПредыдущаяКорректировкаЦенаНН_Справочно</dataPath>
+			<field>ПредыдущаяКорректировкаЦенаНН_Справочно</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предыдущая корректировка, цена (справочно)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Попереднє коригування, ціна (довідково)</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПредыдущаяКорректировкаЭтоКорректировкаКоличества</dataPath>
+			<field>ПредыдущаяКорректировкаЭтоКорректировкаКоличества</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предыдущая корректировка, это корректировка количества</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Попередня коригуваннє, це коригування кількості</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПредыдущаяКорректировкаЭтоКорректировкаЦены</dataPath>
+			<field>ПредыдущаяКорректировкаЭтоКорректировкаЦены</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предыдущая корректировка, это корректировка цены</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Попереднє коригування, це коригування ціни</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерСтроки</dataPath>
+			<field>НомерСтроки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер строки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Номер рядка</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПредыдущаяКорректировкаНомерСтроки</dataPath>
+			<field>ПредыдущаяКорректировкаНомерСтроки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предыдущая корректировка, номер строки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Попереднє коригування, номер рядка</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПредыдущаяКорректировкаРегистратор</dataPath>
+			<field>ПредыдущаяКорректировкаРегистратор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предыдущая корректировка, регистратор</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Попереднє коригування, реєстратор</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОшибкаРасхождениеЦены</dataPath>
+			<field>ОшибкаРасхождениеЦены</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ошибка расхождение цены</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Помилка розбіжність ціни</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОшибкаТоварОтсутсвуетВНалоговойНакладной</dataPath>
+			<field>ОшибкаТоварОтсутсвуетВНалоговойНакладной</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ошибка товар отсутсвует в налоговой накладной</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Помилка товар відсутній у податковій накладній</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СторкаНалоговойНакладнойНомерСтроки</dataPath>
+			<field>СторкаНалоговойНакладнойНомерСтроки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сторка налоговой накладной, номер строки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Рядок податкової накладної, номер рядка</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных</dataSource>
+		<query>ВЫБРАТЬ
+	Товары.Ссылка КАК Регистратор,
+	Товары.НомерСтроки,
+	Товары.Номенклатура,
+	Товары.Содержание,
+	Товары.Характеристика,
+	Товары.НомерГТД,
+	Товары.СтавкаНДС,
+	Товары.Упаковка,
+	Товары.ЦенаРегл,
+	Товары.КоличествоУпаковок,
+	ИСТИНА КАК ЭтоНалоговаяНакладная,
+	ЛОЖЬ КАК ЭтоКорректировкаЦены,
+	ЛОЖЬ КАК ЭтоКорректировкаКоличества,
+	Товары.СуммаБезНДСРегл,
+	Товары.СуммаНДСРегл
+ПОМЕСТИТЬ ИсходнаяИсторияКорректировок
+ИЗ
+	Документ.НалоговаяНакладная.Товары КАК Товары
+ГДЕ
+	Товары.Ссылка = &amp;НалоговаяНакладная
+	И Товары.Ссылка.Проведен
+	И Товары.Ссылка.СтатусАвтокорректировки &lt;&gt; ЗНАЧЕНИЕ(Перечисление.СтатусыАвтокорректировкиНалоговыхДокументов.ИсправлятьТехническуюТЧ)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	Товары.Ссылка,
+	Товары.НомерСтроки,
+	Товары.Номенклатура,
+	Товары.Содержание,
+	Товары.Характеристика,
+	Товары.НомерГТД,
+	Товары.СтавкаНДС,
+	Товары.Упаковка,
+	Товары.ЦенаРегл,
+	Товары.КоличествоУпаковок,
+	ИСТИНА,
+	ЛОЖЬ,
+	ЛОЖЬ,
+	Товары.СуммаБезНДСРегл,
+	Товары.СуммаНДСРегл
+ИЗ
+	Документ.НалоговаяНакладная.ТоварыПоДаннымПользователя КАК Товары
+ГДЕ
+	Товары.Ссылка = &amp;НалоговаяНакладная
+	И Товары.Ссылка.Проведен
+	И Товары.Ссылка.СтатусАвтокорректировки = ЗНАЧЕНИЕ(Перечисление.СтатусыАвтокорректировкиНалоговыхДокументов.ИсправлятьТехническуюТЧ)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	Товары.Ссылка,
+	Товары.НомерСтроки,
+	Товары.Номенклатура,
+	Товары.Содержание,
+	Товары.Характеристика,
+	Товары.НомерГТД,
+	Товары.СтавкаНДС,
+	Товары.Упаковка,
+	Товары.ЦенаРегл,
+	Товары.КоличествоУпаковок,
+	ЛОЖЬ,
+	НЕ Товары.ЭтоКорректировкаКоличества,
+	Товары.ЭтоКорректировкаКоличества,
+	Товары.СуммаБезНДСРегл,
+	Товары.СуммаНДСРегл
+ИЗ
+	Документ.Приложение2КНалоговойНакладной.Товары КАК Товары
+ГДЕ
+	Товары.Ссылка.НалоговаяНакладная = &amp;НалоговаяНакладная
+	И Товары.Ссылка.Проведен
+	И Товары.Ссылка.СтатусАвтокорректировки &lt;&gt; ЗНАЧЕНИЕ(Перечисление.СтатусыАвтокорректировкиНалоговыхДокументов.ИсправлятьТехническуюТЧ)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	Товары.Ссылка,
+	Товары.НомерСтроки,
+	Товары.Номенклатура,
+	Товары.Содержание,
+	Товары.Характеристика,
+	Товары.НомерГТД,
+	Товары.СтавкаНДС,
+	Товары.Упаковка,
+	Товары.ЦенаРегл,
+	Товары.КоличествоУпаковок,
+	ЛОЖЬ,
+	НЕ Товары.ЭтоКорректировкаКоличества,
+	Товары.ЭтоКорректировкаКоличества,
+	Товары.СуммаБезНДСРегл,
+	Товары.СуммаНДСРегл
+ИЗ
+	Документ.Приложение2КНалоговойНакладной.ТоварыПоДаннымПользователя КАК Товары
+ГДЕ
+	Товары.Ссылка.НалоговаяНакладная = &amp;НалоговаяНакладная
+	И Товары.Ссылка.Проведен
+	И Товары.Ссылка.СтатусАвтокорректировки = ЗНАЧЕНИЕ(Перечисление.СтатусыАвтокорректировкиНалоговыхДокументов.ИсправлятьТехническуюТЧ)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ИсходнаяИсторияКорректировок.Регистратор,
+	ИсходнаяИсторияКорректировок.Регистратор.Дата КАК РегистраторДата,
+	МАКСИМУМ(ИсходнаяИсторияКорректировок.НомерСтроки) КАК НомерСтроки,
+	ИсходнаяИсторияКорректировок.Номенклатура,
+	ИсходнаяИсторияКорректировок.Содержание,
+	ИсходнаяИсторияКорректировок.Характеристика,
+	ИсходнаяИсторияКорректировок.НомерГТД,
+	ИсходнаяИсторияКорректировок.СтавкаНДС,
+	ВЫБОР
+		КОГДА ИсходнаяИсторияКорректировок.Упаковка &lt;&gt; ЗНАЧЕНИЕ(Справочник.УпаковкиЕдиницыИзмерения.ПустаяСсылка)
+			ТОГДА ИсходнаяИсторияКорректировок.Упаковка
+		ИНАЧЕ ИсходнаяИсторияКорректировок.Номенклатура.ЕдиницаИзмерения
+	КОНЕЦ КАК УпаковкаЕдниницаИзмерения,
+	ВЫБОР
+		КОГДА ИсходнаяИсторияКорректировок.ЭтоНалоговаяНакладная
+				ИЛИ ИсходнаяИсторияКорректировок.ЭтоКорректировкаЦены
+			ТОГДА ИсходнаяИсторияКорректировок.ЦенаРегл
+		ИНАЧЕ 0
+	КОНЕЦ КАК ЦенаНН,
+	СУММА(ВЫБОР
+			КОГДА ИсходнаяИсторияКорректировок.ЭтоНалоговаяНакладная
+					ИЛИ ИсходнаяИсторияКорректировок.ЭтоКорректировкаКоличества
+				ТОГДА ИсходнаяИсторияКорректировок.КоличествоУпаковок
+			ИНАЧЕ 0
+		КОНЕЦ) КАК КоличествоУпаковок,
+	ИсходнаяИсторияКорректировок.ЦенаРегл КАК ЦенаНН_Справочно,
+	СУММА(ИсходнаяИсторияКорректировок.КоличествоУпаковок) КАК КоличествоУпаковок_Справочно,
+	ИсходнаяИсторияКорректировок.ЭтоНалоговаяНакладная,
+	ИсходнаяИсторияКорректировок.ЭтоКорректировкаЦены,
+	ИсходнаяИсторияКорректировок.ЭтоКорректировкаКоличества,
+	СУММА(ИсходнаяИсторияКорректировок.СуммаБезНДСРегл) КАК СуммаБезНДС,
+	СУММА(ИсходнаяИсторияКорректировок.СуммаНДСРегл) КАК СуммаНДС
+ПОМЕСТИТЬ ИсторияКорректировок
+ИЗ
+	ИсходнаяИсторияКорректировок КАК ИсходнаяИсторияКорректировок
+
+СГРУППИРОВАТЬ ПО
+	ИсходнаяИсторияКорректировок.Регистратор,
+	ИсходнаяИсторияКорректировок.Номенклатура,
+	ИсходнаяИсторияКорректировок.Содержание,
+	ИсходнаяИсторияКорректировок.Характеристика,
+	ИсходнаяИсторияКорректировок.НомерГТД,
+	ИсходнаяИсторияКорректировок.СтавкаНДС,
+	ВЫБОР
+		КОГДА ИсходнаяИсторияКорректировок.Упаковка &lt;&gt; ЗНАЧЕНИЕ(Справочник.УпаковкиЕдиницыИзмерения.ПустаяСсылка)
+			ТОГДА ИсходнаяИсторияКорректировок.Упаковка
+		ИНАЧЕ ИсходнаяИсторияКорректировок.Номенклатура.ЕдиницаИзмерения
+	КОНЕЦ,
+	ИсходнаяИсторияКорректировок.ЭтоНалоговаяНакладная,
+	ИсходнаяИсторияКорректировок.ЭтоКорректировкаЦены,
+	ИсходнаяИсторияКорректировок.ЭтоКорректировкаКоличества,
+	ИсходнаяИсторияКорректировок.ЦенаРегл,
+	ИсходнаяИсторияКорректировок.Регистратор.Дата
+;
+
+////////////////////////////////////////////////////////////////////////////////
+УНИЧТОЖИТЬ ИсходнаяИсторияКорректировок
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ИсходнаяСтрока.Номенклатура,
+	ИсходнаяСтрока.Содержание,
+	ИсходнаяСтрока.Характеристика,
+	ИсходнаяСтрока.НомерГТД,
+	ИсходнаяСтрока.СтавкаНДС,
+	ИсходнаяСтрока.УпаковкаЕдниницаИзмерения,
+	ИсходнаяСтрока.Регистратор,
+	ИсходнаяСтрока.РегистраторДата,
+	ИсходнаяСтрока.НомерСтроки,
+	ИсходнаяСтрока.ПредыдущаяСтрокаДата,
+	ИсходнаяСтрока.ПредыдущаяСтрокаРегистратор,
+	МАКСИМУМ(ПредыдущаяСтрока.НомерСтроки) КАК ПредыдущаяСтрокаНомерСтроки
+ПОМЕСТИТЬ СоответсвиеКорректировок
+ИЗ
+	(ВЫБРАТЬ
+		ИсходнаяСтрока.Номенклатура КАК Номенклатура,
+		ИсходнаяСтрока.Содержание КАК Содержание,
+		ИсходнаяСтрока.Характеристика КАК Характеристика,
+		ИсходнаяСтрока.НомерГТД КАК НомерГТД,
+		ИсходнаяСтрока.СтавкаНДС КАК СтавкаНДС,
+		ИсходнаяСтрока.УпаковкаЕдниницаИзмерения КАК УпаковкаЕдниницаИзмерения,
+		ИсходнаяСтрока.Регистратор КАК Регистратор,
+		ИсходнаяСтрока.РегистраторДата КАК РегистраторДата,
+		ИсходнаяСтрока.НомерСтроки КАК НомерСтроки,
+		ИсходнаяСтрока.ПредыдущаяСтрокаДата КАК ПредыдущаяСтрокаДата,
+		МАКСИМУМ(ПредыдущаяСтрока.Регистратор) КАК ПредыдущаяСтрокаРегистратор
+	ИЗ
+		(ВЫБРАТЬ
+			ИсходнаяСтрока.Номенклатура КАК Номенклатура,
+			ИсходнаяСтрока.Содержание КАК Содержание,
+			ИсходнаяСтрока.Характеристика КАК Характеристика,
+			ИсходнаяСтрока.НомерГТД КАК НомерГТД,
+			ИсходнаяСтрока.СтавкаНДС КАК СтавкаНДС,
+			ИсходнаяСтрока.УпаковкаЕдниницаИзмерения КАК УпаковкаЕдниницаИзмерения,
+			ИсходнаяСтрока.Регистратор КАК Регистратор,
+			ИсходнаяСтрока.РегистраторДата КАК РегистраторДата,
+			ИсходнаяСтрока.НомерСтроки КАК НомерСтроки,
+			МАКСИМУМ(ПредыдущаяСтрока.РегистраторДата) КАК ПредыдущаяСтрокаДата
+		ИЗ
+			ИсторияКорректировок КАК ИсходнаяСтрока
+				ЛЕВОЕ СОЕДИНЕНИЕ ИсторияКорректировок КАК ПредыдущаяСтрока
+				ПО ИсходнаяСтрока.Номенклатура = ПредыдущаяСтрока.Номенклатура
+					И ИсходнаяСтрока.Содержание = ПредыдущаяСтрока.Содержание
+					И ИсходнаяСтрока.Характеристика = ПредыдущаяСтрока.Характеристика
+					И ИсходнаяСтрока.НомерГТД = ПредыдущаяСтрока.НомерГТД
+					И ИсходнаяСтрока.СтавкаНДС = ПредыдущаяСтрока.СтавкаНДС
+					И ИсходнаяСтрока.УпаковкаЕдниницаИзмерения = ПредыдущаяСтрока.УпаковкаЕдниницаИзмерения
+					И (ИсходнаяСтрока.РегистраторДата &gt; ПредыдущаяСтрока.РегистраторДата
+						ИЛИ ИсходнаяСтрока.РегистраторДата = ПредыдущаяСтрока.РегистраторДата
+							И ИсходнаяСтрока.Регистратор &gt; ПредыдущаяСтрока.Регистратор
+						ИЛИ ИсходнаяСтрока.РегистраторДата = ПредыдущаяСтрока.РегистраторДата
+							И ИсходнаяСтрока.Регистратор = ПредыдущаяСтрока.Регистратор
+							И ИсходнаяСтрока.НомерСтроки &gt; ПредыдущаяСтрока.НомерСтроки)
+		
+		СГРУППИРОВАТЬ ПО
+			ИсходнаяСтрока.Номенклатура,
+			ИсходнаяСтрока.Содержание,
+			ИсходнаяСтрока.Характеристика,
+			ИсходнаяСтрока.НомерГТД,
+			ИсходнаяСтрока.СтавкаНДС,
+			ИсходнаяСтрока.УпаковкаЕдниницаИзмерения,
+			ИсходнаяСтрока.Регистратор,
+			ИсходнаяСтрока.РегистраторДата,
+			ИсходнаяСтрока.НомерСтроки) КАК ИсходнаяСтрока
+			ЛЕВОЕ СОЕДИНЕНИЕ ИсторияКорректировок КАК ПредыдущаяСтрока
+			ПО ИсходнаяСтрока.Номенклатура = ПредыдущаяСтрока.Номенклатура
+				И ИсходнаяСтрока.Содержание = ПредыдущаяСтрока.Содержание
+				И ИсходнаяСтрока.Характеристика = ПредыдущаяСтрока.Характеристика
+				И ИсходнаяСтрока.НомерГТД = ПредыдущаяСтрока.НомерГТД
+				И ИсходнаяСтрока.СтавкаНДС = ПредыдущаяСтрока.СтавкаНДС
+				И ИсходнаяСтрока.УпаковкаЕдниницаИзмерения = ПредыдущаяСтрока.УпаковкаЕдниницаИзмерения
+				И ИсходнаяСтрока.ПредыдущаяСтрокаДата = ПредыдущаяСтрока.РегистраторДата
+				И (ИсходнаяСтрока.Регистратор &gt; ПредыдущаяСтрока.Регистратор
+					ИЛИ ИсходнаяСтрока.Регистратор = ПредыдущаяСтрока.Регистратор
+						И ИсходнаяСтрока.НомерСтроки &gt; ПредыдущаяСтрока.НомерСтроки)
+	
+	СГРУППИРОВАТЬ ПО
+		ИсходнаяСтрока.Номенклатура,
+		ИсходнаяСтрока.Содержание,
+		ИсходнаяСтрока.Характеристика,
+		ИсходнаяСтрока.НомерГТД,
+		ИсходнаяСтрока.СтавкаНДС,
+		ИсходнаяСтрока.УпаковкаЕдниницаИзмерения,
+		ИсходнаяСтрока.Регистратор,
+		ИсходнаяСтрока.РегистраторДата,
+		ИсходнаяСтрока.НомерСтроки,
+		ИсходнаяСтрока.ПредыдущаяСтрокаДата) КАК ИсходнаяСтрока
+		ЛЕВОЕ СОЕДИНЕНИЕ ИсторияКорректировок КАК ПредыдущаяСтрока
+		ПО ИсходнаяСтрока.Номенклатура = ПредыдущаяСтрока.Номенклатура
+			И ИсходнаяСтрока.Содержание = ПредыдущаяСтрока.Содержание
+			И ИсходнаяСтрока.Характеристика = ПредыдущаяСтрока.Характеристика
+			И ИсходнаяСтрока.НомерГТД = ПредыдущаяСтрока.НомерГТД
+			И ИсходнаяСтрока.СтавкаНДС = ПредыдущаяСтрока.СтавкаНДС
+			И ИсходнаяСтрока.УпаковкаЕдниницаИзмерения = ПредыдущаяСтрока.УпаковкаЕдниницаИзмерения
+			И ИсходнаяСтрока.ПредыдущаяСтрокаДата = ПредыдущаяСтрока.РегистраторДата
+			И ИсходнаяСтрока.ПредыдущаяСтрокаРегистратор = ПредыдущаяСтрока.Регистратор
+			И (ВЫБОР
+				КОГДА ИсходнаяСтрока.Регистратор = ИсходнаяСтрока.ПредыдущаяСтрокаРегистратор
+					ТОГДА ИсходнаяСтрока.НомерСтроки &gt; ПредыдущаяСтрока.НомерСтроки
+				ИНАЧЕ ИСТИНА
+			КОНЕЦ)
+
+СГРУППИРОВАТЬ ПО
+	ИсходнаяСтрока.Номенклатура,
+	ИсходнаяСтрока.Содержание,
+	ИсходнаяСтрока.Характеристика,
+	ИсходнаяСтрока.НомерГТД,
+	ИсходнаяСтрока.СтавкаНДС,
+	ИсходнаяСтрока.УпаковкаЕдниницаИзмерения,
+	ИсходнаяСтрока.Регистратор,
+	ИсходнаяСтрока.РегистраторДата,
+	ИсходнаяСтрока.НомерСтроки,
+	ИсходнаяСтрока.ПредыдущаяСтрокаДата,
+	ИсходнаяСтрока.ПредыдущаяСтрокаРегистратор
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВЫБОР
+		КОГДА СторкаНалоговойНакладной.Регистратор ЕСТЬ NULL 
+			ТОГДА 99999
+		ИНАЧЕ СторкаНалоговойНакладной.НомерСтроки
+	КОНЕЦ КАК СторкаНалоговойНакладнойНомерСтроки,
+	ИсходнаяСтрока.Регистратор,
+	ИсходнаяСтрока.НомерСтроки,
+	ИсходнаяСтрока.Номенклатура,
+	ИсходнаяСтрока.Содержание,
+	ИсходнаяСтрока.Характеристика,
+	ИсходнаяСтрока.НомерГТД,
+	ИсходнаяСтрока.СтавкаНДС,
+	ИсходнаяСтрока.УпаковкаЕдниницаИзмерения,
+	ИсходнаяСтрока.ЦенаНН,
+	ИсходнаяСтрока.КоличествоУпаковок,
+	ИсходнаяСтрока.ЦенаНН_Справочно,
+	ИсходнаяСтрока.КоличествоУпаковок_Справочно,
+	ИсходнаяСтрока.ЭтоКорректировкаЦены,
+	ИсходнаяСтрока.ЭтоКорректировкаКоличества,
+	ИсходнаяСтрока.СуммаБезНДС,
+	ИсходнаяСтрока.СуммаНДС,
+	ПредыдущаяСтрока.Регистратор КАК ПредыдущаяКорректировкаРегистратор,
+	ПредыдущаяСтрока.НомерСтроки КАК ПредыдущаяКорректировкаНомерСтроки,
+	ПредыдущаяСтрока.ЦенаНН КАК ПредыдущаяКорректировкаЦенаНН,
+	ПредыдущаяСтрока.КоличествоУпаковок КАК ПредыдущаяКорректировкаКоличествоУпаковок,
+	ПредыдущаяСтрока.ЦенаНН_Справочно КАК ПредыдущаяКорректировкаЦенаНН_Справочно,
+	ПредыдущаяСтрока.КоличествоУпаковок_Справочно КАК ПредыдущаяКорректировкаКоличествоУпаковок_Справочно,
+	ПредыдущаяСтрока.ЭтоКорректировкаЦены КАК ПредыдущаяКорректировкаЭтоКорректировкаЦены,
+	ПредыдущаяСтрока.ЭтоКорректировкаКоличества КАК ПредыдущаяКорректировкаЭтоКорректировкаКоличества,
+	ПредыдущаяСтрока.СуммаБезНДС КАК ПредыдущаяКорректировкаСуммаБезНДС,
+	ПредыдущаяСтрока.СуммаНДС КАК ПредыдущаяКорректировкаСуммаНДС,
+	ВЫБОР
+		КОГДА СторкаНалоговойНакладной.Регистратор ЕСТЬ NULL 
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК ОшибкаТоварОтсутсвуетВНалоговойНакладной,
+	ВЫБОР
+		КОГДА ПредыдущаяСтрока.Регистратор ЕСТЬ NULL 
+			ТОГДА ЛОЖЬ
+		КОГДА ИсходнаяСтрока.Регистратор &lt;&gt; ПредыдущаяСтрока.Регистратор
+				И ИсходнаяСтрока.ЭтоКорректировкаКоличества
+				И (ПредыдущаяСтрока.ЭтоНалоговаяНакладная
+					ИЛИ ПредыдущаяСтрока.ЭтоКорректировкаКоличества)
+				И ИсходнаяСтрока.ЦенаНН_Справочно &lt;&gt; ПредыдущаяСтрока.ЦенаНН_Справочно
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК ОшибкаРасхождениеЦены
+ИЗ
+	ИсторияКорректировок КАК ИсходнаяСтрока
+		ЛЕВОЕ СОЕДИНЕНИЕ ИсторияКорректировок КАК СторкаНалоговойНакладной
+		ПО ИсходнаяСтрока.Номенклатура = СторкаНалоговойНакладной.Номенклатура
+			И ИсходнаяСтрока.Содержание = СторкаНалоговойНакладной.Содержание
+			И ИсходнаяСтрока.Характеристика = СторкаНалоговойНакладной.Характеристика
+			И ИсходнаяСтрока.НомерГТД = СторкаНалоговойНакладной.НомерГТД
+			И ИсходнаяСтрока.СтавкаНДС = СторкаНалоговойНакладной.СтавкаНДС
+			И ИсходнаяСтрока.УпаковкаЕдниницаИзмерения = СторкаНалоговойНакладной.УпаковкаЕдниницаИзмерения
+			И (СторкаНалоговойНакладной.ЭтоНалоговаяНакладная)
+		ЛЕВОЕ СОЕДИНЕНИЕ СоответсвиеКорректировок КАК СоответсвиеКорректировок
+		ПО ИсходнаяСтрока.Номенклатура = СоответсвиеКорректировок.Номенклатура
+			И ИсходнаяСтрока.Содержание = СоответсвиеКорректировок.Содержание
+			И ИсходнаяСтрока.Характеристика = СоответсвиеКорректировок.Характеристика
+			И ИсходнаяСтрока.НомерГТД = СоответсвиеКорректировок.НомерГТД
+			И ИсходнаяСтрока.СтавкаНДС = СоответсвиеКорректировок.СтавкаНДС
+			И ИсходнаяСтрока.УпаковкаЕдниницаИзмерения = СоответсвиеКорректировок.УпаковкаЕдниницаИзмерения
+			И ИсходнаяСтрока.РегистраторДата = СоответсвиеКорректировок.РегистраторДата
+			И ИсходнаяСтрока.Регистратор = СоответсвиеКорректировок.Регистратор
+			И ИсходнаяСтрока.НомерСтроки = СоответсвиеКорректировок.НомерСтроки
+		ЛЕВОЕ СОЕДИНЕНИЕ ИсторияКорректировок КАК ПредыдущаяСтрока
+		ПО (СоответсвиеКорректировок.Номенклатура = ПредыдущаяСтрока.Номенклатура)
+			И (СоответсвиеКорректировок.Содержание = ПредыдущаяСтрока.Содержание)
+			И (СоответсвиеКорректировок.Характеристика = ПредыдущаяСтрока.Характеристика)
+			И (СоответсвиеКорректировок.НомерГТД = ПредыдущаяСтрока.НомерГТД)
+			И (СоответсвиеКорректировок.СтавкаНДС = ПредыдущаяСтрока.СтавкаНДС)
+			И (СоответсвиеКорректировок.УпаковкаЕдниницаИзмерения = ПредыдущаяСтрока.УпаковкаЕдниницаИзмерения)
+			И (СоответсвиеКорректировок.ПредыдущаяСтрокаДата = ПредыдущаяСтрока.РегистраторДата)
+			И (СоответсвиеКорректировок.ПредыдущаяСтрокаРегистратор = ПредыдущаяСтрока.Регистратор)
+			И (СоответсвиеКорректировок.ПредыдущаяСтрокаНомерСтроки = ПредыдущаяСтрока.НомерСтроки)
+</query>
+	</dataSet>
+	<totalField>
+		<dataPath>КоличествоУпаковок</dataPath>
+		<expression>Сумма(КоличествоУпаковок)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаБезНДС</dataPath>
+		<expression>Сумма(СуммаБезНДС)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаНДС</dataPath>
+		<expression>Сумма(СуммаНДС)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОшибкаТоварОтсутсвуетВНалоговойНакладной</dataPath>
+		<expression>Максимум(ОшибкаТоварОтсутсвуетВНалоговойНакладной)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОшибкаРасхождениеЦены</dataPath>
+		<expression>Максимум(ОшибкаРасхождениеЦены)</expression>
+	</totalField>
+	<parameter>
+		<name>НалоговаяНакладная</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Налоговая накладная</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>Податкова накладна</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:DocumentRef.НалоговаяНакладная</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>НалоговыйДокумент</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Налоговый документ</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>Податковий документ</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:DocumentRef.НалоговаяНакладная</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:DocumentRef.Приложение2КНалоговойНакладной</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+		<denyIncompleteValues>true</denyIncompleteValues>
+		<use>Always</use>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>АнализКорректировокТоваровДляДокумента</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Анализ корректировок товаров для документа</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>Аналіз коригувань товарів для документа</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Регистратор</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ЦенаНН</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>SpecialColumn</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоУпаковок</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаБезНДС</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаНДС</dcsset:field>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>НалоговыйДокумент</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>5e17f700-f003-4766-bb44-8ebfeaa4a952</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>СторкаНалоговойНакладнойНомерСтроки</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Регистратор.Дата</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Регистратор</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>НомерСтроки</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ЦенаНН</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ЭтоКорректировкаКоличества</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:ЦветТекстаОтмененнойСтрокиДокумента</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Текст</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:Field">ЦенаНН_Справочно</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
+					<dcsset:useInOverall>DontUse</dcsset:useInOverall>
+					<dcsset:useInFieldsHeader>DontUse</dcsset:useInFieldsHeader>
+					<dcsset:useInHeader>DontUse</dcsset:useInHeader>
+					<dcsset:useInParameters>DontUse</dcsset:useInParameters>
+					<dcsset:useInFilter>DontUse</dcsset:useInFilter>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>КоличествоУпаковок</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ЭтоКорректировкаЦены</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:ЦветТекстаОтмененнойСтрокиДокумента</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Текст</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:Field">КоличествоУпаковок_Справочно</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
+					<dcsset:useInOverall>DontUse</dcsset:useInOverall>
+					<dcsset:useInFieldsHeader>DontUse</dcsset:useInFieldsHeader>
+					<dcsset:useInHeader>DontUse</dcsset:useInHeader>
+					<dcsset:useInParameters>DontUse</dcsset:useInParameters>
+					<dcsset:useInFilter>DontUse</dcsset:useInFilter>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection/>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ОшибкаТоварОтсутсвуетВНалоговойНакладной</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:ПолеСОшибкойФон</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
+					<dcsset:useInOverall>DontUse</dcsset:useInOverall>
+					<dcsset:useInFieldsHeader>DontUse</dcsset:useInFieldsHeader>
+					<dcsset:useInHeader>DontUse</dcsset:useInHeader>
+					<dcsset:useInParameters>DontUse</dcsset:useInParameters>
+					<dcsset:useInFilter>DontUse</dcsset:useInFilter>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Анализ корректировок товаров</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Аналіз коригувань товарів</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Номенклатура</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Содержание</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Характеристика</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>НомерГТД</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>СтавкаНДС</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>УпаковкаЕдниницаИзмерения</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:conditionalAppearance>
+					<dcsset:item>
+						<dcsset:selection>
+							<dcsset:item>
+								<dcsset:field>КоличествоУпаковок</dcsset:field>
+							</dcsset:item>
+						</dcsset:selection>
+						<dcsset:filter>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">КоличествоУпаковок</dcsset:left>
+								<dcsset:comparisonType>Less</dcsset:comparisonType>
+								<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+							</dcsset:item>
+						</dcsset:filter>
+						<dcsset:appearance>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:parameter>ЦветФона</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Color">style:ПолеСОшибкойФон</dcscor:value>
+							</dcscor:item>
+						</dcsset:appearance>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:selection>
+							<dcsset:item>
+								<dcsset:field>СуммаБезНДС</dcsset:field>
+							</dcsset:item>
+						</dcsset:selection>
+						<dcsset:filter>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">СуммаБезНДС</dcsset:left>
+								<dcsset:comparisonType>Less</dcsset:comparisonType>
+								<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+							</dcsset:item>
+						</dcsset:filter>
+						<dcsset:appearance>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:parameter>ЦветФона</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Color">style:ПолеСОшибкойФон</dcscor:value>
+							</dcscor:item>
+						</dcsset:appearance>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:selection>
+							<dcsset:item>
+								<dcsset:field>СуммаНДС</dcsset:field>
+							</dcsset:item>
+						</dcsset:selection>
+						<dcsset:filter>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">СуммаНДС</dcsset:left>
+								<dcsset:comparisonType>Less</dcsset:comparisonType>
+								<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+							</dcsset:item>
+						</dcsset:filter>
+						<dcsset:appearance>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:parameter>ЦветФона</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Color">style:ПолеСОшибкойФон</dcscor:value>
+							</dcscor:item>
+						</dcsset:appearance>
+					</dcsset:item>
+				</dcsset:conditionalAppearance>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:conditionalAppearance>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>ЦенаНН</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ОшибкаРасхождениеЦены</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветФона</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">style:ПолеСОшибкойФон</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+					</dcsset:conditionalAppearance>
+				</dcsset:item>
+			</dcsset:item>
+			<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

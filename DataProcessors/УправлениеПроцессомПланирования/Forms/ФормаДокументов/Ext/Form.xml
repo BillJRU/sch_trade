@@ -1,0 +1,580 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Popup name="ГруппаУстановитьСтатус" id="23">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Установить статус</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>uk</v8:lang>
+						<v8:content>Встановити статус</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ГруппаУстановитьСтатусРасширеннаяПодсказка" id="24"/>
+				<ChildItems>
+					<Button name="УстановитьСтатусОтменен" id="31">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.УстановитьСтатусОтменен</CommandName>
+						<ExtendedTooltip name="УстановитьСтатусОтмененРасширеннаяПодсказка" id="32"/>
+					</Button>
+					<Button name="УстановитьСтатусВПодготовке" id="25">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.УстановитьСтатусВПодготовке</CommandName>
+						<ExtendedTooltip name="УстановитьСтатусВПодготовкеРасширеннаяПодсказка" id="26"/>
+					</Button>
+					<Button name="УстановитьСтатусНаУтверждении" id="27">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.УстановитьСтатусНаУтверждении</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>В работе</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
+								<v8:content>В роботі</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="УстановитьСтатусНаУтвержденииРасширеннаяПодсказка" id="28"/>
+					</Button>
+					<Button name="УстановитьСтатусУтвержден" id="29">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.УстановитьСтатусУтвержден</CommandName>
+						<ExtendedTooltip name="УстановитьСтатусУтвержденРасширеннаяПодсказка" id="30"/>
+					</Button>
+				</ChildItems>
+			</Popup>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="Планы" id="1">
+			<Representation>List</Representation>
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<RowSelectionMode>Row</RowSelectionMode>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Планы</DataPath>
+			<CommandSet>
+				<ExcludedCommand>Add</ExcludedCommand>
+				<ExcludedCommand>Change</ExcludedCommand>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+				<ExcludedCommand>Delete</ExcludedCommand>
+				<ExcludedCommand>EndEdit</ExcludedCommand>
+				<ExcludedCommand>MoveDown</ExcludedCommand>
+				<ExcludedCommand>MoveUp</ExcludedCommand>
+				<ExcludedCommand>OutputList</ExcludedCommand>
+				<ExcludedCommand>SelectAll</ExcludedCommand>
+				<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+				<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+				<ExcludedCommand>SortListAsc</ExcludedCommand>
+				<ExcludedCommand>SortListDesc</ExcludedCommand>
+			</CommandSet>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ПланыКонтекстноеМеню" id="3"/>
+			<AutoCommandBar name="ПланыКоманднаяПанель" id="2">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ПланыРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="ПланыСтрокаПоиска" id="5">
+				<AdditionSource>
+					<Item>Планы</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПланыСтрокаПоискаКонтекстноеМеню" id="6"/>
+				<ExtendedTooltip name="ПланыСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ПланыСостояниеПросмотра" id="11">
+				<AdditionSource>
+					<Item>Планы</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПланыСостояниеПросмотраКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="ПланыСостояниеПросмотраРасширеннаяПодсказка" id="13"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ПланыУправлениеПоиском" id="8">
+				<AdditionSource>
+					<Item>Планы</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ПланыУправлениеПоискомКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="ПланыУправлениеПоискомРасширеннаяПодсказка" id="10"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">ПланыВыбор</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="ПланыВидПлана" id="33">
+					<DataPath>Планы.ВидПлана</DataPath>
+					<ContextMenu name="ПланыВидПланаКонтекстноеМеню" id="34"/>
+					<ExtendedTooltip name="ПланыВидПланаРасширеннаяПодсказка" id="35"/>
+				</LabelField>
+				<LabelField name="ПланыТипПлана" id="14">
+					<DataPath>Планы.ТипПлана</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="ПланыТипПланаКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ПланыТипПланаРасширеннаяПодсказка" id="16"/>
+				</LabelField>
+				<LabelField name="ПланыДокумент" id="17">
+					<DataPath>Планы.Документ</DataPath>
+					<ContextMenu name="ПланыДокументКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="ПланыДокументРасширеннаяПодсказка" id="19"/>
+				</LabelField>
+				<LabelField name="ПланыСтатус" id="20">
+					<DataPath>Планы.Статус</DataPath>
+					<ContextMenu name="ПланыСтатусКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ПланыСтатусРасширеннаяПодсказка" id="22"/>
+				</LabelField>
+				<InputField name="ПланыКоличество" id="39">
+					<DataPath>Планы.Количество</DataPath>
+					<ContextMenu name="ПланыКоличествоКонтекстноеМеню" id="40"/>
+					<ExtendedTooltip name="ПланыКоличествоРасширеннаяПодсказка" id="41"/>
+				</InputField>
+				<InputField name="ПланыКомментарий" id="42">
+					<DataPath>Планы.Комментарий</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>20</Width>
+					<MultiLine>true</MultiLine>
+					<ContextMenu name="ПланыКомментарийКонтекстноеМеню" id="43"/>
+					<ExtendedTooltip name="ПланыКомментарийРасширеннаяПодсказка" id="44"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<LabelField name="ТекстНадписиРасшифровка" id="36">
+			<DataPath>ТекстНадписиРасшифровка</DataPath>
+			<TitleLocation>None</TitleLocation>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="ТекстНадписиРасшифровкаКонтекстноеМеню" id="37"/>
+			<ExtendedTooltip name="ТекстНадписиРасшифровкаРасширеннаяПодсказка" id="38"/>
+		</LabelField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Планы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Планы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Плани</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ТипПлана" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип плана</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Тип плану</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.ТипыПланов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Документ" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Документ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.ПланЗакупок</v8:Type>
+						<v8:Type>cfg:DocumentRef.ПланПродаж</v8:Type>
+						<v8:Type>cfg:DocumentRef.КорректировкаПлановыхПотребностей</v8:Type>
+						<v8:Type>cfg:DocumentRef.ПланПродажПоКатегориям</v8:Type>
+						<v8:Type>cfg:DocumentRef.ПланВнутреннихПотреблений</v8:Type>
+						<v8:Type>cfg:DocumentRef.ПланСборкиРазборки</v8:Type>
+						<v8:Type>cfg:DocumentRef.ПланОстатков</v8:Type>
+						<v8:TypeSet>cfg:DocumentRef</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="Статус" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Статус</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.СтатусыПлановыхКорректировок</v8:Type>
+						<v8:Type>cfg:EnumRef.СтатусыПланов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ВидПлана" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид плана</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Вид плану</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ВидыПланов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Количество" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Кількість</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Комментарий" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Коментар</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>255</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТекстНадписиРасшифровка" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст надписи расшифровка</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Текст напису розшифровка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НачалоПериода" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начало периода</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Початок періоду</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОкончаниеПериода" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Окончание периода</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Закінчення періоду</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВидПлана" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид плана</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Вид плану</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВидыПланов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Номенклатура" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Номенклатура</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Характеристика" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Характеристика</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Характеристика</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ХарактеристикиНоменклатуры</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Назначение" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назначение</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Призначення</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Назначения</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТипДанных" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип данных</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Тип даних</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Сценарий" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сценарий</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Сценарій</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.СценарииТоварногоПланирования</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КорректировкаРасхода" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Корректировка расхода</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Коригування витрачання</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокВидовПланов" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список видов планов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Список видів планів</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="УстановитьСтатусВПодготовке" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>В подготовке</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>У підготовці</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить статус "В подготовке" для всех выделенных в списке планов.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Встановити статус "У підготовці" для всіх виділених у списку планів.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.УстановитьСтатусЗаказаНеСогласован</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьСтатусВПодготовке</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УстановитьСтатусНаУтверждении" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>На утверждении</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>На затвердженні</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить статус "На утверждении" для всех выделенных в списке планов.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Встановити статус "На затвердженні" для всіх виділених у списку планів.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ЭлектронныйДокументСогласован</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьСтатусНаУтверждении</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УстановитьСтатусУтвержден" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Утвержден</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Затверджено</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить статус "Утвержден" для всех выделенных в списке планов.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Встановити статус "Затверджений" для всіх виділених у списку планів.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.УстановитьСтатусЗаказаСогласован</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьСтатусУтвержден</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УстановитьСтатусОтменен" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменен</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Скасовано</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить статус "Отменен" для всех выделенных в списке планов.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Встановити статус "Скасовано" для всіх виділених у списку планів.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.УстановитьСтатусЗаявкиОтклонена</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьСтатусОтменен</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

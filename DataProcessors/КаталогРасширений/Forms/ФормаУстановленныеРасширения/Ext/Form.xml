@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Установленные расширения</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>uk</v8:lang>
+			<v8:content>Встановлені розширення</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="УстановленныеРасширения" id="1">
+			<Representation>List</Representation>
+			<ReadOnly>true</ReadOnly>
+			<Header>false</Header>
+			<HorizontalLines>false</HorizontalLines>
+			<VerticalLines>false</VerticalLines>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<DataPath>УстановленныеРасширения</DataPath>
+			<RowPictureDataPath>УстановленныеРасширения.Picture</RowPictureDataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установленные расширения</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Встановлені розширення</v8:content>
+				</v8:item>
+			</Title>
+			<CommandSet>
+				<ExcludedCommand>Add</ExcludedCommand>
+				<ExcludedCommand>Change</ExcludedCommand>
+				<ExcludedCommand>CheckAll</ExcludedCommand>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+				<ExcludedCommand>Delete</ExcludedCommand>
+				<ExcludedCommand>EndEdit</ExcludedCommand>
+				<ExcludedCommand>MoveDown</ExcludedCommand>
+				<ExcludedCommand>MoveUp</ExcludedCommand>
+				<ExcludedCommand>Pickup</ExcludedCommand>
+				<ExcludedCommand>SelectAll</ExcludedCommand>
+				<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+				<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+				<ExcludedCommand>SortListAsc</ExcludedCommand>
+				<ExcludedCommand>SortListDesc</ExcludedCommand>
+				<ExcludedCommand>UncheckAll</ExcludedCommand>
+			</CommandSet>
+			<ContextMenu name="УстановленныеРасширенияКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="УстановленныеРасширенияКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="УстановленныеРасширенияРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="УстановленныеРасширенияСтрокаПоиска" id="5">
+				<AdditionSource>
+					<Item>УстановленныеРасширения</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="УстановленныеРасширенияСтрокаПоискаКонтекстноеМеню" id="6"/>
+				<ExtendedTooltip name="УстановленныеРасширенияСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="УстановленныеРасширенияСостояниеПросмотра" id="8">
+				<AdditionSource>
+					<Item>УстановленныеРасширения</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="УстановленныеРасширенияСостояниеПросмотраКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="УстановленныеРасширенияСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="УстановленныеРасширенияУправлениеПоиском" id="11">
+				<AdditionSource>
+					<Item>УстановленныеРасширения</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="УстановленныеРасширенияУправлениеПоискомКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="УстановленныеРасширенияУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">УстановленныеРасширенияВыбор</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="УстановленныеРасширенияЗначение" id="14">
+					<DataPath>УстановленныеРасширения.Value</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="УстановленныеРасширенияЗначениеКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="УстановленныеРасширенияЗначениеРасширеннаяПодсказка" id="16"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.КаталогРасширений</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="УстановленныеРасширения" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установленные расширения</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Встановлені розширення</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.ПоставляемыеРасширения</v8:Type>
+			</Settings>
+		</Attribute>
+	</Attributes>
+</Form>

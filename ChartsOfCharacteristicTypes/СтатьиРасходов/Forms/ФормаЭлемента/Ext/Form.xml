@@ -1,0 +1,1382 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+		<Event name="OnWriteAtServer">ПриЗаписиНаСервере</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ГруппаСтраницы" id="333">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Сторінки</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="334"/>
+			<ChildItems>
+				<Page name="ГруппаСтраницаОсновное" id="335">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основное</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Основне</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаСтраницаОсновноеРасширеннаяПодсказка" id="336"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаОбщееОписаниеРасхода" id="608">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа общее описание расхода</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Група загальний опис витрати</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа общее описание расхода</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Група загальний опис витрати</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ThroughAlign>DontUse</ThroughAlign>
+							<ExtendedTooltip name="ГруппаОбщееОписаниеРасходаРасширеннаяПодсказка" id="609"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаНаименованиеКод" id="15">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Наименование код</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Найменування код</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаНаименованиеКодExtendedTooltip" id="138"/>
+									<ChildItems>
+										<InputField name="Наименование" id="3">
+											<DataPath>Объект.Description</DataPath>
+											<HorizontalStretch>false</HorizontalStretch>
+											<Wrap>false</Wrap>
+											<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+											<ExtendedTooltip name="НаименованиеExtendedTooltip" id="139"/>
+										</InputField>
+										<InputField name="Код" id="1">
+											<DataPath>Объект.Code</DataPath>
+											<Wrap>false</Wrap>
+											<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+											<ExtendedTooltip name="КодExtendedTooltip" id="140"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<InputField name="Описание" id="52">
+									<DataPath>Объект.Описание</DataPath>
+									<TitleLocation>Left</TitleLocation>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>68</MaxWidth>
+									<Height>2</Height>
+									<VerticalStretch>false</VerticalStretch>
+									<ContextMenu name="ОписаниеКонтекстноеМеню" id="53"/>
+									<ExtendedTooltip name="ОписаниеExtendedTooltip" id="141"/>
+								</InputField>
+								<InputField name="Родитель" id="5">
+									<DataPath>Объект.Parent</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа статей</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Група статей</v8:content>
+										</v8:item>
+									</Title>
+									<Wrap>false</Wrap>
+									<DropListButton>false</DropListButton>
+									<ChoiceButton>true</ChoiceButton>
+									<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+									<ContextMenu name="РодительКонтекстноеМеню" id="6"/>
+									<ExtendedTooltip name="РодительExtendedTooltip" id="142"/>
+								</InputField>
+								<InputField name="ТипРасходов" id="532">
+									<DataPath>Объект.ТипРасходов</DataPath>
+									<DropListButton>false</DropListButton>
+									<ChoiceButton>true</ChoiceButton>
+									<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+									<ChooseType>false</ChooseType>
+									<BackColor>style:ФонУправляющегоПоля</BackColor>
+									<ContextMenu name="ТипРасходовКонтекстноеМеню" id="533"/>
+									<ExtendedTooltip name="ТипРасходовРасширеннаяПодсказка" id="534"/>
+									<Events>
+										<Event name="OnChange">ТипРасходовПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<RadioButtonField name="ВидДеятельностиРасходов" id="423">
+							<DataPath>Объект.ВидДеятельностиРасходов</DataPath>
+							<Visible>false</Visible>
+							<UserVisible>
+								<xr:Common>false</xr:Common>
+							</UserVisible>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Расходы по деятельности</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Витрати з діяльності</v8:content>
+								</v8:item>
+							</Title>
+							<RadioButtonType>Auto</RadioButtonType>
+							<ColumnsCount>3</ColumnsCount>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Основной</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>uk</v8:lang>
+												<v8:content>Основний</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xr:DesignTimeRef">Enum.ВидыДеятельностиРасходов.EnumValue.ОсновнаяДеятельность</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Прочей</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>uk</v8:lang>
+												<v8:content>Іншої</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xr:DesignTimeRef">Enum.ВидыДеятельностиРасходов.EnumValue.ПрочаяДеятельность</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Основной и прочей</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>uk</v8:lang>
+												<v8:content>Основний та іншої</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xr:DesignTimeRef">Enum.ВидыДеятельностиРасходов.EnumValue.ОсновнаяИПрочаяДеятельность</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="ВидДеятельностиРасходовКонтекстноеМеню" id="424"/>
+							<ExtendedTooltip name="ВидДеятельностиРасходовРасширеннаяПодсказка" id="425"/>
+							<Events>
+								<Event name="OnChange">ВидДеятельностиРасходовПриИзменении</Event>
+							</Events>
+						</RadioButtonField>
+						<UsualGroup name="ГруппаВариантРаспределенияРасходов" id="192">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Вариант распределения расходов</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Варіант розподілу витрат</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаВариантРаспределенияРасходовРасширеннаяПодсказка" id="193"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаВариантРаспределенияРегл" id="549">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Вариант распределения лево</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Варіант розподілу ліво</v8:content>
+										</v8:item>
+									</Title>
+									<Group>AlwaysHorizontal</Group>
+									<United>false</United>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаВариантРаспределенияРеглРасширеннаяПодсказка" id="550"/>
+									<ChildItems>
+										<InputField name="ВариантРаспределенияРасходовРегл" id="9">
+											<DataPath>Объект.ВариантРаспределенияРасходовРегл</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>В регл. учете</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>В регл. обліку</v8:content>
+												</v8:item>
+											</Title>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>27</MaxWidth>
+											<DropListButton>false</DropListButton>
+											<ChoiceButton>true</ChoiceButton>
+											<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+											<ChooseType>false</ChooseType>
+											<ContextMenu name="ВариантРаспределенияРасходовРеглКонтекстноеМеню" id="10"/>
+											<ExtendedTooltip name="ВариантРаспределенияРасходовРеглРасширеннаяПодсказка" id="144"/>
+											<Events>
+												<Event name="OnChange">ВариантРаспределенияРасходовПриИзмененииРегл</Event>
+											</Events>
+										</InputField>
+										<UsualGroup name="ГруппаПравилоРаспределенияРегл" id="545">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Распределение на финансовый результат / на себестоимость</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Розподіл на фінансовий результат / на собівартість</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Vertical</Group>
+											<ChildrenAlign>None</ChildrenAlign>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПравилоРаспределенияРеглРасширеннаяПодсказка" id="546"/>
+											<ChildItems>
+												<InputField name="ПравилоРаспределенияРасходовРегл" id="597">
+													<DataPath>Объект.ПравилоРаспределенияРасходовРегл</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>и распределить по правилу</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>uk</v8:lang>
+															<v8:content>і розподілити за правилом</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Left</TitleLocation>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<MaxWidth>32</MaxWidth>
+													<ContextMenu name="ПравилоРаспределенияРасходовРеглКонтекстноеМеню" id="598"/>
+													<ExtendedTooltip name="ПравилоРаспределенияРасходовРеглРасширеннаяПодсказка" id="599"/>
+												</InputField>
+												<InputField name="ПравилоРаспределенияНаСебестоимость" id="13">
+													<DataPath>Объект.ПравилоРаспределенияНаСебестоимость</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>и распределить по правилу</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>uk</v8:lang>
+															<v8:content>і розподілити за правилом</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Left</TitleLocation>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<MaxWidth>32</MaxWidth>
+													<Wrap>false</Wrap>
+													<ContextMenu name="ПравилоРаспределенияНаСебестоимостьКонтекстноеМеню" id="14"/>
+													<ExtendedTooltip name="ПравилоРаспределенияНаСебестоимостьExtendedTooltip" id="155"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаВариантРаспределенияУпр" id="606">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа вариант распределения упр</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Група варіант розподілу упр</v8:content>
+										</v8:item>
+									</Title>
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<United>false</United>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаВариантРаспределенияУпрРасширеннаяПодсказка" id="607"/>
+									<ChildItems>
+										<InputField name="ВариантРаспределенияРасходовУпр" id="537">
+											<DataPath>ВариантРаспределенияРасходовУпр</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>В упр. учете</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>В упр. обліку</v8:content>
+												</v8:item>
+											</Title>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>27</MaxWidth>
+											<DropListButton>false</DropListButton>
+											<ChoiceButton>true</ChoiceButton>
+											<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+											<ChoiceParameterLinks>
+												<xr:Link>
+													<xr:Name>ВидДеятельностиРасходов</xr:Name>
+													<xr:DataPath xsi:type="xs:string">Объект.ВидДеятельностиРасходов</xr:DataPath>
+													<xr:ValueChange>DontChange</xr:ValueChange>
+												</xr:Link>
+												<xr:Link>
+													<xr:Name>ТипРасходов</xr:Name>
+													<xr:DataPath xsi:type="xs:string">Объект.ТипРасходов</xr:DataPath>
+													<xr:ValueChange>DontChange</xr:ValueChange>
+												</xr:Link>
+											</ChoiceParameterLinks>
+											<InputHint>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>так же как в регл. учете</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>так само як в регл. обліку</v8:content>
+												</v8:item>
+											</InputHint>
+											<ContextMenu name="ВариантРаспределенияРасходовУпрКонтекстноеМеню" id="538"/>
+											<ExtendedTooltip name="ВариантРаспределенияРасходовУпрРасширеннаяПодсказка" id="539"/>
+											<Events>
+												<Event name="OnChange">ВариантРаспределенияРасходовПриИзмененииУпр</Event>
+											</Events>
+										</InputField>
+										<UsualGroup name="ГруппаПравилоРаспределенияУпр" id="553">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Распределение на финансовый результат / на себестоимость</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Розподіл на фінансовий результат / на собівартість</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа правило распределения регл</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Група правило розподілу регл</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Vertical</Group>
+											<ChildrenAlign>None</ChildrenAlign>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПравилоРаспределенияУпрРасширеннаяПодсказка" id="554"/>
+											<ChildItems>
+												<InputField name="ПравилоРаспределенияНаСебестоимостьУпр" id="558">
+													<DataPath>Объект.ПравилоРаспределенияНаСебестоимость</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>и распределить по правилу</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>uk</v8:lang>
+															<v8:content>і розподілити за правилом</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Left</TitleLocation>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<MaxWidth>32</MaxWidth>
+													<Wrap>false</Wrap>
+													<ContextMenu name="ПравилоРаспределенияНаСебестоимостьУпрКонтекстноеМеню" id="559"/>
+													<ExtendedTooltip name="ПравилоРаспределенияНаСебестоимостьУпрРасширеннаяПодсказка" id="560"/>
+												</InputField>
+												<InputField name="ПравилоРаспределенияРасходовУпрПустышка" id="610">
+													<DataPath>ПравилоРаспределенияРасходовУпрПустышка</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<TitleLocation>Left</TitleLocation>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<MaxWidth>32</MaxWidth>
+													<InputHint>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>так же как в регл. учете</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>uk</v8:lang>
+															<v8:content>так само як в регл. обліку</v8:content>
+														</v8:item>
+													</InputHint>
+													<ContextMenu name="ПравилоРаспределенияРасходовУпрПустышкаКонтекстноеМеню" id="611"/>
+													<ExtendedTooltip name="ПравилоРаспределенияРасходовУпрПустышкаРасширеннаяПодсказка" id="612"/>
+												</InputField>
+												<InputField name="ПравилоРаспределенияРасходовУпр" id="600">
+													<DataPath>ПравилоРаспределенияРасходовУпр</DataPath>
+													<TitleLocation>Left</TitleLocation>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<MaxWidth>32</MaxWidth>
+													<InputHint>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>так же как в регл. учете</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>uk</v8:lang>
+															<v8:content>так само як в регл. обліку</v8:content>
+														</v8:item>
+													</InputHint>
+													<ContextMenu name="ПравилоРаспределенияРасходовУпрКонтекстноеМеню" id="601"/>
+													<ExtendedTooltip name="ПравилоРаспределенияРасходовУпрРасширеннаяПодсказка" id="602"/>
+													<Events>
+														<Event name="OnChange">ПравилоРаспределенияРасходовУпрПриИзменении</Event>
+													</Events>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаНаПрочиеАктивы" id="526">
+							<Visible>false</Visible>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>На прочие активы</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>На інші активи</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНаПрочиеАктивыРасширеннаяПодсказка" id="527"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаИнформацияНаПрочиеАктивы" id="325">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Информация на прочие активы</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Інформація на інші активи</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Horizontal</Group>
+									<Representation>NormalSeparation</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаИнформацияНаПрочиеАктивыРасширеннаяПодсказка" id="326"/>
+									<ChildItems>
+										<PictureDecoration name="ИнформацияНаПрочиеАктивыВнимание" id="327">
+											<Width>2</Width>
+											<Height>1</Height>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Информация на прочие активы внимание</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Інформація на інші активи увага</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.Внимание16</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ИнформацияНаПрочиеАктивыВниманиеКонтекстноеМеню" id="328"/>
+											<ExtendedTooltip name="ИнформацияНаПрочиеАктивыВниманиеРасширеннаяПодсказка" id="329"/>
+										</PictureDecoration>
+										<LabelDecoration name="ИнформацияНаПрочиеАктивыТекст" id="330">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>68</MaxWidth>
+											<TextColor>style:ПоясняющийТекст</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Данный вариант распределения устарел, вместо статей с таким вариантом распределения в новых документах следует использовать соответствующие статьи активов/пассивов.</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Даний варіант розподілу застарів, замість статей з таким варіантом розподілу в нових документах слід використовувати відповідні статті активів/пасивів.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ИнформацияНаПрочиеАктивыТекстКонтекстноеМеню" id="331"/>
+											<ExtendedTooltip name="ИнформацияНаПрочиеАктивыТекстРасширеннаяПодсказка" id="332"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПравилоРаспределенияНаПроизводство" id="372">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Распределение на производственные затраты</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Розподіл на виробничі витрати</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<ShowTitle>false</ShowTitle>
+							<ThroughAlign>DontUse</ThroughAlign>
+							<ExtendedTooltip name="ГруппаПравилоРаспределенияНаПроизводствоРасширеннаяПодсказка" id="373"/>
+							<ChildItems>
+								<RadioButtonField name="ХарактерПроизводственныхЗатрат" id="583">
+									<DataPath>Объект.ХарактерПроизводственныхЗатрат</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Характер затрат</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Характер витрат</v8:content>
+										</v8:item>
+									</Title>
+									<RadioButtonType>Auto</RadioButtonType>
+									<ColumnsCount>2</ColumnsCount>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="xr:DesignTimeRef">1245f62d-22c9-40fc-9192-b45ade4cd0e3.1e4502a9-468b-4489-9563-599be5e7bbf6</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="xr:DesignTimeRef">1245f62d-22c9-40fc-9192-b45ade4cd0e3.8d0af252-eb1d-4d23-a7d6-942ae95b26b1</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="ХарактерПроизводственныхЗатратКонтекстноеМеню" id="584"/>
+									<ExtendedTooltip name="ХарактерПроизводственныхЗатратРасширеннаяПодсказка" id="585"/>
+								</RadioButtonField>
+								<InputField name="СтатьяКалькуляции" id="68">
+									<DataPath>Объект.СтатьяКалькуляции</DataPath>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>28</MaxWidth>
+									<ContextMenu name="СтатьяКалькуляцииКонтекстноеМеню" id="69"/>
+									<ExtendedTooltip name="СтатьяКалькуляцииExtendedTooltip" id="163"/>
+								</InputField>
+								<LabelDecoration name="НадписьНастроитьПравилаРаспределения" id="603">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Настроить правила распределения по организациям и подразделениям</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Настроїти правила розподілу по організаціях і підрозділах</v8:content>
+										</v8:item>
+									</Title>
+									<Hyperlink>true</Hyperlink>
+									<ContextMenu name="НадписьНастроитьПравилаРаспределенияКонтекстноеМеню" id="604"/>
+									<ExtendedTooltip name="НадписьНастроитьПравилаРаспределенияРасширеннаяПодсказка" id="605"/>
+									<Events>
+										<Event name="Click">НадписьНастроитьПравилаРаспределенияНажатие</Event>
+									</Events>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="КорреспондирующийСчет" id="49">
+							<DataPath>Объект.КорреспондирующийСчет</DataPath>
+							<DropListButton>true</DropListButton>
+							<ChoiceListButton>true</ChoiceListButton>
+							<ContextMenu name="КорреспондирующийСчетКонтекстноеМеню" id="50"/>
+							<ExtendedTooltip name="КорреспондирующийСчетExtendedTooltip" id="149"/>
+						</InputField>
+						<UsualGroup name="ГруппаДопФлаги" id="624">
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаДопФлагиРасширеннаяПодсказка" id="625"/>
+							<ChildItems>
+								<CheckBoxField name="СебестоимостьРеализации" id="618">
+									<DataPath>Объект.СебестоимостьРеализации</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СебестоимостьРеализацииКонтекстноеМеню" id="619"/>
+									<ExtendedTooltip name="СебестоимостьРеализацииРасширеннаяПодсказка" id="620"/>
+									<Events>
+										<Event name="OnChange">СебестоимостьРеализацииПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<CheckBoxField name="РасходыНаРемонтОС" id="621">
+									<DataPath>Объект.РасходыНаРемонтОС</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="РасходыНаРемонтОСКонтекстноеМеню" id="622"/>
+									<ExtendedTooltip name="РасходыНаРемонтОСРасширеннаяПодсказка" id="623"/>
+									<Events>
+										<Event name="OnChange">РасходыНаРемонтОСПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<LabelDecoration name="ДекорацияДопФлаги" id="626">
+									<ContextMenu name="ДекорацияДопФлагиКонтекстноеМеню" id="627"/>
+									<ExtendedTooltip name="ДекорацияДопФлагиРасширеннаяПодсказка" id="628"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаВидАналитики" id="540">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Тип аналитики расходов</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Тип аналітики витрат</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="ГруппаВидАналитикиРасширеннаяПодсказка" id="541"/>
+							<ChildItems>
+								<RadioButtonField name="ТипЗначения" id="542">
+									<DataPath>ТипЗначения</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<RadioButtonType>Auto</RadioButtonType>
+									<ColumnsCount>4</ColumnsCount>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>&lt;&gt;</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>uk</v8:lang>
+														<v8:content>&lt;&gt;</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">&lt;&gt;</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="ТипЗначенияКонтекстноеМеню" id="543"/>
+									<ExtendedTooltip name="ТипЗначенияРасширеннаяПодсказка" id="544"/>
+									<Events>
+										<Event name="OnChange">ТипЗначенияПриИзменении</Event>
+									</Events>
+								</RadioButtonField>
+							</ChildItems>
+						</UsualGroup>
+						<CheckBoxField name="КонтролироватьЗаполнениеАналитики" id="197">
+							<DataPath>Объект.КонтролироватьЗаполнениеАналитики</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="КонтролироватьЗаполнениеАналитикиКонтекстноеМеню" id="198"/>
+							<ExtendedTooltip name="КонтролироватьЗаполнениеАналитикиРасширеннаяПодсказка" id="199"/>
+						</CheckBoxField>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаСтраницаРеглУчет" id="337">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Регламентированный учет</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Регламентований облік</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаСтраницаРеглУчетРасширеннаяПодсказка" id="338"/>
+					<ChildItems>
+						<UsualGroup name="ЛокализацияНастройкаСчетовУчета" id="265">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отражение в регл. учете</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Відображення в регл. обліку</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ЛокализацияНастройкаСчетовУчетаРасширеннаяПодсказка" id="266"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаСчетов" id="613">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа счетов</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Група рахунків</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа счетов</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Група рахунків</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаСчетовРасширеннаяПодсказка" id="615"/>
+									<ChildItems>
+										<InputField name="НастройкаСчетовУчета_СчетУчета_Расходы" id="254">
+											<DataPath>НастройкаСчетовУчета_СчетУчета_Расходы</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Счет учета</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Рахунок</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Счет учета используется по умолчанию при отражении документов в учете, если по организации и подразделению не определено индивидуальное значение.</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Рахунок обліку використовується за умовчанням при відображенні документів в обліку, якщо за організацією і підрозділом не визначене індивідуальне значення.</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<HorizontalStretch>false</HorizontalStretch>
+											<DropListButton>false</DropListButton>
+											<ChoiceButton>true</ChoiceButton>
+											<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+											<AutoMarkIncomplete>false</AutoMarkIncomplete>
+											<ContextMenu name="НастройкаСчетовУчета_СчетУчета_РасходыКонтекстноеМеню" id="255"/>
+											<ExtendedTooltip name="НастройкаСчетовУчета_СчетУчета_РасходыРасширеннаяПодсказка" id="256"/>
+											<Events>
+												<Event name="OnChange">Подключаемый_ПриИзмененииСчетаУчета</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<LabelField name="НастройкаСчетовУчета_Ссылка" id="614">
+									<DataPath>НастройкаСчетовУчета_Ссылка</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Настройка счетов учета по организациям и подразделениям</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Настройка рахунків обліку по організаціях і підрозділах</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>None</TitleLocation>
+									<ToolTipRepresentation>ShowTop</ToolTipRepresentation>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<ContextMenu name="НастройкаСчетовУчета_СсылкаКонтекстноеМеню" id="616"/>
+									<ExtendedTooltip name="НастройкаСчетовУчета_СсылкаРасширеннаяПодсказка" id="617">
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Счета учета используются при отражении документов в учете, если для организации и подразделения не настроены исключения.</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>uk</v8:lang>
+												<v8:content>Рахунки обліку використовуються при відображенні документів в обліку, якщо для організації та підрозділу не налаштовані виключення.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="URLProcessing">НастройкаСчетовУчетаРасходовОбработкаНавигационнойСсылки</Event>
+									</Events>
+								</LabelField>
+								<UsualGroup name="ГруппаСчетУчета8Класс" id="629">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа счет учета 8 класса</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Група рахунок обліку 8 класу</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа счет учета</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Група рахунок обліку</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаСчетУчета8КлассРасширеннаяПодсказка" id="630"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаГруппаСчета8КлассГоризонтальная" id="631">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа группа счета 8 класса горизонтальная</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Група група рахунки 8 класу горизонтальна</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа группа счета горизонтальная</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Група група рахунки горизонтальна</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаГруппаСчета8КлассГоризонтальнаяРасширеннаяПодсказка" id="632"/>
+											<ChildItems>
+												<InputField name="СчетУчета8Класс" id="633">
+													<DataPath>Объект.СчетУчета8Класс</DataPath>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ChoiceButton>true</ChoiceButton>
+													<ContextMenu name="СчетУчета8КлассКонтекстноеМеню" id="634"/>
+													<ExtendedTooltip name="СчетУчета8КлассРасширеннаяПодсказка" id="635"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+										<LabelDecoration name="НадписьПодсказкаСчетаУчета8Класса" id="639">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<TextColor>style:ПоясняющийТекст</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Счет учета 8 класса используется при отражении документов в учете, если для организации в учетной политике установлено использование 8 и 9 классов счетов.</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Рахунок обліку 8 класу використовується при відображенні документів в обліку, якщо для організації в обліковій політиці встановлено використання 8 і 9 класів рахунків.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="НадписьПодсказкаСчетаУчета8КлассаКонтекстноеМеню" id="640"/>
+											<ExtendedTooltip name="НадписьПодсказкаСчетаУчета8КлассаРасширеннаяПодсказка" id="641"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаМеждународныйУчет" id="581">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Международный финансовый учет</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Міжнародний фінансовий облік</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ГруппаМеждународныйУчетРасширеннаяПодсказка" id="582"/>
+							<ChildItems>
+								<InputField name="ГруппаФинансовогоУчета" id="131">
+									<DataPath>Объект.ГруппаФинансовогоУчета</DataPath>
+									<TitleLocation>Top</TitleLocation>
+									<ContextMenu name="ГруппаФинансовогоУчетаКонтекстноеМеню" id="132"/>
+									<ExtendedTooltip name="ГруппаФинансовогоУчетаExtendedTooltip" id="143"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаОграниченияИспользования" id="339">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ограничение использования</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Обмеження використання</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаОграниченияИспользованияРасширеннаяПодсказка" id="340"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаДоступностьДляВыбораВДокументах" id="54">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Ограничение использования статьи расходов</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Обмеження використання статті витрат</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаДоступностьДляВыбораВДокументахExtendedTooltip" id="189"/>
+							<ChildItems>
+								<CheckBoxField name="ОграничитьИспользование" id="55">
+									<DataPath>Объект.ОграничитьИспользование</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОграничитьИспользованиеКонтекстноеМеню" id="56"/>
+									<ExtendedTooltip name="ОграничитьИспользованиеExtendedTooltip" id="190"/>
+									<Events>
+										<Event name="OnChange">ОграничитьИспользованиеПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<Table name="ДоступныеХозяйственныеОперации" id="349">
+									<Representation>List</Representation>
+									<TitleLocation>Auto</TitleLocation>
+									<ChangeRowSet>false</ChangeRowSet>
+									<ChangeRowOrder>false</ChangeRowOrder>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<MaxHeight>24</MaxHeight>
+									<Header>false</Header>
+									<HorizontalLines>false</HorizontalLines>
+									<VerticalLines>false</VerticalLines>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>ДоступныеХозяйственныеОперации</DataPath>
+									<RowPictureDataPath>ДоступныеХозяйственныеОперации.Picture</RowPictureDataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Хозяйственные операции, для которых будет доступен выбор статьи расходов в документах</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Господарські операції, для яких буде доступний вибір статті витрат в документах</v8:content>
+										</v8:item>
+									</Title>
+									<CommandSet>
+										<ExcludedCommand>Add</ExcludedCommand>
+										<ExcludedCommand>Change</ExcludedCommand>
+										<ExcludedCommand>Copy</ExcludedCommand>
+										<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+										<ExcludedCommand>Delete</ExcludedCommand>
+										<ExcludedCommand>EndEdit</ExcludedCommand>
+										<ExcludedCommand>MoveDown</ExcludedCommand>
+										<ExcludedCommand>MoveUp</ExcludedCommand>
+										<ExcludedCommand>Pickup</ExcludedCommand>
+										<ExcludedCommand>SelectAll</ExcludedCommand>
+										<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+										<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+										<ExcludedCommand>SortListAsc</ExcludedCommand>
+										<ExcludedCommand>SortListDesc</ExcludedCommand>
+									</CommandSet>
+									<ContextMenu name="ДоступныеХозяйственныеОперацииКонтекстноеМеню" id="350"/>
+									<AutoCommandBar name="ДоступныеХозяйственныеОперацииКоманднаяПанель" id="351">
+										<Autofill>false</Autofill>
+										<ChildItems>
+											<Button name="ДоступныеХозяйственныеОперацииУстановитьФлажки" id="368">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.ДоступныеХозяйственныеОперации.StandardCommand.CheckAll</CommandName>
+												<RepresentationInContextMenu>None</RepresentationInContextMenu>
+												<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+												<ExtendedTooltip name="ДоступныеХозяйственныеОперацииУстановитьФлажкиРасширеннаяПодсказка" id="369"/>
+											</Button>
+											<Button name="ДоступныеХозяйственныеОперацииСнятьФлажки" id="370">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.ДоступныеХозяйственныеОперации.StandardCommand.UncheckAll</CommandName>
+												<RepresentationInContextMenu>None</RepresentationInContextMenu>
+												<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+												<ExtendedTooltip name="ДоступныеХозяйственныеОперацииСнятьФлажкиРасширеннаяПодсказка" id="371"/>
+											</Button>
+										</ChildItems>
+									</AutoCommandBar>
+									<ExtendedTooltip name="ДоступныеХозяйственныеОперацииРасширеннаяПодсказка" id="352"/>
+									<SearchStringAddition name="ДоступныеХозяйственныеОперацииСтрокаПоиска" id="353">
+										<AdditionSource>
+											<Item>ДоступныеХозяйственныеОперации</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ДоступныеХозяйственныеОперацииСтрокаПоискаКонтекстноеМеню" id="354"/>
+										<ExtendedTooltip name="ДоступныеХозяйственныеОперацииСтрокаПоискаРасширеннаяПодсказка" id="355"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ДоступныеХозяйственныеОперацииСостояниеПросмотра" id="356">
+										<AdditionSource>
+											<Item>ДоступныеХозяйственныеОперации</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ДоступныеХозяйственныеОперацииСостояниеПросмотраКонтекстноеМеню" id="357"/>
+										<ExtendedTooltip name="ДоступныеХозяйственныеОперацииСостояниеПросмотраРасширеннаяПодсказка" id="358"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ДоступныеХозяйственныеОперацииУправлениеПоиском" id="359">
+										<AdditionSource>
+											<Item>ДоступныеХозяйственныеОперации</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ДоступныеХозяйственныеОперацииУправлениеПоискомКонтекстноеМеню" id="360"/>
+										<ExtendedTooltip name="ДоступныеХозяйственныеОперацииУправлениеПоискомРасширеннаяПодсказка" id="361"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<CheckBoxField name="ДоступныеХозяйственныеОперацииПометка" id="365">
+											<DataPath>ДоступныеХозяйственныеОперации.Check</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ДоступныеХозяйственныеОперацииПометкаКонтекстноеМеню" id="366"/>
+											<ExtendedTooltip name="ДоступныеХозяйственныеОперацииПометкаРасширеннаяПодсказка" id="367"/>
+										</CheckBoxField>
+										<InputField name="ДоступныеХозяйственныеОперацииЗначение" id="362">
+											<DataPath>ДоступныеХозяйственныеОперации.Value</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<MaxWidth>24</MaxWidth>
+											<MaxHeight>24</MaxHeight>
+											<ContextMenu name="ДоступныеХозяйственныеОперацииЗначениеКонтекстноеМеню" id="363"/>
+											<ExtendedTooltip name="ДоступныеХозяйственныеОперацииЗначениеРасширеннаяПодсказка" id="364"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<UsualGroup name="ГруппаДополнительныеРеквизиты" id="51">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дополнительно</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Додатково</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ГруппаДополнительныеРеквизитыExtendedTooltip" id="188"/>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ChartOfCharacteristicTypesObject.СтатьиРасходов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ТипЗначения" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип значения</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Тип значення</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ДоступныеОперации" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доступные операции</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Доступні операції</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>250</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="НадписьОтборПоПодразделениям" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подразделения</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Підрозділи</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтборПоПодразделениям" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Указанные подразделения для правила распределения по подразделениям</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Зазначені підрозділи правила розподілу по підрозділах</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.СтруктураПредприятия</v8:Type>
+			</Settings>
+		</Attribute>
+		<Attribute name="ДоступныеХозяйственныеОперации" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доступные хозяйственные операции</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Доступні господарські операції</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:EnumRef.ХозяйственныеОперации</v8:Type>
+			</Settings>
+		</Attribute>
+		<Attribute name="ВариантРаспределенияРасходовУпр" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вариант распределения расходов упр</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Варіант розподілу витрат упр</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ВариантыРаспределенияРасходов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ФормироватьФинансовыйРезультат" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Формировать финансовый результат</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Формувати фінансовий результат</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НастройкаСчетовУчета_Ссылка" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка счетов учета ссылка</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Настройка рахунків обліку посилання</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8ui:FormattedString</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьРеглУчет</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="БазоваяВерсия" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Базовая версия</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Базова версія</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НастройкаСчетовУчета_СчетУчета_Расходы" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Счет учета</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Рахунок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьРеглУчет</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="ПравилоРаспределенияРасходовУпр" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>и распределить по правилу</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>і розподілити за правилом</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ПравилаРаспределенияРасходов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПравилоРаспределенияРасходовУпрПустышка" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>и распределить по правилу</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>і розподілити за правилом</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЭтоУТ" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это УТ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Це УТ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>Catalog.ПрочиеРасходы.StandardCommand.OpenByValue</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

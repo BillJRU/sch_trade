@@ -1,0 +1,675 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Авансовые отчеты к оформлению</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>uk</v8:lang>
+			<v8:content>Авансові звіти до оформлення</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаОтборы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа отборы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Група відбори</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа отборы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Група відбори</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОтборыРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<InputField name="ПодотчетноеЛицо" id="3">
+					<DataPath>ПодотчетноеЛицо</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<Width>20</Width>
+					<ClearButton>true</ClearButton>
+					<OpenButton>false</OpenButton>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подотчетное лицо</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Підзвітна особа</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="ПодотчетноеЛицоКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="ПодотчетноеЛицоРасширеннаяПодсказка" id="5"/>
+					<Events>
+						<Event name="OnChange">ПодотчетноеЛицоПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="Организация" id="6">
+					<DataPath>Организация</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<Width>20</Width>
+					<ClearButton>true</ClearButton>
+					<OpenButton>false</OpenButton>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Організація</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="8"/>
+					<Events>
+						<Event name="OnChange">ОрганизацияПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПользовательскихНастроек" id="75">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Група користувацьких настройок</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Група користувацьких настройок</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПользовательскихНастроекРасширеннаяПодсказка" id="76"/>
+		</UsualGroup>
+		<Table name="КОформлению" id="9">
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>КОформлению</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>К оформлению</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>До оформлення</v8:content>
+				</v8:item>
+			</Title>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>ГруппаПользовательскихНастроек</UserSettingsGroup>
+			<ContextMenu name="КОформлениюКонтекстноеМеню" id="10"/>
+			<AutoCommandBar name="КОформлениюКоманднаяПанель" id="11">
+				<ChildItems>
+					<Button name="АвансыАвансовыйОтчет" id="56">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОформитьАвансовыйОтчетПоРаспоряжению</CommandName>
+						<ExtendedTooltip name="АвансыАвансовыйОтчетРасширеннаяПодсказка" id="57"/>
+					</Button>
+					<Popup name="КОформлениюГруппаОформить" id="54">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Оформить платеж</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
+								<v8:content>Оформити платіж</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Оформить платежный документ по распоряжению</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
+								<v8:content>Оформити платіжний документ за розпорядженням</v8:content>
+							</v8:item>
+						</ToolTip>
+						<Picture>
+							<xr:Ref>CommonPicture.ОформитьПоРаспоряжению</xr:Ref>
+							<xr:LoadTransparent>false</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="КОформлениюГруппаОформитьРасширеннаяПодсказка" id="55"/>
+						<ChildItems>
+							<Button name="АвансыПриходныйКассовыйОрдер" id="58">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ПриходныйКассовыйОрдер</CommandName>
+								<ExtendedTooltip name="АвансыПриходныйКассовыйОрдерРасширеннаяПодсказка" id="59"/>
+							</Button>
+							<Button name="АвансыПоступлениеБезналичныхДенежныхСредств" id="60">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ПоступлениеБезналичныхДенежныхСредств</CommandName>
+								<ExtendedTooltip name="АвансыПоступлениеБезналичныхДенежныхСредствРасширеннаяПодсказка" id="61"/>
+							</Button>
+							<Button name="АвансыЗаявкаНаВозвратДенежныхСредств" id="62">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ЗаявкаНаВыдачуПодОтчет</CommandName>
+								<ExtendedTooltip name="АвансыЗаявкаНаВозвратДенежныхСредствРасширеннаяПодсказка" id="63"/>
+							</Button>
+							<Button name="АвансыРасходныйКассовыйОрдер" id="64">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.РасходныйКассовыйОрдер</CommandName>
+								<ExtendedTooltip name="АвансыРасходныйКассовыйОрдерРасширеннаяПодсказка" id="65"/>
+							</Button>
+							<Button name="АвансыСписаниеБезналичныхДенежныхСредств" id="66">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.СписаниеБезналичныхДенежныхСредств</CommandName>
+								<ExtendedTooltip name="АвансыСписаниеБезналичныхДенежныхСредствРасширеннаяПодсказка" id="67"/>
+							</Button>
+						</ChildItems>
+					</Popup>
+					<Button name="КОформлениюСправка" id="71">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.StandardCommand.Help</CommandName>
+						<ExtendedTooltip name="КОформлениюСправкаРасширеннаяПодсказка" id="72"/>
+					</Button>
+					<Button name="КОформлениюИзменитьФорму" id="73">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+						<ExtendedTooltip name="КОформлениюИзменитьФормуРасширеннаяПодсказка" id="74"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="КОформлениюРасширеннаяПодсказка" id="12"/>
+			<SearchStringAddition name="КОформлениюСтрокаПоиска" id="13">
+				<AdditionSource>
+					<Item>КОформлению</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="КОформлениюСтрокаПоискаКонтекстноеМеню" id="14"/>
+				<ExtendedTooltip name="КОформлениюСтрокаПоискаРасширеннаяПодсказка" id="15"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="КОформлениюСостояниеПросмотра" id="16">
+				<AdditionSource>
+					<Item>КОформлению</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="КОформлениюСостояниеПросмотраКонтекстноеМеню" id="17"/>
+				<ExtendedTooltip name="КОформлениюСостояниеПросмотраРасширеннаяПодсказка" id="18"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="КОформлениюУправлениеПоиском" id="19">
+				<AdditionSource>
+					<Item>КОформлению</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="КОформлениюУправлениеПоискомКонтекстноеМеню" id="20"/>
+				<ExtendedTooltip name="КОформлениюУправлениеПоискомРасширеннаяПодсказка" id="21"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="КОформлениюПодотчетноеЛицо" id="22">
+					<DataPath>КОформлению.ПодотчетноеЛицо</DataPath>
+					<ContextMenu name="КОформлениюПодотчетноеЛицоКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="КОформлениюПодотчетноеЛицоРасширеннаяПодсказка" id="24"/>
+				</LabelField>
+				<LabelField name="КОформлениюЦельВыдачи" id="25">
+					<DataPath>КОформлению.ЦельВыдачи</DataPath>
+					<ContextMenu name="КОформлениюЦельВыдачиКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="КОформлениюЦельВыдачиРасширеннаяПодсказка" id="27"/>
+				</LabelField>
+				<ColumnGroup name="КОформлениюГруппаОтчитаться" id="52">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отчитаться за</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Відзвітувати за</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>К оформлению группа отчитаться</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>До оформлення група відзвітувати</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ShowInHeader>true</ShowInHeader>
+					<ExtendedTooltip name="КОформлениюГруппаОтчитатьсяРасширеннаяПодсказка" id="53"/>
+					<ChildItems>
+						<LabelField name="КОформлениюСуммаОстаток" id="46">
+							<DataPath>КОформлению.СуммаОстаток</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Аванс</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Аванс</v8:content>
+								</v8:item>
+							</Title>
+							<Width>16</Width>
+							<ContextMenu name="КОформлениюСуммаОстатокКонтекстноеМеню" id="47"/>
+							<ExtendedTooltip name="КОформлениюСуммаОстатокРасширеннаяПодсказка" id="48"/>
+						</LabelField>
+						<LabelField name="КОформлениюСуммаЗакупки" id="49">
+							<DataPath>КОформлению.СуммаЗакупки</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Закупки</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Купівлі</v8:content>
+								</v8:item>
+							</Title>
+							<Width>16</Width>
+							<ContextMenu name="КОформлениюСуммаЗакупкиКонтекстноеМеню" id="50"/>
+							<ExtendedTooltip name="КОформлениюСуммаЗакупкиРасширеннаяПодсказка" id="51"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<LabelField name="КОформлениюСуммаПросрочено" id="31">
+					<DataPath>КОформлению.СуммаПросрочено</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Просрочен отчет</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Прострочений звіт</v8:content>
+						</v8:item>
+					</Title>
+					<Width>16</Width>
+					<ContextMenu name="КОформлениюСуммаПросроченоКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="КОформлениюСуммаПросроченоРасширеннаяПодсказка" id="33"/>
+				</LabelField>
+				<LabelField name="КОформлениюПерерасход" id="34">
+					<DataPath>КОформлению.Перерасход</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Перерасход</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Перевитрата</v8:content>
+						</v8:item>
+					</Title>
+					<Width>16</Width>
+					<Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>ЧДЦ=2</v8:content>
+						</v8:item>
+					</Format>
+					<ContextMenu name="КОформлениюПерерасходКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="КОформлениюПерерасходРасширеннаяПодсказка" id="36"/>
+				</LabelField>
+				<LabelField name="КОформлениюВалюта" id="37">
+					<DataPath>КОформлению.Валюта</DataPath>
+					<ContextMenu name="КОформлениюВалютаКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="КОформлениюВалютаРасширеннаяПодсказка" id="39"/>
+				</LabelField>
+				<LabelField name="КОформлениюПодразделение" id="40">
+					<DataPath>КОформлению.Подразделение</DataPath>
+					<ContextMenu name="КОформлениюПодразделениеКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="КОформлениюПодразделениеРасширеннаяПодсказка" id="42"/>
+				</LabelField>
+				<LabelField name="КОформлениюОрганизация" id="43">
+					<DataPath>КОформлению.Организация</DataPath>
+					<ContextMenu name="КОформлениюОрганизацияКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="КОформлениюОрганизацияРасширеннаяПодсказка" id="45"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+		<LabelField name="СмТакжеВРаботе" id="68">
+			<DataPath>СмТакжеВРаботе</DataPath>
+			<TitleLocation>None</TitleLocation>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="СмТакжеВРаботеКонтекстноеМеню" id="69"/>
+			<ExtendedTooltip name="СмТакжеВРаботеРасширеннаяПодсказка" id="70"/>
+			<Events>
+				<Event name="URLProcessing">СмТакжеВРаботеОбработкаНавигационнойСсылки</Event>
+			</Events>
+		</LabelField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ЖурналДокументовАвансовыеОтчеты</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Организация" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Організація</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+			<Save>
+				<Field>Организация</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ПодотчетноеЛицо" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подотчетное лицо</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Підзвітна особа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ФизическиеЛица</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КОформлению" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>К оформлению</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>До оформлення</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>КОформлению.Валюта</Field>
+				<Field>КОформлению.Организация</Field>
+				<Field>КОформлению.Перерасход</Field>
+				<Field>КОформлению.ПодотчетноеЛицо</Field>
+				<Field>КОформлению.Подразделение</Field>
+				<Field>КОформлению.СуммаЗакупки</Field>
+				<Field>КОформлению.СуммаОстаток</Field>
+				<Field>КОформлению.ЦельВыдачи</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ДенежныеСредства.Организация        КАК Организация,
+	ДенежныеСредства.ПодотчетноеЛицо    КАК ПодотчетноеЛицо,
+	ДенежныеСредства.Подразделение      КАК Подразделение,
+	ДенежныеСредства.ЦельВыдачи         КАК ЦельВыдачи,
+	ДенежныеСредства.Валюта             КАК Валюта,
+	ВЫБОР
+		КОГДА ДенежныеСредства.СуммаОстаток &gt; 0 ТОГДА
+			ДенежныеСредства.СуммаОстаток
+	КОНЕЦ КАК СуммаОстаток,
+	ВЫБОР
+		КОГДА ДенежныеСредства.КОтчетуОстаток &gt; 0 ТОГДА
+			ДенежныеСредства.КОтчетуОстаток
+	КОНЕЦ КАК СуммаПросрочено,
+	ВЫБОР
+		КОГДА ДенежныеСредства.СуммаОстаток &lt; 0 ТОГДА
+			-ДенежныеСредства.СуммаОстаток
+	КОНЕЦ КАК Перерасход,
+	ДенежныеСредства.СуммаЗакупкиОстаток КАК СуммаЗакупки
+	
+ИЗ
+	РегистрНакопления.ДенежныеСредстваУПодотчетныхЛиц.Остатки(&amp;ТекущаяДата, ) КАК ДенежныеСредства
+
+ГДЕ
+	ДенежныеСредства.СуммаОстаток &lt;&gt; 0
+	ИЛИ ДенежныеСредства.КОтчетуОстаток &gt; 0
+	ИЛИ ДенежныеСредства.СуммаЗакупкиОстаток &gt; 0
+</QueryText>
+				<MainTable>AccumulationRegister.ДенежныеСредстваУПодотчетныхЛиц.Balance</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>ПодотчетноеЛицо</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="СмТакжеВРаботе" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>См также в работе</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Див також в роботі</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8ui:FormattedString</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОформитьАвансовыйОтчетПоРаспоряжению" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оформить авансовый отчет</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Оформити авансовий звіт</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оформить авансовый отчет по распоряжению</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Оформити авансовий звіт за розпорядженням</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ОформитьПоРаспоряжению</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ОформитьАвансовыйОтчетПоРаспоряжению</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПоступлениеБезналичныхДенежныхСредств" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Возврат по безналичному расчету</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Повернення за безготівковим розрахунком</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поступление безналичных денежных средств</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Надходження безготівкових коштів</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоступлениеБезналичныхДенежныхСредств</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗаявкаНаВыдачуПодОтчет" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заявка на выдачу перерасхода</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Заявка на видачу перевитрати</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заявка на выдачу под отчет</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Заявка на видачу під звіт</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаявкаНаВыдачуПодОтчет</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьЗаявкиНаРасходованиеДенежныхСредств</Item>
+			</FunctionalOptions>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПриходныйКассовыйОрдер" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Возврат наличными</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Повернення готівкою</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Приходный кассовый ордер</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Прибутковий касовий ордер</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПриходныйКассовыйОрдер</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="РасходныйКассовыйОрдер" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выдача перерасхода наличными</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Видача перевитрати готівкою</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расходный кассовый ордер</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Видатковий касовий ордер</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РасходныйКассовыйОрдер</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СписаниеБезналичныхДенежныхСредств" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перечисление перерасхода по безналичному расчету</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Перерахування перевитрати за безготівковим розрахунком</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Списание безналичных денежных средств</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Списання безготівкових коштів</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СписаниеБезналичныхДенежныхСредств</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

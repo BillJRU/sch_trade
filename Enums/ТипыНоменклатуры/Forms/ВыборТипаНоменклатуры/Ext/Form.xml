@@ -1,0 +1,708 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Выберите тип номенклатуры</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>uk</v8:lang>
+			<v8:content>Виберіть тип номенклатури</v8:content>
+		</v8:item>
+	</Title>
+	<Width>62</Width>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаНастройкиТипаНоменклатуры" id="86">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки типа номенклатуры</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Настройки типу номенклатури</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНастройкиТипаНоменклатурыРасширеннаяПодсказка" id="87"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаКолонки" id="65">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Колонки</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Колонки</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<United>false</United>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКолонкиРасширеннаяПодсказка" id="66"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаКолонкиЛево" id="61">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Колонки лево</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Колонки ліво</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКолонкиЛевоРасширеннаяПодсказка" id="62"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаТипНоменклатурыТовар" id="26">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Тип номенклатуры товар</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Тип номенклатури товар</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>NormalSeparation</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаТипНоменклатурыТоварРасширеннаяПодсказка" id="27"/>
+									<ChildItems>
+										<RadioButtonField name="ТипНоменклатурыТовар" id="1">
+											<DataPath>ТипНоменклатуры</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Подсказка задается программно</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Підказка задається програмно</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+											<RadioButtonType>Auto</RadioButtonType>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation/>
+														<Value xsi:type="xr:DesignTimeRef">Enum.ТипыНоменклатуры.EnumValue.Товар</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="ТипНоменклатурыТоварКонтекстноеМеню" id="2"/>
+											<ExtendedTooltip name="ТипНоменклатурыТоварРасширеннаяПодсказка" id="3">
+												<TextColor>style:ПоясняющийТекст</TextColor>
+											</ExtendedTooltip>
+											<Events>
+												<Event name="OnChange">ТипНоменклатурыПриИзменении</Event>
+											</Events>
+										</RadioButtonField>
+										<UsualGroup name="ГруппаОсобенностиТовара" id="39">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Особенности учета товаров</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Особливості обліку товарів</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаОсобенностиТовараРасширеннаяПодсказка" id="40"/>
+											<ChildItems>
+												<LabelDecoration name="ДекорацияОсобенностиТовараОтступ" id="41">
+													<ContextMenu name="ДекорацияОсобенностиТовараОтступКонтекстноеМеню" id="42"/>
+													<ExtendedTooltip name="ДекорацияОсобенностиТовараОтступРасширеннаяПодсказка" id="43"/>
+												</LabelDecoration>
+												<UsualGroup name="ГруппаОсобенностиТовараЗначения" id="44">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Значения особенностей учета товаров</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>uk</v8:lang>
+															<v8:content>Значення особливостей обліку товарів</v8:content>
+														</v8:item>
+													</Title>
+													<Group>Vertical</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаОсобенностиТовараЗначенияРасширеннаяПодсказка" id="45"/>
+													<ChildItems>
+														<RadioButtonField name="ОсобенностьУчетаБезОсобенностейУчета" id="36">
+															<DataPath>ОсобенностьУчета</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+															<RadioButtonType>Auto</RadioButtonType>
+															<ColumnsCount>1</ColumnsCount>
+															<ChoiceList>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation/>
+																		<Value xsi:type="xr:DesignTimeRef">Enum.ОсобенностиУчетаНоменклатуры.EnumValue.БезОсобенностейУчета</Value>
+																	</xr:Value>
+																</xr:Item>
+															</ChoiceList>
+															<ContextMenu name="ОсобенностьУчетаБезОсобенностейУчетаКонтекстноеМеню" id="37"/>
+															<ExtendedTooltip name="ОсобенностьУчетаБезОсобенностейУчетаРасширеннаяПодсказка" id="38"/>
+															<Events>
+																<Event name="OnChange">ОсобенностьУчетаТовараПриИзменении</Event>
+															</Events>
+														</RadioButtonField>
+														<UsualGroup name="ГруппаОсобенностиТовараЛокализация" id="91">
+															<Visible>false</Visible>
+															<UserVisible>
+																<xr:Common>false</xr:Common>
+															</UserVisible>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа особенности товара локализация</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>uk</v8:lang>
+																	<v8:content>Група особливості товару локалізація</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа особенности товара локализация</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>uk</v8:lang>
+																	<v8:content>Група особливості товару локалізація</v8:content>
+																</v8:item>
+															</ToolTip>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаОсобенностиТовараЛокализацияРасширеннаяПодсказка" id="92"/>
+														</UsualGroup>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаТипНоменклатурыТара" id="28">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Тип номенклатуры тара</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Тип номенклатури тара</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>NormalSeparation</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаТипНоменклатурыТараРасширеннаяПодсказка" id="29"/>
+									<ChildItems>
+										<RadioButtonField name="ТипНоменклатурыМногооборотнаяТара" id="23">
+											<DataPath>ТипНоменклатуры</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Подсказка задается программно</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Підказка задається програмно</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+											<RadioButtonType>Auto</RadioButtonType>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation/>
+														<Value xsi:type="xr:DesignTimeRef">Enum.ТипыНоменклатуры.EnumValue.МногооборотнаяТара</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="ТипНоменклатурыМногооборотнаяТараКонтекстноеМеню" id="24"/>
+											<ExtendedTooltip name="ТипНоменклатурыМногооборотнаяТараРасширеннаяПодсказка" id="25">
+												<TextColor>style:ПоясняющийТекст</TextColor>
+											</ExtendedTooltip>
+											<Events>
+												<Event name="OnChange">ТипНоменклатурыПриИзменении</Event>
+											</Events>
+										</RadioButtonField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаТипНоменклатурыНабор" id="34">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Тип номенклатуры набор</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Тип номенклатури набір</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>NormalSeparation</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаТипНоменклатурыНаборРасширеннаяПодсказка" id="35"/>
+									<ChildItems>
+										<RadioButtonField name="ТипНоменклатурыНабор" id="14">
+											<DataPath>ТипНоменклатуры</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Подсказка задается программно</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Підказка задається програмно</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+											<RadioButtonType>Auto</RadioButtonType>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation/>
+														<Value xsi:type="xr:DesignTimeRef">Enum.ТипыНоменклатуры.EnumValue.Набор</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="ТипНоменклатурыНаборКонтекстноеМеню" id="15"/>
+											<ExtendedTooltip name="ТипНоменклатурыНаборРасширеннаяПодсказка" id="16">
+												<TextColor>style:ПоясняющийТекст</TextColor>
+											</ExtendedTooltip>
+											<Events>
+												<Event name="OnChange">ТипНоменклатурыПриИзменении</Event>
+											</Events>
+										</RadioButtonField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКолонкиПраво" id="63">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Колонки право</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Колонки право</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКолонкиПравоРасширеннаяПодсказка" id="64"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаТипНоменклатурыУслуга" id="32">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Тип номенклатуры услуга</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Тип номенклатури послуга</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>NormalSeparation</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаТипНоменклатурыУслугаРасширеннаяПодсказка" id="33"/>
+									<ChildItems>
+										<RadioButtonField name="ТипНоменклатурыУслуга" id="20">
+											<DataPath>ТипНоменклатуры</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Подсказка задается программно</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Підказка задається програмно</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+											<RadioButtonType>Auto</RadioButtonType>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation/>
+														<Value xsi:type="xr:DesignTimeRef">Enum.ТипыНоменклатуры.EnumValue.Услуга</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="ТипНоменклатурыУслугаКонтекстноеМеню" id="21"/>
+											<ExtendedTooltip name="ТипНоменклатурыУслугаРасширеннаяПодсказка" id="22">
+												<TextColor>style:ПоясняющийТекст</TextColor>
+											</ExtendedTooltip>
+											<Events>
+												<Event name="OnChange">ТипНоменклатурыПриИзменении</Event>
+											</Events>
+										</RadioButtonField>
+										<UsualGroup name="ГруппаОсобенностиУслуги" id="67">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Особенности учета услуг</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Особливості обліку послуг</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаОсобенностиУслугиРасширеннаяПодсказка" id="68"/>
+											<ChildItems>
+												<LabelDecoration name="ДекорацияОсобенностиУслугиОтступ" id="69">
+													<ContextMenu name="ДекорацияОсобенностиУслугиОтступКонтекстноеМеню" id="70"/>
+													<ExtendedTooltip name="ДекорацияОсобенностиУслугиОтступРасширеннаяПодсказка" id="71"/>
+												</LabelDecoration>
+												<UsualGroup name="ГруппаОсобенностиУслугиЗначения" id="72">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Значения особенностей учета услуг</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>uk</v8:lang>
+															<v8:content>Значення особливостей обліку послуг</v8:content>
+														</v8:item>
+													</Title>
+													<Group>Vertical</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаОсобенностиУслугиЗначенияРасширеннаяПодсказка" id="73"/>
+													<ChildItems>
+														<RadioButtonField name="ОсобенностьУчетаОрганизациейПродавцом" id="77">
+															<DataPath>ОсобенностьУчета</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Подсказка задается программно</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>uk</v8:lang>
+																	<v8:content>Підказка задається програмно</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+															<RadioButtonType>Auto</RadioButtonType>
+															<ColumnsCount>1</ColumnsCount>
+															<ChoiceList>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation/>
+																		<Value xsi:type="xr:DesignTimeRef">Enum.ОсобенностиУчетаНоменклатуры.EnumValue.ОрганизациейПродавцом</Value>
+																	</xr:Value>
+																</xr:Item>
+															</ChoiceList>
+															<ContextMenu name="ОсобенностьУчетаОрганизациейПродавцомКонтекстноеМеню" id="78"/>
+															<ExtendedTooltip name="ОсобенностьУчетаОрганизациейПродавцомРасширеннаяПодсказка" id="79"/>
+															<Events>
+																<Event name="OnChange">ОсобенностьУчетаУслугиПриИзменении</Event>
+															</Events>
+														</RadioButtonField>
+														<RadioButtonField name="ОсобенностьУчетаОрганизациейПоАгентскойСхеме" id="80">
+															<DataPath>ОсобенностьУчета</DataPath>
+															<Visible>false</Visible>
+															<UserVisible>
+																<xr:Common>false</xr:Common>
+															</UserVisible>
+															<TitleLocation>None</TitleLocation>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Подсказка задается программно</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>uk</v8:lang>
+																	<v8:content>Підказка задається програмно</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+															<RadioButtonType>Auto</RadioButtonType>
+															<ColumnsCount>1</ColumnsCount>
+															<ChoiceList>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation/>
+																		<Value xsi:type="xr:DesignTimeRef">5647c4ea-0d6d-4d75-8261-5aa213fca033.bca5af74-66f6-44f5-8fa6-cee0b448788a</Value>
+																	</xr:Value>
+																</xr:Item>
+															</ChoiceList>
+															<ContextMenu name="ОсобенностьУчетаОрганизациейПоАгентскойСхемеКонтекстноеМеню" id="81"/>
+															<ExtendedTooltip name="ОсобенностьУчетаОрганизациейПоАгентскойСхемеРасширеннаяПодсказка" id="82"/>
+															<Events>
+																<Event name="OnChange">ОсобенностьУчетаУслугиПриИзменении</Event>
+															</Events>
+														</RadioButtonField>
+														<RadioButtonField name="ОсобенностьУчетаПартнером" id="83">
+															<DataPath>ОсобенностьУчета</DataPath>
+															<Visible>false</Visible>
+															<UserVisible>
+																<xr:Common>false</xr:Common>
+															</UserVisible>
+															<TitleLocation>None</TitleLocation>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Подсказка задается программно</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>uk</v8:lang>
+																	<v8:content>Підказка задається програмно</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+															<RadioButtonType>Auto</RadioButtonType>
+															<ColumnsCount>1</ColumnsCount>
+															<ChoiceList>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation/>
+																		<Value xsi:type="xr:DesignTimeRef">5647c4ea-0d6d-4d75-8261-5aa213fca033.c7cc0c7c-147d-47ff-b1e1-80827888a643</Value>
+																	</xr:Value>
+																</xr:Item>
+															</ChoiceList>
+															<ContextMenu name="ОсобенностьУчетаПартнеромКонтекстноеМеню" id="84"/>
+															<ExtendedTooltip name="ОсобенностьУчетаПартнеромРасширеннаяПодсказка" id="85"/>
+															<Events>
+																<Event name="OnChange">ОсобенностьУчетаУслугиПриИзменении</Event>
+															</Events>
+														</RadioButtonField>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаТипНоменклатурыРабота" id="30">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Тип номенклатуры работа</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Тип номенклатури робота</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>NormalSeparation</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаТипНоменклатурыРаботаРасширеннаяПодсказка" id="31"/>
+									<ChildItems>
+										<RadioButtonField name="ТипНоменклатурыРабота" id="17">
+											<DataPath>ТипНоменклатуры</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Подсказка задается программно</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Підказка задається програмно</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+											<RadioButtonType>Auto</RadioButtonType>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation/>
+														<Value xsi:type="xr:DesignTimeRef">Enum.ТипыНоменклатуры.EnumValue.Работа</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="ТипНоменклатурыРаботаКонтекстноеМеню" id="18"/>
+											<ExtendedTooltip name="ТипНоменклатурыРаботаРасширеннаяПодсказка" id="19">
+												<TextColor>style:ПоясняющийТекст</TextColor>
+											</ExtendedTooltip>
+											<Events>
+												<Event name="OnChange">ТипНоменклатурыПриИзменении</Event>
+											</Events>
+										</RadioButtonField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<CommandBar name="КоманднаяПанельФормы" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Командная панель формы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Командна панель форми</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalLocation>Right</HorizontalLocation>
+			<ExtendedTooltip name="КоманднаяПанельФормыРасширеннаяПодсказка" id="9"/>
+			<ChildItems>
+				<Button name="ОК" id="6">
+					<Type>CommandBarButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>Form.Command.ОК</CommandName>
+					<ExtendedTooltip name="ОКРасширеннаяПодсказка" id="7"/>
+				</Button>
+				<Button name="Отмена" id="4">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.Отмена</CommandName>
+					<ExtendedTooltip name="ОтменаРасширеннаяПодсказка" id="5"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ТипНоменклатуры" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип номенклатуры</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Тип номенклатури</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ТипыНоменклатуры</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОсобенностьУчета" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Особенность учета</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Особливість обліку</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ОсобенностиУчетаНоменклатуры</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОК" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОК</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Отмена" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Відмінити</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Відмінити</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Отмена</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ТипНоменклатуры">
+			<Type>
+				<v8:Type>cfg:EnumRef.ТипыНоменклатуры</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="ОсобенностьУчета">
+			<Type>
+				<v8:Type>cfg:EnumRef.ОсобенностиУчетаНоменклатуры</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

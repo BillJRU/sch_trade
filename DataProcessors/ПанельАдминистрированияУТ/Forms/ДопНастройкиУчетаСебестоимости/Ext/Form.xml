@@ -1,0 +1,633 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<Customizable>false</Customizable>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаУчетТоваров" id="1">
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа учет товаров</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Група облік товарів</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ГруппаУчетТоваровРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаИспользоватьПартионныйУчет" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Использовать партионный учет</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Використовувати партіонний облік</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа использовать партионный учет</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Група використовувати партіонний облік</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаИспользоватьПартионныйУчетРасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаНастройкаИспользоватьПартионныйУчет" id="5">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройка использовать партионный учет</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Настройка використовувати партіонний облік</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНастройкаИспользоватьПартионныйУчетРасширеннаяПодсказка" id="6"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаРежимПартионногоУчета" id="7">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Режим партионного учета</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Режим партіонного обліку</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаРежимПартионногоУчетаРасширеннаяПодсказка" id="8"/>
+									<ChildItems>
+										<InputField name="РежимПартионногоУчета" id="9">
+											<DataPath>РежимПартионногоУчета</DataPath>
+											<WarningOnEditRepresentation>DontShow</WarningOnEditRepresentation>
+											<WarningOnEdit>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Изменение режима партионного учета приведет к перепроведению документов, которое может занять длительное время</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Зміна режиму партіонного обліку призведе до перепроведення документів, яке може зайняти тривалий час</v8:content>
+												</v8:item>
+											</WarningOnEdit>
+											<MaxWidth>45</MaxWidth>
+											<ListChoiceMode>true</ListChoiceMode>
+											<ChooseType>false</ChooseType>
+											<TextEdit>false</TextEdit>
+											<ContextMenu name="РежимПартионногоУчетаКонтекстноеМеню" id="10"/>
+											<ExtendedTooltip name="РежимПартионногоУчетаРасширеннаяПодсказка" id="11"/>
+											<Events>
+												<Event name="OnChange">РежимПартионногоУчетаПриИзменении</Event>
+												<Event name="Clearing">РежимПартионногоУчетаОчистка</Event>
+											</Events>
+										</InputField>
+										<InputField name="ДатаПереходаНаПартионныйУчетВерсии22" id="12">
+											<DataPath>НаборКонстант.ДатаПереходаНаПартионныйУчетВерсии22</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>действует с</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>діє з</v8:content>
+												</v8:item>
+											</Title>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>7</MaxWidth>
+											<EditFormat>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ДФ=MM.yyyy</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>ДФ=MM.yyyy</v8:content>
+												</v8:item>
+											</EditFormat>
+											<ChooseType>false</ChooseType>
+											<ContextMenu name="ДатаПереходаНаПартионныйУчетВерсии22КонтекстноеМеню" id="13"/>
+											<ExtendedTooltip name="ДатаПереходаНаПартионныйУчетВерсии22РасширеннаяПодсказка" id="14"/>
+											<Events>
+												<Event name="OnChange">ДатаПереходаНаПартионныйУчетВерсии22ПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<LabelDecoration name="ПояснениеИспользоватьПартионныйУчет" id="15">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>80</MaxWidth>
+									<TextColor>style:ПоясняющийТекст</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Режим работы механизмов партионного учета и расчета себестоимости.</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Режим роботи механізмів партіонного обліку та розрахунку собівартості.</v8:content>
+										</v8:item>
+									</Title>
+									<VerticalAlign>Top</VerticalAlign>
+									<ContextMenu name="ПояснениеИспользоватьПартионныйУчетКонтекстноеМеню" id="16"/>
+									<ExtendedTooltip name="ПояснениеИспользоватьПартионныйУчетРасширеннаяПодсказка" id="17"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКомментарийИспользоватьПартионныйУчет" id="18">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Комментарий использовать партионный учет</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Коментар використовувати облік по партіях</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКомментарийИспользоватьПартионныйУчетРасширеннаяПодсказка" id="19"/>
+							<ChildItems>
+								<PictureDecoration name="ДекорацияКомментарийИспользоватьПартионныйУчет" id="20">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Декорация комментарий использовать партионный учет</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Декорація коментар використовувати партіонний облік</v8:content>
+										</v8:item>
+									</Title>
+									<Picture>
+										<xr:Ref>CommonPicture.ИнформацияПоНедоступнымПолям</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="ДекорацияКомментарийИспользоватьПартионныйУчетКонтекстноеМеню" id="21"/>
+									<ExtendedTooltip name="ДекорацияКомментарийИспользоватьПартионныйУчетРасширеннаяПодсказка" id="22"/>
+								</PictureDecoration>
+								<LabelDecoration name="КомментарийИспользоватьПартионныйУчет" id="23">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>80</MaxWidth>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>&lt;Текст заполняется в НастройкиПартионногоУчета()&gt;</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>&lt;Текст заповнюється в НастройкиПартионногоУчета ()&gt;</v8:content>
+										</v8:item>
+									</Title>
+									<VerticalAlign>Top</VerticalAlign>
+									<ContextMenu name="КомментарийИспользоватьПартионныйУчетКонтекстноеМеню" id="24"/>
+									<ExtendedTooltip name="КомментарийИспользоватьПартионныйУчетРасширеннаяПодсказка" id="25"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаУправленческийУчетОрганизаций" id="26">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Управленческий учет организаций</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Управлінський облік організацій</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаУправленческийУчетОрганизацийРасширеннаяПодсказка" id="27"/>
+					<ChildItems>
+						<CheckBoxField name="ВестиУправленческийУчетОрганизаций" id="28">
+							<DataPath>НаборКонстант.ВестиУправленческийУчетОрганизаций</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Управленческий учет по правилам международного финансового учета</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Управлінський облік за правилами міжнародного фінансового обліку</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ВестиУправленческийУчетОрганизацийКонтекстноеМеню" id="29"/>
+							<ExtendedTooltip name="ВестиУправленческийУчетОрганизацийРасширеннаяПодсказка" id="30">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<MaxWidth>80</MaxWidth>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Отражение себестоимости товаров, прочих доходов и расходов, в валюте управленческого учета по правилам международного финансового учета.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>uk</v8:lang>
+										<v8:content>Відображення собівартості товарів, інших доходів і витрат, у валюті управлінського обліку за правилами міжнародного фінансового обліку.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<Events>
+								<Event name="OnChange">ВестиУправленческийУчетОрганизацийПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаКомментарийВестиУправленческийУчетОрганизаций" id="31">
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий вести управленческий учет организаций</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Коментар вести управлінський облік організацій</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа комментарий использование МФУ</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Група коментар використання БФП</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКомментарийВестиУправленческийУчетОрганизацийРасширеннаяПодсказка" id="32"/>
+					<ChildItems>
+						<PictureDecoration name="ДекорацияВестиУправленческийУчетОрганизаций" id="33">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Декорация вести управленческий учет организаций</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Декорація вести управлінський облік організацій</v8:content>
+								</v8:item>
+							</Title>
+							<Picture>
+								<xr:Ref>CommonPicture.ИнформацияПоНедоступнымПолям</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</Picture>
+							<FileDragMode>AsFile</FileDragMode>
+							<ContextMenu name="ДекорацияВестиУправленческийУчетОрганизацийКонтекстноеМеню" id="34"/>
+							<ExtendedTooltip name="ДекорацияВестиУправленческийУчетОрганизацийРасширеннаяПодсказка" id="35"/>
+						</PictureDecoration>
+						<LabelDecoration name="КомментарийВестиУправленческийУчетОрганизаций" id="36">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>80</MaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Невозможно отключение использования управленческого учета по правилам МФУ, потому что включена опция "Управленческий учет на плане счетов регламентированного учета" разделе "НСИ и администрирование" — "Регламентированный учет".</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Неможливо відключення використання управлінського обліку за правилами МФО, тому що була включена опція "Управлінський облік на плані рахунків регламентованого обліку" розділі "НДІ і адміністрування" - "Регламентований облік".</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="КомментарийВестиУправленческийУчетОрганизацийКонтекстноеМеню" id="37"/>
+							<ExtendedTooltip name="КомментарийВестиУправленческийУчетОрганизацийРасширеннаяПодсказка" id="38"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаДатаНачалаВеденияУправленческогоУчетаОрганизаций" id="39">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата начала ведения управленческого учета организаций</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Дата початку ведення управлінського обліку організацій</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаДатаНачалаВеденияУправленческогоУчетаОрганизацийРасширеннаяПодсказка" id="40"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаНачалоВеденияУправленческогоУчетаСОпределеннойДаты" id="41">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Начало ведения управленческого учета с определенной даты</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Початок ведення управлінського обліку з певної дати</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНачалоВеденияУправленческогоУчетаСОпределеннойДатыРасширеннаяПодсказка" id="42"/>
+							<ChildItems>
+								<RadioButtonField name="НачалоВеденияУправленческогоУчетаСОпределеннойДаты" id="43">
+									<DataPath>НачалоВеденияУправленческогоУчетаОрганизаций</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отражать в учете</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Відображати в обліку</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Top</TitleLocation>
+									<WarningOnEdit>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Изменять настройку после начала ведения управленческого учета не рекомендуется</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Змінювати настройку після початку ведення управлінського обліку не рекомендується</v8:content>
+										</v8:item>
+									</WarningOnEdit>
+									<RadioButtonType>Auto</RadioButtonType>
+									<ColumnsCount>1</ColumnsCount>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>хозяйственные операции начиная с:</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>uk</v8:lang>
+														<v8:content>господарські операції починаючи з:</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">0</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="НачалоВеденияУправленческогоУчетаСОпределеннойДатыКонтекстноеМеню" id="44"/>
+									<ExtendedTooltip name="НачалоВеденияУправленческогоУчетаСОпределеннойДатыРасширеннаяПодсказка" id="45"/>
+									<Events>
+										<Event name="OnChange">НачалоВеденияУправленческогоУчетаСОпределеннойДатыПриИзменении</Event>
+									</Events>
+								</RadioButtonField>
+								<InputField name="ДатаНачалаВеденияУправленческогоУчетаОрганизаций" id="46">
+									<DataPath>НаборКонстант.ДатаНачалаВеденияУправленческогоУчетаОрганизаций</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>действует с</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>діє з</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>None</TitleLocation>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>7</MaxWidth>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=MM.yyyy</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>ДФ=MM.yyyy</v8:content>
+										</v8:item>
+									</EditFormat>
+									<ContextMenu name="ДатаНачалаВеденияУправленческогоУчетаОрганизацийКонтекстноеМеню" id="47"/>
+									<ExtendedTooltip name="ДатаНачалаВеденияУправленческогоУчетаОрганизацийРасширеннаяПодсказка" id="48"/>
+									<Events>
+										<Event name="OnChange">ДатаНачалаВеденияУправленческогоУчетаОрганизацийПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<RadioButtonField name="НачалоВеденияУправленческогоУчетаСНачальнойДаты" id="49">
+							<DataPath>НачалоВеденияУправленческогоУчетаОрганизаций</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<WarningOnEdit>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Изменять настройку после начала ведения регл. учета не рекомендуется</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Змінювати настройку після початку ведення регл. обліку не рекомендується</v8:content>
+								</v8:item>
+							</WarningOnEdit>
+							<RadioButtonType>Auto</RadioButtonType>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>хозяйственные операции во всех периодах применения партионного учета версии 2.5</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>uk</v8:lang>
+												<v8:content>господарські операції у всіх періодах застосування партіонного обліку версії 2.5</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">1</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="НачалоВеденияУправленческогоУчетаСНачальнойДатыКонтекстноеМеню" id="50"/>
+							<ExtendedTooltip name="НачалоВеденияУправленческогоУчетаСНачальнойДатыРасширеннаяПодсказка" id="51"/>
+							<Events>
+								<Event name="OnChange">НачалоВеденияУправленческогоУчетаСНачальнойДатыПриИзменении</Event>
+							</Events>
+						</RadioButtonField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НаборКонстант" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Набор констант</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Набір констант</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>НаборКонстант.ДатаНачалаУчетаСебестоимости</Field>
+				<Field>НаборКонстант.ИспользоватьПартионныйУчет</Field>
+				<Field>НаборКонстант.ИспользоватьУчетСебестоимости</Field>
+				<Field>НаборКонстант.ПартионныйУчетВерсии22</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="РежимПартионногоУчета" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Партионный учет</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Партіонний облік</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НачалоВеденияУправленческогоУчетаОрганизаций" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начало ведения управленческого учета организаций</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Початок ведення управлінського обліку організацій</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПериодДвиженийПУ22" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период движений ПУ 2.5</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Період рухів ПО 2.5</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПериодДвиженийСебестоимости" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период движений себестоимости</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Період рухів собівартості</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗначенияДоИзменения" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Значения до изменения</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Значення до зміни</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ЗначенияПоУмолчанию" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Значения по умолчанию</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Значення по умовчанню</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="РежимРаботы" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим работы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Режим роботи</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,529 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Обращение в службу технической поддержки BAS</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>uk</v8:lang>
+			<v8:content>Звернення до служби технічної підтримки BAS</v8:content>
+		</v8:item>
+	</Title>
+	<Width>60</Width>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаСпособОбращенияВертикальная" id="195">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа способ обращения вертикальная</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Група спосіб звернення вертикальна</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСпособОбращенияВертикальнаяРасширеннаяПодсказка" id="196"/>
+			<ChildItems>
+				<LabelDecoration name="СпособОбращенияЗаголовок" id="197">
+					<TextColor>style:ПоясняющийТекст</TextColor>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обратитесь в техподдержку</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Зверніться в техпідтримку</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СпособОбращенияЗаголовокКонтекстноеМеню" id="198"/>
+					<ExtendedTooltip name="СпособОбращенияЗаголовокРасширеннаяПодсказка" id="199"/>
+				</LabelDecoration>
+				<UsualGroup name="ГруппаСпособОбращенияГоризонтальная" id="200">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа способ обращения горизонтальная</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Група спосіб звернення горизонтальна</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСпособОбращенияГоризонтальнаяРасширеннаяПодсказка" id="201"/>
+					<ChildItems>
+						<LabelDecoration name="СпособОбращенияОтступ" id="202">
+							<Width>3</Width>
+							<ContextMenu name="СпособОбращенияОтступКонтекстноеМеню" id="203"/>
+							<ExtendedTooltip name="СпособОбращенияОтступРасширеннаяПодсказка" id="204"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаСпособОбращения" id="11">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Обратитесь в техподдержку одним из доступных способов</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Зверніться в техпідтримку одним з доступних способів</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСпособОбращенияРасширеннаяПодсказка" id="12"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаЭлектроннаяПочта" id="29">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа электронная почта</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Група електронна пошта</v8:content>
+										</v8:item>
+									</Title>
+									<Group>AlwaysHorizontal</Group>
+									<HorizontalSpacing>Half</HorizontalSpacing>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаЭлектроннаяПочтаРасширеннаяПодсказка" id="30"/>
+									<ChildItems>
+										<PictureDecoration name="ЭлектроннаяПочтаКартинка" id="31">
+											<Picture>
+												<xr:Ref>CommonPicture.ОтправитьЭлектронноеПисьмо</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ЭлектроннаяПочтаКартинкаКонтекстноеМеню" id="32"/>
+											<ExtendedTooltip name="ЭлектроннаяПочтаКартинкаРасширеннаяПодсказка" id="33"/>
+										</PictureDecoration>
+										<LabelField name="АдресЭлектроннойПочтыСлужбыПоддержки" id="216">
+											<DataPath>АдресЭлектроннойПочтыСлужбыПоддержки</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Напишите на</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Напишіть на</v8:content>
+												</v8:item>
+											</Title>
+											<Hiperlink>true</Hiperlink>
+											<ContextMenu name="АдресЭлектроннойПочтыСлужбыПоддержкиКонтекстноеМеню" id="217"/>
+											<ExtendedTooltip name="АдресЭлектроннойПочтыСлужбыПоддержкиРасширеннаяПодсказка" id="218"/>
+											<Events>
+												<Event name="Click">АдресЭлектроннойПочтыСлужбыПоддержкиНажатие</Event>
+											</Events>
+										</LabelField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаТелефон" id="51">
+									<Visible>false</Visible>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа телефон</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Група телефон</v8:content>
+										</v8:item>
+									</Title>
+									<Group>AlwaysHorizontal</Group>
+									<HorizontalSpacing>Half</HorizontalSpacing>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаТелефонРасширеннаяПодсказка" id="52"/>
+									<ChildItems>
+										<PictureDecoration name="ТелефонКартинка" id="53">
+											<Picture>
+												<xr:Ref>CommonPicture.Позвонить</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ТелефонКартинкаКонтекстноеМеню" id="54"/>
+											<ExtendedTooltip name="ТелефонКартинкаРасширеннаяПодсказка" id="55"/>
+										</PictureDecoration>
+										<LabelField name="ТелефонСлужбыПоддержки" id="213">
+											<DataPath>ТелефонСлужбыПоддержки</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Позвоните</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Зателефонуйте</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ТелефонСлужбыПоддержкиКонтекстноеМеню" id="214"/>
+											<ExtendedTooltip name="ТелефонСлужбыПоддержкиРасширеннаяПодсказка" id="215"/>
+										</LabelField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаСодержаниеОбращенияВертикальная" id="62">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа содержание обращения вертикальная</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Група зміст звернення вертикальна</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСодержаниеОбращенияВертикальнаяРасширеннаяПодсказка" id="63"/>
+			<ChildItems>
+				<LabelDecoration name="СодержаниеОбращенияЗаголовок" id="205">
+					<TextColor>style:ПоясняющийТекст</TextColor>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Приложите к обращению следующую информацию</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Прикладіть до звернення наступну інформацію</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СодержаниеОбращенияЗаголовокКонтекстноеМеню" id="206"/>
+					<ExtendedTooltip name="СодержаниеОбращенияЗаголовокРасширеннаяПодсказка" id="207"/>
+				</LabelDecoration>
+				<UsualGroup name="ГруппаСодержаниеОбращенияГоризонтальная" id="69">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа содержание обращения горизонтальная</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Група зміст звернення горизонтальна</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСодержаниеОбращенияГоризонтальнаяРасширеннаяПодсказка" id="70"/>
+					<ChildItems>
+						<LabelDecoration name="СодержаниеОбращенияОтступ" id="208">
+							<Width>3</Width>
+							<ContextMenu name="СодержаниеОбращенияОтступКонтекстноеМеню" id="209"/>
+							<ExtendedTooltip name="СодержаниеОбращенияОтступРасширеннаяПодсказка" id="210"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаСодержаниеОбращения" id="211">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа содержание обращения</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Група зміст звернення</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСодержаниеОбращенияРасширеннаяПодсказка" id="212"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаТекстОбращения" id="93">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа текст обращения</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Група текст звернення</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаТекстОбращенияРасширеннаяПодсказка" id="94"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаТекстОбращенияЗаголовок" id="120">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа текст обращения заголовок</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Група текст звернення заголовок</v8:content>
+												</v8:item>
+											</Title>
+											<Group>AlwaysHorizontal</Group>
+											<HorizontalSpacing>Half</HorizontalSpacing>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаТекстОбращенияЗаголовокРасширеннаяПодсказка" id="121"/>
+											<ChildItems>
+												<PictureDecoration name="ТекстОбращенияКартинка" id="144">
+													<Picture>
+														<xr:Ref>CommonPicture.ПримечаниеЖурналаРегистрации</xr:Ref>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<FileDragMode>AsFile</FileDragMode>
+													<ContextMenu name="ТекстОбращенияКартинкаКонтекстноеМеню" id="145"/>
+													<ExtendedTooltip name="ТекстОбращенияКартинкаРасширеннаяПодсказка" id="146"/>
+												</PictureDecoration>
+												<LabelDecoration name="ТекстОбращенияНадпись" id="115">
+													<Title formatted="true">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Текст обращения (&lt;link копировать&gt;копировать&lt;/&gt;):</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>uk</v8:lang>
+															<v8:content>Текст звернення (&lt;link копировать&gt;копіювати&lt;/&gt; ):</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ТекстОбращенияНадписьКонтекстноеМеню" id="116"/>
+													<ExtendedTooltip name="ТекстОбращенияНадписьРасширеннаяПодсказка" id="117"/>
+													<Events>
+														<Event name="URLProcessing">ТекстОбращенияНадписьОбработкаНавигационнойСсылки</Event>
+													</Events>
+												</LabelDecoration>
+												<LabelDecoration name="ТекстОбращенияНадписьНеизвестнаяОшибка" id="168">
+													<Visible>false</Visible>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<Title formatted="true">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Текст обращения (сценарий воспроизведения ошибки, вопрос, пожелание и.т.п.)</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>uk</v8:lang>
+															<v8:content>Текст звернення (сценарій відтворення помилки, питання, побажання тощо)</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ТекстОбращенияНадписьНеизвестнаяОшибкаКонтекстноеМеню" id="169"/>
+													<ExtendedTooltip name="ТекстОбращенияНадписьНеизвестнаяОшибкаРасширеннаяПодсказка" id="170"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<InputField name="ТекстОбращения" id="112">
+											<DataPath>ТекстОбращения</DataPath>
+											<SkipOnInput>true</SkipOnInput>
+											<TitleLocation>None</TitleLocation>
+											<MultiLine>true</MultiLine>
+											<TextEdit>false</TextEdit>
+											<BorderColor>style:FormBackColor</BorderColor>
+											<ContextMenu name="ТекстОбращенияКонтекстноеМеню" id="113"/>
+											<ExtendedTooltip name="ТекстОбращенияРасширеннаяПодсказка" id="114"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаАрхивСТехИнформацией" id="104">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа архив с тех информацией</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Група архів з тех інформацією</v8:content>
+										</v8:item>
+									</Title>
+									<Group>AlwaysHorizontal</Group>
+									<HorizontalSpacing>Half</HorizontalSpacing>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаАрхивСТехИнформациейРасширеннаяПодсказка" id="105"/>
+									<ChildItems>
+										<PictureDecoration name="АрхивСТехИнформациейКартинка" id="141">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Архив с тех информацией картинка</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Архів з тех інформацією картинка</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.ПримечаниеЖурналаРегистрации</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="АрхивСТехИнформациейКартинкаКонтекстноеМеню" id="142"/>
+											<ExtendedTooltip name="АрхивСТехИнформациейКартинкаРасширеннаяПодсказка" id="143"/>
+										</PictureDecoration>
+										<LabelDecoration name="АрхивСТехИнформациейНадпись" id="109">
+											<Title formatted="true">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Архив с тех.информацией (&lt;link сохранить&gt;сохранить&lt;/&gt;)</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Архів з тех. інформацією (&lt;link сохранить&gt;зберегти&lt;/&gt; )</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="АрхивСТехИнформациейНадписьКонтекстноеМеню" id="110"/>
+											<ExtendedTooltip name="АрхивСТехИнформациейНадписьРасширеннаяПодсказка" id="111"/>
+											<Events>
+												<Event name="URLProcessing">АрхивСТехИнформациейНадписьОбработкаНавигационнойСсылки</Event>
+											</Events>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<LabelDecoration name="Техподдержка" id="219">
+			<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+			<ContextMenu name="ТехподдержкаКонтекстноеМеню" id="220"/>
+			<ExtendedTooltip name="ТехподдержкаРасширеннаяПодсказка" id="221"/>
+		</LabelDecoration>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ТекстОбращения" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст обращения</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Текст звернення</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НеизвестнаяОшибка" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Неизвестная ошибка</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Невідома помилка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КонтекстОперации" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контекст операции</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Контекст операції</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="АдресФайлаДляТехПоддержки" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес файла для тех поддержки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Адреса файлу для тех підтримки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТелефонСлужбыПоддержки" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Телефон службы поддержки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Телефон служби підтримки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресЭлектроннойПочтыСлужбыПоддержки" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес электронной почты службы поддержки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Адреса електронної пошти служби підтримки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

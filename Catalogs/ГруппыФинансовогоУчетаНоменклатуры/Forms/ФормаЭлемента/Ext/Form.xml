@@ -1,0 +1,1095 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Popup name="ПодменюЗаполнить" id="90">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Заполнение</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>uk</v8:lang>
+						<v8:content>Заповнення</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Дополнительные команды заполнения</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>uk</v8:lang>
+						<v8:content>Додаткові команди заповнення</v8:content>
+					</v8:item>
+				</ToolTip>
+				<Picture>
+					<xr:Ref>CommonPicture.ЗаполнитьФорму</xr:Ref>
+					<xr:LoadTransparent>false</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ПодменюДополнительныхОбработокЗаполненияРасширеннаяПодсказка" id="91"/>
+			</Popup>
+			<Popup name="ПодменюПечать" id="92">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Печать</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>uk</v8:lang>
+						<v8:content>Друк</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Команды печати</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>uk</v8:lang>
+						<v8:content>Команди друку</v8:content>
+					</v8:item>
+				</ToolTip>
+				<Picture>
+					<xr:Ref>StdPicture.Print</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ПодменюПечатьРасширеннаяПодсказка" id="93"/>
+			</Popup>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+		<Event name="OnWriteAtServer">ПриЗаписиНаСервере</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапкаГоризонтальная" id="75">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка горизонтальная</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Шапка горизонтальна</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаГоризонтальнаяРасширеннаяПодсказка" id="76"/>
+			<ChildItems>
+				<InputField name="Наименование" id="1">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НаименованиеExtendedTooltip" id="13"/>
+				</InputField>
+				<InputField name="Описание" id="5">
+					<DataPath>Объект.Описание</DataPath>
+					<ContextMenu name="ОписаниеКонтекстноеМеню" id="6"/>
+					<ExtendedTooltip name="ОписаниеExtendedTooltip" id="15"/>
+				</InputField>
+				<InputField name="ВидЦенности" id="182">
+					<DataPath>Объект.ВидЦенности</DataPath>
+					<ContextMenu name="ВидЦенностиКонтекстноеМеню" id="183"/>
+					<ExtendedTooltip name="ВидЦенностиРасширеннаяПодсказка" id="184"/>
+				</InputField>
+				<InputField name="Родитель" id="3">
+					<DataPath>Объект.Parent</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РодительКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="РодительExtendedTooltip" id="14"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ЛокализацияНастройкаСчетовУчета" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отражение в регламентированном учете</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Відображення в регламентованому обліку</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ЛокализацияНастройкаСчетовУчетаРасширеннаяПодсказка" id="22"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаСчетов" id="133">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа счетов</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Група рахунків</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа счетов</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Група рахунків</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСчетовРасширеннаяПодсказка" id="134"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаОтражениеВРеглУчетеГоризонтальная" id="68">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отражение в регл учете горизонтальная</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Відображення в регл обліку горизонтальна</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОтражениеВРеглУчетеГоризонтальнаяРасширеннаяПодсказка" id="69"/>
+							<ChildItems>
+								<RadioButtonField name="НастройкаСчетовУчета_НастройкаСворачиваемостиГрупп" id="143">
+									<DataPath>НастройкаСчетовУчета_НастройкаСворачиваемостиГрупп</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+									<RadioButtonType>Tumbler</RadioButtonType>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Показать все</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>uk</v8:lang>
+														<v8:content>Показати всі</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">ПоказатьВсе</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Свернуть все</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>uk</v8:lang>
+														<v8:content>Згорнути всі</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">СвернутьВсе</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="НастройкаСчетовУчета_НастройкаСворачиваемостиГруппКонтекстноеМеню" id="144"/>
+									<ExtendedTooltip name="НастройкаСчетовУчета_НастройкаСворачиваемостиГруппРасширеннаяПодсказка" id="145"/>
+									<Events>
+										<Event name="OnChange">Подключаемый_ПриИзмененииСчетаУчета</Event>
+									</Events>
+								</RadioButtonField>
+								<UsualGroup name="НастройкаСчетовУчета_Группа_Стоимость" id="50">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Счета учета стоимости номенклатуры</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Рахунки обліку вартості номенклатури</v8:content>
+										</v8:item>
+									</Title>
+									<TitleTextColor>style:ГиперссылкаЦвет</TitleTextColor>
+									<Behavior>Collapsible</Behavior>
+									<Collapsed>true</Collapsed>
+									<Representation>None</Representation>
+									<ExtendedTooltip name="НастройкаСчетовУчета_Группа_СтоимостьРасширеннаяПодсказка" id="51"/>
+									<ChildItems>
+										<InputField name="НастройкаСчетовУчета_СчетУчета_ЗатратыНаПриобретениеТМЦ" id="112">
+											<DataPath>НастройкаСчетовУчета_СчетУчета_ЗатратыНаПриобретениеТМЦ</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Затраты на приобретение</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Витрати на придбання</v8:content>
+												</v8:item>
+											</Title>
+											<Width>9</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="НастройкаСчетовУчета_СчетУчета_ЗатратыНаПриобретениеТМЦКонтекстноеМеню" id="113"/>
+											<ExtendedTooltip name="НастройкаСчетовУчета_СчетУчета_ЗатратыНаПриобретениеТМЦРасширеннаяПодсказка" id="114"/>
+											<Events>
+												<Event name="OnChange">Подключаемый_ПриИзмененииСчетаУчета</Event>
+											</Events>
+										</InputField>
+										<InputField name="НастройкаСчетовУчета_СчетУчета_НаСкладе" id="38">
+											<DataPath>НастройкаСчетовУчета_СчетУчета_НаСкладе</DataPath>
+											<Width>9</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="НастройкаСчетовУчета_СчетУчета_НаСкладеКонтекстноеМеню" id="39"/>
+											<ExtendedTooltip name="НастройкаСчетовУчета_СчетУчета_НаСкладеРасширеннаяПодсказка" id="40"/>
+											<Events>
+												<Event name="OnChange">Подключаемый_ПриИзмененииСчетаУчета</Event>
+											</Events>
+										</InputField>
+										<InputField name="НастройкаСчетовУчета_СчетУчета_НоменклатураПереданная" id="23">
+											<DataPath>НастройкаСчетовУчета_СчетУчета_НоменклатураПереданная</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Переданной</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Переданої</v8:content>
+												</v8:item>
+											</Title>
+											<Width>9</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="НастройкаСчетовУчета_СчетУчета_НоменклатураПереданнаяКонтекстноеМеню" id="24"/>
+											<ExtendedTooltip name="НастройкаСчетовУчета_СчетУчета_НоменклатураПереданнаяРасширеннаяПодсказка" id="25"/>
+											<Events>
+												<Event name="OnChange">Подключаемый_ПриИзмененииСчетаУчета</Event>
+											</Events>
+										</InputField>
+										<InputField name="НастройкаСчетовУчета_СчетУчета_ПередачаВПереработку" id="100">
+											<DataPath>НастройкаСчетовУчета_СчетУчета_ПередачаВПереработку</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>В переработке</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>У переробці</v8:content>
+												</v8:item>
+											</Title>
+											<Width>9</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="НастройкаСчетовУчета_СчетУчета_ПередачаВПереработкуКонтекстноеМеню" id="101"/>
+											<ExtendedTooltip name="НастройкаСчетовУчета_СчетУчета_ПередачаВПереработкуРасширеннаяПодсказка" id="102"/>
+											<Events>
+												<Event name="OnChange">Подключаемый_ПриИзмененииСчетаУчета</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="НастройкаСчетовУчета_Группа_Продажи" id="52">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Счета учета продаж</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Рахунки обліку продажів</v8:content>
+										</v8:item>
+									</Title>
+									<TitleTextColor>style:ГиперссылкаЦвет</TitleTextColor>
+									<Behavior>Collapsible</Behavior>
+									<Collapsed>true</Collapsed>
+									<Representation>None</Representation>
+									<ExtendedTooltip name="НастройкаСчетовУчета_Группа_ПродажиРасширеннаяПодсказка" id="53"/>
+									<ChildItems>
+										<InputField name="НастройкаСчетовУчета_СчетУчета_ВыручкаОтПродаж" id="26">
+											<DataPath>НастройкаСчетовУчета_СчетУчета_ВыручкаОтПродаж</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Выручки</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Виторгу</v8:content>
+												</v8:item>
+											</Title>
+											<Width>9</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="НастройкаСчетовУчета_СчетУчета_ВыручкаОтПродажКонтекстноеМеню" id="27"/>
+											<ExtendedTooltip name="НастройкаСчетовУчета_СчетУчета_ВыручкаОтПродажРасширеннаяПодсказка" id="28"/>
+											<Events>
+												<Event name="OnChange">Подключаемый_ПриИзмененииСчетаУчета</Event>
+											</Events>
+										</InputField>
+										<InputField name="НастройкаСчетовУчета_СчетУчета_ВычетыИзДоходов" id="176">
+											<DataPath>НастройкаСчетовУчета_СчетУчета_ВычетыИзДоходов</DataPath>
+											<Width>9</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="НастройкаСчетовУчета_СчетУчета_ВычетыИзДоходовКонтекстноеМеню" id="177"/>
+											<ExtendedTooltip name="НастройкаСчетовУчета_СчетУчета_ВычетыИзДоходовРасширеннаяПодсказка" id="178"/>
+											<Events>
+												<Event name="OnChange">Подключаемый_ПриИзмененииСчетаУчета</Event>
+											</Events>
+										</InputField>
+										<InputField name="НастройкаСчетовУчета_Субконто_СтатьяДоходов" id="94">
+											<DataPath>НастройкаСчетовУчета_Субконто_СтатьяДоходов</DataPath>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>16</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="НастройкаСчетовУчета_Субконто_СтатьяДоходовКонтекстноеМеню" id="95"/>
+											<ExtendedTooltip name="НастройкаСчетовУчета_Субконто_СтатьяДоходовРасширеннаяПодсказка" id="96"/>
+											<Events>
+												<Event name="OnChange">Подключаемый_ПриИзмененииСчетаУчета</Event>
+											</Events>
+										</InputField>
+										<InputField name="НастройкаСчетовУчета_СчетУчета_СебестоимостьПродаж" id="29">
+											<DataPath>НастройкаСчетовУчета_СчетУчета_СебестоимостьПродаж</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Себестоимости</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Собівартості</v8:content>
+												</v8:item>
+											</Title>
+											<Width>9</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="НастройкаСчетовУчета_СчетУчета_СебестоимостьПродажКонтекстноеМеню" id="30"/>
+											<ExtendedTooltip name="НастройкаСчетовУчета_СчетУчета_СебестоимостьПродажРасширеннаяПодсказка" id="31"/>
+											<Events>
+												<Event name="OnChange">Подключаемый_ПриИзмененииСчетаУчета</Event>
+											</Events>
+										</InputField>
+										<InputField name="НастройкаСчетовУчета_Субконто_СтатьяЗатрат" id="179">
+											<DataPath>НастройкаСчетовУчета_Субконто_СтатьяЗатрат</DataPath>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>16</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="НастройкаСчетовУчета_Субконто_СтатьяЗатратКонтекстноеМеню" id="180"/>
+											<ExtendedTooltip name="НастройкаСчетовУчета_Субконто_СтатьяЗатратРасширеннаяПодсказка" id="181"/>
+											<Events>
+												<Event name="OnChange">Подключаемый_ПриИзмененииСчетаУчета</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="НастройкаСчетовУчета_Группа_ТМЦпринятыеНаОтветственноеХранение" id="146">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ТМЦ, принятые на ответственное хранение</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>ТМЦ, прийняті на відповідальне зберігання</v8:content>
+										</v8:item>
+									</Title>
+									<TitleTextColor>style:ГиперссылкаЦвет</TitleTextColor>
+									<Behavior>Collapsible</Behavior>
+									<Collapsed>true</Collapsed>
+									<Representation>None</Representation>
+									<ExtendedTooltip name="НастройкаСчетовУчета_Группа_ТМЦпринятыеНаОтветственноеХранениеРасширеннаяПодсказка" id="147"/>
+									<ChildItems>
+										<InputField name="НастройкаСчетовУчета_СчетУчета_ТМЦНаСкладах" id="152">
+											<DataPath>НастройкаСчетовУчета_СчетУчета_ТМЦНаСкладах</DataPath>
+											<Width>9</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="НастройкаСчетовУчета_СчетУчета_ТМЦНаСкладахКонтекстноеМеню" id="153"/>
+											<ExtendedTooltip name="НастройкаСчетовУчета_СчетУчета_ТМЦНаСкладахРасширеннаяПодсказка" id="154"/>
+											<Events>
+												<Event name="OnChange">Подключаемый_ПриИзмененииСчетаУчета</Event>
+											</Events>
+										</InputField>
+										<InputField name="НастройкаСчетовУчета_СчетУчета_ТМЦВПроизводстве" id="155">
+											<DataPath>НастройкаСчетовУчета_СчетУчета_ТМЦВПроизводстве</DataPath>
+											<Width>9</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="НастройкаСчетовУчета_СчетУчета_ТМЦВПроизводствеКонтекстноеМеню" id="156"/>
+											<ExtendedTooltip name="НастройкаСчетовУчета_СчетУчета_ТМЦВПроизводствеРасширеннаяПодсказка" id="157"/>
+											<Events>
+												<Event name="OnChange">Подключаемый_ПриИзмененииСчетаУчета</Event>
+											</Events>
+										</InputField>
+										<InputField name="НастройкаСчетовУчета_СчетУчета_ТМЦУХранителей" id="158">
+											<DataPath>НастройкаСчетовУчета_СчетУчета_ТМЦУХранителей</DataPath>
+											<Width>9</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="НастройкаСчетовУчета_СчетУчета_ТМЦУХранителейКонтекстноеМеню" id="159"/>
+											<ExtendedTooltip name="НастройкаСчетовУчета_СчетУчета_ТМЦУХранителейРасширеннаяПодсказка" id="160"/>
+											<Events>
+												<Event name="OnChange">Подключаемый_ПриИзмененииСчетаУчета</Event>
+											</Events>
+										</InputField>
+										<InputField name="НастройкаСчетовУчета_СчетУчета_ТМЦКСписанию" id="161">
+											<DataPath>НастройкаСчетовУчета_СчетУчета_ТМЦКСписанию</DataPath>
+											<Width>9</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="НастройкаСчетовУчета_СчетУчета_ТМЦКСписаниюКонтекстноеМеню" id="162"/>
+											<ExtendedTooltip name="НастройкаСчетовУчета_СчетУчета_ТМЦКСписаниюРасширеннаяПодсказка" id="163"/>
+											<Events>
+												<Event name="OnChange">Подключаемый_ПриИзмененииСчетаУчета</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="НастройкаСчетовУчета_Группа_МатериалыПринятыеВПереработку" id="148">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Материалы, принятые в переработку</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Матеріали, прийняті в переробку</v8:content>
+										</v8:item>
+									</Title>
+									<TitleTextColor>style:ГиперссылкаЦвет</TitleTextColor>
+									<Behavior>Collapsible</Behavior>
+									<Collapsed>true</Collapsed>
+									<Representation>None</Representation>
+									<ExtendedTooltip name="НастройкаСчетовУчета_Группа_МатериалыПринятыеВПереработкуРасширеннаяПодсказка" id="149"/>
+									<ChildItems>
+										<InputField name="НастройкаСчетовУчета_СчетУчета_МатериалыПринятыеВПереработку" id="164">
+											<DataPath>НастройкаСчетовУчета_СчетУчета_МатериалыПринятыеВПереработку</DataPath>
+											<Width>9</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="НастройкаСчетовУчета_СчетУчета_МатериалыПринятыеВПереработкуКонтекстноеМеню" id="165"/>
+											<ExtendedTooltip name="НастройкаСчетовУчета_СчетУчета_МатериалыПринятыеВПереработкуРасширеннаяПодсказка" id="166"/>
+											<Events>
+												<Event name="OnChange">Подключаемый_ПриИзмененииСчетаУчета</Event>
+											</Events>
+										</InputField>
+										<InputField name="НастройкаСчетовУчета_СчетУчета_МатериалыПринятыеВПереработкуВПроизводстве" id="167">
+											<DataPath>НастройкаСчетовУчета_СчетУчета_МатериалыПринятыеВПереработкуВПроизводстве</DataPath>
+											<Width>9</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="НастройкаСчетовУчета_СчетУчета_МатериалыПринятыеВПереработкуВПроизводствеКонтекстноеМеню" id="168"/>
+											<ExtendedTooltip name="НастройкаСчетовУчета_СчетУчета_МатериалыПринятыеВПереработкуВПроизводствеРасширеннаяПодсказка" id="169"/>
+											<Events>
+												<Event name="OnChange">Подключаемый_ПриИзмененииСчетаУчета</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="НастройкаСчетовУчета_Группа_ТоварыПринятыеНаКомиссию" id="150">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Товары, принятые на комиссию</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Товари, прийняті на комісію</v8:content>
+										</v8:item>
+									</Title>
+									<TitleTextColor>style:ГиперссылкаЦвет</TitleTextColor>
+									<Behavior>Collapsible</Behavior>
+									<Collapsed>true</Collapsed>
+									<Representation>None</Representation>
+									<ExtendedTooltip name="НастройкаСчетовУчета_Группа_ТоварыПринятыеНаКомиссиюРасширеннаяПодсказка" id="151"/>
+									<ChildItems>
+										<InputField name="НастройкаСчетовУчета_СчетУчета_ТоварыНаСкладе" id="170">
+											<DataPath>НастройкаСчетовУчета_СчетУчета_ТоварыНаСкладе</DataPath>
+											<Width>9</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="НастройкаСчетовУчета_СчетУчета_ТоварыНаСкладеКонтекстноеМеню" id="171"/>
+											<ExtendedTooltip name="НастройкаСчетовУчета_СчетУчета_ТоварыНаСкладеРасширеннаяПодсказка" id="172"/>
+											<Events>
+												<Event name="OnChange">Подключаемый_ПриИзмененииСчетаУчета</Event>
+											</Events>
+										</InputField>
+										<InputField name="НастройкаСчетовУчета_СчетУчета_ТоварыПереданныеНаКомиссию" id="173">
+											<DataPath>НастройкаСчетовУчета_СчетУчета_ТоварыПереданныеНаКомиссию</DataPath>
+											<Width>9</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="НастройкаСчетовУчета_СчетУчета_ТоварыПереданныеНаКомиссиюКонтекстноеМеню" id="174"/>
+											<ExtendedTooltip name="НастройкаСчетовУчета_СчетУчета_ТоварыПереданныеНаКомиссиюРасширеннаяПодсказка" id="175"/>
+											<Events>
+												<Event name="OnChange">Подключаемый_ПриИзмененииСчетаУчета</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<LabelField name="НастройкаСчетовУчета_Ссылка" id="115">
+					<DataPath>НастройкаСчетовУчета_Ссылка</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ToolTipRepresentation>ShowTop</ToolTipRepresentation>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="НастройкаСчетовУчета_СсылкаКонтекстноеМеню" id="116"/>
+					<ExtendedTooltip name="НастройкаСчетовУчета_СсылкаРасширеннаяПодсказка" id="117">
+						<AutoMaxWidth>false</AutoMaxWidth>
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Счета учета используются при отражении документов в учете, если для организации и складу не настроены исключения.</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
+								<v8:content>Рахунки обліку використовуються при відображенні документів в обліку, якщо для організації та складу не налаштовані виключення.</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+					<Events>
+						<Event name="URLProcessing">СсылкаНастройкаСчетовУчетаОбработкаНавигационнойСсылки</Event>
+					</Events>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаОтражениеВМеждународномУчете" id="79">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отражение в международном учете</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Відображення в міжнародному обліку</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОтражениеВМеждународномУчетеРасширеннаяПодсказка" id="80"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаИспользованиеВНастройкахОтраженияВМФУ" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отражение в международном финансовом учете</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Відображення в міжнародному фінансовому обліку</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ExtendedTooltip name="ГруппаИспользованиеВНастройкахОтраженияВМФУРасширеннаяПодсказка" id="17"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаУточнениеСчетовУчета" id="9">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Уточнение счетов учета</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Уточнення рахунків обліку</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаУточнениеСчетовУчетаExtendedTooltip" id="18"/>
+							<ChildItems>
+								<Button name="НастроитьУточнениеСчетов" id="12">
+									<Type>Hyperlink</Type>
+									<CommandName>0</CommandName>
+									<DataPath>Объект.Ref</DataPath>
+									<ExtendedTooltip name="НастроитьУточнениеСчетовExtendedTooltip" id="20"/>
+								</Button>
+								<LabelDecoration name="ПояснениеНастроитьУточнениеСчетов" id="84">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<TextColor>style:ПоясняющийТекст</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Уточнение счетов учета номенклатуры в разрезе шаблонов проводок.</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Уточнення рахунків обліку номенклатури в розрізі шаблонів проводок.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПояснениеНастроитьУточнениеСчетовКонтекстноеМеню" id="85"/>
+									<ExtendedTooltip name="ПояснениеНастроитьУточнениеСчетовРасширеннаяПодсказка" id="86"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ГруппыФинансовогоУчетаНоменклатуры</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПараметрыПодключаемыхКоманд" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры подключаемых команд</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Параметри команд, які підключаються</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="НастройкаСчетовУчета_Ссылка" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка счетов учета ссылка</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Настройка рахунків обліку посилання</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8ui:FormattedString</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьРеглУчет</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="НастройкаСчетовУчета_СчетУчета_НаСкладе" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>На складе</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>На складі</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьРеглУчет</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="НастройкаСчетовУчета_СчетУчета_ЗатратыНаПриобретениеТМЦ" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Затраты на приобретение</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Витрати на придбання</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьРеглУчет</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="НастройкаСчетовУчета_СчетУчета_НоменклатураПереданная" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переданной</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Переданої</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьРеглУчет</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="НастройкаСчетовУчета_СчетУчета_ПередачаВПереработку" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>В переработке</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>У переробці</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьРеглУчет</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="НастройкаСчетовУчета_СчетУчета_ВыручкаОтПродаж" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выручки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Виторгу</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьРеглУчет</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="НастройкаСчетовУчета_СчетУчета_СебестоимостьПродаж" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Себестоимости (ОСНО)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Вартість (OСНО)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьРеглУчет</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="НастройкаСчетовУчета_Субконто_СтатьяДоходов" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статья доходов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Стаття доходів</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ChartOfCharacteristicTypesRef.СтатьиДоходов</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьРеглУчет</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="НастройкаСчетовУчета_СчетУчета_ТМЦНаСкладах" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>На складе</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>На складі</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьРеглУчет</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="НастройкаСчетовУчета_СчетУчета_ТМЦВПроизводстве" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>В производстве</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>У виробництві</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьРеглУчет</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="НастройкаСчетовУчета_СчетУчета_ТМЦУХранителей" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>У хранителей</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>У зберігачів</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьРеглУчет</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="НастройкаСчетовУчета_СчетУчета_ТМЦКСписанию" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>К списанию</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>До списання</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьРеглУчет</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="НастройкаСчетовУчета_СчетУчета_МатериалыПринятыеВПереработку" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>На складе</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>На складі</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьРеглУчет</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="НастройкаСчетовУчета_СчетУчета_МатериалыПринятыеВПереработкуВПроизводстве" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>В производстве</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>У виробництві</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьРеглУчет</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="НастройкаСчетовУчета_СчетУчета_ТоварыНаСкладе" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>На складе</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>На складі</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьРеглУчет</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="НастройкаСчетовУчета_СчетУчета_ТоварыПереданныеНаКомиссию" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переданные на комиссию</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Передані на комісію</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьРеглУчет</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="НастройкаСчетовУчета_НастройкаСворачиваемостиГрупп" id="28">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НастройкаСчетовУчета_СчетУчета_ВычетыИзДоходов" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вычетов из доходов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Вирахувань з доходів</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьРеглУчет</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="НастройкаСчетовУчета_Субконто_СтатьяЗатрат" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статья затрат</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Стаття витрат</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ChartOfCharacteristicTypesRef.СтатьиРасходов</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьРеглУчет</Item>
+			</FunctionalOptions>
+		</Attribute>
+	</Attributes>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<Index>1</Index>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

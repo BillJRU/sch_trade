@@ -1,0 +1,938 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаЗаписатьИЗакрыть" id="17">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ЗаписатьИЗакрыть</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьИЗакрытьРасширеннаяПодсказка" id="18"/>
+			</Button>
+			<Button name="ФормаЗаписать" id="68">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Записать</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьРасширеннаяПодсказка" id="69"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаФильтр" id="100">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фильтр</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Фільтр</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаФильтрРасширеннаяПодсказка" id="101"/>
+			<ChildItems>
+				<InputField name="СезонныеГруппы" id="80">
+					<DataPath>СезонныеГруппы</DataPath>
+					<ClearButton>true</ClearButton>
+					<ContextMenu name="СезонныеГруппыКонтекстноеМеню" id="81"/>
+					<ExtendedTooltip name="СезонныеГруппыРасширеннаяПодсказка" id="82"/>
+					<Events>
+						<Event name="OnChange">СезонныеГруппыПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="СезонныеГруппыБизнесРегионов" id="97">
+					<DataPath>СезонныеГруппыБизнесРегионов</DataPath>
+					<ExtendedEdit>true</ExtendedEdit>
+					<ClearButton>true</ClearButton>
+					<ContextMenu name="СезонныеГруппыБизнесРегионовКонтекстноеМеню" id="98"/>
+					<ExtendedTooltip name="СезонныеГруппыБизнесРегионовРасширеннаяПодсказка" id="99"/>
+					<Events>
+						<Event name="OnChange">СезонныеГруппыПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="ГруппаСтраницы" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Сторінки</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="5"/>
+			<Events>
+				<Event name="OnCurrentPageChange">ГруппаСтраницыПриСменеСтраницы</Event>
+			</Events>
+			<ChildItems>
+				<Page name="ГруппаКоэффициенты" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Коэффициенты</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Коефіцієнти</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаКоэффициентыРасширеннаяПодсказка" id="7"/>
+					<ChildItems>
+						<Table name="СезонныеКоэффициенты" id="21">
+							<Representation>List</Representation>
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>СезонныеКоэффициенты</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сезонные коэффициенты</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Сезонні коефіцієнти</v8:content>
+								</v8:item>
+							</Title>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="СезонныеКоэффициентыКонтекстноеМеню" id="22">
+								<ChildItems>
+									<Button name="СезонныеКоэффициентыКонтекстноеМенюОтобратьПоГруппам" id="86">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ОтобратьПоГруппам</CommandName>
+										<ExtendedTooltip name="СезонныеКоэффициентыКонтекстноеМенюОтобратьПоГруппамРасширеннаяПодсказка" id="87"/>
+									</Button>
+								</ChildItems>
+							</ContextMenu>
+							<AutoCommandBar name="СезонныеКоэффициентыКоманднаяПанель" id="23">
+								<ChildItems>
+									<ButtonGroup name="СезонныеКоэффициентыГруппа1" id="76">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Сезонные коэффициенты группа 1</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>uk</v8:lang>
+												<v8:content>Сезонні коефіцієнти група 1</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="СезонныеКоэффициентыГруппа1РасширеннаяПодсказка" id="77"/>
+										<ChildItems>
+											<Button name="СезонныеКоэффициентыСоздать" id="72">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.Создать</CommandName>
+												<ExtendedTooltip name="СезонныеКоэффициентыСоздатьРасширеннаяПодсказка" id="73"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<Button name="СезонныеКоэффициентыСправочникСезонныеГруппыСоздать" id="78">
+										<Type>CommandBarButton</Type>
+										<Visible>false</Visible>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Catalog.СезонныеГруппы.StandardCommand.Create</CommandName>
+										<Picture>
+											<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Создать</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>uk</v8:lang>
+												<v8:content>Створити</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="СезонныеКоэффициентыСправочникСезонныеГруппыСоздатьРасширеннаяПодсказка" id="79"/>
+									</Button>
+									<Button name="СезонныеКоэффициентыИзменить" id="74">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.СезонныеКоэффициенты.StandardCommand.Change</CommandName>
+										<ExtendedTooltip name="СезонныеКоэффициентыИзменитьРасширеннаяПодсказка" id="75"/>
+									</Button>
+									<Button name="СезонныеКоэффициентыЗаполнить" id="28">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.Обновить</CommandName>
+										<ExtendedTooltip name="СезонныеКоэффициентыЗаполнитьРасширеннаяПодсказка" id="29"/>
+									</Button>
+									<Button name="СезонныеКоэффициентыРассчитатьПоСтатистике" id="39">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.РассчитатьПоСтатистикеПродаж</CommandName>
+										<ExtendedTooltip name="СезонныеКоэффициентыРассчитатьПоСтатистикеРасширеннаяПодсказка" id="40"/>
+									</Button>
+									<Button name="СезонныеКоэффициентыГрафик" id="57">
+										<Type>CommandBarButton</Type>
+										<Visible>false</Visible>
+										<CommandName>Form.Command.График</CommandName>
+										<ExtendedTooltip name="СезонныеКоэффициентыГрафикРасширеннаяПодсказка" id="58"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СезонныеКоэффициентыРасширеннаяПодсказка" id="24"/>
+							<SearchStringAddition name="СезонныеКоэффициентыСтрокаПоиска" id="88">
+								<AdditionSource>
+									<Item>СезонныеКоэффициенты</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СезонныеКоэффициентыСтрокаПоискаКонтекстноеМеню" id="89"/>
+								<ExtendedTooltip name="СезонныеКоэффициентыСтрокаПоискаРасширеннаяПодсказка" id="90"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СезонныеКоэффициентыСостояниеПросмотра" id="91">
+								<AdditionSource>
+									<Item>СезонныеКоэффициенты</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СезонныеКоэффициентыСостояниеПросмотраКонтекстноеМеню" id="92"/>
+								<ExtendedTooltip name="СезонныеКоэффициентыСостояниеПросмотраРасширеннаяПодсказка" id="93"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СезонныеКоэффициентыУправлениеПоиском" id="94">
+								<AdditionSource>
+									<Item>СезонныеКоэффициенты</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СезонныеКоэффициентыУправлениеПоискомКонтекстноеМеню" id="95"/>
+								<ExtendedTooltip name="СезонныеКоэффициентыУправлениеПоискомРасширеннаяПодсказка" id="96"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="СезонныеКоэффициентыСезоннаяГруппа" id="25">
+									<DataPath>СезонныеКоэффициенты.СезоннаяГруппа</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<TitleLocation>Top</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<FixingInTable>Left</FixingInTable>
+									<ContextMenu name="СезонныеКоэффициентыСезоннаяГруппаКонтекстноеМеню" id="26"/>
+									<ExtendedTooltip name="СезонныеКоэффициентыСезоннаяГруппаРасширеннаяПодсказка" id="27"/>
+								</InputField>
+								<InputField name="СезонныеКоэффициентыСезоннаяГруппаБизнесРегиона" id="102">
+									<DataPath>СезонныеКоэффициенты.СезоннаяГруппаБизнесРегиона</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<TitleLocation>Top</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<FixingInTable>Left</FixingInTable>
+									<ContextMenu name="СезонныеКоэффициентыСезоннаяГруппаБизнесРегионаКонтекстноеМеню" id="103"/>
+									<ExtendedTooltip name="СезонныеКоэффициентыСезоннаяГруппаБизнесРегионаРасширеннаяПодсказка" id="104"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаГрафик" id="61">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>График</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Графік</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаГрафикРасширеннаяПодсказка" id="62"/>
+					<ChildItems>
+						<UsualGroup name="Группа1" id="70">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="71"/>
+							<ChildItems>
+								<RadioButtonField name="ТипДанных" id="83">
+									<DataPath>ТипДанных</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<RadioButtonType>Tumbler</RadioButtonType>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Введенные значения</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>uk</v8:lang>
+														<v8:content>Введені значення</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">0</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Нормированные значения</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>uk</v8:lang>
+														<v8:content>Нормовані значення</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">1</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="ТипДанныхКонтекстноеМеню" id="84"/>
+									<ExtendedTooltip name="ТипДанныхРасширеннаяПодсказка" id="85"/>
+									<Events>
+										<Event name="OnChange">ТипДанныхПриИзменении</Event>
+									</Events>
+								</RadioButtonField>
+								<InputField name="ТипДиаграммы" id="65">
+									<DataPath>ТипДиаграммыКоэффициентов</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Тип диаграммы</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Тип діаграми</v8:content>
+										</v8:item>
+									</Title>
+									<Width>25</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="ТипДиаграммыКонтекстноеМеню" id="66"/>
+									<ExtendedTooltip name="ТипДиаграммыРасширеннаяПодсказка" id="67"/>
+									<Events>
+										<Event name="OnChange">ТипДиаграммыПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<ChartField name="Диаграмма" id="51">
+							<DataPath>Диаграмма</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ContextMenu name="ДиаграммаКонтекстноеМеню" id="52"/>
+							<ExtendedTooltip name="ДиаграммаРасширеннаяПодсказка" id="53"/>
+						</ChartField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="СезонныеКоэффициенты" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сезонные коэффициенты</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Сезонні коефіцієнти</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Columns>
+				<Column name="СезоннаяГруппа" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа номенклатуры</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Група номенклатури</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.СезонныеГруппы</v8:Type>
+					</Type>
+				</Column>
+				<Column name="СезоннаяГруппаБизнесРегиона" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа бизнес-региона</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Група бізнес-регіону</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.СезонныеГруппыБизнесРегионов</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Периодичность" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Периодичность</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Періодичність</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.Периодичность</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Диаграмма" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Диаграмма</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Діаграма</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.2/data/chart">d5p1:Chart</v8:Type>
+			</Type>
+			<Settings xmlns:d4p1="http://v8.1c.ru/8.2/data/chart" xsi:type="d4p1:Chart">
+				<d4p1:seriesCurId>1</d4p1:seriesCurId>
+				<d4p1:pointsCurId>0</d4p1:pointsCurId>
+				<d4p1:isSeriesDesign>true</d4p1:isSeriesDesign>
+				<d4p1:realSeriesCount>0</d4p1:realSeriesCount>
+				<d4p1:realExSeriesData>
+					<d4p1:id>1</d4p1:id>
+					<d4p1:color>auto</d4p1:color>
+					<d4p1:line width="2" gap="false">
+						<v8ui:style xsi:type="v8ui:ChartLineType">Solid</v8ui:style>
+					</d4p1:line>
+					<d4p1:marker>Auto</d4p1:marker>
+					<d4p1:text/>
+					<d4p1:strIsChanged>true</d4p1:strIsChanged>
+					<d4p1:isExpand>false</d4p1:isExpand>
+					<d4p1:isIndicator>false</d4p1:isIndicator>
+					<d4p1:colorPriority>false</d4p1:colorPriority>
+				</d4p1:realExSeriesData>
+				<d4p1:isPointsDesign>true</d4p1:isPointsDesign>
+				<d4p1:realPointCount>0</d4p1:realPointCount>
+				<d4p1:curSeries>-1</d4p1:curSeries>
+				<d4p1:curPoint>0</d4p1:curPoint>
+				<d4p1:chartType>Column3D</d4p1:chartType>
+				<d4p1:circleLabelType>None</d4p1:circleLabelType>
+				<d4p1:labelsDelimiter>, </d4p1:labelsDelimiter>
+				<d4p1:labelsLocation>Edge</d4p1:labelsLocation>
+				<d4p1:lbFormat/>
+				<d4p1:lbpFormat/>
+				<d4p1:labelsColor>#333333</d4p1:labelsColor>
+				<d4p1:labelsFont kind="AutoFont"/>
+				<d4p1:transparentLabelsBkg>true</d4p1:transparentLabelsBkg>
+				<d4p1:labelsBkgColor>auto</d4p1:labelsBkgColor>
+				<d4p1:labelsBorder width="1">
+					<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+				</d4p1:labelsBorder>
+				<d4p1:labelsBorderColor>auto</d4p1:labelsBorderColor>
+				<d4p1:circleExpandMode>None</d4p1:circleExpandMode>
+				<d4p1:chart3Dcrd>SouthWest</d4p1:chart3Dcrd>
+				<d4p1:title/>
+				<d4p1:isShowTitle>true</d4p1:isShowTitle>
+				<d4p1:isShowLegend>true</d4p1:isShowLegend>
+				<d4p1:ttlBorder width="0">
+					<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+				</d4p1:ttlBorder>
+				<d4p1:ttlBorderColor>#A0A0A0</d4p1:ttlBorderColor>
+				<d4p1:lgBorder width="0">
+					<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+				</d4p1:lgBorder>
+				<d4p1:lgBorderColor>#A0A0A0</d4p1:lgBorderColor>
+				<d4p1:chBorder width="0">
+					<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+				</d4p1:chBorder>
+				<d4p1:chBorderColor>#A0A0A0</d4p1:chBorderColor>
+				<d4p1:transparent>false</d4p1:transparent>
+				<d4p1:bkgColor>#FFFFFF</d4p1:bkgColor>
+				<d4p1:isTrnspTtl>false</d4p1:isTrnspTtl>
+				<d4p1:ttlColor>#FFFFFF</d4p1:ttlColor>
+				<d4p1:isTrnspLeg>false</d4p1:isTrnspLeg>
+				<d4p1:legColor>#FFFFFF</d4p1:legColor>
+				<d4p1:isTrnspCh>false</d4p1:isTrnspCh>
+				<d4p1:chColor>#FFFFFF</d4p1:chColor>
+				<d4p1:ttlTxtColor>#333333</d4p1:ttlTxtColor>
+				<d4p1:legTxtColor>#333333</d4p1:legTxtColor>
+				<d4p1:chTxtColor>#333333</d4p1:chTxtColor>
+				<d4p1:ttlFont kind="AutoFont"/>
+				<d4p1:legFont kind="AutoFont"/>
+				<d4p1:chFont kind="AutoFont"/>
+				<d4p1:isShowScale>true</d4p1:isShowScale>
+				<d4p1:isShowScaleVL>true</d4p1:isShowScaleVL>
+				<d4p1:isShowSeriesScale>true</d4p1:isShowSeriesScale>
+				<d4p1:isShowPointsScale>true</d4p1:isShowPointsScale>
+				<d4p1:isShowValuesScale>true</d4p1:isShowValuesScale>
+				<d4p1:vsFormat/>
+				<d4p1:xLabelsOrientation>Auto</d4p1:xLabelsOrientation>
+				<d4p1:scaleLine width="1" gap="false">
+					<v8ui:style xsi:type="v8ui:ChartLineType">Solid</v8ui:style>
+				</d4p1:scaleLine>
+				<d4p1:scaleColor>#A9A9A9</d4p1:scaleColor>
+				<d4p1:isAutoSeriesName>true</d4p1:isAutoSeriesName>
+				<d4p1:isAutoPointName>true</d4p1:isAutoPointName>
+				<d4p1:maxMode>NotDefined</d4p1:maxMode>
+				<d4p1:maxSeries>4</d4p1:maxSeries>
+				<d4p1:maxSeriesPrc>30</d4p1:maxSeriesPrc>
+				<d4p1:spaceMode>Half</d4p1:spaceMode>
+				<d4p1:baseVal>0</d4p1:baseVal>
+				<d4p1:isOutline>false</d4p1:isOutline>
+				<d4p1:realPiePoint>0</d4p1:realPiePoint>
+				<d4p1:realStockSeries>0</d4p1:realStockSeries>
+				<d4p1:isLight>true</d4p1:isLight>
+				<d4p1:isGradient>false</d4p1:isGradient>
+				<d4p1:isTransposition>false</d4p1:isTransposition>
+				<d4p1:hideBaseVal>false</d4p1:hideBaseVal>
+				<d4p1:dataTable>false</d4p1:dataTable>
+				<d4p1:dtVerLines>true</d4p1:dtVerLines>
+				<d4p1:dtHorLines>true</d4p1:dtHorLines>
+				<d4p1:dtHAlign>Right</d4p1:dtHAlign>
+				<d4p1:dtFormat/>
+				<d4p1:dtKeys>true</d4p1:dtKeys>
+				<d4p1:paletteKind>Auto</d4p1:paletteKind>
+				<d4p1:animation>Auto</d4p1:animation>
+				<d4p1:rebuildTime>0</d4p1:rebuildTime>
+				<d4p1:isTransposed>false</d4p1:isTransposed>
+				<d4p1:autoTransposition>false</d4p1:autoTransposition>
+				<d4p1:legendScrollEnable>false</d4p1:legendScrollEnable>
+				<d4p1:surfaceColor>#A90000</d4p1:surfaceColor>
+				<d4p1:radarScaleType>Circle</d4p1:radarScaleType>
+				<d4p1:gaugeValuesPresentation>Needle</d4p1:gaugeValuesPresentation>
+				<d4p1:gaugeQualityBands useTextStr="false" useTooltipStr="false"/>
+				<d4p1:beginGaugeAngle>0</d4p1:beginGaugeAngle>
+				<d4p1:endGaugeAngle>180</d4p1:endGaugeAngle>
+				<d4p1:gaugeThickness>5</d4p1:gaugeThickness>
+				<d4p1:gaugeLabelsLocation>InsideScale</d4p1:gaugeLabelsLocation>
+				<d4p1:gaugeLabelsArcDirection>false</d4p1:gaugeLabelsArcDirection>
+				<d4p1:gaugeBushThickness>4</d4p1:gaugeBushThickness>
+				<d4p1:gaugeBushColor>#A9A9A9</d4p1:gaugeBushColor>
+				<d4p1:autoMaxValue>true</d4p1:autoMaxValue>
+				<d4p1:userMaxValue>0</d4p1:userMaxValue>
+				<d4p1:autoMinValue>true</d4p1:autoMinValue>
+				<d4p1:userMinValue>0</d4p1:userMinValue>
+				<d4p1:elementsIsInit>true</d4p1:elementsIsInit>
+				<d4p1:titleIsInit>true</d4p1:titleIsInit>
+				<d4p1:legendIsInit>true</d4p1:legendIsInit>
+				<d4p1:chartIsInit>true</d4p1:chartIsInit>
+				<d4p1:elementsChart>
+					<d4p1:left>0</d4p1:left>
+					<d4p1:right>0.1672</d4p1:right>
+					<d4p1:top>0</d4p1:top>
+					<d4p1:bottom>0</d4p1:bottom>
+				</d4p1:elementsChart>
+				<d4p1:elementsLegend>
+					<d4p1:left>0.8328</d4p1:left>
+					<d4p1:right>0</d4p1:right>
+					<d4p1:top>0.047</d4p1:top>
+					<d4p1:bottom>0</d4p1:bottom>
+				</d4p1:elementsLegend>
+				<d4p1:elementsTitle>
+					<d4p1:left>0.8328</d4p1:left>
+					<d4p1:right>0</d4p1:right>
+					<d4p1:top>0</d4p1:top>
+					<d4p1:bottom>0.953</d4p1:bottom>
+				</d4p1:elementsTitle>
+				<d4p1:borderColor>#A0A0A0</d4p1:borderColor>
+				<d4p1:border width="1">
+					<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+				</d4p1:border>
+				<d4p1:dataSourceDescription/>
+				<d4p1:isDataSourceMode>false</d4p1:isDataSourceMode>
+				<d4p1:isRandomizedNewValues>true</d4p1:isRandomizedNewValues>
+				<d4p1:splineStrain>95</d4p1:splineStrain>
+				<d4p1:translucencePercent>0</d4p1:translucencePercent>
+				<d4p1:funnelNeckHeightPercent>0</d4p1:funnelNeckHeightPercent>
+				<d4p1:funnelNeckWidthPercent>0</d4p1:funnelNeckWidthPercent>
+				<d4p1:funnelGapSumPercent>0</d4p1:funnelGapSumPercent>
+				<d4p1:multiStageLinkLine width="1" gap="false">
+					<v8ui:style xsi:type="v8ui:ChartLineType">Solid</v8ui:style>
+				</d4p1:multiStageLinkLine>
+				<d4p1:multiStageLinkColor>#000000</d4p1:multiStageLinkColor>
+				<d4p1:valuesAxis/>
+				<d4p1:pointsAxis/>
+				<d4p1:valuesScale>
+					<d4p1:titleArea>
+						<d4p1:font kind="AutoFont"/>
+						<d4p1:textColor>auto</d4p1:textColor>
+						<d4p1:backColor>auto</d4p1:backColor>
+						<d4p1:border width="1">
+							<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+						</d4p1:border>
+						<d4p1:borderColor>auto</d4p1:borderColor>
+					</d4p1:titleArea>
+					<d4p1:gridLinesShowMode>Show</d4p1:gridLinesShowMode>
+				</d4p1:valuesScale>
+			</Settings>
+		</Attribute>
+		<Attribute name="ТипДиаграммыКоэффициентов" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип диаграммы коэффициентов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Тип діаграми коефіцієнтів</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ТипыДиаграммПоказателей</v8:Type>
+			</Type>
+			<Save>
+				<Field>ТипДиаграммыКоэффициентов</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="СезонныеГруппы" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группы номенклатуры</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Групи номенклатури</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Save>
+				<Field>СезонныеГруппы</Field>
+			</Save>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.СезонныеГруппы</v8:Type>
+			</Settings>
+		</Attribute>
+		<Attribute name="ТипДанных" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип данных</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Тип даних</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИдентификаторЗадания" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор задания</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Ідентифікатор завдання</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:UUID</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресХранилища" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес хранилища</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Адреса сховища</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресПользовательскихНастроек" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес пользовательских настроек</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Адреса настройок користувача</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СезонныеГруппыБизнесРегионов" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группы бизнес-регионов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Групи бізнес-регіонів</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Save>
+				<Field>СезонныеГруппыБизнесРегионов</Field>
+			</Save>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.СезонныеГруппыБизнесРегионов</v8:Type>
+			</Settings>
+		</Attribute>
+		<Attribute name="КоличествоГруппБизнесРегионов" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество групп бизнес регионов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Кількість груп бізнес регіонів</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Обновить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Оновити</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Оновити</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Обновить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗаписатьИЗакрыть" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать и закрыть</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Записати і закрити</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать и закрыть</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Записати і закрити</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаписатьИЗакрыть</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Записать" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Записати</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Применить изменения сезонных коэффициентов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Застосувати зміни сезонних коефіцієнтів</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Ctrl+S</Shortcut>
+			<Picture>
+				<xr:Ref>StdPicture.Write</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Записать</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="РассчитатьПоСтатистикеПродаж" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рассчитать по статистике продаж</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Розрахувати за статистикою продажів</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рассчитать по статистике продаж</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Розрахувати за статистикою продажів</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РассчитатьПоСтатистике</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="График" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>График</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Графік</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>График</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Графік</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>График</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Создать" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Створити</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать новый элемент списка</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Створити новий елемент списку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Создать</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОтобратьПоГруппам" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отобрать по группам</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Відібрати за групами</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отобрать по группам</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Відібрати за групами</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.DataCompositionFilter</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОтобратьПоГруппам</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ТолькоПросмотр">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="СезонныеГруппы">
+			<Type/>
+		</Parameter>
+	</Parameters>
+</Form>

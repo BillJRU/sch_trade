@@ -1,0 +1,966 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Безналичные платежи: к поступлению</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>uk</v8:lang>
+			<v8:content>Безготівкові платежі: до надходження</v8:content>
+		</v8:item>
+	</Title>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<SaveDataInSettings>UseList</SaveDataInSettings>
+	<AutoTitle>false</AutoTitle>
+	<AutoURL>false</AutoURL>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnLoadDataFromSettingsAtServer">ПриЗагрузкеДанныхИзНастроекНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Шапка" id="150">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+			</Title>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ШапкаРасширеннаяПодсказка" id="151"/>
+			<ChildItems>
+				<InputField name="БанковскийСчетОтбор" id="152">
+					<DataPath>БанковскийСчетОтбор</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<MaxWidth>28</MaxWidth>
+					<ClearButton>true</ClearButton>
+					<OpenButton>false</OpenButton>
+					<QuickChoice>false</QuickChoice>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Банковский счет</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Банківський рахунок</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="БанковскийСчетОтборКонтекстноеМеню" id="153"/>
+					<ExtendedTooltip name="БанковскийСчетОтборРасширеннаяПодсказка" id="154"/>
+					<Events>
+						<Event name="OnChange">БанковскийСчетОтборПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="КонтрагентОтбор" id="155">
+					<DataPath>КонтрагентПредставление</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<MaxWidth>28</MaxWidth>
+					<ClearButton>true</ClearButton>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрагент</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Контрагент</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="КонтрагентОтборКонтекстноеМеню" id="156"/>
+					<ExtendedTooltip name="КонтрагентОтборРасширеннаяПодсказка" id="157"/>
+					<Events>
+						<Event name="OnChange">КонтрагентОтборПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="КПоступлениюОтборы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>К поступлению отборы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>До надходження відбори</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="КПоступлениюОтборыРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<Button name="ЗаказыКПоступлениюПринятьОплату" id="3">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Form.Command.СоздатьПоступлениеПоРаспоряжению</CommandName>
+					<Picture>
+						<xr:Ref>CommonPicture.ОформитьПоРаспоряжению</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Оформить поступление</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Оформити надходження</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ЗаказыКПоступлениюПринятьОплатуРасширеннаяПодсказка" id="4"/>
+				</Button>
+				<InputField name="ДатаКПоступлению" id="5">
+					<DataPath>ДатаКПоступлению</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>До</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>До</v8:content>
+						</v8:item>
+					</Title>
+					<ClearButton>true</ClearButton>
+					<ContextMenu name="ДатаКПоступлениюКонтекстноеМеню" id="6"/>
+					<ExtendedTooltip name="ДатаКПоступлениюРасширеннаяПодсказка" id="7"/>
+					<Events>
+						<Event name="OnChange">ДатаКПоступлениюПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="СписокОперацийКПоступлениюОтбор" id="8">
+					<DataPath>СписокОперацийПоступленияПредставление</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отбор по основаниям платежа</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Відбір по підставам платежу</v8:content>
+						</v8:item>
+					</ToolTip>
+					<MaxWidth>30</MaxWidth>
+					<DropListButton>true</DropListButton>
+					<ChoiceButton>true</ChoiceButton>
+					<ClearButton>true</ClearButton>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основание платежа</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Підстава платежу</v8:content>
+						</v8:item>
+					</InputHint>
+					<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+					<ContextMenu name="СписокОперацийКПоступлениюОтборКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="СписокОперацийКПоступлениюОтборРасширеннаяПодсказка" id="10"/>
+					<Events>
+						<Event name="StartChoice">СписокОперацийКПоступлениюОтборНачалоВыбора</Event>
+						<Event name="Clearing">СписокОперацийКПоступлениюОтборОчистка</Event>
+						<Event name="ChoiceProcessing">СписокОперацийКПоступлениюОтборОбработкаВыбора</Event>
+					</Events>
+				</InputField>
+				<CommandBar name="ГруппаКоманднаяПанельКПоступлению" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Командная панель к поступлению</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Командна панель до надходження</v8:content>
+						</v8:item>
+					</Title>
+					<CommandSource>Item.ЗаказыКПоступлению</CommandSource>
+					<ExtendedTooltip name="ГруппаКоманднаяПанельКПоступлениюРасширеннаяПодсказка" id="12"/>
+					<ChildItems>
+						<Button name="ЗаказыКПоступлениюИзменитьФорму" id="158">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+							<ExtendedTooltip name="ЗаказыКПоступлениюИзменитьФормуРасширеннаяПодсказка" id="159"/>
+						</Button>
+						<Button name="ЗаказыКПоступлениюСправка" id="160">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.StandardCommand.Help</CommandName>
+							<ExtendedTooltip name="ЗаказыКПоступлениюСправкаРасширеннаяПодсказка" id="161"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ЗаказыКПоступлению" id="13">
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>ЗаказыКПоступлению</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказы к поступлению</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Замовлення до надходження</v8:content>
+				</v8:item>
+			</Title>
+			<CommandSet>
+				<ExcludedCommand>Change</ExcludedCommand>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>Create</ExcludedCommand>
+				<ExcludedCommand>Delete</ExcludedCommand>
+			</CommandSet>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<ContextMenu name="ЗаказыКПоступлениюКонтекстноеМеню" id="14">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="ЗаказыКПоступлениюКонтекстноеМенюПринятьОплату" id="74">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.СоздатьПоступлениеПоРаспоряжению</CommandName>
+						<Picture>
+							<xr:Ref>CommonPicture.ОформитьПоРаспоряжению</xr:Ref>
+							<xr:LoadTransparent>false</xr:LoadTransparent>
+						</Picture>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Оформить поступление</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
+								<v8:content>Оформити надходження</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ЗаказыКПоступлениюКонтекстноеМенюПринятьОплатуРасширеннаяПодсказка" id="75"/>
+					</Button>
+					<ButtonGroup name="ЗаказыКПоступлениюКонтекстноеМенюСтандартныеКоманды" id="76">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Заказы к поступлению контекстное меню стандартные команды</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
+								<v8:content>Замовлення до надходження контекстне меню стандартні команди</v8:content>
+							</v8:item>
+						</Title>
+						<CommandSource>Item.ЗаказыКПоступлению</CommandSource>
+						<ExtendedTooltip name="ЗаказыКПоступлениюКонтекстноеМенюСтандартныеКомандыРасширеннаяПодсказка" id="77"/>
+					</ButtonGroup>
+				</ChildItems>
+			</ContextMenu>
+			<AutoCommandBar name="ЗаказыКПоступлениюКоманднаяПанель" id="15">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ЗаказыКПоступлениюРасширеннаяПодсказка" id="16"/>
+			<SearchStringAddition name="ЗаказыКПоступлениюСтрокаПоиска" id="17">
+				<AdditionSource>
+					<Item>ЗаказыКПоступлению</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗаказыКПоступлениюСтрокаПоискаКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="ЗаказыКПоступлениюСтрокаПоискаРасширеннаяПодсказка" id="19"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ЗаказыКПоступлениюСостояниеПросмотра" id="20">
+				<AdditionSource>
+					<Item>ЗаказыКПоступлению</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗаказыКПоступлениюСостояниеПросмотраКонтекстноеМеню" id="21"/>
+				<ExtendedTooltip name="ЗаказыКПоступлениюСостояниеПросмотраРасширеннаяПодсказка" id="22"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ЗаказыКПоступлениюУправлениеПоиском" id="23">
+				<AdditionSource>
+					<Item>ЗаказыКПоступлению</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗаказыКПоступлениюУправлениеПоискомКонтекстноеМеню" id="24"/>
+				<ExtendedTooltip name="ЗаказыКПоступлениюУправлениеПоискомРасширеннаяПодсказка" id="25"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">ВспомогательныйСписокВыбор</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="ЗаказыКПоступлениюДатаПлатежа" id="102">
+					<DataPath>ЗаказыКПоступлению.ДатаПлатежа</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата платежа</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Дата платежу</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЗаказыКПоступлениюДатаПлатежаКонтекстноеМеню" id="103"/>
+					<ExtendedTooltip name="ЗаказыКПоступлениюДатаПлатежаРасширеннаяПодсказка" id="104"/>
+				</LabelField>
+				<LabelField name="ЗаказыКПоступлениюПлательщик" id="105">
+					<DataPath>ЗаказыКПоступлению.Плательщик</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Плательщик</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Платник</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЗаказыКПоступлениюПлательщикКонтекстноеМеню" id="106"/>
+					<ExtendedTooltip name="ЗаказыКПоступлениюПлательщикРасширеннаяПодсказка" id="107"/>
+				</LabelField>
+				<LabelField name="ЗаказыКПоступлениюСуммаКОплате" id="147">
+					<DataPath>ЗаказыКПоступлению.СуммаКОплате</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>К оплате</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>До оплати</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЗаказыКПоступлениюСуммаКОплатеКонтекстноеМеню" id="148"/>
+					<ExtendedTooltip name="ЗаказыКПоступлениюСуммаКОплатеРасширеннаяПодсказка" id="149"/>
+				</LabelField>
+				<LabelField name="ЗаказыКПоступлениюСуммаДокумента" id="144">
+					<DataPath>ЗаказыКПоступлению.СуммаДокумента</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма документа</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Сума документа</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЗаказыКПоступлениюСуммаДокументаКонтекстноеМеню" id="145"/>
+					<ExtendedTooltip name="ЗаказыКПоступлениюСуммаДокументаРасширеннаяПодсказка" id="146"/>
+				</LabelField>
+				<LabelField name="ЗаказыКПоступлениюВалюта" id="141">
+					<DataPath>ЗаказыКПоступлению.Валюта</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Валюта</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Валюта</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЗаказыКПоступлениюВалютаКонтекстноеМеню" id="142"/>
+					<ExtendedTooltip name="ЗаказыКПоступлениюВалютаРасширеннаяПодсказка" id="143"/>
+				</LabelField>
+				<LabelField name="ЗаказыКПоступлениюТип" id="138">
+					<DataPath>ЗаказыКПоступлению.ТипОбъектаОплаты</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основание</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Підстава</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЗаказыКПоступлениюТипКонтекстноеМеню" id="139"/>
+					<ExtendedTooltip name="ЗаказыКПоступлениюТипРасширеннаяПодсказка" id="140"/>
+				</LabelField>
+				<LabelField name="ЗаказыКПоступлениюНомер" id="135">
+					<DataPath>ЗаказыКПоступлению.Номер</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Номер</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЗаказыКПоступлениюНомерКонтекстноеМеню" id="136"/>
+					<ExtendedTooltip name="ЗаказыКПоступлениюНомерРасширеннаяПодсказка" id="137"/>
+				</LabelField>
+				<LabelField name="ЗаказыКПоступлениюДата" id="132">
+					<DataPath>ЗаказыКПоступлению.Дата</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Дата</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЗаказыКПоступлениюДатаКонтекстноеМеню" id="133"/>
+					<ExtendedTooltip name="ЗаказыКПоступлениюДатаРасширеннаяПодсказка" id="134"/>
+				</LabelField>
+				<LabelField name="ЗаказыКПоступлениюХозяйственнаяОперация" id="129">
+					<DataPath>ЗаказыКПоступлению.ХозяйственнаяОперация</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Операция</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Операція</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЗаказыКПоступлениюХозяйственнаяОперацияКонтекстноеМеню" id="130"/>
+					<ExtendedTooltip name="ЗаказыКПоступлениюХозяйственнаяОперацияРасширеннаяПодсказка" id="131"/>
+				</LabelField>
+				<LabelField name="ЗаказыКПоступлениюСтатьяДвиженияДенежныхСредств" id="126">
+					<DataPath>ЗаказыКПоступлению.СтатьяДвиженияДенежныхСредств</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статья ДДС</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Стаття РГК</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЗаказыКПоступлениюСтатьяДвиженияДенежныхСредствКонтекстноеМеню" id="127"/>
+					<ExtendedTooltip name="ЗаказыКПоступлениюСтатьяДвиженияДенежныхСредствРасширеннаяПодсказка" id="128"/>
+				</LabelField>
+				<LabelField name="ЗаказыКПоступлениюПодразделение" id="123">
+					<DataPath>ЗаказыКПоступлению.Подразделение</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подразделение</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Підрозділ</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЗаказыКПоступлениюПодразделениеКонтекстноеМеню" id="124"/>
+					<ExtendedTooltip name="ЗаказыКПоступлениюПодразделениеРасширеннаяПодсказка" id="125"/>
+				</LabelField>
+				<LabelField name="ЗаказыКПоступлениюНаправлениеДеятельности" id="120">
+					<DataPath>ЗаказыКПоступлению.НаправлениеДеятельности</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Направление деятельности</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Напрям діяльності</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЗаказыКПоступлениюНаправлениеДеятельностиКонтекстноеМеню" id="121"/>
+					<ExtendedTooltip name="ЗаказыКПоступлениюНаправлениеДеятельностиРасширеннаяПодсказка" id="122"/>
+				</LabelField>
+				<LabelField name="ЗаказыКПоступлениюБанковскийСчет" id="117">
+					<DataPath>ЗаказыКПоступлению.БанковскийСчет</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Банковский счет</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Банківський рахунок</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЗаказыКПоступлениюБанковскийСчетКонтекстноеМеню" id="118"/>
+					<ExtendedTooltip name="ЗаказыКПоступлениюБанковскийСчетРасширеннаяПодсказка" id="119"/>
+				</LabelField>
+				<LabelField name="ЗаказыКПоступлениюОтветственный" id="114">
+					<DataPath>ЗаказыКПоступлению.Ответственный</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ответственный</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Відповідальний</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЗаказыКПоступлениюОтветственныйКонтекстноеМеню" id="115"/>
+					<ExtendedTooltip name="ЗаказыКПоступлениюОтветственныйРасширеннаяПодсказка" id="116"/>
+				</LabelField>
+				<LabelField name="ЗаказыКПоступлениюОрганизация" id="111">
+					<DataPath>ЗаказыКПоступлению.Организация</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Організація</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЗаказыКПоступлениюОрганизацияКонтекстноеМеню" id="112"/>
+					<ExtendedTooltip name="ЗаказыКПоступлениюОрганизацияРасширеннаяПодсказка" id="113"/>
+				</LabelField>
+				<LabelField name="ЗаказыКПоступлениюСсылка" id="108">
+					<DataPath>ЗаказыКПоступлению.Ссылка</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ссылка</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Посилання</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЗаказыКПоступлениюСсылкаКонтекстноеМеню" id="109"/>
+					<ExtendedTooltip name="ЗаказыКПоступлениюСсылкаРасширеннаяПодсказка" id="110"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+		<UsualGroup name="КПоступлениюИтоги" id="78">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>К поступлению итоги</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>До надходження підсумки</v8:content>
+				</v8:item>
+			</Title>
+			<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="КПоступлениюИтогиРасширеннаяПодсказка" id="79"/>
+			<ChildItems>
+				<InputField name="КПоступлениюВсего" id="80">
+					<DataPath>КПоступлениюВсего</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>К поступлению</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>До надходження</v8:content>
+						</v8:item>
+					</Title>
+					<Width>10</Width>
+					<ContextMenu name="КПоступлениюВсегоКонтекстноеМеню" id="81"/>
+					<ExtendedTooltip name="КПоступлениюВсегоРасширеннаяПодсказка" id="82"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Подвал" id="83">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подвал</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Підвал</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ПодвалРасширеннаяПодсказка" id="84"/>
+			<ChildItems>
+				<LabelDecoration name="НадписьБанковскийСчет" id="85">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Height>1</Height>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;Счет не задан&gt;</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>&lt;Рахунок не заданий&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НадписьБанковскийСчетКонтекстноеМеню" id="86"/>
+					<ExtendedTooltip name="НадписьБанковскийСчетРасширеннаяПодсказка" id="87"/>
+				</LabelDecoration>
+				<LabelDecoration name="Декорация3" id="88">
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="Декорация3КонтекстноеМеню" id="89"/>
+					<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="90"/>
+				</LabelDecoration>
+				<UsualGroup name="ГруппаИтоги" id="91">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Итоги</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Підсумки</v8:content>
+						</v8:item>
+					</Title>
+					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаИтогиРасширеннаяПодсказка" id="92"/>
+					<ChildItems>
+						<InputField name="ТекущийОстаток" id="93">
+							<DataPath>ТекущийОстаток</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Остаток на счете</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Залишок на рахунку</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Left</TitleLocation>
+							<Width>10</Width>
+							<ContextMenu name="ТекущийОстатокКонтекстноеМеню" id="94"/>
+							<ExtendedTooltip name="ТекущийОстатокРасширеннаяПодсказка" id="95"/>
+						</InputField>
+						<InputField name="КСписаниюВсего" id="96">
+							<DataPath>КСписаниюВсего</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<TitleLocation>Left</TitleLocation>
+							<Width>10</Width>
+							<ContextMenu name="КСписаниюВсегоКонтекстноеМеню" id="97"/>
+							<ExtendedTooltip name="КСписаниюВсегоРасширеннаяПодсказка" id="98"/>
+						</InputField>
+						<InputField name="ДоступноВсего" id="99">
+							<DataPath>ДоступноВсего</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<TitleLocation>Left</TitleLocation>
+							<Width>10</Width>
+							<ContextMenu name="ДоступноВсегоКонтекстноеМеню" id="100"/>
+							<ExtendedTooltip name="ДоступноВсегоРасширеннаяПодсказка" id="101"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ЖурналДокументовБезналичныеПлатежи</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ЗаказыКПоступлению" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказы к поступлению</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Замовлення до надходження</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>~ЗаказыКПоступлению.Контрагент</Field>
+				<Field>~ЗаказыКПоступлению.ПлательщикПредставление</Field>
+				<Field>ЗаказыКПоступлению.БанковскийСчет</Field>
+				<Field>ЗаказыКПоступлению.Валюта</Field>
+				<Field>ЗаказыКПоступлению.КонтрагентПредставление</Field>
+				<Field>ЗаказыКПоступлению.Организация</Field>
+				<Field>ЗаказыКПоступлению.Плательщик</Field>
+				<Field>ЗаказыКПоступлению.Ссылка</Field>
+				<Field>ЗаказыКПоступлению.СуммаКОплате</Field>
+				<Field>ЗаказыКПоступлению.ХозяйственнаяОперация</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ГрафикПлатежей.ДатаПлатежа КАК ДатаПлатежа,
+	ГрафикПлатежей.ПлательщикПолучатель КАК Плательщик,
+	ГрафикПлатежей.ПлательщикПолучатель.Наименование КАК КонтрагентПредставление,
+	ГрафикПлатежей.Сумма КАК СуммаКОплате,
+	ГрафикПлатежей.Валюта КАК Валюта,
+	
+	ГрафикПлатежей.Номер КАК Номер,
+	ГрафикПлатежей.Дата КАК Дата,
+	ГрафикПлатежей.ТипОбъектаОплаты КАК ТипОбъектаОплаты,
+	ГрафикПлатежей.СуммаДокумента КАК СуммаДокумента,
+	ГрафикПлатежей.БанковскийСчетКасса КАК БанковскийСчет,
+	
+	ГрафикПлатежей.ХозяйственнаяОперация КАК ХозяйственнаяОперация,
+	ГрафикПлатежей.СтатьяДвиженияДенежныхСредств КАК СтатьяДвиженияДенежныхСредств,
+	ГрафикПлатежей.Подразделение КАК Подразделение,
+	ГрафикПлатежей.НаправлениеДеятельности КАК НаправлениеДеятельности,
+	ГрафикПлатежей.Ответственный КАК Ответственный,
+	
+	ГрафикПлатежей.Организация КАК Организация,
+	ГрафикПлатежей.ДатаАктуальностиГрафика КАК ДатаАктуальностиГрафика,
+	ГрафикПлатежей.ОбластьПланирования КАК ОбластьПланирования,
+	
+	ГрафикПлатежей.ОбъектОплаты КАК Ссылка
+ИЗ
+	РегистрСведений.ГрафикПлатежей КАК ГрафикПлатежей
+	
+ГДЕ
+	ГрафикПлатежей.ПоступлениеСписание = ЗНАЧЕНИЕ(Перечисление.ТипыДвиженияДенежныхСредств.Поступление)
+	И ГрафикПлатежей.ДатаПлатежа &lt;= &amp;ДатаПлатежа
+	И ГрафикПлатежей.ОбластьПланирования В (
+		ЗНАЧЕНИЕ(Перечисление.ОбластиПланированияПлатежей.РасчетыСКлиентами),
+		ЗНАЧЕНИЕ(Перечисление.ОбластиПланированияПлатежей.ВозвратыОтПоставщиков),
+		ЗНАЧЕНИЕ(Перечисление.ОбластиПланированияПлатежей.ДенежныеСредстваВПути),
+		ЗНАЧЕНИЕ(Перечисление.ОбластиПланированияПлатежей.КредитыИлиЗаймыПолученные),
+		ЗНАЧЕНИЕ(Перечисление.ОбластиПланированияПлатежей.ЗаймыВыданные),
+		ЗНАЧЕНИЕ(Перечисление.ОбластиПланированияПлатежей.Депозиты)
+		)
+	И ГрафикПлатежей.ФормаОплаты В (
+		ЗНАЧЕНИЕ(Перечисление.ФормыОплаты.Безналичная),
+		ЗНАЧЕНИЕ(Перечисление.ФормыОплаты.ПустаяСсылка))</QueryText>
+				<MainTable>InformationRegister.ГрафикПлатежей</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>ДатаПлатежа</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="БанковскийСчетОтбор" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Банковский счет</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Банківський рахунок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.БанковскиеСчетаОрганизаций</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КонтрагентПредставление" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Контрагент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаКПоступлению" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата к поступлению</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Дата до надходження</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+			<Save>
+				<Field>ДатаКПоступлению</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="СписокОперацийПоступления" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список операций поступления</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Список операцій надходження</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Save>
+				<Field>СписокОперацийПоступления</Field>
+			</Save>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+		<Attribute name="СписокОперацийПоступленияПредставление" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основание платежа</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Підстава платежу</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущийОстаток" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий остаток</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Поточний залишок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаЛюбогоЗнака</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="КСписаниюВсего" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>К списанию</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>До списання</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаЛюбогоЗнака</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="ДоступноВсего" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доступно</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Доступно</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаЛюбогоЗнака</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="КПоступлениюВсего" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>К поступлению всего</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>До надходження всього</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаЛюбогоЗнака</v8:TypeSet>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СоздатьПоступлениеПоРаспоряжению" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать поступление по распоряжению</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Створити надходження за розпорядженням</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать поступление по распоряжению</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Створити надходження за розпорядженням</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьПоступлениеПоРаспоряжению</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

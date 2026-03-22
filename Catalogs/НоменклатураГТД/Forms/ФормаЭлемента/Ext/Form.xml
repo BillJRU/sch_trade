@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Владелец" id="1">
+			<DataPath>Объект.Owner</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<ContextMenu name="ВладелецКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ВладелецExtendedTooltip" id="12"/>
+		</InputField>
+		<InputField name="КодУКТВЭД" id="3">
+			<DataPath>Объект.КодУКТВЭД</DataPath>
+			<ChoiceParameters>
+				<app:item name="СоздатьНовый">
+					<app:value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation/>
+						<Value xsi:type="xs:boolean">true</Value>
+					</app:value>
+				</app:item>
+			</ChoiceParameters>
+			<ContextMenu name="КодУКТВЭДКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="КодУКТВЭДExtendedTooltip" id="13"/>
+			<Events>
+				<Event name="OnChange">КодУКТВЭДПриИзменении</Event>
+			</Events>
+		</InputField>
+		<UsualGroup name="ГруппаНомерГТД" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа номер ГТД</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Група номер ВМД</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа номер ГТД</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Група номер ВМД</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНомерГТДExtendedTooltip" id="14"/>
+			<ChildItems>
+				<InputField name="НомерГТД" id="7">
+					<DataPath>Объект.НомерГТД</DataPath>
+					<ClearButton>true</ClearButton>
+					<ChoiceParameters>
+						<app:item name="СоздатьНовый">
+							<app:value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation/>
+								<Value xsi:type="xs:boolean">true</Value>
+							</app:value>
+						</app:item>
+					</ChoiceParameters>
+					<ContextMenu name="НомерГТДКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="НомерГТДExtendedTooltip" id="15"/>
+					<Events>
+						<Event name="OnChange">НомерГТДПриИзменении</Event>
+					</Events>
+				</InputField>
+				<LabelField name="НомерГТДДата" id="10">
+					<DataPath>Объект.НомерГТД.Дата</DataPath>
+					<TitleTextColor>style:ПоясняющийТекст</TitleTextColor>
+					<TitleLocation>None</TitleLocation>
+					<TitleHeight>1</TitleHeight>
+					<Width>9</Width>
+					<Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ='от dd.MM.yyyy'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>ДФ='від dd.MM.yyyy'</v8:content>
+						</v8:item>
+					</Format>
+					<TextColor>style:ПоясняющийТекст</TextColor>
+					<ContextMenu name="НомерГТДДатаКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="НомерГТДДатаExtendedTooltip" id="16"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Комментарий" id="5">
+			<DataPath>Объект.Комментарий</DataPath>
+			<TitleLocation>Left</TitleLocation>
+			<MultiLine>true</MultiLine>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="КомментарийExtendedTooltip" id="17"/>
+			<Events>
+				<Event name="OnChange">КомментарийПриИзменении</Event>
+			</Events>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.НоменклатураГТД</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Ссылка_КодУКТВЭД" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ссылка код УКТВЭД</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Посилання код УКТЗЕД</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.КлассификаторУКТВЭД</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Ссылка_НомерГТД" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ссылка номер ГТД</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Посилання номер ВМД</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.НомераГТД</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Объект_КодУКТВЭД" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект код УКТВЭД</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Об'єкт код УКТЗЕД</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.КлассификаторУКТВЭД</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Объект_НомерГТД" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект номер ГТД</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Об'єкт номер ВМД</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.НомераГТД</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Объект_Комментарий" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект комментарий</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Об'єкт коментар</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>Catalog.НоменклатураГТД.Command.ПоискИИсправлениеНекорректныхНаименований</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</NavigationPanel>
+		<CommandBar>
+			<Item>
+				<Command>Catalog.НоменклатураГТД.Command.ПоискИИсправлениеНекорректныхНаименований</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</CommandBar>
+	</CommandInterface>
+</Form>

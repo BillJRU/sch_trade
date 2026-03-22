@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<LabelDecoration name="ДекорацияПредупреждение" id="24">
+			<TextColor>style:SpecialTextColor</TextColor>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Внимание! 
+С 2021 года допустимый доход плательщика единого налога рассчитывается в привязке к минимальной заработной плате. 
+Для корректного формирования отчетности необходимо заполнить регистр сведений "Минимальная оплата труда" </v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Увага!
+З 2021 року допустимий дохід платника єдиного податку розраховується в прив'язці до мінімальної заробітної плати.
+Для коректного формування звітності необхідно заповнити регістр відомостей "Мінімальна оплата праці"</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ДекорацияПредупреждениеКонтекстноеМеню" id="25"/>
+			<ExtendedTooltip name="ДекорацияПредупреждениеРасширеннаяПодсказка" id="26"/>
+		</LabelDecoration>
+		<InputField name="Период" id="1">
+			<DataPath>Запись.Period</DataPath>
+			<ContextMenu name="ПериодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="16"/>
+			<Events>
+				<Event name="OnChange">ПериодПриИзменении</Event>
+			</Events>
+		</InputField>
+		<UsualGroup name="ГруппаДопустимыйДоход" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Допустимый объем дохода плательщика единого налога (п. 291.4 НКУ):</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Припустимий обсяг доходу платників єдиного податку (п. 291.4 ПКУ):</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа допустимый доход</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Група припустимий дохід</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="ГруппаДопустимыйДоходРасширеннаяПодсказка" id="17"/>
+			<ChildItems>
+				<InputField name="ОбъемДоходаЕНПерваяГруппа" id="3">
+					<DataPath>Запись.ОбъемДоходаЕНПерваяГруппа</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Первая группа</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Перша група</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ОбъемДоходаЕНПерваяГруппаКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="ОбъемДоходаЕНПерваяГруппаРасширеннаяПодсказка" id="18"/>
+				</InputField>
+				<InputField name="ОбъемДоходаЕНВтораяГруппа" id="5">
+					<DataPath>Запись.ОбъемДоходаЕНВтораяГруппа</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вторая группа</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Друга група</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ОбъемДоходаЕНВтораяГруппаКонтекстноеМеню" id="6"/>
+					<ExtendedTooltip name="ОбъемДоходаЕНВтораяГруппаРасширеннаяПодсказка" id="19"/>
+				</InputField>
+				<InputField name="ОбъемДоходаЕНТретьяГруппа" id="7">
+					<DataPath>Запись.ОбъемДоходаЕНТретьяГруппа</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Третья группа</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Третя група</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ОбъемДоходаЕНТретьяГруппаКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ОбъемДоходаЕНТретьяГруппаРасширеннаяПодсказка" id="20"/>
+				</InputField>
+				<InputField name="ОбъемДоходаЕНЧетвертаяГруппа" id="9">
+					<DataPath>Запись.ОбъемДоходаЕНЧетвертаяГруппа</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Четвертая группа</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Четверта група</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ОбъемДоходаЕНЧетвертаяГруппаКонтекстноеМеню" id="10"/>
+					<ExtendedTooltip name="ОбъемДоходаЕНЧетвертаяГруппаРасширеннаяПодсказка" id="21"/>
+				</InputField>
+				<InputField name="ОбъемДоходаЕНПятаяГруппа" id="11">
+					<DataPath>Запись.ОбъемДоходаЕНПятаяГруппа</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пятая группа</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>П'ята група</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ОбъемДоходаЕНПятаяГруппаКонтекстноеМеню" id="12"/>
+					<ExtendedTooltip name="ОбъемДоходаЕНПятаяГруппаРасширеннаяПодсказка" id="22"/>
+				</InputField>
+				<InputField name="ОбъемДоходаЕНШестаяГруппа" id="13">
+					<DataPath>Запись.ОбъемДоходаЕНШестаяГруппа</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шестая группа</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Шоста група</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ОбъемДоходаЕНШестаяГруппаКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="ОбъемДоходаЕНШестаяГруппаРасширеннаяПодсказка" id="23"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.ПараметрыНалоговогоУчета</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

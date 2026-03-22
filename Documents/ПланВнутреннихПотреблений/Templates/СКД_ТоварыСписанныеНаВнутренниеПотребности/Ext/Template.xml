@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>ТоварыСписанныеНаВнутренниеПотребности</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Номенклатура</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Назначение</dataPath>
+			<field>Назначение</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назначение</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Призначення</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Характеристика</dataPath>
+			<field>Характеристика</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Характеристика</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Характеристика</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СписанныеТовары</dataPath>
+			<field>СписанныеТовары</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Списанные товары</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Списані товари</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Серия</dataPath>
+			<field>Серия</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Серия</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Серія</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Помещение</dataPath>
+			<field>Помещение</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Помещение</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Приміщення</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Склад</dataPath>
+			<field>Склад</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Склад</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Склад</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	ТоварыНаСкладахОбороты.Номенклатура КАК Номенклатура,
+	ЕСТЬNULL(ТоварыНаСкладахОбороты.Характеристика, ЗНАЧЕНИЕ(Справочник.ХарактеристикиНоменклатуры.ПустаяСсылка)) КАК Характеристика,
+	-ТоварыНаСкладахОбороты.ВНаличииОборот КАК СписанныеТовары,
+	ЕСТЬNULL(ТоварыНаСкладахОбороты.Назначение, ЗНАЧЕНИЕ(Справочник.Назначения.ПустаяСсылка)) КАК Назначение
+ИЗ
+	РегистрНакопления.ТоварыНаСкладах.Обороты(, , Авто, ) КАК ТоварыНаСкладахОбороты
+ГДЕ
+	ТоварыНаСкладахОбороты.Регистратор ССЫЛКА Документ.ВнутреннееПотреблениеТоваров
+{ГДЕ
+	ТоварыНаСкладахОбороты.Номенклатура КАК Номенклатура,
+	ТоварыНаСкладахОбороты.Склад КАК Склад,
+	(ЕСТЬNULL(ТоварыНаСкладахОбороты.Характеристика, ЗНАЧЕНИЕ(Справочник.ХарактеристикиНоменклатуры.ПустаяСсылка))) КАК Характеристика}
+	
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ТоварыНаСкладахОбороты.Номенклатура КАК Номенклатура,
+	ЕСТЬNULL(ТоварыНаСкладахОбороты.Характеристика, ЗНАЧЕНИЕ(Справочник.ХарактеристикиНоменклатуры.ПустаяСсылка)) КАК Характеристика,
+	-ТоварыНаСкладахОбороты.ВНаличииОборот КАК СписанныеТовары,
+	ЕСТЬNULL(ТоварыНаСкладахОбороты.Назначение, ЗНАЧЕНИЕ(Справочник.Назначения.ПустаяСсылка)) КАК Назначение
+ИЗ
+	РегистрНакопления.ТоварыНаСкладах.Обороты(, , Авто, ) КАК ТоварыНаСкладахОбороты
+ГДЕ
+	ТоварыНаСкладахОбороты.Регистратор ССЫЛКА Документ.РасходныйОрдерНаТовары
+	И ТоварыНаСкладахОбороты.Регистратор.СкладскаяОперация = ЗНАЧЕНИЕ(Перечисление.СкладскиеОперации.ОтгрузкаНаВнутренниеНужды)
+{ГДЕ
+	ТоварыНаСкладахОбороты.Номенклатура КАК Номенклатура,
+	ТоварыНаСкладахОбороты.Склад КАК Склад,
+	(ЕСТЬNULL(ТоварыНаСкладахОбороты.Характеристика, ЗНАЧЕНИЕ(Справочник.ХарактеристикиНоменклатуры.ПустаяСсылка))) КАК Характеристика}
+	
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ТоварыНаСкладахОбороты.Номенклатура КАК Номенклатура,
+	ЕСТЬNULL(ТоварыНаСкладахОбороты.Характеристика, ЗНАЧЕНИЕ(Справочник.ХарактеристикиНоменклатуры.ПустаяСсылка)) КАК Характеристика,
+	-ТоварыНаСкладахОбороты.ВНаличииОборот КАК СписанныеТовары,
+	ЕСТЬNULL(ТоварыНаСкладахОбороты.Назначение, ЗНАЧЕНИЕ(Справочник.Назначения.ПустаяСсылка)) КАК Назначение
+ИЗ
+	РегистрНакопления.ТоварыНаСкладах.Обороты(, , Авто, ) КАК ТоварыНаСкладахОбороты
+ГДЕ
+	ТоварыНаСкладахОбороты.Регистратор ССЫЛКА Документ.ПередачаМатериаловВПроизводство
+{ГДЕ
+	ТоварыНаСкладахОбороты.Номенклатура КАК Номенклатура,
+	ТоварыНаСкладахОбороты.Склад КАК Склад,
+	(ЕСТЬNULL(ТоварыНаСкладахОбороты.Характеристика, ЗНАЧЕНИЕ(Справочник.ХарактеристикиНоменклатуры.ПустаяСсылка))) КАК Характеристика}</query>
+	</dataSet>
+	<totalField>
+		<dataPath>СписанныеТовары</dataPath>
+		<expression>ЕстьNull(Сумма(СписанныеТовары), 0)</expression>
+	</totalField>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>Початок періоду</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>Кінець періоду</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Основной</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>Основний</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows"/>
+	</settingsVariant>
+</DataCompositionSchema>

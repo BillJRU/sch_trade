@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<CommandsVisibility>
+		<Command name="Catalog.СтатьиДвиженияДенежныхСредств.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="ChartOfCharacteristicTypes.СтатьиДоходов.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="ChartOfCharacteristicTypes.СтатьиРасходов.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="DocumentJournal.РеестрТорговыхДокументов.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+	</CommandsVisibility>
+	<CommandsPlacement>
+		<Command name="DocumentJournal.РеестрТорговыхДокументов.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+	</CommandsPlacement>
+	<CommandsOrder>
+		<Command name="CommonCommand.НачальноеЗаполнениеБанкКассаБазовая">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+		</Command>
+		<Command name="DocumentJournal.РеестрТорговыхДокументов.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.ДополнительныеОбработкиБанкИКассаБазовая">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+		</Command>
+		<Command name="Report.КонтрольОперацийСДенежнымиСредствами.StandardCommand.Open">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="0:895f8c87-94b5-49a8-a76f-85fbc5dbccf6">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="0:ed8d7b7a-342a-4448-883b-97544af32960">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.ДополнительныеОтчетыБанкИКассаБазовая">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+	</CommandsOrder>
+	<SubsystemsOrder>
+		<Subsystem>Subsystem.БанкИКассаБазовая.Subsystem.БанкБазовая</Subsystem>
+		<Subsystem>Subsystem.БанкИКассаБазовая.Subsystem.КассаБазовая</Subsystem>
+	</SubsystemsOrder>
+	<GroupsOrder>
+		<Group>NavigationPanelSeeAlso</Group>
+		<Group>ActionsPanelReports</Group>
+	</GroupsOrder>
+</CommandInterface>

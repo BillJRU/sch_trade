@@ -1,0 +1,985 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаВнешнийВидДиаграммы" id="55">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Внешний вид диаграммы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Зовнішній вигляд діаграми</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаВнешнийВидДиаграммыРасширеннаяПодсказка" id="56"/>
+			<ChildItems>
+				<InputField name="ТипДиаграммы" id="43">
+					<DataPath>ТипДиаграммы</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>39</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<DropListButton>true</DropListButton>
+					<ChoiceButton>false</ChoiceButton>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ContextMenu name="ТипДиаграммыКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="ТипДиаграммыРасширеннаяПодсказка" id="45"/>
+					<Events>
+						<Event name="OnChange">ТипДиаграммыПриИзменении</Event>
+					</Events>
+				</InputField>
+				<Button name="НастроитьОформление" id="53">
+					<Type>Hyperlink</Type>
+					<CommandName>Form.Command.НастроитьОформление</CommandName>
+					<ExtendedTooltip name="НастроитьОформлениеExtendedTooltip" id="54"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаВводДанных" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ввод данных</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Введення даних</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаВводДанныхРасширеннаяПодсказка" id="30"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаВводДанныхДиаграмма" id="31">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа ввод данных данные</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Група введення даних дані</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВводДанныхДиаграммаРасширеннаяПодсказка" id="32"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаЭлементыПоказателя" id="33">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Элементы показателя</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Елементи показника</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаЭлементыПоказателяРасширеннаяПодсказка" id="34"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаЗаголовокПоказателя" id="35">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Заголовок показателя</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Заголовок показника</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаЗаголовокПоказателяРасширеннаяПодсказка" id="36"/>
+									<ChildItems>
+										<LabelField name="НаименованиеПоказателя" id="37">
+											<DataPath>НаименованиеПоказателя</DataPath>
+											<Width>22</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="НаименованиеПоказателяКонтекстноеМеню" id="38"/>
+											<ExtendedTooltip name="НаименованиеПоказателяРасширеннаяПодсказка" id="39"/>
+										</LabelField>
+									</ChildItems>
+								</UsualGroup>
+								<ChartField name="Диаграмма" id="40">
+									<DataPath>Диаграмма</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="ДиаграммаКонтекстноеМеню" id="41"/>
+									<ExtendedTooltip name="ДиаграммаРасширеннаяПодсказка" id="42"/>
+								</ChartField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаВводДанныхДанные" id="67">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ввод данных данные</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Введення даних дані</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВводДанныхДанныеРасширеннаяПодсказка" id="68"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаГоризонтальная" id="71">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Горизонтальная</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Горизонтальна</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаГоризонтальнаяРасширеннаяПодсказка" id="72"/>
+							<ChildItems>
+								<CommandBar name="ГруппаКоманднаяПанельДанные" id="69">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Командная панель данные</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Командна панель дані</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ГруппаКоманднаяПанельДанныеРасширеннаяПодсказка" id="70"/>
+									<ChildItems>
+										<Button name="ДанныеНайти" id="57">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Item.Данные.StandardCommand.Find</CommandName>
+											<ExtendedTooltip name="ДанныеНайтиРасширеннаяПодсказка" id="58"/>
+										</Button>
+										<Button name="ДанныеОтменитьПоиск" id="59">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Item.Данные.StandardCommand.CancelSearch</CommandName>
+											<ExtendedTooltip name="ДанныеОтменитьПоискРасширеннаяПодсказка" id="60"/>
+										</Button>
+										<Button name="ЗаполнитьПоДаннымИБ" id="76">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.ЗаполнитьПоДаннымИБ</CommandName>
+											<ExtendedTooltip name="ЗаполнитьПоДаннымИБРасширеннаяПодсказка" id="77"/>
+										</Button>
+									</ChildItems>
+								</CommandBar>
+								<InputField name="КоличествоОбъектовАнализа" id="73">
+									<DataPath>КоличествоОбъектовАнализа</DataPath>
+									<SpinButton>true</SpinButton>
+									<MinValue xsi:type="xs:decimal">2</MinValue>
+									<ContextMenu name="КоличествоОбъектовАнализаКонтекстноеМеню" id="74"/>
+									<ExtendedTooltip name="КоличествоОбъектовАнализаРасширеннаяПодсказка" id="75"/>
+									<Events>
+										<Event name="OnChange">КоличествоОбъектовАнализаПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="Данные" id="1">
+							<Representation>List</Representation>
+							<CommandBarLocation>None</CommandBarLocation>
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Данные</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Данные</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Дані</v8:content>
+								</v8:item>
+							</Title>
+							<CommandSet>
+								<ExcludedCommand>Add</ExcludedCommand>
+								<ExcludedCommand>Change</ExcludedCommand>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+								<ExcludedCommand>Delete</ExcludedCommand>
+								<ExcludedCommand>EndEdit</ExcludedCommand>
+								<ExcludedCommand>MoveDown</ExcludedCommand>
+								<ExcludedCommand>MoveUp</ExcludedCommand>
+								<ExcludedCommand>OutputList</ExcludedCommand>
+								<ExcludedCommand>SelectAll</ExcludedCommand>
+								<ExcludedCommand>SortListAsc</ExcludedCommand>
+								<ExcludedCommand>SortListDesc</ExcludedCommand>
+							</CommandSet>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ДанныеКонтекстноеМеню" id="2"/>
+							<AutoCommandBar name="ДанныеКоманднаяПанель" id="3"/>
+							<ExtendedTooltip name="ДанныеРасширеннаяПодсказка" id="4"/>
+							<SearchStringAddition name="ДанныеСтрокаПоиска" id="5">
+								<AdditionSource>
+									<Item>Данные</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДанныеСтрокаПоискаКонтекстноеМеню" id="8"/>
+								<ExtendedTooltip name="ДанныеСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ДанныеСостояниеПросмотра" id="10">
+								<AdditionSource>
+									<Item>Данные</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДанныеСостояниеПросмотраКонтекстноеМеню" id="13"/>
+								<ExtendedTooltip name="ДанныеСостояниеПросмотраРасширеннаяПодсказка" id="14"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ДанныеУправлениеПоиском" id="15">
+								<AdditionSource>
+									<Item>Данные</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ДанныеУправлениеПоискомКонтекстноеМеню" id="18"/>
+								<ExtendedTooltip name="ДанныеУправлениеПоискомРасширеннаяПодсказка" id="19"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnEditEnd">ДанныеПриОкончанииРедактирования</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="ДанныеПериод" id="20">
+									<DataPath>Данные.Период</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДанныеПериодКонтекстноеМеню" id="21"/>
+									<ExtendedTooltip name="ДанныеПериодРасширеннаяПодсказка" id="22"/>
+								</InputField>
+								<InputField name="ДанныеОбъектАнализа" id="23">
+									<DataPath>Данные.ОбъектАнализа</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДанныеОбъектАнализаКонтекстноеМеню" id="24"/>
+									<ExtendedTooltip name="ДанныеОбъектАнализаРасширеннаяПодсказка" id="25"/>
+									<Events>
+										<Event name="OnChange">ДанныеОбъектАнализаПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ДанныеЗначениеПоказателя" id="26">
+									<DataPath>Данные.ЗначениеПоказателя</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДанныеЗначениеПоказателяКонтекстноеМеню" id="27"/>
+									<ExtendedTooltip name="ДанныеЗначениеПоказателяРасширеннаяПодсказка" id="28"/>
+								</InputField>
+								<InputField name="ДанныеЗначениеПоказателяДополнительное" id="78">
+									<DataPath>Данные.ЗначениеПоказателяДополнительное</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДанныеЗначениеПоказателяДополнительноеКонтекстноеМеню" id="79"/>
+									<ExtendedTooltip name="ДанныеЗначениеПоказателяДополнительноеРасширеннаяПодсказка" id="80"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<CommandBar name="ГруппаКоманднаяПанель" id="61">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Командная панель</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Командна панель</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalLocation>Right</HorizontalLocation>
+			<ExtendedTooltip name="ГруппаКоманднаяПанельExtendedTooltip" id="62"/>
+			<ChildItems>
+				<Button name="ЗавершитьРедактирование" id="63">
+					<Type>CommandBarButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>Form.Command.ЗавершитьРедактирование</CommandName>
+					<ExtendedTooltip name="ЗавершитьРедактированиеExtendedTooltip" id="64"/>
+				</Button>
+				<Button name="Закрыть" id="65">
+					<Type>CommandBarButton</Type>
+					<Representation>Text</Representation>
+					<CommandName>Form.StandardCommand.Close</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отмена</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Відмінити</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ЗакрытьExtendedTooltip" id="66"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Данные" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Данные</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Дані</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Период" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Период</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Період</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ОбъектАнализа" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект анализа</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Об'єкт аналізу</v8:content>
+						</v8:item>
+					</Title>
+					<Type/>
+				</Column>
+				<Column name="ЗначениеПоказателя" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение показателя</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Значення показника</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>16</v8:Digits>
+							<v8:FractionDigits>4</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЦелевоеЗначение" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Целевое значение</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Цільове значення</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>16</v8:Digits>
+							<v8:FractionDigits>4</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЦелевойДиапазонМаксимум" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Целевой диапазон максимум</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Цільовий діапазон максимум</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>16</v8:Digits>
+							<v8:FractionDigits>4</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЦелевойДиапазонМинимум" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Целевой диапазон минимум</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Цільовий діапазон мінімум</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>16</v8:Digits>
+							<v8:FractionDigits>4</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПриведенноеГраничноеПозитивноеОтклонение" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Приведенное граничное позитивное отклонение</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Приведене граничне додатне відхилення</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>16</v8:Digits>
+							<v8:FractionDigits>4</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПриведенноеГраничноеНегативноеОтклонение" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Приведенное граничное негативное отклонение</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Приведене граничне від'ємне відхилення</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>16</v8:Digits>
+							<v8:FractionDigits>4</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ГраничноеПозитивноеОтклонение" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Приведенное граничное позитивное отклонение</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Приведене граничне додатне відхилення</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>16</v8:Digits>
+							<v8:FractionDigits>4</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ГраничноеНегативноеОтклонение" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Приведенное граничное негативное отклонение</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Приведене граничне від'ємне відхилення</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>16</v8:Digits>
+							<v8:FractionDigits>4</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЗначениеПоказателяДополнительное" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доп. значение</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Дод. значення</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>16</v8:Digits>
+							<v8:FractionDigits>4</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ВариантАнализа" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вариант анализа</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Варіант аналізу</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВариантыАнализаЦелевыхПоказателей</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОбъектыАнализа" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объекты анализа</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Об'єкти аналізу</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+		<Attribute name="Диаграмма" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Диаграмма</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Діаграма</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.2/data/chart">d5p1:Chart</v8:Type>
+			</Type>
+			<Settings xmlns:d4p1="http://v8.1c.ru/8.2/data/chart" xsi:type="d4p1:Chart">
+				<d4p1:seriesCurId>1</d4p1:seriesCurId>
+				<d4p1:pointsCurId>0</d4p1:pointsCurId>
+				<d4p1:isSeriesDesign>true</d4p1:isSeriesDesign>
+				<d4p1:realSeriesCount>0</d4p1:realSeriesCount>
+				<d4p1:realExSeriesData>
+					<d4p1:id>1</d4p1:id>
+					<d4p1:color>auto</d4p1:color>
+					<d4p1:line width="2" gap="false">
+						<v8ui:style xsi:type="v8ui:ChartLineType">Solid</v8ui:style>
+					</d4p1:line>
+					<d4p1:marker>Auto</d4p1:marker>
+					<d4p1:text/>
+					<d4p1:strIsChanged>true</d4p1:strIsChanged>
+					<d4p1:isExpand>false</d4p1:isExpand>
+					<d4p1:isIndicator>false</d4p1:isIndicator>
+					<d4p1:colorPriority>false</d4p1:colorPriority>
+				</d4p1:realExSeriesData>
+				<d4p1:isPointsDesign>true</d4p1:isPointsDesign>
+				<d4p1:realPointCount>0</d4p1:realPointCount>
+				<d4p1:curSeries>-1</d4p1:curSeries>
+				<d4p1:curPoint>0</d4p1:curPoint>
+				<d4p1:chartType>Column3D</d4p1:chartType>
+				<d4p1:circleLabelType>None</d4p1:circleLabelType>
+				<d4p1:labelsDelimiter>, </d4p1:labelsDelimiter>
+				<d4p1:labelsLocation>Edge</d4p1:labelsLocation>
+				<d4p1:lbFormat/>
+				<d4p1:lbpFormat/>
+				<d4p1:labelsColor>#333333</d4p1:labelsColor>
+				<d4p1:labelsFont kind="AutoFont"/>
+				<d4p1:transparentLabelsBkg>true</d4p1:transparentLabelsBkg>
+				<d4p1:labelsBkgColor>auto</d4p1:labelsBkgColor>
+				<d4p1:labelsBorder width="1">
+					<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+				</d4p1:labelsBorder>
+				<d4p1:labelsBorderColor>auto</d4p1:labelsBorderColor>
+				<d4p1:circleExpandMode>None</d4p1:circleExpandMode>
+				<d4p1:chart3Dcrd>SouthWest</d4p1:chart3Dcrd>
+				<d4p1:title/>
+				<d4p1:isShowTitle>true</d4p1:isShowTitle>
+				<d4p1:isShowLegend>true</d4p1:isShowLegend>
+				<d4p1:ttlBorder width="0">
+					<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+				</d4p1:ttlBorder>
+				<d4p1:ttlBorderColor>#A0A0A0</d4p1:ttlBorderColor>
+				<d4p1:lgBorder width="0">
+					<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+				</d4p1:lgBorder>
+				<d4p1:lgBorderColor>#A0A0A0</d4p1:lgBorderColor>
+				<d4p1:chBorder width="0">
+					<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+				</d4p1:chBorder>
+				<d4p1:chBorderColor>#A0A0A0</d4p1:chBorderColor>
+				<d4p1:transparent>false</d4p1:transparent>
+				<d4p1:bkgColor>#FFFFFF</d4p1:bkgColor>
+				<d4p1:isTrnspTtl>false</d4p1:isTrnspTtl>
+				<d4p1:ttlColor>#FFFFFF</d4p1:ttlColor>
+				<d4p1:isTrnspLeg>false</d4p1:isTrnspLeg>
+				<d4p1:legColor>#FFFFFF</d4p1:legColor>
+				<d4p1:isTrnspCh>false</d4p1:isTrnspCh>
+				<d4p1:chColor>#FFFFFF</d4p1:chColor>
+				<d4p1:ttlTxtColor>#333333</d4p1:ttlTxtColor>
+				<d4p1:legTxtColor>#333333</d4p1:legTxtColor>
+				<d4p1:chTxtColor>#333333</d4p1:chTxtColor>
+				<d4p1:ttlFont kind="AutoFont"/>
+				<d4p1:legFont kind="AutoFont"/>
+				<d4p1:chFont kind="AutoFont"/>
+				<d4p1:isShowScale>true</d4p1:isShowScale>
+				<d4p1:isShowScaleVL>true</d4p1:isShowScaleVL>
+				<d4p1:isShowSeriesScale>true</d4p1:isShowSeriesScale>
+				<d4p1:isShowPointsScale>true</d4p1:isShowPointsScale>
+				<d4p1:isShowValuesScale>true</d4p1:isShowValuesScale>
+				<d4p1:vsFormat/>
+				<d4p1:xLabelsOrientation>Auto</d4p1:xLabelsOrientation>
+				<d4p1:scaleLine width="1" gap="false">
+					<v8ui:style xsi:type="v8ui:ChartLineType">Solid</v8ui:style>
+				</d4p1:scaleLine>
+				<d4p1:scaleColor>#A9A9A9</d4p1:scaleColor>
+				<d4p1:isAutoSeriesName>true</d4p1:isAutoSeriesName>
+				<d4p1:isAutoPointName>true</d4p1:isAutoPointName>
+				<d4p1:maxMode>NotDefined</d4p1:maxMode>
+				<d4p1:maxSeries>4</d4p1:maxSeries>
+				<d4p1:maxSeriesPrc>30</d4p1:maxSeriesPrc>
+				<d4p1:spaceMode>Half</d4p1:spaceMode>
+				<d4p1:baseVal>0</d4p1:baseVal>
+				<d4p1:isOutline>false</d4p1:isOutline>
+				<d4p1:realPiePoint>0</d4p1:realPiePoint>
+				<d4p1:realStockSeries>0</d4p1:realStockSeries>
+				<d4p1:isLight>true</d4p1:isLight>
+				<d4p1:isGradient>false</d4p1:isGradient>
+				<d4p1:isTransposition>false</d4p1:isTransposition>
+				<d4p1:hideBaseVal>false</d4p1:hideBaseVal>
+				<d4p1:dataTable>false</d4p1:dataTable>
+				<d4p1:dtVerLines>true</d4p1:dtVerLines>
+				<d4p1:dtHorLines>true</d4p1:dtHorLines>
+				<d4p1:dtHAlign>Right</d4p1:dtHAlign>
+				<d4p1:dtFormat/>
+				<d4p1:dtKeys>true</d4p1:dtKeys>
+				<d4p1:paletteKind>Auto</d4p1:paletteKind>
+				<d4p1:animation>Auto</d4p1:animation>
+				<d4p1:rebuildTime>0</d4p1:rebuildTime>
+				<d4p1:isTransposed>false</d4p1:isTransposed>
+				<d4p1:autoTransposition>false</d4p1:autoTransposition>
+				<d4p1:legendScrollEnable>false</d4p1:legendScrollEnable>
+				<d4p1:surfaceColor>#A90000</d4p1:surfaceColor>
+				<d4p1:radarScaleType>Circle</d4p1:radarScaleType>
+				<d4p1:gaugeValuesPresentation>Needle</d4p1:gaugeValuesPresentation>
+				<d4p1:gaugeQualityBands useTextStr="false" useTooltipStr="false"/>
+				<d4p1:beginGaugeAngle>0</d4p1:beginGaugeAngle>
+				<d4p1:endGaugeAngle>180</d4p1:endGaugeAngle>
+				<d4p1:gaugeThickness>5</d4p1:gaugeThickness>
+				<d4p1:gaugeLabelsLocation>InsideScale</d4p1:gaugeLabelsLocation>
+				<d4p1:gaugeLabelsArcDirection>false</d4p1:gaugeLabelsArcDirection>
+				<d4p1:gaugeBushThickness>4</d4p1:gaugeBushThickness>
+				<d4p1:gaugeBushColor>#A9A9A9</d4p1:gaugeBushColor>
+				<d4p1:autoMaxValue>true</d4p1:autoMaxValue>
+				<d4p1:userMaxValue>0</d4p1:userMaxValue>
+				<d4p1:autoMinValue>true</d4p1:autoMinValue>
+				<d4p1:userMinValue>0</d4p1:userMinValue>
+				<d4p1:elementsIsInit>true</d4p1:elementsIsInit>
+				<d4p1:titleIsInit>true</d4p1:titleIsInit>
+				<d4p1:legendIsInit>true</d4p1:legendIsInit>
+				<d4p1:chartIsInit>true</d4p1:chartIsInit>
+				<d4p1:elementsChart>
+					<d4p1:left>0</d4p1:left>
+					<d4p1:right>0.1672</d4p1:right>
+					<d4p1:top>0</d4p1:top>
+					<d4p1:bottom>0</d4p1:bottom>
+				</d4p1:elementsChart>
+				<d4p1:elementsLegend>
+					<d4p1:left>0.8328</d4p1:left>
+					<d4p1:right>0</d4p1:right>
+					<d4p1:top>0.047</d4p1:top>
+					<d4p1:bottom>0</d4p1:bottom>
+				</d4p1:elementsLegend>
+				<d4p1:elementsTitle>
+					<d4p1:left>0.8328</d4p1:left>
+					<d4p1:right>0</d4p1:right>
+					<d4p1:top>0</d4p1:top>
+					<d4p1:bottom>0.953</d4p1:bottom>
+				</d4p1:elementsTitle>
+				<d4p1:borderColor>#A0A0A0</d4p1:borderColor>
+				<d4p1:border width="1">
+					<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+				</d4p1:border>
+				<d4p1:dataSourceDescription/>
+				<d4p1:isDataSourceMode>false</d4p1:isDataSourceMode>
+				<d4p1:isRandomizedNewValues>true</d4p1:isRandomizedNewValues>
+				<d4p1:splineStrain>95</d4p1:splineStrain>
+				<d4p1:translucencePercent>100</d4p1:translucencePercent>
+				<d4p1:funnelNeckHeightPercent>0</d4p1:funnelNeckHeightPercent>
+				<d4p1:funnelNeckWidthPercent>0</d4p1:funnelNeckWidthPercent>
+				<d4p1:funnelGapSumPercent>0</d4p1:funnelGapSumPercent>
+				<d4p1:multiStageLinkLine width="1" gap="false">
+					<v8ui:style xsi:type="v8ui:ChartLineType">Solid</v8ui:style>
+				</d4p1:multiStageLinkLine>
+				<d4p1:multiStageLinkColor>#000000</d4p1:multiStageLinkColor>
+				<d4p1:valuesAxis/>
+				<d4p1:pointsAxis/>
+				<d4p1:valuesScale>
+					<d4p1:titleArea>
+						<d4p1:font kind="AutoFont"/>
+						<d4p1:textColor>auto</d4p1:textColor>
+						<d4p1:backColor>auto</d4p1:backColor>
+						<d4p1:border width="1">
+							<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+						</d4p1:border>
+						<d4p1:borderColor>auto</d4p1:borderColor>
+					</d4p1:titleArea>
+					<d4p1:gridLinesShowMode>Show</d4p1:gridLinesShowMode>
+				</d4p1:valuesScale>
+			</Settings>
+		</Attribute>
+		<Attribute name="НаименованиеПоказателя" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование показателя</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Найменування показника</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8ui:FormattedString</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТипДиаграммы" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип диаграммы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Тип діаграми</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ТипыДиаграммПоказателей</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СтруктураНастроекОформления" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Структура настроек оформления</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Структура настройок оформлення</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ХранилищеНастроекОформления" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Хранилище настроек оформления</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Сховище налаштувань оформлення</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="КоличествоОбъектовАнализа" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество объектов анализа</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Кількість об'єктів аналізу</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НастройкиТребующиеОбновления" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки требующие обновления</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Настройки потребують оновлення</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="СтруктураНастроекДемоДанных" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Структура настроек оформления</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Структура настройок оформлення</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ХранилищеПользовательскихНастроекКомпоновкиДанных" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Хранилище настроек компоновки данных</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Сховище налаштувань компоновки даних</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="НастроитьОформление" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить оформление</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Настроїти оформлення</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить оформление</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Настроїти оформлення</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастроитьОформление</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗавершитьРедактирование" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Завершить редактирование</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Завершити редагування</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Завершить редактирование</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Завершити редагування</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗавершитьРедактирование</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗаполнитьПоДаннымИБ" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по данным ИБ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Заповнити за даними ІБ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по данным ИБ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Заповнити за даними ІБ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ТоварыЗагрузить</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗаполнитьПоДаннымИБ</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,882 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<AutoTitle>false</AutoTitle>
+	<Customizable>false</Customizable>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ЗаписатьИЗакрыть" id="1">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>Form.Command.ЗаписатьИЗакрыть</CommandName>
+				<ExtendedTooltip name="ЗаписатьИЗакрытьРасширеннаяПодсказка" id="73"/>
+			</Button>
+			<Popup name="Функции" id="51">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Функции</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>uk</v8:lang>
+						<v8:content>Функції</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Функции</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>uk</v8:lang>
+						<v8:content>Функції</v8:content>
+					</v8:item>
+				</ToolTip>
+				<ExtendedTooltip name="ФункцииРасширеннаяПодсказка" id="74"/>
+				<ChildItems>
+					<Button name="ТестУстройства" id="52">
+						<Type>CommandBarButton</Type>
+						<SkipOnInput>false</SkipOnInput>
+						<CommandName>Form.Command.ТестУстройства</CommandName>
+						<ExtendedTooltip name="ТестУстройстваРасширеннаяПодсказка" id="75"/>
+					</Button>
+					<ButtonGroup name="Группа" id="60">
+						<ExtendedTooltip name="ГруппаРасширеннаяПодсказка" id="76"/>
+						<ChildItems>
+							<Button name="УстановитьДрайвер" id="59">
+								<Type>CommandBarButton</Type>
+								<SkipOnInput>false</SkipOnInput>
+								<CommandName>Form.Command.УстановитьДрайвер</CommandName>
+								<ExtendedTooltip name="УстановитьДрайверРасширеннаяПодсказка" id="77"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+				</ChildItems>
+			</Popup>
+			<Button name="Справка" id="3">
+				<Type>CommandBarButton</Type>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>Form.StandardCommand.Help</CommandName>
+				<ExtendedTooltip name="СправкаРасширеннаяПодсказка" id="78"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ДрайверИВерсия" id="54">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Драйвер и версия</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Драйвер і версія</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Драйвер и версия</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Драйвер і версія</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="ДрайверИВерсияРасширеннаяПодсказка" id="79"/>
+			<ChildItems>
+				<InputField name="Драйвер" id="55">
+					<DataPath>Драйвер</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Wrap>false</Wrap>
+					<ContextMenu name="ДрайверКонтекстноеМеню" id="56"/>
+					<ExtendedTooltip name="ДрайверРасширеннаяПодсказка" id="80"/>
+				</InputField>
+				<InputField name="Версия" id="57">
+					<DataPath>Версия</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Wrap>false</Wrap>
+					<ContextMenu name="ВерсияКонтекстноеМеню" id="58"/>
+					<ExtendedTooltip name="ВерсияРасширеннаяПодсказка" id="81"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="МодельУстройства" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Модель устройства</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Модель пристрою</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Модель устройства</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Модель пристрою</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="МодельУстройстваРасширеннаяПодсказка" id="82"/>
+			<ChildItems>
+				<InputField name="Модель" id="103">
+					<DataPath>Модель</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<Wrap>false</Wrap>
+					<ListChoiceMode>true</ListChoiceMode>
+					<TextEdit>false</TextEdit>
+					<ContextMenu name="МодельКонтекстноеМеню" id="104"/>
+					<ExtendedTooltip name="МодельExtendedTooltip" id="105"/>
+					<Events>
+						<Event name="OnChange">МодельПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПараметровПодключения_Устройства" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа параметров подключения устройства</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Група параметрів підключення пристрою</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа параметров подключения устройства</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Група параметрів підключення пристрою</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПараметровПодключения_УстройстваРасширеннаяПодсказка" id="84"/>
+			<ChildItems>
+				<UsualGroup name="ПараметрыПодключения" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Параметры подключения</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Параметри підключення</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Параметры подключения</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Параметри підключення</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ExtendedTooltip name="ПараметрыПодключенияРасширеннаяПодсказка" id="85"/>
+					<ChildItems>
+						<RadioButtonField name="ТипСоединения" id="117">
+							<DataPath>ТипСоединения</DataPath>
+							<RadioButtonType>Tumbler</RadioButtonType>
+							<ContextMenu name="ТипСоединенияКонтекстноеМеню" id="118"/>
+							<ExtendedTooltip name="ТипСоединенияРасширеннаяПодсказка" id="119"/>
+							<Events>
+								<Event name="OnChange">ТипСоединенияПриИзменении</Event>
+							</Events>
+						</RadioButtonField>
+						<InputField name="IP" id="111">
+							<DataPath>IP</DataPath>
+							<ContextMenu name="IPКонтекстноеМеню" id="112"/>
+							<ExtendedTooltip name="IPРасширеннаяПодсказка" id="113"/>
+						</InputField>
+						<InputField name="ПортIP" id="114">
+							<DataPath>ПортIP</DataPath>
+							<EditFormat>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧГ=0</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>ЧГ=0</v8:content>
+								</v8:item>
+							</EditFormat>
+							<ContextMenu name="ПортIPКонтекстноеМеню" id="115"/>
+							<ExtendedTooltip name="ПортIPРасширеннаяПодсказка" id="116"/>
+						</InputField>
+						<InputField name="Порт" id="19">
+							<DataPath>Порт</DataPath>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Wrap>false</Wrap>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ContextMenu name="ПортКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="ПортРасширеннаяПодсказка" id="86"/>
+						</InputField>
+						<InputField name="Скорость" id="21">
+							<DataPath>Скорость</DataPath>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Wrap>false</Wrap>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ContextMenu name="СкоростьКонтекстноеМеню" id="22"/>
+							<ExtendedTooltip name="СкоростьРасширеннаяПодсказка" id="87"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ПараметрыУстройства" id="109">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Параметры устройства</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Параметри пристрою</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Параметры устройства</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Параметри пристрою</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ExtendedTooltip name="ПараметрыУстройстваExtendedTooltip" id="110"/>
+					<ChildItems>
+						<CheckBoxField name="ИспользоватьДисплей" id="106">
+							<DataPath>ИспользоватьДисплей</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьДисплейКонтекстноеМеню" id="107"/>
+							<ExtendedTooltip name="ИспользоватьДисплейРасширеннаяПодсказка" id="108"/>
+						</CheckBoxField>
+						<CheckBoxField name="НесколькоАкцизныхМарокДляОдногоТовара" id="120">
+							<DataPath>НесколькоАкцизныхМарокДляОдногоТовара</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="НесколькоАкцизныхМарокДляОдногоТовараКонтекстноеМеню" id="121"/>
+							<ExtendedTooltip name="НесколькоАкцизныхМарокДляОдногоТовараРасширеннаяПодсказка" id="122"/>
+						</CheckBoxField>
+						<CheckBoxField name="ШтрихкодАкцизнойМаркиВВидеШтрихкода" id="123">
+							<DataPath>ШтрихкодАкцизнойМаркиВВидеШтрихкода</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ШтрихкодАкцизнойМаркиВВидеШтрихкодаКонтекстноеМеню" id="124"/>
+							<ExtendedTooltip name="ШтрихкодАкцизнойМаркиВВидеШтрихкодаРасширеннаяПодсказка" id="125"/>
+						</CheckBoxField>
+						<CheckBoxField name="КодПоУКТВЭДВВидеШтрихкода" id="126">
+							<DataPath>КодПоУКТВЭДВВидеШтрихкода</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="КодПоУКТВЭДВВидеШтрихкодаКонтекстноеМеню" id="127"/>
+							<ExtendedTooltip name="КодПоУКТВЭДВВидеШтрихкодаРасширеннаяПодсказка" id="128"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ПараметрыНалогообложения" id="63">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Налоговые ставки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Податкові ставки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры налогообложения</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Параметри оподаткування</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ПараметрыНалогообложенияРасширеннаяПодсказка" id="88"/>
+			<ChildItems>
+				<Table name="ТаблицаСоответствий" id="64">
+					<Representation>List</Representation>
+					<Width>52</Width>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>ТаблицаСоответствий</DataPath>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ТаблицаСоответствийКонтекстноеМеню" id="65"/>
+					<AutoCommandBar name="ТаблицаСоответствийКоманднаяПанель" id="66"/>
+					<ExtendedTooltip name="ТаблицаСоответствийРасширеннаяПодсказка" id="89"/>
+					<SearchStringAddition name="ТаблицаСоответствийСтрокаПоиска" id="90">
+						<AdditionSource>
+							<Item>ТаблицаСоответствий</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаСоответствийСтрокаПоискаКонтекстноеМеню" id="91"/>
+						<ExtendedTooltip name="ТаблицаСоответствийСтрокаПоискаРасширеннаяПодсказка" id="92"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ТаблицаСоответствийСостояниеПросмотра" id="93">
+						<AdditionSource>
+							<Item>ТаблицаСоответствий</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаСоответствийСостояниеПросмотраКонтекстноеМеню" id="94"/>
+						<ExtendedTooltip name="ТаблицаСоответствийСостояниеПросмотраРасширеннаяПодсказка" id="95"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ТаблицаСоответствийУправлениеПоиском" id="96">
+						<AdditionSource>
+							<Item>ТаблицаСоответствий</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаСоответствийУправлениеПоискомКонтекстноеМеню" id="97"/>
+						<ExtendedTooltip name="ТаблицаСоответствийУправлениеПоискомРасширеннаяПодсказка" id="98"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<InputField name="ТаблицаСоответствийНалоговаяГруппаРРО" id="67">
+							<DataPath>ТаблицаСоответствий.НалоговаяГруппаРРО</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТаблицаСоответствийНалоговаяГруппаРРОКонтекстноеМеню" id="68"/>
+							<ExtendedTooltip name="ТаблицаСоответствийНалоговаяГруппаРРОРасширеннаяПодсказка" id="99"/>
+						</InputField>
+						<InputField name="ТаблицаСоответствийСтавкаНДС" id="69">
+							<DataPath>ТаблицаСоответствий.СтавкаНДС</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТаблицаСоответствийСтавкаНДСКонтекстноеМеню" id="70"/>
+							<ExtendedTooltip name="ТаблицаСоответствийСтавкаНДСРасширеннаяПодсказка" id="100"/>
+						</InputField>
+						<CheckBoxField name="ТаблицаСоответствийПодакцизныйТовар" id="71">
+							<DataPath>ТаблицаСоответствий.ПодакцизныйТовар</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ТаблицаСоответствийПодакцизныйТоварКонтекстноеМеню" id="72"/>
+							<ExtendedTooltip name="ТаблицаСоответствийПодакцизныйТоварРасширеннаяПодсказка" id="101"/>
+						</CheckBoxField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаНалОплата_Отладка" id="47">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа нал оплата отладка</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Група нал оплата налагодження</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа нал оплата отладка</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Група нал оплата налагодження</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНалОплата_ОтладкаРасширеннаяПодсказка" id="102"/>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Драйвер" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Драйвер</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Драйвер</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Версия" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Версия</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Версія</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Модель" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Модель</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Модель</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Порт" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Порт</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Порт</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Скорость" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скорость</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Швидкість</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЖурналОперацийДрайвера" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вести журнал операций драйвера</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Вести журнал операцій драйвера</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Идентификатор" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Ідентифікатор</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ПодключаемоеОборудование</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЦветОшибки" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цвет ошибки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Колір помилки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8ui:Color</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЦветТекста" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цвет текста</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Колір тексту</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8ui:Color</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТаблицаСоответствий" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица соответствий</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Таблиця відповідностей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="НалоговаяГруппаРРО" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Налоговая группа РРО</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Податкова група РРО</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>1</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="СтавкаНДС" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ставка НДС</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Ставка ПДВ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.СтавкиНДС</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПодакцизныйТовар" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подакцизный</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Підакцизний</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ДрайверОборудования" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Драйвер оборудования</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Драйвер обладнання</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ДрайверыОборудования</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьДисплей" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать встроенный дисплей</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Використовувати вбудований дисплей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="IP" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>IP адрес</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>IP адреса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПортIP" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Порт ФР</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Порт ФР</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТипСоединения" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип соединения</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Тип з'єднання</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекстПредупрежденияПриСтарте" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст предупреждения при старте</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Текст попередження при старті</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НесколькоАкцизныхМарокДляОдногоТовара" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поддерживает печать нескольких акцизных марок для одного товара</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Підтримує друк декількох акцизних марок для одного товару</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ШтрихкодАкцизнойМаркиВВидеШтрихкода" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поддерживает печать акцизной марки в виде штрихкода</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Підтримує друк акцизної марки у вигляді штрихкоду</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КодПоУКТВЭДВВидеШтрихкода" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поддерживает печать кода по УКТВЭД в виде штрихкода</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Підтримує друк коду за УКТЗЕД у вигляді штрихкоду</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаписатьИЗакрыть" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать и закрыть</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Записати і закрити</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать и закрыть</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Записати і закрити</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаписатьИЗакрытьВыполнить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ТестУстройства" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тест устройства</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Тест пристрою</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тест устройства</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Тест пристрою</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ТестУстройства</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УстановитьДрайвер" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить драйвер</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Встановити драйвер</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить драйвер</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Встановити драйвер</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьДрайвер</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ПараметрыНастройки">
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+	</Parameters>
+</Form>

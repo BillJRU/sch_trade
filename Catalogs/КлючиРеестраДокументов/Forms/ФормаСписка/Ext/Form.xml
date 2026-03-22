@@ -1,0 +1,534 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаКоманднаяПанельФормыОтбор" id="46">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа командная панель формы отбор</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Група командна панель форми відбір</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа командная панель формы отбор</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Група командна панель форми відбір</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКоманднаяПанельФормыОтборРасширеннаяПодсказка" id="47"/>
+			<ChildItems>
+				<InputField name="ТипЗначения" id="43">
+					<DataPath>ТипЗначения</DataPath>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ChooseType>false</ChooseType>
+					<TextEdit>false</TextEdit>
+					<ContextMenu name="ТипЗначенияКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="ТипЗначенияРасширеннаяПодсказка" id="45"/>
+					<Events>
+						<Event name="OnChange">ТипЗначенияПриИзменении</Event>
+					</Events>
+				</InputField>
+				<CommandBar name="ГруппаГруппаКоманднаяПанельФормы" id="48">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа группа командная панель формы</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Група група командна панель форми</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа группа командная панель формы</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Група група командна панель форми</v8:content>
+						</v8:item>
+					</ToolTip>
+					<CommandSource>Form</CommandSource>
+					<ExtendedTooltip name="ГруппаГруппаКоманднаяПанельФормыРасширеннаяПодсказка" id="49"/>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Група користувацьких настройок</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="2"/>
+		</UsualGroup>
+		<LabelDecoration name="ДекорацияОшибкаУдаленияДублей" id="31">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Title formatted="true">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>При удалении дублей возникла ошибка. Подробности - см. &lt;link ОткрытьЖурналРегистрации&gt;Журнал регистрации&lt;/&gt;</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>При вилученні дублів виникла помилка. Подробиці - див.&lt;link ОткрытьЖурналРегистрации&gt; Журнал реєстрації&lt;/&gt;</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ДекорацияОшибкаУдаленияДублейКонтекстноеМеню" id="32"/>
+			<ExtendedTooltip name="ДекорацияОшибкаУдаленияДублейРасширеннаяПодсказка" id="33"/>
+			<Events>
+				<Event name="URLProcessing">ДекорацияОшибкаУдаленияДублейОбработкаНавигационнойСсылки</Event>
+			</Events>
+		</LabelDecoration>
+		<LabelDecoration name="ДекорацияЕстьДублиВПодчиненномУзлеРИБ" id="40">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Title formatted="true">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>&lt;colorstyle -16&gt;Есть дубли ключей реестра документов&lt;/&gt;. Проведите обмен с главным узлом РИБ, запустите в нем процедуру удаления дублей и еще раз проведите обмен.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>&lt;colorstyle -16&gt;Є дублі ключів реєстру документів&lt;/&gt; . Проведіть обмін з головним вузлом РІБ, запустіть в ньому процедуру вилучення дублів і ще раз проведіть обмін.</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ДекорацияЕстьДублиВПодчиненномУзлеРИБКонтекстноеМеню" id="41"/>
+			<ExtendedTooltip name="ДекорацияЕстьДублиВПодчиненномУзлеРИБРасширеннаяПодсказка" id="42"/>
+		</LabelDecoration>
+		<LabelDecoration name="ДекорацияЕстьДублиВГлавномУзелРИБ" id="34">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Title formatted="true">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>&lt;colorstyle -16&gt;Есть дубли ключей реестра документов&lt;/&gt;. Рекомендуется &lt;link ЗапуститьПроцедуруУдаленияДублей&gt;запустить процедуру удаления дублей&lt;/&gt;.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>&lt;colorstyle -16&gt;Є дублі ключів реєстру документів&lt;/&gt; . рекомендується&lt;link ЗапуститьПроцедуруУдаленияДублей&gt; запустити процедуру вилучення дублів&lt;/&gt; .</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ДекорацияЕстьДублиВГлавномУзелРИБКонтекстноеМеню" id="35"/>
+			<ExtendedTooltip name="ДекорацияЕстьДублиВГлавномУзелРИБРасширеннаяПодсказка" id="36"/>
+			<Events>
+				<Event name="URLProcessing">ДекорацияЕстьДублиВГлавномУзелРИБОбработкаНавигационнойСсылки</Event>
+			</Events>
+		</LabelDecoration>
+		<LabelDecoration name="ДекорацияНетДублей" id="37">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Title formatted="true">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>&lt;colorstyle 0:0cc3bc7c-a0bd-4487-ad07-99501a79bc1a&gt;Дублей ключей реестра документов нет&lt;/&gt;</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>&lt;colorstyle 0:0cc3bc7c-a0bd-4487-ad07-99501a79bc1a&gt;Дублів ключів реєстру документів немає&lt;/&gt;</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ДекорацияНетДублейКонтекстноеМеню" id="38"/>
+			<ExtendedTooltip name="ДекорацияНетДублейРасширеннаяПодсказка" id="39"/>
+		</LabelDecoration>
+		<LabelDecoration name="ДекорацияОшибкаСозданияКлючейРеестраДокументов" id="59">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Title formatted="true">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>При создании ключей и переотражении документов в реестре документов возникли ошибки. Подробнее - см. &lt;link ОткрытьЖурналРегистрации&gt;Журнал регистрации&lt;/&gt;</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>При створенні ключів і перевідображення документів в реєстрі документів виникли помилки. Детальніше - див.&lt;link ОткрытьЖурналРегистрации&gt; Журнал реєстрації&lt;/&gt;</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ДекорацияОшибкаСозданияКлючейРеестраДокументовКонтекстноеМеню" id="60"/>
+			<ExtendedTooltip name="ДекорацияОшибкаСозданияКлючейРеестраДокументовРасширеннаяПодсказка" id="61"/>
+			<Events>
+				<Event name="URLProcessing">ДекорацияОшибкаСозданияКлючейРеестраДокументовОбработкаНавигационнойСсылки</Event>
+			</Events>
+		</LabelDecoration>
+		<LabelDecoration name="ДекорацияЗапуститьПроцедуруСозданияКлючейРеестраДокументов" id="53">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Title formatted="true">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>&lt;colorstyle -16&gt;Есть элементы справочников, для которых не созданы ключи реестра документов&lt;/&gt;. Рекомендуется &lt;link СоздатьКлючиРеестраДокументов&gt;запустить процедуру создания недостающих ключей&lt;/&gt;.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>&lt;colorstyle -16&gt;Є елементи довідників, для яких не створені ключі реєстру документів&lt;/&gt; . рекомендується&lt;link СоздатьКлючиРеестраДокументов&gt; запустити процедуру створення відсутніх ключів&lt;/&gt; .</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ДекорацияЗапуститьПроцедуруСозданияКлючейРеестраДокументовКонтекстноеМеню" id="54"/>
+			<ExtendedTooltip name="ДекорацияЗапуститьПроцедуруСозданияКлючейРеестраДокументовРасширеннаяПодсказка" id="55"/>
+			<Events>
+				<Event name="URLProcessing">ДекорацияЗапуститьПроцедуруСозданияКлючейРеестраДокументовОбработкаНавигационнойСсылки</Event>
+			</Events>
+		</LabelDecoration>
+		<LabelDecoration name="ДекорацияНеХватаетКлючейВПодчиненномУзлеРИБ" id="56">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Title formatted="true">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>&lt;colorstyle -16&gt;Есть элементы справочников, для которых не созданы ключи реестра документов&lt;/&gt;. Запустите процедуру создания ключей в главном узле, а затем выполните обмен.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>&lt;colorstyle -16&gt;Є елементи довідників, для яких не створені ключі реєстру документів&lt;/&gt; . Запустіть процедуру створення ключів в головному вузлі, а потім виконайте обмін.</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ДекорацияНеХватаетКлючейВПодчиненномУзлеРИБКонтекстноеМеню" id="57"/>
+			<ExtendedTooltip name="ДекорацияНеХватаетКлючейВПодчиненномУзлеРИБРасширеннаяПодсказка" id="58"/>
+		</LabelDecoration>
+		<LabelDecoration name="ДекорацияДляВсехЭлементовСправочниковКлючиСозданы" id="50">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Title formatted="true">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>&lt;colorstyle 0:0cc3bc7c-a0bd-4487-ad07-99501a79bc1a&gt;Для всех элементов справочников ключи созданы&lt;/&gt;</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>&lt;colorstyle 0:0cc3bc7c-a0bd-4487-ad07-99501a79bc1a&gt;Для всіх елементів довідників ключі створені&lt;/&gt;</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ДекорацияДляВсехЭлементовСправочниковКлючиСозданыКонтекстноеМеню" id="51"/>
+			<ExtendedTooltip name="ДекорацияДляВсехЭлементовСправочниковКлючиСозданыРасширеннаяПодсказка" id="52"/>
+		</LabelDecoration>
+		<LabelDecoration name="ДекорацияОшибкаОтраженияДокументовВРеестре" id="62">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Title formatted="true">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>При переотражении документов в реестре документов возникли ошибки. Подробнее - см. &lt;link ОткрытьЖурналРегистрации&gt;Журнал регистрации&lt;/&gt;</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>При перевідображенні документів в реєстрі документів виникли помилки. Детальніше - див.&lt;link ОткрытьЖурналРегистрации&gt; Журнал реєстрації&lt;/&gt;</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ДекорацияОшибкаОтраженияДокументовВРеестреКонтекстноеМеню" id="63"/>
+			<ExtendedTooltip name="ДекорацияОшибкаОтраженияДокументовВРеестреРасширеннаяПодсказка" id="64"/>
+			<Events>
+				<Event name="URLProcessing">ДекорацияОшибкаОтраженияДокументовВРеестреОбработкаНавигационнойСсылки</Event>
+			</Events>
+		</LabelDecoration>
+		<LabelDecoration name="ДекорацияЕстьДокументыКПереотражениюВРеестре" id="65">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Title formatted="true">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>&lt;colorstyle -16&gt;Есть документы, которые необходимо переотразить в реестре документов&lt;/&gt;. &lt;link ЗапуститьПроцедуруПереотраженияДокументовВРеестре&gt;Запустить процедуру переотражения&lt;/&gt;</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>&lt;colorstyle -16&gt;Є документи, які необхідно повторно відобразити в реєстрі документів&lt;/&gt; .&lt;link ЗапуститьПроцедуруПереотраженияДокументовВРеестре&gt; Запустити процедуру повторного відображення&lt;/&gt;</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ДекорацияЕстьДокументыКПереотражениюВРеестреКонтекстноеМеню" id="66"/>
+			<ExtendedTooltip name="ДекорацияЕстьДокументыКПереотражениюВРеестреРасширеннаяПодсказка" id="67"/>
+			<Events>
+				<Event name="URLProcessing">ДекорацияЕстьДокументыКПереотражениюВРеестреОбработкаНавигационнойСсылки</Event>
+			</Events>
+		</LabelDecoration>
+		<LabelDecoration name="ДекорацияВсеДокументыВРеестреОтраженыКорректно" id="71">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Title formatted="true">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>&lt;color #008000&gt;Все документы в реестре документов отражены корректно&lt;/&gt;</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>&lt;color #008000&gt;Всі документи в реєстрі документів відображені коректно&lt;/&gt;</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ДекорацияВсеДокументыВРеестреОтраженыКорректноКонтекстноеМеню" id="72"/>
+			<ExtendedTooltip name="ДекорацияВсеДокументыВРеестреОтраженыКорректноРасширеннаяПодсказка" id="73"/>
+			<Events>
+				<Event name="URLProcessing">ДекорацияОшибкаСозданияКлючейРеестраДокументовОбработкаНавигационнойСсылки</Event>
+			</Events>
+		</LabelDecoration>
+		<LabelDecoration name="ДекорацияПроверитьНеобходимостьПереотраженияДокументовВРеестре" id="68">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Title formatted="true">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>&lt;link ЗапуститьПроцеруруПроверкиКорректностиОтраженияДокументовВРеестре&gt;Запустить&lt;/&gt; процедуру проверки корректности отражения документов в реестре документов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>&lt;link ЗапуститьПроцеруруПроверкиКорректностиОтраженияДокументовВРеестре&gt;Запустити&lt;/&gt; процедуру перевірки коректності відображення документів в реєстрі документів</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ДекорацияПроверитьНеобходимостьПереотраженияДокументовВРеестреКонтекстноеМеню" id="69"/>
+			<ExtendedTooltip name="ДекорацияПроверитьНеобходимостьПереотраженияДокументовВРеестреРасширеннаяПодсказка" id="70"/>
+			<Events>
+				<Event name="URLProcessing">ДекорацияПроверитьНеобходимостьПереотраженияДокументовВРеестреОбработкаНавигационнойСсылки</Event>
+			</Events>
+		</LabelDecoration>
+		<Table name="Список" id="3">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
+			<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="5">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="7">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="8"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="10">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="11"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="12"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="13">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="14"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="15"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="Ссылка" id="16">
+					<DataPath>Список.Ref</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<ContextMenu name="СсылкаКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="18"/>
+				</LabelField>
+				<LabelField name="Наименование" id="19">
+					<DataPath>Список.Description</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="21"/>
+				</LabelField>
+				<LabelField name="Ключ" id="22">
+					<DataPath>Список.Ключ</DataPath>
+					<ContextMenu name="КлючКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="КлючРасширеннаяПодсказка" id="24"/>
+				</LabelField>
+				<LabelField name="КодПоЕДРПОУ" id="25">
+					<DataPath>Список.КодПоЕДРПОУ</DataPath>
+					<ContextMenu name="КодПоЕДРПОУКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="КодПоЕДРПОУРасширеннаяПодсказка" id="27"/>
+				</LabelField>
+				<LabelField name="Организация" id="28">
+					<DataPath>Список.Организация</DataPath>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="30"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Список.Ключ</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СправочникКлючиРеестраДокументов.Ссылка,
+	СправочникКлючиРеестраДокументов.ПометкаУдаления,
+	СправочникКлючиРеестраДокументов.Наименование,
+	СправочникКлючиРеестраДокументов.Ключ,
+	СправочникКлючиРеестраДокументов.КодПоЕДРПОУ,
+	СправочникКлючиРеестраДокументов.Организация,
+	СправочникКлючиРеестраДокументов.Предопределенный,
+	СправочникКлючиРеестраДокументов.ИмяПредопределенныхДанных
+ИЗ
+	Справочник.КлючиРеестраДокументов КАК СправочникКлючиРеестраДокументов
+ГДЕ
+	ТИПЗНАЧЕНИЯ(СправочникКлючиРеестраДокументов.Ключ) = &amp;ТипЗначенияКлюча
+	ИЛИ &amp;ТипЗначенияКлюча = ТИПЗНАЧЕНИЯ(НЕОПРЕДЕЛЕНО)</QueryText>
+				<MainTable>Catalog.КлючиРеестраДокументов</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ЕстьДубли" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Есть дубли</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Є дублі</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВремяНачалаИсправления" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Время начала исправления</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Час початку виправлення</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПустыеЗначенияКлюча" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пустые значения ключа</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Порожні значення ключа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+		<Attribute name="ТипЗначения" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип значения</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Тип значення</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЕстьЭлементыСправочниковБезКлючей" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Есть элементы справочников без ключей</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Є елементи довідників без ключів</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЕстьДокументыКПереотражениюВРеестре" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Есть документы к переотражению в реестре</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Є документи до перевідображення в реєстрі</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

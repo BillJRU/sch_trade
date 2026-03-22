@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<CommandSet>
+		<ExcludedCommand>Copy</ExcludedCommand>
+		<ExcludedCommand>Delete</ExcludedCommand>
+		<ExcludedCommand>Reread</ExcludedCommand>
+		<ExcludedCommand>Write</ExcludedCommand>
+		<ExcludedCommand>WriteAndClose</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="Страницы" id="47">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Сторінки</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="48"/>
+			<ChildItems>
+				<Page name="СтраницаОсновное" id="49">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основное</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Основне</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаОсновноеРасширеннаяПодсказка" id="50"/>
+					<ChildItems>
+						<InputField name="ПланПроизводства" id="1">
+							<DataPath>Запись.План</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ПланПроизводстваКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="ПланПроизводстваРасширеннаяПодсказка" id="3"/>
+						</InputField>
+						<InputField name="Номенклатура" id="4">
+							<DataPath>Запись.Номенклатура</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="НоменклатураКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="НоменклатураРасширеннаяПодсказка" id="6"/>
+						</InputField>
+						<InputField name="Характеристика" id="7">
+							<DataPath>Запись.Характеристика</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ХарактеристикаКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ХарактеристикаРасширеннаяПодсказка" id="9"/>
+						</InputField>
+						<InputField name="Назначение" id="10">
+							<DataPath>Запись.Назначение</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="НазначениеКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="НазначениеРасширеннаяПодсказка" id="12"/>
+						</InputField>
+						<InputField name="Спецификация" id="13">
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="СпецификацияКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="СпецификацияРасширеннаяПодсказка" id="15"/>
+						</InputField>
+						<InputField name="Период" id="53">
+							<DataPath>Запись.ПериодПланирования</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ПериодКонтекстноеМеню" id="54"/>
+							<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="55"/>
+						</InputField>
+						<UsualGroup name="ГруппаОбеспечить" id="42">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Обеспечить</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Забезпечити</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа обеспечить</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Група забезпечити</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОбеспечитьРасширеннаяПодсказка" id="43"/>
+							<ChildItems>
+								<InputField name="Обеспечить" id="28">
+									<DataPath>Запись.Обеспечить</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Width>9</Width>
+									<ContextMenu name="ОбеспечитьКонтекстноеМеню" id="29"/>
+									<ExtendedTooltip name="ОбеспечитьРасширеннаяПодсказка" id="30"/>
+								</InputField>
+								<LabelField name="НоменклатураЕдиницаИзмерения" id="44">
+									<DataPath>Запись.Номенклатура.ЕдиницаИзмерения</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="НоменклатураЕдиницаИзмеренияКонтекстноеМеню" id="45"/>
+									<ExtendedTooltip name="НоменклатураЕдиницаИзмеренияРасширеннаяПодсказка" id="46"/>
+								</LabelField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаИнтервалПотребностиОт" id="56">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Количество</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Кількість</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа интервал потребности от</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Група інтервал потреби від</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаИнтервалПотребностиОтРасширеннаяПодсказка" id="57"/>
+							<ChildItems>
+								<InputField name="ИнтервалПотребностиОт" id="58">
+									<DataPath>Запись.ИнтервалПотребностиОт</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Width>9</Width>
+									<ContextMenu name="ИнтервалПотребностиОтКонтекстноеМеню" id="59"/>
+									<ExtendedTooltip name="ИнтервалПотребностиОтРасширеннаяПодсказка" id="60"/>
+								</InputField>
+								<LabelField name="НоменклатураЕдиницаИзмерения1" id="61">
+									<DataPath>Запись.Номенклатура.ЕдиницаИзмерения</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="НоменклатураЕдиницаИзмерения1КонтекстноеМеню" id="62"/>
+									<ExtendedTooltip name="НоменклатураЕдиницаИзмерения1РасширеннаяПодсказка" id="63"/>
+								</LabelField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаИнтервалПотребностиДо" id="64">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Интервал потребности до</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Інтервал потреби до</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа интервал потребности от</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Група інтервал потреби від</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаИнтервалПотребностиДоРасширеннаяПодсказка" id="65"/>
+							<ChildItems>
+								<InputField name="ИнтервалПотребностиДо" id="66">
+									<DataPath>Запись.ИнтервалПотребностиДо</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Width>9</Width>
+									<ContextMenu name="ИнтервалПотребностиДоКонтекстноеМеню" id="67"/>
+									<ExtendedTooltip name="ИнтервалПотребностиДоРасширеннаяПодсказка" id="68"/>
+								</InputField>
+								<LabelField name="НоменклатураЕдиницаИзмерения2" id="69">
+									<DataPath>Запись.Номенклатура.ЕдиницаИзмерения</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="НоменклатураЕдиницаИзмерения2КонтекстноеМеню" id="70"/>
+									<ExtendedTooltip name="НоменклатураЕдиницаИзмерения2РасширеннаяПодсказка" id="71"/>
+								</LabelField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="ДатаКорректировки" id="31">
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ДатаКорректировкиКонтекстноеМеню" id="32"/>
+							<ExtendedTooltip name="ДатаКорректировкиРасширеннаяПодсказка" id="33"/>
+						</InputField>
+						<InputField name="АвторКорректировки" id="34">
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="АвторКорректировкиКонтекстноеМеню" id="35"/>
+							<ExtendedTooltip name="АвторКорректировкиРасширеннаяПодсказка" id="36"/>
+						</InputField>
+						<InputField name="Комментарий1" id="72">
+							<DataPath>Запись.Комментарий</DataPath>
+							<MultiLine>true</MultiLine>
+							<ContextMenu name="Комментарий1КонтекстноеМеню" id="73"/>
+							<ExtendedTooltip name="Комментарий1РасширеннаяПодсказка" id="74"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаКомментарий" id="51">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Коментар</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаКомментарийРасширеннаяПодсказка" id="52"/>
+					<ChildItems>
+						<InputField name="Комментарий" id="37">
+							<ReadOnly>true</ReadOnly>
+							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<MultiLine>true</MultiLine>
+							<ContextMenu name="КомментарийКонтекстноеМеню" id="38"/>
+							<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="39"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.ОтменаКорректировокПлановОбеспечения</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Parameters>
+		<Parameter name="ПоказыватьНазначение">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

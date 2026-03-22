@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<Width>100</Width>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<Table name="Список" id="1">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<HeaderHeight>2</HeaderHeight>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокExtendedTooltip" id="20"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="29">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="30"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="31"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="32">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="33"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="34"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="35">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="36"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="37"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="Период" id="4">
+					<DataPath>Список.Period</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ПериодКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ПериодExtendedTooltip" id="21"/>
+				</LabelField>
+				<LabelField name="Организация" id="6">
+					<DataPath>Список.Организация</DataPath>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="ОрганизацияExtendedTooltip" id="22"/>
+				</LabelField>
+				<CheckBoxField name="ВыгрузкаПечатьНН_ПоФормеНаДатуДокумента" id="38">
+					<DataPath>Список.ВыгрузкаПечатьНН_ПоФормеНаДатуДокумента</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВыгрузкаПечатьНН_ПоФормеНаДатуДокументаКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="ВыгрузкаПечатьНН_ПоФормеНаДатуДокументаРасширеннаяПодсказка" id="40"/>
+				</CheckBoxField>
+				<CheckBoxField name="ДополнятьНаименованиеАдресДаннымиГоловнойОрганизацииВНН" id="18">
+					<DataPath>Список.ДополнятьНаименованиеАдресДаннымиГоловнойОрганизацииВНН</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнять наименование и адрес
+данными головной организации</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Доповнювати найменування та адресу
+даними головної організації</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ДополнятьНаименованиеАдресДаннымиГоловнойОрганизацииВННКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="ДополнятьНаименованиеАдресДаннымиГоловнойОрганизацииВННExtendedTooltip" id="23"/>
+				</CheckBoxField>
+				<LabelField name="СимволПустыхПоказателейВНалоговойНакладной" id="8">
+					<DataPath>Список.СимволПустыхПоказателейВНалоговойНакладной</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Символ 
+пустых</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Символ 
+порожніх</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СимволПустыхПоказателейВНалоговойНакладнойКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="СимволПустыхПоказателейВНалоговойНакладнойExtendedTooltip" id="24"/>
+				</LabelField>
+				<CheckBoxField name="ПечататьКодУКТВЭДБезПробелов" id="10">
+					<DataPath>Список.ПечататьКодУКТВЭДБезПробелов</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код УКТ ВЭД 
+без пробелов</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Код УКТ ЗЕД 
+без пробілів</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПечататьКодУКТВЭДБезПробеловКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ПечататьКодУКТВЭДБезПробеловExtendedTooltip" id="25"/>
+				</CheckBoxField>
+				<CheckBoxField name="ПечататьТитульныйЛистДляПриложения2КНалоговойНакладной" id="12">
+					<DataPath>Список.ПечататьТитульныйЛистДляПриложения2КНалоговойНакладной</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Титульный лист 
+для Приложения 2</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Титульний аркуш 
+для Додатка 2</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПечататьТитульныйЛистДляПриложения2КНалоговойНакладнойКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="ПечататьТитульныйЛистДляПриложения2КНалоговойНакладнойExtendedTooltip" id="26"/>
+				</CheckBoxField>
+				<CheckBoxField name="ПечататьДатыВНалоговыхНакладныхСРазделителями" id="14">
+					<DataPath>Список.ПечататьДатыВНалоговыхНакладныхСРазделителями</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Даты с 
+разделителями</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Дати з
+роздільниками</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПечататьДатыВНалоговыхНакладныхСРазделителямиКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ПечататьДатыВНалоговыхНакладныхСРазделителямиExtendedTooltip" id="27"/>
+				</CheckBoxField>
+				<CheckBoxField name="НеДополнятьНаименованиеНомеромГТДВНалоговыхДокументах" id="16">
+					<DataPath>Список.НеДополнятьНаименованиеНомеромГТДВНалоговыхДокументах</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование товара 
+без номера и даты ГТД</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Найменування товару 
+без номера та дати ВМД</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="НеДополнятьНаименованиеНомеромГТДВНалоговыхДокументахКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="НеДополнятьНаименованиеНомеромГТДВНалоговыхДокументахExtendedTooltip" id="28"/>
+				</CheckBoxField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>InformationRegister.НастройкаПечатиНалоговыхДокументов</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+</Form>

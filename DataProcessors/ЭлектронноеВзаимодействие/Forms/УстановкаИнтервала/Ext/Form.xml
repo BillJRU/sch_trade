@@ -1,0 +1,779 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Установите интервал значений</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>uk</v8:lang>
+			<v8:content>Встановіть інтервал значень</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаОК" id="1">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ОК</CommandName>
+				<ExtendedTooltip name="ФормаОКРасширеннаяПодсказка" id="2"/>
+			</Button>
+			<Button name="ФормаОтмена" id="3">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Отмена</CommandName>
+				<ExtendedTooltip name="ФормаОтменаРасширеннаяПодсказка" id="4"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<LabelField name="Значение" id="5">
+			<DataPath>ИмяРеквизита</DataPath>
+			<TitleLocation>None</TitleLocation>
+			<TextColor>style:ЦветРазделаПанелиФункций</TextColor>
+			<ContextMenu name="ЗначениеКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="ЗначениеРасширеннаяПодсказка" id="7"/>
+		</LabelField>
+		<Pages name="СтраницыВидовОтборов" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы видов отборов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Сторінки видів відборів</v8:content>
+				</v8:item>
+			</Title>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыВидовОтборовExtendedTooltip" id="9"/>
+			<ChildItems>
+				<Page name="СтраницаВводаИнтервала" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница ввода интервала</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Сторінка введення інтервалу</v8:content>
+						</v8:item>
+					</Title>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="СтраницаВводаИнтервалаExtendedTooltip" id="11"/>
+					<ChildItems>
+						<Pages name="СтраницыТиповИнтервалов" id="12">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страницы типов интервалов</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Сторінки типів інтервалів</v8:content>
+								</v8:item>
+							</Title>
+							<PagesRepresentation>None</PagesRepresentation>
+							<ExtendedTooltip name="СтраницыТиповИнтерваловExtendedTooltip" id="13"/>
+							<ChildItems>
+								<Page name="СтраницаТипаЧисло" id="14">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница типа число</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Сторінка число типу</v8:content>
+										</v8:item>
+									</Title>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="СтраницаТипаЧислоExtendedTooltip" id="15"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаЧисло" id="61">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа число</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Група число</v8:content>
+												</v8:item>
+											</Title>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаЧислоРасширеннаяПодсказка" id="62"/>
+											<ChildItems>
+												<InputField name="ЗначениеЧислоОт" id="16">
+													<DataPath>ЗначениеЧислоОт</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>от</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>uk</v8:lang>
+															<v8:content>від</v8:content>
+														</v8:item>
+													</Title>
+													<ClearButton>true</ClearButton>
+													<ContextMenu name="ЗначениеЧислоОтКонтекстноеМеню" id="17"/>
+													<ExtendedTooltip name="ЗначениеЧислоОтExtendedTooltip" id="18"/>
+												</InputField>
+												<InputField name="ЗначениеЧислоДо" id="19">
+													<DataPath>ЗначениеЧислоДо</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>до</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>uk</v8:lang>
+															<v8:content>до</v8:content>
+														</v8:item>
+													</Title>
+													<ClearButton>true</ClearButton>
+													<ContextMenu name="ЗначениеЧислоДоКонтекстноеМеню" id="20"/>
+													<ExtendedTooltip name="ЗначениеЧислоДоExtendedTooltip" id="21"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаПодсказкаЗначений" id="37">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа подсказка значений</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Група підказка значень</v8:content>
+												</v8:item>
+											</Title>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПодсказкаЗначенийРасширеннаяПодсказка" id="38"/>
+											<ChildItems>
+												<UsualGroup name="ГруппаМинимальноеЗначение" id="51">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа минимальное значение</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>uk</v8:lang>
+															<v8:content>Група мінімальне значення</v8:content>
+														</v8:item>
+													</Title>
+													<Group>AlwaysHorizontal</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаМинимальноеЗначениеРасширеннаяПодсказка" id="52"/>
+													<ChildItems>
+														<LabelDecoration name="ДекорацияОтступМин" id="55">
+															<Width>1</Width>
+															<ContextMenu name="ДекорацияОтступМинКонтекстноеМеню" id="56"/>
+															<ExtendedTooltip name="ДекорацияОтступМинРасширеннаяПодсказка" id="57"/>
+														</LabelDecoration>
+														<LabelDecoration name="ДекорацияМинЗнач" id="45">
+															<Width>19</Width>
+															<ContextMenu name="ДекорацияМинЗначКонтекстноеМеню" id="46"/>
+															<ExtendedTooltip name="ДекорацияМинЗначРасширеннаяПодсказка" id="47"/>
+														</LabelDecoration>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="ГруппаМаксимальноеЗначение" id="53">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа максимальное значение</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>uk</v8:lang>
+															<v8:content>Група максимальне значення</v8:content>
+														</v8:item>
+													</Title>
+													<HorizontalStretch>false</HorizontalStretch>
+													<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаМаксимальноеЗначениеРасширеннаяПодсказка" id="54"/>
+													<ChildItems>
+														<LabelDecoration name="ДекорацияОтступМакс" id="58">
+															<Width>2</Width>
+															<ContextMenu name="ДекорацияОтступМаксКонтекстноеМеню" id="59"/>
+															<ExtendedTooltip name="ДекорацияОтступМаксРасширеннаяПодсказка" id="60"/>
+														</LabelDecoration>
+														<LabelDecoration name="ДекорацияМаксЗнач" id="48">
+															<Width>19</Width>
+															<ContextMenu name="ДекорацияМаксЗначКонтекстноеМеню" id="49"/>
+															<ExtendedTooltip name="ДекорацияМаксЗначРасширеннаяПодсказка" id="50"/>
+														</LabelDecoration>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</Page>
+								<Page name="СтраницаТипаДата" id="22">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница типа дата</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Сторінка типу дата</v8:content>
+										</v8:item>
+									</Title>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="СтраницаТипаДатаExtendedTooltip" id="23"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаДата" id="63">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа дата</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Група дата</v8:content>
+												</v8:item>
+											</Title>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаДатаРасширеннаяПодсказка" id="64"/>
+											<ChildItems>
+												<InputField name="ЗначениеДатаОт" id="24">
+													<DataPath>ЗначениеДатаОт</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>от</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>uk</v8:lang>
+															<v8:content>від</v8:content>
+														</v8:item>
+													</Title>
+													<ClearButton>true</ClearButton>
+													<ContextMenu name="ЗначениеДатаОтКонтекстноеМеню" id="25"/>
+													<ExtendedTooltip name="ЗначениеДатаОтExtendedTooltip" id="26"/>
+												</InputField>
+												<InputField name="ЗначениеДатаДо" id="27">
+													<DataPath>ЗначениеДатаДо</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>до</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>uk</v8:lang>
+															<v8:content>до</v8:content>
+														</v8:item>
+													</Title>
+													<ClearButton>true</ClearButton>
+													<ContextMenu name="ЗначениеДатаДоКонтекстноеМеню" id="28"/>
+													<ExtendedTooltip name="ЗначениеДатаДоExtendedTooltip" id="29"/>
+												</InputField>
+												<Button name="УстановитьИнтервал" id="30">
+													<Type>UsualButton</Type>
+													<Representation>Picture</Representation>
+													<CommandName>Form.Command.УстановитьИнтервал</CommandName>
+													<ExtendedTooltip name="УстановитьИнтервалExtendedTooltip" id="31"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаПодсказкаЗначенийДата" id="65">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа подсказка значений</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Група підказка значень</v8:content>
+												</v8:item>
+											</Title>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПодсказкаЗначенийДатаРасширеннаяПодсказка" id="66"/>
+											<ChildItems>
+												<UsualGroup name="ГруппаМинимальноеЗначениеДата" id="67">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа минимальное значение</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>uk</v8:lang>
+															<v8:content>Група мінімальне значення</v8:content>
+														</v8:item>
+													</Title>
+													<Group>AlwaysHorizontal</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаМинимальноеЗначениеДатаРасширеннаяПодсказка" id="68"/>
+													<ChildItems>
+														<LabelDecoration name="ДекорацияОтступМинДата" id="69">
+															<Width>1</Width>
+															<ContextMenu name="ДекорацияОтступМинДатаКонтекстноеМеню" id="70"/>
+															<ExtendedTooltip name="ДекорацияОтступМинДатаРасширеннаяПодсказка" id="71"/>
+														</LabelDecoration>
+														<LabelDecoration name="ДекорацияМинЗначДата" id="72">
+															<Width>14</Width>
+															<ContextMenu name="ДекорацияМинЗначДатаКонтекстноеМеню" id="73"/>
+															<ExtendedTooltip name="ДекорацияМинЗначДатаРасширеннаяПодсказка" id="74"/>
+														</LabelDecoration>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="ГруппаМаксимальноеЗначениеДата" id="75">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа максимальное значение</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>uk</v8:lang>
+															<v8:content>Група максимальне значення</v8:content>
+														</v8:item>
+													</Title>
+													<HorizontalStretch>false</HorizontalStretch>
+													<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаМаксимальноеЗначениеДатаРасширеннаяПодсказка" id="76"/>
+													<ChildItems>
+														<LabelDecoration name="ДекорацияОтступМаксДата" id="77">
+															<Width>2</Width>
+															<ContextMenu name="ДекорацияОтступМаксДатаКонтекстноеМеню" id="78"/>
+															<ExtendedTooltip name="ДекорацияОтступМаксДатаРасширеннаяПодсказка" id="79"/>
+														</LabelDecoration>
+														<LabelDecoration name="ДекорацияМаксЗначДата" id="80">
+															<Width>14</Width>
+															<ContextMenu name="ДекорацияМаксЗначДатаКонтекстноеМеню" id="81"/>
+															<ExtendedTooltip name="ДекорацияМаксЗначДатаРасширеннаяПодсказка" id="82"/>
+														</LabelDecoration>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаВводаСтроки" id="32">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница ввода строки</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Сторінка вводу рядка</v8:content>
+						</v8:item>
+					</Title>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="СтраницаВводаСтрокиExtendedTooltip" id="33"/>
+					<ChildItems>
+						<InputField name="ЗначениеВыбораСтрока" id="34">
+							<DataPath>ЗначениеВыбораСтрока</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ClearButton>true</ClearButton>
+							<ChoiceListButton>true</ChoiceListButton>
+							<ContextMenu name="ЗначениеВыбораСтрокаКонтекстноеМеню" id="35"/>
+							<ExtendedTooltip name="ЗначениеВыбораСтрокаExtendedTooltip" id="36"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ЗначениеВыбораСтрока" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Значение выбора строка</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Значення вибору рядок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>1024</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗначениеДатаОт" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>от</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>від</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗначениеДатаДо" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>до</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>до</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗначениеЧислоДо" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>до</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>до</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>3</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИмяРеквизита" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя реквизита</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Ім'я реквізиту</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗначениеЧислоОт" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>от</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>від</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>3</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТипЗначенияДата" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип значения дата</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Тип значення, дата</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Число" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Число</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Число</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="МаксимальноеЗначениеЧисло" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Максимальное значение число</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Максимальне значення число</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>3</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="МинимальноеЗначениеЧисло" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Минимальное значение число</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Мінімальне значення число</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>3</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="МаксимальноеЗначениеДата" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Максимальное значение дата</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Максимальне значення дата</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="МинимальноеЗначениеДата" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Минимальное значение дата</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Мінімальне значення дата</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Отмена" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Відмінити</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Відмінити</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Отмена</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОК" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОК</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УстановитьИнтервал" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить интервал</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Встановити інтервал</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить интервал</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Встановити інтервал</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.SetDateInterval</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьИнтервал</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ЗначениеДо">
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>3</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="ЗначениеОт">
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>3</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="ЗначениеОтбора">
+			<Type/>
+		</Parameter>
+		<Parameter name="ИмяРеквизита">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="СписокСтрокОтбора">
+			<Type/>
+		</Parameter>
+		<Parameter name="ТипЗначения">
+			<Type/>
+		</Parameter>
+		<Parameter name="МаксимальноеЗначение">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="МинимальноеЗначение">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="ПодсказкаВвода">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

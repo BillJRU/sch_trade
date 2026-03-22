@@ -1,0 +1,965 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Безналичные платежи: к оплате / переводу</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>uk</v8:lang>
+			<v8:content>Безготівкові платежі: до оплати / переказу</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoURL>false</AutoURL>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnLoadDataFromSettingsAtServer">ПриЗагрузкеДанныхИзНастроекНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Шапка" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+			</Title>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ШапкаРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<InputField name="БанковскийСчетОтбор" id="3">
+					<DataPath>БанковскийСчетОтбор</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<MaxWidth>28</MaxWidth>
+					<ClearButton>true</ClearButton>
+					<OpenButton>false</OpenButton>
+					<QuickChoice>false</QuickChoice>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Банковский счет</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Банківський рахунок</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="БанковскийСчетОтборКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="БанковскийСчетОтборРасширеннаяПодсказка" id="5"/>
+					<Events>
+						<Event name="OnChange">БанковскийСчетОтборПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="КонтрагентОтбор" id="6">
+					<DataPath>КонтрагентПредставление</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ClearButton>true</ClearButton>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрагент</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Контрагент</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="КонтрагентОтборКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="КонтрагентОтборРасширеннаяПодсказка" id="8"/>
+					<Events>
+						<Event name="OnChange">КонтрагентОтборПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ЗаказыКОплатеОтборы" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказы к оплате отборы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Замовлення до оплати відбори</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ЗаказыКОплатеОтборыРасширеннаяПодсказка" id="10"/>
+			<ChildItems>
+				<Button name="ЗаказыКОплатеОплатить" id="11">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.Оплатить</CommandName>
+					<ExtendedTooltip name="ЗаказыКОплатеОплатитьРасширеннаяПодсказка" id="12"/>
+				</Button>
+				<InputField name="ДатаПлатежаЗаказы" id="13">
+					<DataPath>ДатаКОплате</DataPath>
+					<ClearButton>true</ClearButton>
+					<ContextMenu name="ДатаПлатежаЗаказыКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="ДатаПлатежаЗаказыРасширеннаяПодсказка" id="15"/>
+					<Events>
+						<Event name="OnChange">ДатаПлатежаПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="СписокОперацийКОплатеОтбор" id="16">
+					<DataPath>СписокОперацийОплатыПредставление</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отбор по основаниям платежа</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Відбір по підставам платежу</v8:content>
+						</v8:item>
+					</ToolTip>
+					<MaxWidth>30</MaxWidth>
+					<DropListButton>true</DropListButton>
+					<ChoiceButton>true</ChoiceButton>
+					<ClearButton>true</ClearButton>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основание платежа</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Підстава платежу</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="СписокОперацийКОплатеОтборКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="СписокОперацийКОплатеОтборРасширеннаяПодсказка" id="18"/>
+					<Events>
+						<Event name="StartChoice">СписокОперацийКОплатеОтборНачалоВыбора</Event>
+						<Event name="Clearing">СписокОперацийКОплатеОтборОчистка</Event>
+						<Event name="ChoiceProcessing">СписокОперацийКОплатеОтборОбработкаВыбора</Event>
+					</Events>
+				</InputField>
+				<CommandBar name="ГруппаКоманднаяПанельЗаказыКОплате" id="19">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Командная панель заказы к оплате</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Командна панель замовлення до оплати</v8:content>
+						</v8:item>
+					</Title>
+					<CommandSource>Item.ЗаказыКОплате</CommandSource>
+					<ExtendedTooltip name="ГруппаКоманднаяПанельЗаказыКОплатеРасширеннаяПодсказка" id="20"/>
+					<ChildItems>
+						<Button name="ЗаказыКОплатеИзменитьФорму" id="101">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+							<ExtendedTooltip name="ЗаказыКОплатеИзменитьФормуРасширеннаяПодсказка" id="102"/>
+						</Button>
+						<Button name="ЗаказыКОплатеСправка" id="103">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.StandardCommand.Help</CommandName>
+							<ExtendedTooltip name="ЗаказыКОплатеСправкаРасширеннаяПодсказка" id="104"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ЗаказыКОплате" id="21">
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>ЗаказыКОплате</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказы к оплате</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Замовлення до оплати</v8:content>
+				</v8:item>
+			</Title>
+			<CommandSet>
+				<ExcludedCommand>Change</ExcludedCommand>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>Create</ExcludedCommand>
+				<ExcludedCommand>Delete</ExcludedCommand>
+			</CommandSet>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<ContextMenu name="ЗаказыКОплатеКонтекстноеМеню" id="22">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="ЗаказыКОплатеКонтекстноеМенюОплатить" id="70">
+						<Type>CommandBarButton</Type>
+						<CommandName>3:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+						<ExtendedTooltip name="ЗаказыКОплатеКонтекстноеМенюОплатитьРасширеннаяПодсказка" id="71"/>
+					</Button>
+					<ButtonGroup name="ЗаказыКОплатеКонтекстноеМенюСтандартныеКоманды" id="72">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Заказы к оплате контекстное меню стандартные команды</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
+								<v8:content>Замовлення до оплати контекстне меню стандартні команди</v8:content>
+							</v8:item>
+						</Title>
+						<CommandSource>Item.ЗаказыКОплате</CommandSource>
+						<ExtendedTooltip name="ЗаказыКОплатеКонтекстноеМенюСтандартныеКомандыРасширеннаяПодсказка" id="73"/>
+					</ButtonGroup>
+				</ChildItems>
+			</ContextMenu>
+			<AutoCommandBar name="ЗаказыКОплатеКоманднаяПанель" id="23">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ЗаказыКОплатеРасширеннаяПодсказка" id="24"/>
+			<SearchStringAddition name="ЗаказыКОплатеСтрокаПоиска" id="25">
+				<AdditionSource>
+					<Item>ЗаказыКОплате</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗаказыКОплатеСтрокаПоискаКонтекстноеМеню" id="26"/>
+				<ExtendedTooltip name="ЗаказыКОплатеСтрокаПоискаРасширеннаяПодсказка" id="27"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ЗаказыКОплатеСостояниеПросмотра" id="28">
+				<AdditionSource>
+					<Item>ЗаказыКОплате</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗаказыКОплатеСостояниеПросмотраКонтекстноеМеню" id="29"/>
+				<ExtendedTooltip name="ЗаказыКОплатеСостояниеПросмотраРасширеннаяПодсказка" id="30"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ЗаказыКОплатеУправлениеПоиском" id="31">
+				<AdditionSource>
+					<Item>ЗаказыКОплате</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗаказыКОплатеУправлениеПоискомКонтекстноеМеню" id="32"/>
+				<ExtendedTooltip name="ЗаказыКОплатеУправлениеПоискомРасширеннаяПодсказка" id="33"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">ВспомогательныйСписокВыбор</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="ЗаказыКОплатеДатаПлатежа" id="105">
+					<DataPath>ЗаказыКОплате.ДатаПлатежа</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата платежа</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Дата платежу</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЗаказыКОплатеДатаПлатежаКонтекстноеМеню" id="106"/>
+					<ExtendedTooltip name="ЗаказыКОплатеДатаПлатежаРасширеннаяПодсказка" id="107"/>
+				</LabelField>
+				<LabelField name="ЗаказыКОплатеПолучатель" id="108">
+					<DataPath>ЗаказыКОплате.Получатель</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Получатель</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Одержувач</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЗаказыКОплатеПолучательКонтекстноеМеню" id="109"/>
+					<ExtendedTooltip name="ЗаказыКОплатеПолучательРасширеннаяПодсказка" id="110"/>
+				</LabelField>
+				<LabelField name="ЗаказыКОплатеСуммаКОплате" id="111">
+					<DataPath>ЗаказыКОплате.СуммаКОплате</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>К оплате</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>До оплати</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЗаказыКОплатеСуммаКОплатеКонтекстноеМеню" id="112"/>
+					<ExtendedTooltip name="ЗаказыКОплатеСуммаКОплатеРасширеннаяПодсказка" id="113"/>
+				</LabelField>
+				<LabelField name="ЗаказыКОплатеСуммаДокумента" id="114">
+					<DataPath>ЗаказыКОплате.СуммаДокумента</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма документа</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Сума документа</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЗаказыКОплатеСуммаДокументаКонтекстноеМеню" id="115"/>
+					<ExtendedTooltip name="ЗаказыКОплатеСуммаДокументаРасширеннаяПодсказка" id="116"/>
+				</LabelField>
+				<LabelField name="ЗаказыКОплатеВалюта" id="117">
+					<DataPath>ЗаказыКОплате.Валюта</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Валюта</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Валюта</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЗаказыКОплатеВалютаКонтекстноеМеню" id="118"/>
+					<ExtendedTooltip name="ЗаказыКОплатеВалютаРасширеннаяПодсказка" id="119"/>
+				</LabelField>
+				<LabelField name="ЗаказыКОплатеТип" id="120">
+					<DataPath>ЗаказыКОплате.ТипОбъектаОплаты</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основание</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Підстава</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЗаказыКОплатеТипКонтекстноеМеню" id="121"/>
+					<ExtendedTooltip name="ЗаказыКОплатеТипРасширеннаяПодсказка" id="122"/>
+				</LabelField>
+				<LabelField name="ЗаказыКОплатеНомер" id="123">
+					<DataPath>ЗаказыКОплате.Номер</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Номер</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЗаказыКОплатеНомерКонтекстноеМеню" id="124"/>
+					<ExtendedTooltip name="ЗаказыКОплатеНомерРасширеннаяПодсказка" id="125"/>
+				</LabelField>
+				<LabelField name="ЗаказыКОплатеДата" id="126">
+					<DataPath>ЗаказыКОплате.Дата</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Дата</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЗаказыКОплатеДатаКонтекстноеМеню" id="127"/>
+					<ExtendedTooltip name="ЗаказыКОплатеДатаРасширеннаяПодсказка" id="128"/>
+				</LabelField>
+				<LabelField name="ЗаказыКОплатеХозяйственнаяОперация" id="129">
+					<DataPath>ЗаказыКОплате.ХозяйственнаяОперация</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Операция</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Операція</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЗаказыКОплатеХозяйственнаяОперацияКонтекстноеМеню" id="130"/>
+					<ExtendedTooltip name="ЗаказыКОплатеХозяйственнаяОперацияРасширеннаяПодсказка" id="131"/>
+				</LabelField>
+				<LabelField name="ЗаказыКОплатеСтатьяДвиженияДенежныхСредств" id="147">
+					<DataPath>ЗаказыКОплате.СтатьяДвиженияДенежныхСредств</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статья ДДС</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Стаття РГК</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЗаказыКОплатеСтатьяДвиженияДенежныхСредствКонтекстноеМеню" id="148"/>
+					<ExtendedTooltip name="ЗаказыКОплатеСтатьяДвиженияДенежныхСредствРасширеннаяПодсказка" id="149"/>
+				</LabelField>
+				<LabelField name="ЗаказыКОплатеПодразделение" id="144">
+					<DataPath>ЗаказыКОплате.Подразделение</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подразделение</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Підрозділ</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЗаказыКОплатеПодразделениеКонтекстноеМеню" id="145"/>
+					<ExtendedTooltip name="ЗаказыКОплатеПодразделениеРасширеннаяПодсказка" id="146"/>
+				</LabelField>
+				<LabelField name="ЗаказыКОплатеНаправлениеДеятельности" id="150">
+					<DataPath>ЗаказыКОплате.НаправлениеДеятельности</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Направление деятельности</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Напрям діяльності</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЗаказыКОплатеНаправлениеДеятельностиКонтекстноеМеню" id="151"/>
+					<ExtendedTooltip name="ЗаказыКОплатеНаправлениеДеятельностиРасширеннаяПодсказка" id="152"/>
+				</LabelField>
+				<LabelField name="ЗаказыКОплатеБанковскийСчет" id="132">
+					<DataPath>ЗаказыКОплате.БанковскийСчет</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Банковский счет</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Банківський рахунок</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЗаказыКОплатеБанковскийСчетКонтекстноеМеню" id="133"/>
+					<ExtendedTooltip name="ЗаказыКОплатеБанковскийСчетРасширеннаяПодсказка" id="134"/>
+				</LabelField>
+				<LabelField name="ЗаказыКОплатеОтветственный" id="141">
+					<DataPath>ЗаказыКОплате.Ответственный</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ответственный</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Відповідальний</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЗаказыКОплатеОтветственныйКонтекстноеМеню" id="142"/>
+					<ExtendedTooltip name="ЗаказыКОплатеОтветственныйРасширеннаяПодсказка" id="143"/>
+				</LabelField>
+				<LabelField name="ЗаказыКОплатеОрганизация" id="135">
+					<DataPath>ЗаказыКОплате.Организация</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Організація</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЗаказыКОплатеОрганизацияКонтекстноеМеню" id="136"/>
+					<ExtendedTooltip name="ЗаказыКОплатеОрганизацияРасширеннаяПодсказка" id="137"/>
+				</LabelField>
+				<LabelField name="ЗаказыКОплатеСсылка" id="138">
+					<DataPath>ЗаказыКОплате.Ссылка</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ссылка</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Посилання</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЗаказыКОплатеСсылкаКонтекстноеМеню" id="139"/>
+					<ExtendedTooltip name="ЗаказыКОплатеСсылкаРасширеннаяПодсказка" id="140"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+		<UsualGroup name="ЗаказыКОплатеИтоги" id="74">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказы к оплате итоги</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Замовлення до оплати підсумки</v8:content>
+				</v8:item>
+			</Title>
+			<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ЗаказыКОплатеИтогиРасширеннаяПодсказка" id="75"/>
+			<ChildItems>
+				<InputField name="ЗаказыКОплатеВсего" id="76">
+					<DataPath>КОплатеВсего</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>К оплате</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>До оплати</v8:content>
+						</v8:item>
+					</Title>
+					<Width>10</Width>
+					<ContextMenu name="ЗаказыКОплатеВсегоКонтекстноеМеню" id="77"/>
+					<ExtendedTooltip name="ЗаказыКОплатеВсегоРасширеннаяПодсказка" id="78"/>
+				</InputField>
+				<InputField name="ЗаказыДоступноМинусКОплате" id="79">
+					<DataPath>ДоступноМинусКОплате</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доступно - К оплате</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Доступно - До оплати</v8:content>
+						</v8:item>
+					</Title>
+					<Width>10</Width>
+					<ContextMenu name="ЗаказыДоступноМинусКОплатеКонтекстноеМеню" id="80"/>
+					<ExtendedTooltip name="ЗаказыДоступноМинусКОплатеРасширеннаяПодсказка" id="81"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Подвал" id="82">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подвал</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Підвал</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ПодвалРасширеннаяПодсказка" id="83"/>
+			<ChildItems>
+				<LabelDecoration name="НадписьБанковскийСчет" id="84">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Height>1</Height>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;Счет не задан&gt;</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>&lt;Рахунок не заданий&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НадписьБанковскийСчетКонтекстноеМеню" id="85"/>
+					<ExtendedTooltip name="НадписьБанковскийСчетРасширеннаяПодсказка" id="86"/>
+				</LabelDecoration>
+				<LabelDecoration name="Декорация3" id="87">
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="Декорация3КонтекстноеМеню" id="88"/>
+					<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="89"/>
+				</LabelDecoration>
+				<UsualGroup name="ГруппаИтоги" id="90">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Итоги</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Підсумки</v8:content>
+						</v8:item>
+					</Title>
+					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаИтогиРасширеннаяПодсказка" id="91"/>
+					<ChildItems>
+						<InputField name="ТекущийОстаток" id="92">
+							<DataPath>ТекущийОстаток</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Остаток на счете</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Залишок на рахунку</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Left</TitleLocation>
+							<Width>10</Width>
+							<ContextMenu name="ТекущийОстатокКонтекстноеМеню" id="93"/>
+							<ExtendedTooltip name="ТекущийОстатокРасширеннаяПодсказка" id="94"/>
+						</InputField>
+						<InputField name="КСписаниюВсего" id="95">
+							<DataPath>КСписаниюВсего</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<TitleLocation>Left</TitleLocation>
+							<Width>10</Width>
+							<ContextMenu name="КСписаниюВсегоКонтекстноеМеню" id="96"/>
+							<ExtendedTooltip name="КСписаниюВсегоРасширеннаяПодсказка" id="97"/>
+						</InputField>
+						<InputField name="ДоступноВсего" id="98">
+							<DataPath>ДоступноВсего</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<TitleLocation>Left</TitleLocation>
+							<Width>10</Width>
+							<ContextMenu name="ДоступноВсегоКонтекстноеМеню" id="99"/>
+							<ExtendedTooltip name="ДоступноВсегоРасширеннаяПодсказка" id="100"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ЖурналДокументовБезналичныеПлатежи</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="БанковскийСчетОтбор" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Банковский счет</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Банківський рахунок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.БанковскиеСчетаОрганизаций</v8:Type>
+			</Type>
+			<Save>
+				<Field>БанковскийСчетОтбор</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ДатаКОплате" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>До</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>До</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+			<Save>
+				<Field>3/0</Field>
+				<Field>ДатаКОплате</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ДоступноВсего" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доступно</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Доступно</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаЛюбогоЗнака</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="ДоступноМинусКОплате" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доступно минус к оплате</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Доступно мінус до оплати</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаЛюбогоЗнака</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="КонтрагентПредставление" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Контрагент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>КонтрагентПредставление</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="КОплатеВсего" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>К оплате всего</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>До cплати всього</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаЛюбогоЗнака</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="КСписаниюВсего" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>К списанию</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>До списання</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаЛюбогоЗнака</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущийОстаток" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий остаток</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Поточний залишок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаЛюбогоЗнака</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокОперацийОплаты" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список операций оплаты</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Список операцій оплати</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Save>
+				<Field>СписокОперацийОплаты</Field>
+			</Save>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+		<Attribute name="СписокОперацийОплатыПредставление" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основание платежа</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Підстава платежу</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаказыКОплате" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказы к оплате</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Замовлення до оплати</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>ЗаказыКОплате.КонтрагентПредставление</Field>
+				<Field>ЗаказыКОплате.Организация</Field>
+				<Field>ЗаказыКОплате.Ссылка</Field>
+				<Field>ЗаказыКОплате.СуммаКОплате</Field>
+			</UseAlways>
+			<FunctionalOptions>
+				<Item>FunctionalOption.НеИспользоватьЗаявкиНаРасходованиеДенежныхСредств</Item>
+			</FunctionalOptions>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ГрафикПлатежей.ДатаПлатежа КАК ДатаПлатежа,
+	ГрафикПлатежей.ПлательщикПолучатель КАК Получатель,
+	ГрафикПлатежей.ПлательщикПолучатель.Наименование КАК КонтрагентПредставление,
+	ГрафикПлатежей.Сумма КАК СуммаКОплате,
+	ГрафикПлатежей.Валюта КАК Валюта,
+	
+	ГрафикПлатежей.Номер КАК Номер,
+	ГрафикПлатежей.Дата КАК Дата,
+	ГрафикПлатежей.ТипОбъектаОплаты КАК ТипОбъектаОплаты,
+	ГрафикПлатежей.СуммаДокумента КАК СуммаДокумента,
+	ГрафикПлатежей.БанковскийСчетКасса КАК БанковскийСчет,
+	
+	ГрафикПлатежей.ХозяйственнаяОперация КАК ХозяйственнаяОперация,
+	ГрафикПлатежей.СтатьяДвиженияДенежныхСредств КАК СтатьяДвиженияДенежныхСредств,
+	ГрафикПлатежей.Подразделение КАК Подразделение,
+	ГрафикПлатежей.НаправлениеДеятельности КАК НаправлениеДеятельности,
+	ГрафикПлатежей.Ответственный КАК Ответственный,
+	
+	ГрафикПлатежей.Организация КАК Организация,
+	ГрафикПлатежей.ДатаАктуальностиГрафика КАК ДатаАктуальностиГрафика,
+	ГрафикПлатежей.ОбластьПланирования КАК ОбластьПланирования,
+	
+	ГрафикПлатежей.ОбъектОплаты КАК Ссылка
+ИЗ
+	РегистрСведений.ГрафикПлатежей КАК ГрафикПлатежей
+	
+ГДЕ
+	ГрафикПлатежей.ПоступлениеСписание = ЗНАЧЕНИЕ(Перечисление.ТипыДвиженияДенежныхСредств.Списание)
+	И ГрафикПлатежей.ДатаПлатежа &lt;= &amp;ДатаПлатежа
+	И ГрафикПлатежей.ОбластьПланирования В (
+		ЗНАЧЕНИЕ(Перечисление.ОбластиПланированияПлатежей.РасчетыСПоставщиками),
+		ЗНАЧЕНИЕ(Перечисление.ОбластиПланированияПлатежей.ВозвратыКлиентам),
+		ЗНАЧЕНИЕ(Перечисление.ОбластиПланированияПлатежей.ДенежныеСредстваВПути),
+		ЗНАЧЕНИЕ(Перечисление.ОбластиПланированияПлатежей.КредитыИлиЗаймыПолученные),
+		ЗНАЧЕНИЕ(Перечисление.ОбластиПланированияПлатежей.Депозиты),
+		ЗНАЧЕНИЕ(Перечисление.ОбластиПланированияПлатежей.ЗаймыВыданные),
+		ЗНАЧЕНИЕ(Перечисление.ОбластиПланированияПлатежей.Лизинг)
+		)
+	И ГрафикПлатежей.ФормаОплаты В (
+		ЗНАЧЕНИЕ(Перечисление.ФормыОплаты.БезНаличная),
+		ЗНАЧЕНИЕ(Перечисление.ФормыОплаты.ПустаяСсылка))
+</QueryText>
+				<MainTable>InformationRegister.ГрафикПлатежей</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>ДатаПлатежа</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Оплатить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оплатить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Сплатити</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оплатить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Сплатити</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ОформитьПоРаспоряжению</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>Оплатить</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

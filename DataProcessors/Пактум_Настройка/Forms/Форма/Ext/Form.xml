@@ -1,0 +1,697 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Настройка сервиса "Пактум.Контрагент"</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>uk</v8:lang>
+			<v8:content>Настройка сервісу "Пактум.Контрагент"</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<LabelDecoration name="Декорация7" id="100">
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка сервиса "Пактум.Контрагент" для автоматизированного заполнения карточек контрагентов по данным государственных реестров</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Настройка сервісу "Пактум.Контрагент" для автоматизованого заповнення карток контрагентів по даним державних реєстрів</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="Декорация7КонтекстноеМеню" id="101"/>
+			<ExtendedTooltip name="Декорация7РасширеннаяПодсказка" id="102"/>
+		</LabelDecoration>
+		<UsualGroup name="Группа2" id="1">
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Horizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<PictureDecoration name="Лого" id="3">
+					<Width>12</Width>
+					<Height>5</Height>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Лого</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Лого</v8:content>
+						</v8:item>
+					</Title>
+					<Hyperlink>true</Hyperlink>
+					<PictureSize>Proportionally</PictureSize>
+					<Picture>
+						<xr:Abs>Picture.png</xr:Abs>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="ЛогоКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="ЛогоРасширеннаяПодсказка" id="5"/>
+					<Events>
+						<Event name="Click">ЛогоНажатие</Event>
+					</Events>
+				</PictureDecoration>
+				<UsualGroup name="Группа3" id="6">
+					<HorizontalStretch>true</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="7"/>
+					<ChildItems>
+						<UsualGroup name="Группа6" id="36">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="37"/>
+							<ChildItems>
+								<UsualGroup name="Группа7" id="38">
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа7РасширеннаяПодсказка" id="39"/>
+									<ChildItems>
+										<InputField name="Логин" id="8">
+											<DataPath>Логин</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Пинкод</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Пінкод</v8:content>
+												</v8:item>
+											</Title>
+											<TitleTextColor>style:FormTextColor</TitleTextColor>
+											<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											<TitleLocation>Top</TitleLocation>
+											<Width>14</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="ЛогинКонтекстноеМеню" id="9"/>
+											<ExtendedTooltip name="ЛогинРасширеннаяПодсказка" id="10"/>
+										</InputField>
+										<InputField name="Пароль" id="11">
+											<DataPath>Баланс</DataPath>
+											<Visible>false</Visible>
+											<TitleLocation>Top</TitleLocation>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<HorizontalStretch>true</HorizontalStretch>
+											<PasswordMode>true</PasswordMode>
+											<ContextMenu name="ПарольКонтекстноеМеню" id="12"/>
+											<ExtendedTooltip name="ПарольРасширеннаяПодсказка" id="13"/>
+										</InputField>
+										<UsualGroup name="Группа11" id="93">
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="Группа11РасширеннаяПодсказка" id="94"/>
+											<ChildItems>
+												<LabelDecoration name="Декорация3" id="95">
+													<ContextMenu name="Декорация3КонтекстноеМеню" id="96"/>
+													<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="97"/>
+												</LabelDecoration>
+												<Button name="Авторизация1" id="18">
+													<Type>UsualButton</Type>
+													<Width>18</Width>
+													<CommandName>Form.Command.Авторизация</CommandName>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Получить баланс</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>uk</v8:lang>
+															<v8:content>Отримати баланс</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="Авторизация1РасширеннаяПодсказка" id="19"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="Группа1" id="29">
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="30"/>
+									<ChildItems>
+										<LabelDecoration name="Декорация1" id="31">
+											<Visible>false</Visible>
+											<ContextMenu name="Декорация1КонтекстноеМеню" id="32"/>
+											<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="33"/>
+										</LabelDecoration>
+										<UsualGroup name="Группа5" id="34">
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="35"/>
+											<ChildItems>
+												<UsualGroup name="Группа13" id="106">
+													<Group>Horizontal</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="Группа13РасширеннаяПодсказка" id="107"/>
+													<ChildItems>
+														<LabelDecoration name="мБаланс" id="20">
+															<Width>15</Width>
+															<HorizontalStretch>false</HorizontalStretch>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Баланс (карточек)</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>uk</v8:lang>
+																	<v8:content>Баланс (карток)</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="мБалансКонтекстноеМеню" id="21"/>
+															<ExtendedTooltip name="мБалансРасширеннаяПодсказка" id="22"/>
+														</LabelDecoration>
+														<LabelDecoration name="мБалансЗн" id="103">
+															<ContextMenu name="мБалансЗнКонтекстноеМеню" id="104"/>
+															<ExtendedTooltip name="мБалансЗнРасширеннаяПодсказка" id="105"/>
+														</LabelDecoration>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="Группа14" id="108">
+													<Group>Horizontal</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="Группа14РасширеннаяПодсказка" id="109"/>
+													<ChildItems>
+														<LabelDecoration name="мАктивация" id="23">
+															<Width>15</Width>
+															<HorizontalStretch>false</HorizontalStretch>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Активирован</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>uk</v8:lang>
+																	<v8:content>Активовано</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="мАктивацияКонтекстноеМеню" id="24"/>
+															<ExtendedTooltip name="мАктивацияРасширеннаяПодсказка" id="25"/>
+														</LabelDecoration>
+														<LabelDecoration name="мАктивацияЗн" id="110">
+															<ContextMenu name="мАктивацияЗнКонтекстноеМеню" id="111"/>
+															<ExtendedTooltip name="мАктивацияЗнРасширеннаяПодсказка" id="112"/>
+														</LabelDecoration>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="Группа15" id="113">
+													<Group>Horizontal</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="Группа15РасширеннаяПодсказка" id="114"/>
+													<ChildItems>
+														<LabelDecoration name="мОкончание" id="26">
+															<Width>15</Width>
+															<HorizontalStretch>false</HorizontalStretch>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Действует до</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>uk</v8:lang>
+																	<v8:content>Діє до</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="мОкончаниеКонтекстноеМеню" id="27"/>
+															<ExtendedTooltip name="мОкончаниеРасширеннаяПодсказка" id="28"/>
+														</LabelDecoration>
+														<LabelDecoration name="мОкончаниеЗн" id="115">
+															<ContextMenu name="мОкончаниеЗнКонтекстноеМеню" id="116"/>
+															<ExtendedTooltip name="мОкончаниеЗнРасширеннаяПодсказка" id="117"/>
+														</LabelDecoration>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа8" id="40">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа8РасширеннаяПодсказка" id="41"/>
+			<ChildItems>
+				<LabelDecoration name="Декорация2" id="42">
+					<Visible>false</Visible>
+					<Width>12</Width>
+					<ContextMenu name="Декорация2КонтекстноеМеню" id="43"/>
+					<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="44"/>
+				</LabelDecoration>
+				<UsualGroup name="ГрНастройкиПодключения" id="45">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки подключения</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Настройки підключення</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки подключения</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Настройки підключення</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Behavior>Collapsible</Behavior>
+					<CollapsedRepresentationTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки подключения</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Настройки підключення</v8:content>
+						</v8:item>
+					</CollapsedRepresentationTitle>
+					<Collapsed>true</Collapsed>
+					<ControlRepresentation>Picture</ControlRepresentation>
+					<Representation>NormalSeparation</Representation>
+					<ExtendedTooltip name="ГрНастройкиПодключенияРасширеннаяПодсказка" id="46"/>
+					<ChildItems>
+						<UsualGroup name="Группа9" id="91">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа9РасширеннаяПодсказка" id="92"/>
+							<ChildItems>
+								<InputField name="КоличествоПопыток" id="118">
+									<DataPath>Объект.КоличествоПопыток</DataPath>
+									<ContextMenu name="КоличествоПопытокКонтекстноеМеню" id="119"/>
+									<ExtendedTooltip name="КоличествоПопытокРасширеннаяПодсказка" id="120"/>
+								</InputField>
+								<InputField name="ПаузаМеждуПопытками" id="121">
+									<DataPath>Объект.ПаузаМеждуПопытками</DataPath>
+									<ContextMenu name="ПаузаМеждуПопыткамиКонтекстноеМеню" id="122"/>
+									<ExtendedTooltip name="ПаузаМеждуПопыткамиРасширеннаяПодсказка" id="123"/>
+								</InputField>
+								<UsualGroup name="Группа12" id="98">
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа12РасширеннаяПодсказка" id="99"/>
+									<ChildItems>
+										<CheckBoxField name="фИспользоватьПрокси" id="50">
+											<DataPath>Объект.фИспользоватьПрокси</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="фИспользоватьПроксиКонтекстноеМеню" id="51"/>
+											<ExtendedTooltip name="фИспользоватьПроксиРасширеннаяПодсказка" id="52"/>
+											<Events>
+												<Event name="OnChange">фИспользоватьПроксиПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<Button name="ЗаписатьНастройкиПодключения" id="89">
+											<Type>UsualButton</Type>
+											<Width>22</Width>
+											<CommandName>Form.Command.ЗаписатьНастройкиПодключения</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Записать настройки подключения</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Записати настройки підключення</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ЗаписатьНастройкиПодключенияРасширеннаяПодсказка" id="90"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаПрокси1" id="53">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа прокси1</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Група прокси1</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа прокси1</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Група прокси1</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПрокси1РасширеннаяПодсказка" id="54"/>
+									<ChildItems>
+										<LabelDecoration name="Декорация4" id="55">
+											<Width>2</Width>
+											<ContextMenu name="Декорация4КонтекстноеМеню" id="56"/>
+											<ExtendedTooltip name="Декорация4РасширеннаяПодсказка" id="57"/>
+										</LabelDecoration>
+										<InputField name="АдресПрокси" id="58">
+											<DataPath>Объект.АдресПрокси</DataPath>
+											<Width>22</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="АдресПроксиКонтекстноеМеню" id="59"/>
+											<ExtendedTooltip name="АдресПроксиРасширеннаяПодсказка" id="60"/>
+										</InputField>
+										<InputField name="ПортПрокси" id="61">
+											<DataPath>Объект.ПортПрокси</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<Width>10</Width>
+											<ContextMenu name="ПортПроксиКонтекстноеМеню" id="62"/>
+											<ExtendedTooltip name="ПортПроксиРасширеннаяПодсказка" id="63"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаПрокси2" id="64">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа прокси2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Група прокси2</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа прокси2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Група прокси2</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПрокси2РасширеннаяПодсказка" id="65"/>
+									<ChildItems>
+										<LabelDecoration name="Декорация5" id="66">
+											<Width>3</Width>
+											<ContextMenu name="Декорация5КонтекстноеМеню" id="67"/>
+											<ExtendedTooltip name="Декорация5РасширеннаяПодсказка" id="68"/>
+										</LabelDecoration>
+										<CheckBoxField name="фИспользоватьЛогинПарольПрокси" id="69">
+											<DataPath>Объект.фИспользоватьЛогинПарольПрокси</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="фИспользоватьЛогинПарольПроксиКонтекстноеМеню" id="70"/>
+											<ExtendedTooltip name="фИспользоватьЛогинПарольПроксиРасширеннаяПодсказка" id="71"/>
+											<Events>
+												<Event name="OnChange">фИспользоватьЛогинПарольПроксиПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаПрокси3" id="72">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа прокси3</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Група прокси3</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа прокси3</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Група прокси3</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПрокси3РасширеннаяПодсказка" id="73"/>
+									<ChildItems>
+										<LabelDecoration name="Декорация6" id="74">
+											<Width>6</Width>
+											<ContextMenu name="Декорация6КонтекстноеМеню" id="75"/>
+											<ExtendedTooltip name="Декорация6РасширеннаяПодсказка" id="76"/>
+										</LabelDecoration>
+										<UsualGroup name="Группа10" id="77">
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="Группа10РасширеннаяПодсказка" id="78"/>
+											<ChildItems>
+												<InputField name="ЛогинПрокси" id="79">
+													<DataPath>Объект.ЛогинПрокси</DataPath>
+													<Width>32</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ContextMenu name="ЛогинПроксиКонтекстноеМеню" id="80"/>
+													<ExtendedTooltip name="ЛогинПроксиРасширеннаяПодсказка" id="81"/>
+												</InputField>
+												<InputField name="ПарольПрокси" id="82">
+													<DataPath>Объект.ПарольПрокси</DataPath>
+													<Width>32</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ContextMenu name="ПарольПроксиКонтекстноеМеню" id="83"/>
+													<ExtendedTooltip name="ПарольПроксиРасширеннаяПодсказка" id="84"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа4" id="14">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="15"/>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.Пактум_Настройка</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Логин" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Логин</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Логін</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Баланс" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Баланс</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Баланс</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Активация" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Активация</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Активація</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Окончание" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Окончание</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Закінчення</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Пароль" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пароль</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Пароль</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="НастройкаПодключения" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Налаштування</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка подключения</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Настройка підключення</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастройкаПодключения</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Авторизация" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Авторизация</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Авторизація</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Авторизация</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Авторизація</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Авторизация</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗаписатьНастройкиПодключения" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать настройки подключения</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Записати настройки підключення</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать настройки подключения</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Записати настройки підключення</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаписатьНастройкиПодключения</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ВидыПланов.Ссылка КАК ВидПлана,
+	ВидыПланов.ПорядокПланирования КАК ПорядокПланирования,
+	ЕСТЬNULL(ВидыПланов.Родитель.ПорядокПланирования, ВидыПланов.ПорядокПланирования) КАК ПорядокПланированияЭтапа,
+	ВЫБОР
+		КОГДА ВидыПланов.Родитель.ПорядокПланирования ЕСТЬ NULL
+			ТОГДА ВидыПланов.Ссылка
+		ИНАЧЕ ВидыПланов.Родитель
+	КОНЕЦ КАК ЭтапПланирования,
+	ВидыПланов.ЭтоГруппа КАК ЭтоГруппа,
+	ЕСТЬNULL(ВидыПланов.ЗаполнятьПоДефициту, ЛОЖЬ) КАК ЗаполнятьПоДефициту,
+	ЕСТЬNULL(ВидыПланов.ВариантЗаполненияСостава, """") КАК ВариантЗаполненияСостава,
+	ВЫБОР
+		КОГДА СправочникВидыПланов.ЭтоГруппа
+			ТОГДА ВЫБОР
+					КОГДА СправочникВидыПланов.ПометкаУдаления
+						ТОГДА 6
+					ИНАЧЕ ВЫБОР
+							КОГДА СправочникВидыПланов.ПланированиеПотребностей
+								ТОГДА 0
+							ИНАЧЕ 1
+						КОНЕЦ
+				КОНЕЦ
+		ИНАЧЕ ВЫБОР
+				КОГДА СправочникВидыПланов.ПометкаУдаления
+					ТОГДА 7
+				ИНАЧЕ ВЫБОР
+						КОГДА СправочникВидыПланов.Родитель = ЗНАЧЕНИЕ(Справочник.ВидыПланов.ПустаяСсылка)
+								И СправочникВидыПланов.ТипПлана &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ТипыПланов.ПланОстатков)
+							ТОГДА 8
+						КОГДА СправочникВидыПланов.ЗаполнятьПоДефициту
+							ТОГДА 3
+						ИНАЧЕ 2
+					КОНЕЦ
+			КОНЕЦ
+	КОНЕЦ КАК НомерКартинки
+ПОМЕСТИТЬ СтруктураПланов
+ИЗ
+	Справочник.ВидыПланов КАК ВидыПланов
+ГДЕ
+	ВидыПланов.Владелец = &amp;Сценарий
+	И НЕ ВидыПланов.ПометкаУдаления
+	И НЕ(ВидыПланов.ТипПлана &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ТипыПланов.ПланОстатков)
+				И ВидыПланов.Родитель = ЗНАЧЕНИЕ(Справочник.ВидыПланов.ПустаяСсылка)
+				И НЕ ВидыПланов.ЭтоГруппа)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ЗНАЧЕНИЕ(Справочник.ВидыПланов.ПустаяСсылка),
+	999,
+	999,
+	ЗНАЧЕНИЕ(Справочник.ВидыПланов.ПустаяСсылка),
+	ИСТИНА,
+	ЛОЖЬ,
+	"",
+	5</query>
+	</dataSet>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Основной</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>Основний</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows"/>
+	</settingsVariant>
+</DataCompositionSchema>

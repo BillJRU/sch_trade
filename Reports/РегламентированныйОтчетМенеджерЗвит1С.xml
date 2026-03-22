@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<Report uuid="1cc83c6b-5641-4828-89ba-0dd82a734505">
+		<InternalInfo>
+			<xr:GeneratedType name="ReportObject.РегламентированныйОтчетМенеджерЗвит1С" category="Object">
+				<xr:TypeId>c142f3a5-5203-4b0e-aa47-943f52753196</xr:TypeId>
+				<xr:ValueId>0942f624-c8f7-4812-aded-528699df76e5</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="ReportManager.РегламентированныйОтчетМенеджерЗвит1С" category="Manager">
+				<xr:TypeId>c9303dae-6c0c-442a-a796-055a42bd4114</xr:TypeId>
+				<xr:ValueId>5a46ea85-d0bc-49d7-ba4f-55543169bac1</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>РегламентированныйОтчетМенеджерЗвит1С</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Менеджер по работе с системой "FREDO Звіт"</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Менеджер по роботі з системою "FREDO Звіт"</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<UseStandardCommands>false</UseStandardCommands>
+			<DefaultForm>Report.РегламентированныйОтчетМенеджерЗвит1С.Form.Форма</DefaultForm>
+			<AuxiliaryForm/>
+			<MainDataCompositionSchema/>
+			<DefaultSettingsForm/>
+			<AuxiliarySettingsForm/>
+			<DefaultVariantForm/>
+			<VariantsStorage/>
+			<SettingsStorage/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<ExtendedPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects>
+			<Form>ОсновнаяФорма</Form>
+			<Form>Форма</Form>
+			<Form>ФормаВыгрузкиИПроверкиНалоговыхДокументов</Form>
+			<Form>ФормаЗагрузкиВходящихНалоговыхДокументов</Form>
+			<Form>ФормаВыгрузкиПервичныхДокументов</Form>
+			<Form>ФормаЗагрузкиПервичныхДокументов</Form>
+			<Template>ZvitAPI_dll</Template>
+			<Command uuid="f2859254-1ac9-4ea9-980d-6ba0dfe73ce3">
+				<Properties>
+					<Name>ВыгрузитьВ1СЗвитИсходящиеНалоговыеДокументы</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выгрузить в "FREDO Звіт"</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Вивантажити в "FREDO Звіт"</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Group>CommandGroup.Выгрузка</Group>
+					<CommandParameterType>
+						<v8:Type>cfg:DocumentRef.НалоговаяНакладная</v8:Type>
+						<v8:Type>cfg:DocumentRef.Приложение2КНалоговойНакладной</v8:Type>
+					</CommandParameterType>
+					<ParameterUseMode>Multiple</ParameterUseMode>
+					<ModifiesData>false</ModifiesData>
+					<Representation>Auto</Representation>
+					<ToolTip/>
+					<Picture/>
+					<Shortcut/>
+					<OnMainServerUnavalableBehavior>Auto</OnMainServerUnavalableBehavior>
+				</Properties>
+			</Command>
+			<Command uuid="5775e151-0aa7-496e-ae41-0260aa3c763a">
+				<Properties>
+					<Name>ВыгрузитьВ1СЗвитВходящиеНалоговыеДокументы</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отправить запрос и проверить состояние регистрации в "FREDO Звіт"</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Надіслати запит і перевірити стан реєстрації в "FREDO Звіт"</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Group>CommandGroup.Выгрузка</Group>
+					<CommandParameterType>
+						<v8:Type>cfg:DocumentRef.РегистрацияВходящегоНалоговогоДокумента</v8:Type>
+					</CommandParameterType>
+					<ParameterUseMode>Multiple</ParameterUseMode>
+					<ModifiesData>false</ModifiesData>
+					<Representation>Auto</Representation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отправить запрос и проверить состояние регистрации в "FREDO Звіт"</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Надіслати запит і перевірити стан реєстрації в "FREDO Звіт"</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture/>
+					<Shortcut/>
+					<OnMainServerUnavalableBehavior>Auto</OnMainServerUnavalableBehavior>
+				</Properties>
+			</Command>
+		</ChildObjects>
+	</Report>
+</MetaDataObject>

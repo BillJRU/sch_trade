@@ -1,0 +1,528 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаОК" id="17">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<DefaultItem>true</DefaultItem>
+				<CommandName>Form.Command.ОК</CommandName>
+				<ExtendedTooltip name="ФормаОКExtendedTooltip" id="18"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Поле1" id="1">
+			<DataPath>Поле1</DataPath>
+			<ContextMenu name="Поле1КонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="Поле1ExtendedTooltip" id="19"/>
+			<Events>
+				<Event name="OnChange">ПолеПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="Поле2" id="3">
+			<DataPath>Поле2</DataPath>
+			<Width>50</Width>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>(101) Сплата суми грошового зобов'язання*</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
+								<v8:content>(101) Сплата суми грошового зобов'язання*</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">;101</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>(106) Сплата пені*</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
+								<v8:content>(106) Сплата пені*</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">;106</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>(109) Оплата податкового векселя*</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
+								<v8:content>(109) Оплата податкового векселя*</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">;109</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>(121) Сплата адміністративного штрафу*</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
+								<v8:content>(121) Сплата адміністративного штрафу*</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">;121</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>(125) Авансові внески, нараховані на суму дивідендів та прирівняних до них платежів*</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
+								<v8:content>(125) Авансові внески, нараховані на суму дивідендів та прирівняних до них платежів*</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">;125</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>(130) Сплата грошового зобов'язання, визначеного органом державної податкової служби (далі - ДПС) за результатами камеральної перевірки*</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
+								<v8:content>(130) Сплата грошового зобов'язання, визначеного органом державної податкової служби (далі - ДПС) за результатами камеральної перевірки*</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">;130</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>(131) Сплата грошового зобов'язання, визначеного органом ДПС за результатами документальної перевірки підрозділів податкового контролю*</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
+								<v8:content>(131) Сплата грошового зобов'язання, визначеного органом ДПС за результатами документальної перевірки підрозділів податкового контролю*</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">;131</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>(132) Сплата грошового зобов'язання, визначеного органом ДПС за результатами документальної перевірки підрозділів оподаткування юридичних осіб*</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
+								<v8:content>(132) Сплата грошового зобов'язання, визначеного органом ДПС за результатами документальної перевірки підрозділів оподаткування юридичних осіб*</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">;132</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>(133) Сплата грошового зобов'язання, визначеного органом ДПС за результатами документальної перевірки підрозділів оподаткування фізичних осіб*</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
+								<v8:content>(133) Сплата грошового зобов'язання, визначеного органом ДПС за результатами документальної перевірки підрозділів оподаткування фізичних осіб*</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">;133</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>(134) Сплата грошового зобов'язання, визначеного органом ДПС за результатами документальної перевірки підрозділів боротьби з відмиванням доходів, одержаних злочинним шляхом*</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
+								<v8:content>(134) Сплата грошового зобов'язання, визначеного органом ДПС за результатами документальної перевірки підрозділів боротьби з відмиванням доходів, одержаних злочинним шляхом*</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">;134</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>(135) Сплата грошового зобов'язання, визначеного органом ДПС за результатами документальної перевірки підрозділів контролю за виробництвом та обігом спирту, алкогольних напоїв та тютюнових виробів*</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
+								<v8:content>(135) Сплата грошового зобов'язання, визначеного органом ДПС за результатами документальної перевірки підрозділів контролю за виробництвом та обігом спирту, алкогольних напоїв та тютюнових виробів*</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">;135</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>(136) Сплата грошового зобов'язання, визначеного органом ДПС за результатами документальної перевірки підрозділів погашення податкового боргу*</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
+								<v8:content>(136) Сплата грошового зобов'язання, визначеного органом ДПС за результатами документальної перевірки підрозділів погашення податкового боргу*</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">;136</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>(137) Сплата грошового зобов'язання, визначеного органом ДПС за результатами документальної перевірки інших підрозділів*</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
+								<v8:content>(137) Сплата грошового зобов'язання, визначеного органом ДПС за результатами документальної перевірки інших підрозділів*</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">;137</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ChoiceListButton>true</ChoiceListButton>
+			<DropListWidth>50</DropListWidth>
+			<ContextMenu name="Поле2КонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="Поле2ExtendedTooltip" id="20"/>
+			<Events>
+				<Event name="OnChange">ПолеПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="Поле3" id="5">
+			<DataPath>Поле3</DataPath>
+			<ContextMenu name="Поле3КонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="Поле3ExtendedTooltip" id="21"/>
+			<Events>
+				<Event name="OnChange">ПолеПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="Поле4" id="7">
+			<DataPath>Поле4</DataPath>
+			<ContextMenu name="Поле4КонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="Поле4ExtendedTooltip" id="22"/>
+			<Events>
+				<Event name="OnChange">ПолеПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="Поле5" id="9">
+			<DataPath>Поле5</DataPath>
+			<ContextMenu name="Поле5КонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="Поле5ExtendedTooltip" id="23"/>
+			<Events>
+				<Event name="OnChange">ПолеПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="Поле6" id="11">
+			<DataPath>Поле6</DataPath>
+			<ContextMenu name="Поле6КонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="Поле6ExtendedTooltip" id="24"/>
+			<Events>
+				<Event name="OnChange">ПолеПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="Поле7" id="13">
+			<DataPath>Поле7</DataPath>
+			<ContextMenu name="Поле7КонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="Поле7ExtendedTooltip" id="25"/>
+			<Events>
+				<Event name="OnChange">ПолеПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="НазначениеПлатежа" id="15">
+			<DataPath>НазначениеПлатежа</DataPath>
+			<TitleLocation>Top</TitleLocation>
+			<Height>2</Height>
+			<ContextMenu name="НазначениеПлатежаКонтекстноеМеню" id="16"/>
+			<ExtendedTooltip name="НазначениеПлатежаExtendedTooltip" id="26"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Поле1" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поле 1</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Поле 1</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>1</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Поле2" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поле 2</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Поле 2</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>4</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Поле3" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поле 3</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Поле 3</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>11</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Поле4" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поле 4</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Поле 4</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Поле5" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поле 5</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Поле 5</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Поле6" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поле 6</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Поле 6</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Поле7" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поле 7</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Поле 7</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НазначениеПлатежа" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст назначения</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Текст призначення</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СчетПолучателя" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Счет получателя</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Рахунок одержувача</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.БанковскиеСчетаКонтрагентов</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОК" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОК</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПоУмолчанию" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>По умолчанию</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>По умовчанню</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>По умолчанию</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>По умовчанню</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоУмолчанию</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

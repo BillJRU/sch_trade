@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Период" id="1">
+			<DataPath>Запись.Period</DataPath>
+			<ContextMenu name="ПериодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ПериодExtendedTooltip" id="23"/>
+		</InputField>
+		<InputField name="Организация" id="3">
+			<DataPath>Запись.Организация</DataPath>
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="ОрганизацияExtendedTooltip" id="24"/>
+		</InputField>
+		<CheckBoxField name="ВестиДневнуюНумерациюНалоговыхДокументов" id="30">
+			<DataPath>Запись.ВестиДневнуюНумерациюНалоговыхДокументов</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установите этот флаг, если требуется обеспечить начало нумерации документов
+"Налоговая накладная" и "Приложение 2 к налоговой накладной" с №1 каждый день.
+Настройка применяется с 01.01.2015 г.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Встановіть цей прапорець, якщо потрібно забезпечити початок нумерації документів
+"Податкова накладна" і "Додаток 2 до податкової накладної" з №1 на кожен день.
+Настройка застосовується з 01.01.2015 р.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ВестиДневнуюНумерациюНалоговыхДокументовКонтекстноеМеню" id="31"/>
+			<ExtendedTooltip name="ВестиДневнуюНумерациюНалоговыхДокументовРасширеннаяПодсказка" id="32"/>
+			<Events>
+				<Event name="OnChange">ВестиДневнуюНумерациюНалоговыхДокументовПриИзменении</Event>
+			</Events>
+		</CheckBoxField>
+		<CheckBoxField name="ВестиМесячнуюНумерациюНалоговыхДокументов" id="9">
+			<DataPath>Запись.ВестиМесячнуюНумерациюНалоговыхДокументов</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установите этот флаг, если требуется обеспечить начало нумерации документов "Налоговая
+накладная" и "Приложение 2 к налоговой накладной" с №1 каждый месяц.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Встановіть цей прапорець, якщо потрібно забезпечити початок нумерації документів "Податкова
+накладна" і "Додаток 2 до податкової накладної" з №1 кожен місяць.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ВестиМесячнуюНумерациюНалоговыхДокументовКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="ВестиМесячнуюНумерациюНалоговыхДокументовExtendedTooltip" id="25"/>
+			<Events>
+				<Event name="OnChange">ВестиМесячнуюНумерациюНалоговыхДокументовПриИзменении</Event>
+			</Events>
+		</CheckBoxField>
+		<CheckBoxField name="ВестиРаздельнуюНумерациюНалоговыхДокументовПоНеНДСОперациям" id="15">
+			<DataPath>Запись.ВестиРаздельнуюНумерациюНалоговыхДокументовПоНеНДСОперациям</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Технологические документы по операциям, не являющимися объектами обложения НДС,
+могут нумероваться раздельно от обычных налоговых документов.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Технологічні документи за операціями, що не є об'єктами оподаткування ПДВ,
+можуть нумеруватися окремо від звичайних податкових документів.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ВестиРаздельнуюНумерациюНалоговыхДокументовПоНеНДСОперациямКонтекстноеМеню" id="16"/>
+			<ExtendedTooltip name="ВестиРаздельнуюНумерациюНалоговыхДокументовПоНеНДСОперациямExtendedTooltip" id="29"/>
+		</CheckBoxField>
+		<CheckBoxField name="ВестиНумерациюНалоговыхДокументовБезУчетаОбособленныхПодразделений" id="13">
+			<DataPath>Запись.ВестиНумерациюНалоговыхДокументовБезУчетаОбособленныхПодразделений</DataPath>
+			<Enabled>false</Enabled>
+			<TitleLocation>Right</TitleLocation>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установите этот флаг, если требуется обеспечить нумерацию документов "Налоговая
+накладная" и приложений в целом по организации независимо от указания в документах
+обособленного подразделения (действует до 01.04.2016).</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Встановіть цей прапорець, якщо потрібно забезпечити нумерацію документів "Податкова
+накладна" і програмі в цілому за організацією незалежно від зазначення в документах
+відокремленого підрозділу (діє до 01.04.2016).</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ВестиНумерациюНалоговыхДокументовБезУчетаОбособленныхПодразделенийКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ВестиНумерациюНалоговыхДокументовБезУчетаОбособленныхПодразделенийExtendedTooltip" id="27"/>
+		</CheckBoxField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.НастройкаНумерацииНалоговыхДокументов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

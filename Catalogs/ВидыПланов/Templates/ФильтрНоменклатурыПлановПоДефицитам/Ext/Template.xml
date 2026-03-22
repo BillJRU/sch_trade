@@ -1,0 +1,518 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetObject">
+		<name>ТаблицаНоменклатурыПоВидамПланов</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Номенклатура</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Номенклатура</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Характеристика</dataPath>
+			<field>Характеристика</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Характеристика</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Характеристика</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.ХарактеристикиНоменклатуры</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидПлана</dataPath>
+			<field>ВидПлана</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид плана</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Вид плану</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.ВидыПланов</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВариантЗаполненияСостава</dataPath>
+			<field>ВариантЗаполненияСостава</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вариант заполнения состава</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Варіант заповнення складу</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</valueType>
+		</field>
+		<dataSource>ИсточникДанных</dataSource>
+		<objectName>ТаблицаНоменклатурыПоВидамПланов</objectName>
+	</dataSet>
+	<dataSet xsi:type="DataSetUnion">
+		<name>НаборДанныхОбъединение</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Номенклатура</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Характеристика</dataPath>
+			<field>Характеристика</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Характеристика</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Характеристика</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипТовара</dataPath>
+			<field>ТипТовара</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип товара</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Тип товару</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<item xsi:type="DataSetQuery">
+			<name>ПродукцияИПолуфабрикаты</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Номенклатура</dataPath>
+				<field>Номенклатура</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Номенклатура</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>uk</v8:lang>
+						<v8:content>Номенклатура</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Характеристика</dataPath>
+				<field>Характеристика</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Характеристика</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>uk</v8:lang>
+						<v8:content>Характеристика</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ТипТовара</dataPath>
+				<field>ТипТовара</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Тип товара</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>uk</v8:lang>
+						<v8:content>Тип товару</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<dataSource>ИсточникДанных</dataSource>
+			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	РесурсныеСпецификацииВыходныеИзделия.Номенклатура КАК Номенклатура,
+	ЕСТЬNULL(РесурсныеСпецификацииВыходныеИзделия.Характеристика, ЗНАЧЕНИЕ(Справочник.ХарактеристикиНоменклатуры.ПустаяСсылка)) КАК Характеристика,
+	"ПродукцияИПолуфабрикаты" КАК ТипТовара,
+	РесурсныеСпецификацииВыходныеИзделия.Номенклатура.ИспользованиеХарактеристик КАК ИспользованиеХарактеристик,
+	РесурсныеСпецификацииВыходныеИзделия.Номенклатура.ВидНоменклатуры КАК ВидНоменклатуры,
+	РесурсныеСпецификацииВыходныеИзделия.Номенклатура.ВладелецХарактеристик КАК ВладелецХарактеристик
+ПОМЕСТИТЬ РесурсныеСпецификации
+ИЗ
+	Справочник.РесурсныеСпецификации КАК РесурсныеСпецификации
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.РесурсныеСпецификации.ВыходныеИзделия КАК РесурсныеСпецификацииВыходныеИзделия
+		ПО (РесурсныеСпецификацииВыходныеИзделия.Ссылка = РесурсныеСпецификации.Ссылка)
+ГДЕ
+	НЕ РесурсныеСпецификации.ПометкаУдаления
+	И РесурсныеСпецификации.Статус = ЗНАЧЕНИЕ(Перечисление.СтатусыСпецификаций.Действует)
+	И РесурсныеСпецификации.ТипПроизводственногоПроцесса = ЗНАЧЕНИЕ(Перечисление.ТипыПроизводственныхПроцессов.Сборка)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	РесурсныеСпецификации.Номенклатура КАК Номенклатура,
+	ХарактеристикиНоменклатуры.Ссылка КАК Характеристика,
+	РесурсныеСпецификации.ТипТовара КАК ТипТовара
+ИЗ
+	РесурсныеСпецификации КАК РесурсныеСпецификации
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ХарактеристикиНоменклатуры КАК ХарактеристикиНоменклатуры
+		ПО (ВЫБОР
+				КОГДА РесурсныеСпецификации.ИспользованиеХарактеристик = ЗНАЧЕНИЕ(Перечисление.ВариантыИспользованияХарактеристикНоменклатуры.ИндивидуальныеДляНоменклатуры)
+					ТОГДА РесурсныеСпецификации.Номенклатура
+				КОГДА РесурсныеСпецификации.ИспользованиеХарактеристик = ЗНАЧЕНИЕ(Перечисление.ВариантыИспользованияХарактеристикНоменклатуры.ОбщиеДляВидаНоменклатуры)
+					ТОГДА РесурсныеСпецификации.ВидНоменклатуры
+				КОГДА РесурсныеСпецификации.ИспользованиеХарактеристик = ЗНАЧЕНИЕ(Перечисление.ВариантыИспользованияХарактеристикНоменклатуры.ОбщиеСДругимВидомНоменклатуры)
+					ТОГДА РесурсныеСпецификации.ВладелецХарактеристик
+				ИНАЧЕ НЕОПРЕДЕЛЕНО
+			КОНЕЦ = ХарактеристикиНоменклатуры.Владелец)
+ГДЕ
+	РесурсныеСпецификации.Характеристика = ЗНАЧЕНИЕ(Справочник.ХарактеристикиНоменклатуры.ПустаяСсылка)
+	И РесурсныеСпецификации.ИспользованиеХарактеристик &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ВариантыИспользованияХарактеристикНоменклатуры.НеИспользовать)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	РесурсныеСпецификации.Номенклатура,
+	РесурсныеСпецификации.Характеристика,
+	РесурсныеСпецификации.ТипТовара
+ИЗ
+	РесурсныеСпецификации КАК РесурсныеСпецификации
+ГДЕ
+	РесурсныеСпецификации.Характеристика &lt;&gt; ЗНАЧЕНИЕ(Справочник.ХарактеристикиНоменклатуры.ПустаяСсылка)
+	ИЛИ РесурсныеСпецификации.ИспользованиеХарактеристик = ЗНАЧЕНИЕ(Перечисление.ВариантыИспользованияХарактеристикНоменклатуры.НеИспользовать)</query>
+		</item>
+		<item xsi:type="DataSetQuery">
+			<name>Комплекты</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Номенклатура</dataPath>
+				<field>Номенклатура</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Номенклатура</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>uk</v8:lang>
+						<v8:content>Номенклатура</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Характеристика</dataPath>
+				<field>Характеристика</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Характеристика</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>uk</v8:lang>
+						<v8:content>Характеристика</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ТипТовара</dataPath>
+				<field>ТипТовара</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Тип товара</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>uk</v8:lang>
+						<v8:content>Тип товару</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<dataSource>ИсточникДанных</dataSource>
+			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	ВариантыКомплектацииНоменклатуры.Владелец КАК Номенклатура,
+	ЕСТЬNULL(ВариантыКомплектацииНоменклатуры.Характеристика, ЗНАЧЕНИЕ(Справочник.ХарактеристикиНоменклатуры.ПустаяСсылка)) КАК Характеристика,
+	"Комплекты" КАК ТипТовара
+ИЗ
+	Справочник.ВариантыКомплектацииНоменклатуры КАК ВариантыКомплектацииНоменклатуры
+ГДЕ
+	НЕ ВариантыКомплектацииНоменклатуры.ПометкаУдаления</query>
+		</item>
+	</dataSet>
+	<dataSet xsi:type="DataSetUnion">
+		<name>НаборДанныхОбъединениеПроизводьныеОтборы</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Номенклатура</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Номенклатура</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Характеристика</dataPath>
+			<field>Характеристика</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Характеристика</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Характеристика</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.ХарактеристикиНоменклатуры</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидПлана</dataPath>
+			<field>ВидПлана</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид плана</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Вид плану</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.ВидыПланов</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПроизвольныйОтбор</dataPath>
+			<field>ПроизвольныйОтбор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Произвольный отбор</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Довільний відбір</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:boolean</v8:Type>
+			</valueType>
+		</field>
+		<item xsi:type="DataSetObject">
+			<name>НаборДанных</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Номенклатура</dataPath>
+				<field>Номенклатура</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Номенклатура</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>uk</v8:lang>
+						<v8:content>Номенклатура</v8:content>
+					</v8:item>
+				</title>
+				<valueType>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Номенклатура</v8:Type>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Характеристика</dataPath>
+				<field>Характеристика</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Характеристика</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>uk</v8:lang>
+						<v8:content>Характеристика</v8:content>
+					</v8:item>
+				</title>
+				<valueType>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ХарактеристикиНоменклатуры</v8:Type>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ВидПлана</dataPath>
+				<field>ВидПлана</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Вид плана</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>uk</v8:lang>
+						<v8:content>Вид плану</v8:content>
+					</v8:item>
+				</title>
+				<valueType>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ВидыПланов</v8:Type>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПроизвольныйОтбор</dataPath>
+				<field>ПроизвольныйОтбор</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Произвольный отбор</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>uk</v8:lang>
+						<v8:content>Довільний відбір</v8:content>
+					</v8:item>
+				</title>
+				<valueType>
+					<v8:Type>xs:boolean</v8:Type>
+				</valueType>
+			</field>
+			<dataSource>ИсточникДанных</dataSource>
+			<objectName>НаборДанных0</objectName>
+		</item>
+	</dataSet>
+	<dataSetLink>
+		<sourceDataSet>ТаблицаНоменклатурыПоВидамПланов</sourceDataSet>
+		<destinationDataSet>НаборДанныхОбъединение</destinationDataSet>
+		<sourceExpression>Номенклатура</sourceExpression>
+		<destinationExpression>Номенклатура</destinationExpression>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>ТаблицаНоменклатурыПоВидамПланов</sourceDataSet>
+		<destinationDataSet>НаборДанныхОбъединение</destinationDataSet>
+		<sourceExpression>Характеристика</sourceExpression>
+		<destinationExpression>Характеристика</destinationExpression>
+		<required>false</required>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>ТаблицаНоменклатурыПоВидамПланов</sourceDataSet>
+		<destinationDataSet>НаборДанныхОбъединениеПроизводьныеОтборы</destinationDataSet>
+		<sourceExpression>Номенклатура</sourceExpression>
+		<destinationExpression>Номенклатура</destinationExpression>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>ТаблицаНоменклатурыПоВидамПланов</sourceDataSet>
+		<destinationDataSet>НаборДанныхОбъединениеПроизводьныеОтборы</destinationDataSet>
+		<sourceExpression>Характеристика</sourceExpression>
+		<destinationExpression>Характеристика</destinationExpression>
+		<required>false</required>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>ТаблицаНоменклатурыПоВидамПланов</sourceDataSet>
+		<destinationDataSet>НаборДанныхОбъединениеПроизводьныеОтборы</destinationDataSet>
+		<sourceExpression>ВидПлана</sourceExpression>
+		<destinationExpression>ВидПлана</destinationExpression>
+	</dataSetLink>
+	<calculatedField>
+		<dataPath>ЕстьОтбор</dataPath>
+		<expression>Выбор Когда (ВариантЗаполненияСостава = "ТоварыИМатериалы" И ТипТовара Есть Null) ИЛИ (ВариантЗаполненияСостава = ТипТовара) ИЛИ (ВариантЗаполненияСостава = "БезОтборов") Тогда Истина ИНАЧЕ естьnull(ПроизвольныйОтбор, Ложь) КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Есть отбор</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>Є відбір</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Основной</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>Основний</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Характеристика</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВидПлана</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЕстьОтбор</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПроизвольныйОтбор</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

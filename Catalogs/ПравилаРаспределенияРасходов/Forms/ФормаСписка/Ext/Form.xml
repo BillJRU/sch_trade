@@ -1,0 +1,928 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Правила распределения и показатели</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>uk</v8:lang>
+			<v8:content>Правила розподілу та показники</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>Close</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ГруппаСтраницы" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Сторінки</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="ГруппаСтраницыExtendedTooltip" id="38"/>
+			<ChildItems>
+				<Page name="ГруппаДляРаспределенияПоЭтапам" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расходов между партиями производства</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Витрат між партіями виробництва</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаДляРаспределенияПоЭтапамExtendedTooltip" id="39"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаПользовательскихНастроек" id="129">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа пользовательских настроек</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Група користувацьких настройок</v8:content>
+								</v8:item>
+							</Title>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПользовательскихНастроекРасширеннаяПодсказка" id="130"/>
+						</UsualGroup>
+						<Table name="СписокПоЭтапам" id="29">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>СписокПоЭтапам</DataPath>
+							<RowPictureDataPath>СписокПоЭтапам.DefaultPicture</RowPictureDataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Список по этапам</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Список по етапах</v8:content>
+								</v8:item>
+							</Title>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<UserSettingsGroup>ГруппаПользовательскихНастроек</UserSettingsGroup>
+							<ContextMenu name="СписокПоЭтапамКонтекстноеМеню" id="30"/>
+							<AutoCommandBar name="СписокПоЭтапамКоманднаяПанель" id="31">
+								<ChildItems>
+									<Button name="СписокПоЭтапамСправка" id="53">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.StandardCommand.Help</CommandName>
+										<ExtendedTooltip name="СписокПоЭтапамСправкаРасширеннаяПодсказка" id="54"/>
+									</Button>
+									<Button name="ИзменитьФорму" id="179">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+										<ExtendedTooltip name="ИзменитьФормуРасширеннаяПодсказка" id="180"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СписокПоЭтапамExtendedTooltip" id="40"/>
+							<SearchStringAddition name="СписокПоЭтапамСтрокаПоиска" id="57">
+								<AdditionSource>
+									<Item>СписокПоЭтапам</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокПоЭтапамСтрокаПоискаКонтекстноеМеню" id="58"/>
+								<ExtendedTooltip name="СписокПоЭтапамСтрокаПоискаРасширеннаяПодсказка" id="59"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокПоЭтапамСостояниеПросмотра" id="60">
+								<AdditionSource>
+									<Item>СписокПоЭтапам</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокПоЭтапамСостояниеПросмотраКонтекстноеМеню" id="61"/>
+								<ExtendedTooltip name="СписокПоЭтапамСостояниеПросмотраРасширеннаяПодсказка" id="62"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокПоЭтапамУправлениеПоиском" id="63">
+								<AdditionSource>
+									<Item>СписокПоЭтапам</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокПоЭтапамУправлениеПоискомКонтекстноеМеню" id="64"/>
+								<ExtendedTooltip name="СписокПоЭтапамУправлениеПоискомРасширеннаяПодсказка" id="65"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="СписокПоЭтапамНаименование" id="32">
+									<DataPath>СписокПоЭтапам.Description</DataPath>
+									<ContextMenu name="СписокПоЭтапамНаименованиеКонтекстноеМеню" id="33"/>
+									<ExtendedTooltip name="СписокПоЭтапамНаименованиеРасширеннаяПодсказка" id="41"/>
+								</LabelField>
+								<LabelField name="БазаРаспределенияПоПартиям" id="152">
+									<DataPath>СписокПоЭтапам.БазаРаспределенияПоПартиям</DataPath>
+									<ContextMenu name="БазаРаспределенияПоПартиямКонтекстноеМеню" id="153"/>
+									<ExtendedTooltip name="БазаРаспределенияПоПартиямРасширеннаяПодсказка" id="154"/>
+								</LabelField>
+								<LabelField name="БазаРаспределенияПоПодразделениям" id="155">
+									<DataPath>~СписокПоЭтапам.БазаРаспределенияПоПодразделениям</DataPath>
+									<ContextMenu name="БазаРаспределенияПоПодразделениямКонтекстноеМеню" id="156"/>
+									<ExtendedTooltip name="БазаРаспределенияПоПодразделениямРасширеннаяПодсказка" id="157"/>
+								</LabelField>
+								<LabelField name="СписокПоЭтапамСсылка" id="47">
+									<DataPath>СписокПоЭтапам.Ref</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<ContextMenu name="СписокПоЭтапамСсылкаКонтекстноеМеню" id="48"/>
+									<ExtendedTooltip name="СписокПоЭтапамСсылкаРасширеннаяПодсказка" id="49"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаНаФинансовыйРезультат" id="191">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расходов между направлениями деятельности</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Витрат між напрямами діяльності</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаНаФинансовыйРезультатРасширеннаяПодсказка" id="192"/>
+					<ChildItems>
+						<Table name="ПравилаНаФинансовыйРезультат" id="193">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>ПравилаНаФинансовыйРезультат</DataPath>
+							<RowPictureDataPath>ПравилаНаФинансовыйРезультат.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="ПравилаНаФинансовыйРезультатКонтекстноеМеню" id="194"/>
+							<AutoCommandBar name="ПравилаНаФинансовыйРезультатКоманднаяПанель" id="195"/>
+							<ExtendedTooltip name="ПравилаНаФинансовыйРезультатРасширеннаяПодсказка" id="196"/>
+							<SearchStringAddition name="ПравилаНаФинансовыйРезультатСтрокаПоиска" id="197">
+								<AdditionSource>
+									<Item>ПравилаНаФинансовыйРезультат</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПравилаНаФинансовыйРезультатСтрокаПоискаКонтекстноеМеню" id="198"/>
+								<ExtendedTooltip name="ПравилаНаФинансовыйРезультатСтрокаПоискаРасширеннаяПодсказка" id="199"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПравилаНаФинансовыйРезультатСостояниеПросмотра" id="200">
+								<AdditionSource>
+									<Item>ПравилаНаФинансовыйРезультат</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПравилаНаФинансовыйРезультатСостояниеПросмотраКонтекстноеМеню" id="201"/>
+								<ExtendedTooltip name="ПравилаНаФинансовыйРезультатСостояниеПросмотраРасширеннаяПодсказка" id="202"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПравилаНаФинансовыйРезультатУправлениеПоиском" id="203">
+								<AdditionSource>
+									<Item>ПравилаНаФинансовыйРезультат</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПравилаНаФинансовыйРезультатУправлениеПоискомКонтекстноеМеню" id="204"/>
+								<ExtendedTooltip name="ПравилаНаФинансовыйРезультатУправлениеПоискомРасширеннаяПодсказка" id="205"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ПравилаНаФинансовыйРезультатНаименование" id="206">
+									<DataPath>ПравилаНаФинансовыйРезультат.Description</DataPath>
+									<ContextMenu name="ПравилаНаФинансовыйРезультатНаименованиеКонтекстноеМеню" id="207"/>
+									<ExtendedTooltip name="ПравилаНаФинансовыйРезультатНаименованиеРасширеннаяПодсказка" id="208"/>
+								</LabelField>
+								<LabelField name="ПравилаНаФинансовыйРезультатБазаРаспределенияПоПартиям" id="212">
+									<DataPath>ПравилаНаФинансовыйРезультат.БазаРаспределенияПоПартиям</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>База распределения</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>База розподілу</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПравилаНаФинансовыйРезультатБазаРаспределенияПоПартиямКонтекстноеМеню" id="213"/>
+									<ExtendedTooltip name="ПравилаНаФинансовыйРезультатБазаРаспределенияПоПартиямРасширеннаяПодсказка" id="214"/>
+								</LabelField>
+								<LabelField name="ПравилаНаФинансовыйРезультатСсылка" id="209">
+									<DataPath>ПравилаНаФинансовыйРезультат.Ref</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<ContextMenu name="ПравилаНаФинансовыйРезультатСсылкаКонтекстноеМеню" id="210"/>
+									<ExtendedTooltip name="ПравилаНаФинансовыйРезультатСсылкаРасширеннаяПодсказка" id="211"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаНаРБП" id="215">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расходов будущих периодов</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Витрат майбутніх періодів</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа на РБП</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Група на ВМП</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаНаРБПРасширеннаяПодсказка" id="216"/>
+					<ChildItems>
+						<Table name="ПравилаНаРБП" id="217">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>ПравилаНаРБП</DataPath>
+							<RowPictureDataPath>ПравилаНаРБП.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="ПравилаНаРБПКонтекстноеМеню" id="218"/>
+							<AutoCommandBar name="ПравилаНаРБПКоманднаяПанель" id="219"/>
+							<ExtendedTooltip name="ПравилаНаРБПРасширеннаяПодсказка" id="220"/>
+							<SearchStringAddition name="ПравилаНаРБПСтрокаПоиска" id="221">
+								<AdditionSource>
+									<Item>ПравилаНаРБП</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПравилаНаРБПСтрокаПоискаКонтекстноеМеню" id="222"/>
+								<ExtendedTooltip name="ПравилаНаРБПСтрокаПоискаРасширеннаяПодсказка" id="223"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПравилаНаРБПСостояниеПросмотра" id="224">
+								<AdditionSource>
+									<Item>ПравилаНаРБП</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПравилаНаРБПСостояниеПросмотраКонтекстноеМеню" id="225"/>
+								<ExtendedTooltip name="ПравилаНаРБПСостояниеПросмотраРасширеннаяПодсказка" id="226"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПравилаНаРБПУправлениеПоиском" id="227">
+								<AdditionSource>
+									<Item>ПравилаНаРБП</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПравилаНаРБПУправлениеПоискомКонтекстноеМеню" id="228"/>
+								<ExtendedTooltip name="ПравилаНаРБПУправлениеПоискомРасширеннаяПодсказка" id="229"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ПравилаНаРБПНаименование" id="230">
+									<DataPath>ПравилаНаРБП.Description</DataPath>
+									<ContextMenu name="ПравилаНаРБПНаименованиеКонтекстноеМеню" id="231"/>
+									<ExtendedTooltip name="ПравилаНаРБПНаименованиеРасширеннаяПодсказка" id="232"/>
+								</LabelField>
+								<LabelField name="ПравилаНаРБПСсылка" id="233">
+									<DataPath>ПравилаНаРБП.Ref</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<ContextMenu name="ПравилаНаРБПСсылкаКонтекстноеМеню" id="234"/>
+									<ExtendedTooltip name="ПравилаНаРБПСсылкаРасширеннаяПодсказка" id="235"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаДляРаспределенияМатериаловИРабот" id="75">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Материалов и работ</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Матеріалів та робіт</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа для распределения по подразделениям</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Група для розподілу по підрозділах</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаДляРаспределенияМатериаловИРаботРасширеннаяПодсказка" id="76"/>
+					<ChildItems>
+						<Table name="СписокМатериалыРаботы" id="77">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>СписокМатериалыРаботы</DataPath>
+							<RowPictureDataPath>СписокМатериалыРаботы.DefaultPicture</RowPictureDataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Список материалы работы</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Список матеріали роботи</v8:content>
+								</v8:item>
+							</Title>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="СписокМатериалыРаботыКонтекстноеМеню" id="78"/>
+							<AutoCommandBar name="СписокМатериалыРаботыКоманднаяПанель" id="79">
+								<ChildItems>
+									<Button name="СписокМатериалыРаботыИзменитьФорму" id="181">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+										<ExtendedTooltip name="СписокМатериалыРаботыИзменитьФормуРасширеннаяПодсказка" id="182"/>
+									</Button>
+									<Button name="СписокМатериалыИРаботыСправка" id="105">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.StandardCommand.Help</CommandName>
+										<ExtendedTooltip name="СписокМатериалыИРаботыСправкаРасширеннаяПодсказка" id="106"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СписокМатериалыРаботыРасширеннаяПодсказка" id="80"/>
+							<SearchStringAddition name="СписокМатериалыРаботыСтрокаПоиска" id="81">
+								<AdditionSource>
+									<Item>СписокМатериалыРаботы</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокМатериалыРаботыСтрокаПоискаКонтекстноеМеню" id="84"/>
+								<ExtendedTooltip name="СписокМатериалыРаботыСтрокаПоискаРасширеннаяПодсказка" id="85"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокМатериалыРаботыСостояниеПросмотра" id="86">
+								<AdditionSource>
+									<Item>СписокМатериалыРаботы</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокМатериалыРаботыСостояниеПросмотраКонтекстноеМеню" id="89"/>
+								<ExtendedTooltip name="СписокМатериалыРаботыСостояниеПросмотраРасширеннаяПодсказка" id="90"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокМатериалыРаботыУправлениеПоиском" id="91">
+								<AdditionSource>
+									<Item>СписокМатериалыРаботы</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокМатериалыРаботыУправлениеПоискомКонтекстноеМеню" id="94"/>
+								<ExtendedTooltip name="СписокМатериалыРаботыУправлениеПоискомРасширеннаяПодсказка" id="95"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="СписокМатериалыРаботыСсылка" id="116">
+									<DataPath>СписокМатериалыРаботы.Ref</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<ContextMenu name="СписокМатериалыРаботыСсылкаКонтекстноеМеню" id="117"/>
+									<ExtendedTooltip name="СписокМатериалыРаботыСсылкаРасширеннаяПодсказка" id="118"/>
+								</LabelField>
+								<LabelField name="СписокМатериалыРаботыНаименование" id="107">
+									<DataPath>СписокМатериалыРаботы.Description</DataPath>
+									<ContextMenu name="СписокМатериалыРаботыНаименованиеКонтекстноеМеню" id="108"/>
+									<ExtendedTooltip name="СписокМатериалыРаботыНаименованиеРасширеннаяПодсказка" id="109"/>
+								</LabelField>
+								<LabelField name="СписокМатериалыРаботыБазаРаспределения" id="125">
+									<DataPath>~СписокМатериалыРаботы.БазаРаспределения</DataPath>
+									<ContextMenu name="СписокМатериалыРаботыБазаРаспределенияКонтекстноеМеню" id="126"/>
+									<ExtendedTooltip name="СписокМатериалыРаботыБазаРаспределенияРасширеннаяПодсказка" id="127"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаПоказатели" id="131">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Показатели</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Показники</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаПоказателиРасширеннаяПодсказка" id="132"/>
+					<ChildItems>
+						<Table name="Показатели" id="133">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Показатели</DataPath>
+							<RowPictureDataPath>Показатели.DefaultPicture</RowPictureDataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Показатели</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Показники</v8:content>
+								</v8:item>
+							</Title>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="ПоказателиКонтекстноеМеню" id="134"/>
+							<AutoCommandBar name="ПоказателиКоманднаяПанель" id="135">
+								<ChildItems>
+									<Button name="ПоказателиСправка" id="185">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.StandardCommand.Help</CommandName>
+										<ExtendedTooltip name="ПоказателиСправкаРасширеннаяПодсказка" id="186"/>
+									</Button>
+									<Button name="ПоказателиИзменитьФорму" id="183">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+										<ExtendedTooltip name="ПоказателиИзменитьФормуРасширеннаяПодсказка" id="184"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ПоказателиРасширеннаяПодсказка" id="136"/>
+							<SearchStringAddition name="ПоказателиСтрокаПоиска" id="137">
+								<AdditionSource>
+									<Item>Показатели</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПоказателиСтрокаПоискаКонтекстноеМеню" id="138"/>
+								<ExtendedTooltip name="ПоказателиСтрокаПоискаРасширеннаяПодсказка" id="139"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПоказателиСостояниеПросмотра" id="140">
+								<AdditionSource>
+									<Item>Показатели</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПоказателиСостояниеПросмотраКонтекстноеМеню" id="141"/>
+								<ExtendedTooltip name="ПоказателиСостояниеПросмотраРасширеннаяПодсказка" id="142"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПоказателиУправлениеПоиском" id="143">
+								<AdditionSource>
+									<Item>Показатели</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПоказателиУправлениеПоискомКонтекстноеМеню" id="144"/>
+								<ExtendedTooltip name="ПоказателиУправлениеПоискомРасширеннаяПодсказка" id="145"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ПоказателиНаименование" id="146">
+									<DataPath>Показатели.Description</DataPath>
+									<ContextMenu name="ПоказателиНаименованиеКонтекстноеМеню" id="147"/>
+									<ExtendedTooltip name="ПоказателиНаименованиеРасширеннаяПодсказка" id="148"/>
+								</LabelField>
+								<LabelField name="ПоказателиСсылка" id="149">
+									<DataPath>Показатели.Ref</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<ContextMenu name="ПоказателиСсылкаКонтекстноеМеню" id="150"/>
+									<ExtendedTooltip name="ПоказателиСсылкаРасширеннаяПодсказка" id="151"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="УстаревшиеПравила" id="158">
+					<Visible>false</Visible>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Устаревшие правила</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Застарілі правила</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="УстаревшиеПравилаРасширеннаяПодсказка" id="159"/>
+					<ChildItems>
+						<Table name="СписокУстаревшиеПравила" id="160">
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>СписокУстаревшиеПравила</DataPath>
+							<RowPictureDataPath>СписокУстаревшиеПравила.DefaultPicture</RowPictureDataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Список устаревшие правила</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Список застарілі правила</v8:content>
+								</v8:item>
+							</Title>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="СписокУстаревшиеПравилаКонтекстноеМеню" id="161"/>
+							<AutoCommandBar name="СписокУстаревшиеПравилаКоманднаяПанель" id="162">
+								<ChildItems>
+									<Button name="СписокУстаревшиеПравилаСправка" id="187">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.StandardCommand.Help</CommandName>
+										<ExtendedTooltip name="СписокУстаревшиеПравилаСправкаРасширеннаяПодсказка" id="188"/>
+									</Button>
+									<Button name="СписокУстаревшиеПравилаИзменитьФорму" id="189">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+										<ExtendedTooltip name="СписокУстаревшиеПравилаИзменитьФормуРасширеннаяПодсказка" id="190"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СписокУстаревшиеПравилаРасширеннаяПодсказка" id="163"/>
+							<SearchStringAddition name="СписокУстаревшиеПравилаСтрокаПоиска" id="164">
+								<AdditionSource>
+									<Item>СписокУстаревшиеПравила</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокУстаревшиеПравилаСтрокаПоискаКонтекстноеМеню" id="165"/>
+								<ExtendedTooltip name="СписокУстаревшиеПравилаСтрокаПоискаРасширеннаяПодсказка" id="166"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокУстаревшиеПравилаСостояниеПросмотра" id="167">
+								<AdditionSource>
+									<Item>СписокУстаревшиеПравила</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокУстаревшиеПравилаСостояниеПросмотраКонтекстноеМеню" id="168"/>
+								<ExtendedTooltip name="СписокУстаревшиеПравилаСостояниеПросмотраРасширеннаяПодсказка" id="169"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокУстаревшиеПравилаУправлениеПоиском" id="170">
+								<AdditionSource>
+									<Item>СписокУстаревшиеПравила</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокУстаревшиеПравилаУправлениеПоискомКонтекстноеМеню" id="171"/>
+								<ExtendedTooltip name="СписокУстаревшиеПравилаУправлениеПоискомРасширеннаяПодсказка" id="172"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="СписокУстаревшиеПравилаНаименование" id="176">
+									<DataPath>СписокУстаревшиеПравила.Description</DataPath>
+									<ContextMenu name="СписокУстаревшиеПравилаНаименованиеКонтекстноеМеню" id="177"/>
+									<ExtendedTooltip name="СписокУстаревшиеПравилаНаименованиеРасширеннаяПодсказка" id="178"/>
+								</LabelField>
+								<LabelField name="СписокУстаревшиеПравилаСсылка" id="173">
+									<DataPath>СписокУстаревшиеПравила.Ref</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<ContextMenu name="СписокУстаревшиеПравилаСсылкаКонтекстноеМеню" id="174"/>
+									<ExtendedTooltip name="СписокУстаревшиеПравилаСсылкаРасширеннаяПодсказка" id="175"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="СписокПоЭтапам" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.ПравилаРаспределенияРасходов</MainTable>
+				<AutoSaveUserSettings>false</AutoSaveUserSettings>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">НазначениеПравила</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.НазначениеПравилРаспределенияРасходов.РаспределениеСтатейРасходовПоЭтапамПроизводства</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Устаревшее</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+							<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="СписокМатериалыРаботы" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список материалы работы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Список матеріали роботи</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.ПравилаРаспределенияРасходов</MainTable>
+				<AutoSaveUserSettings>false</AutoSaveUserSettings>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">НазначениеПравила</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.НазначениеПравилРаспределенияРасходов.РаспределениеМатериаловИРабот</dcsset:right>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="Показатели" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показатели</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Показники</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.ПравилаРаспределенияРасходов</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">БазаРаспределения</dcsset:left>
+							<dcsset:comparisonType>InList</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ТипыБазыРаспределенияРасходов.ВводитсяПриИзменении</dcsset:right>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ТипыБазыРаспределенияРасходов.ВводитсяЕжемесячно</dcsset:right>
+							<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">НазначениеПравила</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.НазначениеПравилРаспределенияРасходов.РаспределениеСтатейРасходовПоПодразделениям</dcsset:right>
+							<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="СписокУстаревшиеПравила" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Устаревшие правила</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Застарілі правила</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.ПравилаРаспределенияРасходов</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Устаревшее</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+							<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ПравилаНаФинансовыйРезультат" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Правила на финансовый результат</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Правила на фінансовий результат</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.ПравилаРаспределенияРасходов</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">НазначениеПравила</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.НазначениеПравилРаспределенияРасходов.РаспределениеРасходовНаФинансовыйРезультат</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Устаревшее</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ПравилаНаРБП" id="7">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.ПравилаРаспределенияРасходов</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">НазначениеПравила</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.НазначениеПравилРаспределенияРасходов.РаспределениеРасходовНаРБП</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Устаревшее</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+</Form>

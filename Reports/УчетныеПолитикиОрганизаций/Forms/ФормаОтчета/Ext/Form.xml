@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<CommandBarLocation>Top</CommandBarLocation>
+	<ReportFormType>Main</ReportFormType>
+	<AutoShowState>Auto</AutoShowState>
+	<ReportResultViewMode>Auto</ReportResultViewMode>
+	<ViewModeApplicationOnSetReportResult>Auto</ViewModeApplicationOnSetReportResult>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаСформировать" id="6">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.Сформировать</CommandName>
+				<ExtendedTooltip name="ФормаСформироватьРасширеннаяПодсказка" id="7"/>
+			</Button>
+			<Button name="ФормаСправка" id="4">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<CommandName>Form.StandardCommand.Help</CommandName>
+				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаСправкаРасширеннаяПодсказка" id="5"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаПараметрыСравнения" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры сравнения</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Параметри порівняння</v8:content>
+				</v8:item>
+			</Title>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПараметрыСравненияРасширеннаяПодсказка" id="16"/>
+			<ChildItems>
+				<InputField name="ОрганизацияОсновная" id="23">
+					<DataPath>ОрганизацияОсновная</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Організація</v8:content>
+						</v8:item>
+					</Title>
+					<ChoiceParameters>
+						<app:item name="Отбор.ОбособленноеПодразделение">
+							<app:value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation/>
+								<Value xsi:type="xs:boolean">false</Value>
+							</app:value>
+						</app:item>
+						<app:item name="Отбор.Предопределенный">
+							<app:value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation/>
+								<Value xsi:type="xs:boolean">false</Value>
+							</app:value>
+						</app:item>
+					</ChoiceParameters>
+					<ContextMenu name="ОрганизацияОсновнаяКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ОрганизацияОсновнаяРасширеннаяПодсказка" id="25"/>
+					<Events>
+						<Event name="OnChange">ОрганизацияОсновнаяПриИзменении</Event>
+					</Events>
+				</InputField>
+				<CheckBoxField name="ПоказатьОтличия" id="20">
+					<DataPath>ПоказатьОтличия</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПоказатьОтличияКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ПоказатьОтличияРасширеннаяПодсказка" id="22"/>
+					<Events>
+						<Event name="OnChange">ПоказатьОтличияПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<InputField name="ПредставлениеОрганизаций" id="17">
+					<DataPath>ПредставлениеОрганизаций</DataPath>
+					<Enabled>false</Enabled>
+					<TitleLocation>None</TitleLocation>
+					<ChoiceButton>true</ChoiceButton>
+					<ClearButton>true</ClearButton>
+					<ContextMenu name="ПредставлениеОрганизацийКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="ПредставлениеОрганизацийРасширеннаяПодсказка" id="19"/>
+					<Events>
+						<Event name="StartChoice">ПредставлениеОрганизацийНачалоВыбора</Event>
+						<Event name="Clearing">ПредставлениеОрганизацийОчистка</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<SpreadSheetDocumentField name="ТаблицаОтчета" id="1">
+			<DataPath>ТаблицаОтчета</DataPath>
+			<TitleLocation>None</TitleLocation>
+			<ContextMenu name="ТаблицаОтчетаКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ТаблицаОтчетаРасширеннаяПодсказка" id="3"/>
+			<Events>
+				<Event name="DetailProcessing">ТаблицаОтчетаОбработкаРасшифровки</Event>
+			</Events>
+		</SpreadSheetDocumentField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Отчет" id="1">
+			<Type>
+				<v8:Type>cfg:ReportObject.УчетныеПолитикиОрганизаций</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ТаблицаОтчета" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица отчета</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Таблиця звіту</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОрганизацияОсновная" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация основная</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Організація основна</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="СписокОрганизаций" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список организаций</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Список організацій</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+		<Attribute name="ПредставлениеОрганизаций" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Представление организаций</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Представлення організацій</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьНесколькоОрганизаций</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="ПоказатьОтличия" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать отличия</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Показати відмінності</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Сформировать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Сформувати</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Сформировать</Action>
+		</Command>
+	</Commands>
+</Form>

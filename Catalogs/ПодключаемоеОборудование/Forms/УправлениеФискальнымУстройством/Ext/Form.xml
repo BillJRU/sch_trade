@@ -1,0 +1,463 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаОсновныеОперации" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основные операции</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Основні операції</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа основные операции</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Група основні операції</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОсновныеОперацииРасширеннаяПодсказка" id="19"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаУправлениеСменой" id="20">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Управление сменой</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Управління зміною</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа управление сменой</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Група управління зміною</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаУправлениеСменойРасширеннаяПодсказка" id="21"/>
+					<ChildItems>
+						<Button name="ОткрытьСмену" id="8">
+							<Type>UsualButton</Type>
+							<Representation>PictureAndText</Representation>
+							<Width>20</Width>
+							<CommandName>Form.Command.ОткрытьСмену</CommandName>
+							<ExtendedTooltip name="ОткрытьСменуРасширеннаяПодсказка" id="9"/>
+						</Button>
+						<Button name="ЗакрытьСмену" id="6">
+							<Type>UsualButton</Type>
+							<Representation>PictureAndText</Representation>
+							<Width>20</Width>
+							<CommandName>Form.Command.ЗакрытьСмену</CommandName>
+							<ExtendedTooltip name="ЗакрытьСменуРасширеннаяПодсказка" id="7"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаОтчетыФискальногорегистратора" id="22">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отчеты фискального регистратора</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Звіти фіскального реєстратора</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа отчеты фискальногорегистратора</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Група звіти фіскального реєстратора</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<ExtendedTooltip name="ГруппаОтчетыФискальногорегистратораРасширеннаяПодсказка" id="23"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаОтчетыБезПараметров" id="30">
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа отчеты без параметров</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Група звітів без параметрів</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОтчетыБезПараметровРасширеннаяПодсказка" id="31"/>
+							<ChildItems>
+								<Button name="ОтчетБезГашения" id="16">
+									<Type>UsualButton</Type>
+									<Representation>PictureAndText</Representation>
+									<Width>20</Width>
+									<CommandName>Form.Command.ОтчетБезГашения</CommandName>
+									<ExtendedTooltip name="ОтчетБезГашенияРасширеннаяПодсказка" id="17"/>
+								</Button>
+								<Button name="ОтчетОПроданныхТоварах" id="24">
+									<Type>UsualButton</Type>
+									<Width>20</Width>
+									<CommandName>Form.Command.ОтчетОПроданныхТоварах</CommandName>
+									<ExtendedTooltip name="ОтчетОПроданныхТоварахРасширеннаяПодсказка" id="25"/>
+								</Button>
+								<Button name="ОтчетОТекущемСостоянииРасчетов" id="14">
+									<Type>UsualButton</Type>
+									<Visible>false</Visible>
+									<Width>20</Width>
+									<CommandName>Form.Command.ОтчетОТекущемСостоянииРасчетов</CommandName>
+									<ExtendedTooltip name="ОтчетОТекущемСостоянииРасчетовРасширеннаяПодсказка" id="15"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаОтчетПоДатам" id="32">
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа отчет по датам</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Група звіт за датами</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОтчетПоДатамРасширеннаяПодсказка" id="33"/>
+							<ChildItems>
+								<Button name="ОтчетаПоДатам" id="26">
+									<Type>UsualButton</Type>
+									<Width>20</Width>
+									<CommandName>Form.Command.ОтчетаПоДатам</CommandName>
+									<ExtendedTooltip name="ОтчетаПоДатамРасширеннаяПодсказка" id="27"/>
+								</Button>
+								<InputField name="ПериодПериодическогоОтчета" id="34">
+									<DataPath>ПериодПериодическогоОтчета</DataPath>
+									<ContextMenu name="ПериодПериодическогоОтчетаКонтекстноеМеню" id="35"/>
+									<ExtendedTooltip name="ПериодПериодическогоОтчетаРасширеннаяПодсказка" id="36"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаОтчетПоНомерам" id="37">
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа отчет по номерам</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Група звіт за номерами</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОтчетПоНомерамРасширеннаяПодсказка" id="38"/>
+							<ChildItems>
+								<Button name="ОтчетПоНомерам" id="28">
+									<Type>UsualButton</Type>
+									<Width>20</Width>
+									<CommandName>Form.Command.ОтчетПоНомерам</CommandName>
+									<ExtendedTooltip name="ОтчетПоНомерамРасширеннаяПодсказка" id="29"/>
+								</Button>
+								<InputField name="НачальныйНомерПериодическогоОтчета" id="39">
+									<DataPath>НачальныйНомерПериодическогоОтчета</DataPath>
+									<ContextMenu name="НачальныйНомерПериодическогоОтчетаКонтекстноеМеню" id="40"/>
+									<ExtendedTooltip name="НачальныйНомерПериодическогоОтчетаРасширеннаяПодсказка" id="41"/>
+								</InputField>
+								<InputField name="КонечныйНомерПериодическогоОтчета" id="42">
+									<DataPath>КонечныйНомерПериодическогоОтчета</DataPath>
+									<ContextMenu name="КонечныйНомерПериодическогоОтчетаКонтекстноеМеню" id="43"/>
+									<ExtendedTooltip name="КонечныйНомерПериодическогоОтчетаРасширеннаяПодсказка" id="44"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ПараметрКассир" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметр кассир</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Параметр касир</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КонечныйНомерПериодическогоОтчета" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>по номер</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>по номер</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НачальныйНомерПериодическогоОтчета" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>С номера</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>З номеру</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПериодПериодическогоОтчета" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>За период</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>За період</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:StandardPeriod</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИдентификаторУстройства" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор устройства</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Ідентифікатор пристрою</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОтчетОТекущемСостоянииРасчетов" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчет о текущем состоянии расчетов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Звіт про поточний стан розрахунків</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчет о текущем состоянии расчетов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Звіт про поточний стан розрахунків</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтчетОТекущемСостоянииРасчетов</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗакрытьСмену" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть смену</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Закрити зміну</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть смену</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Закрити зміну</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗакрытьСмену</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьСмену" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть смену</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Відкрити зміну</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть смену</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Відкрити зміну</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьСмену</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОтчетБезГашения" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>X-отчет</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>X-звіт</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчет без гашения</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Звіт без гасіння</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтчетБезГашения</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОтчетОПроданныхТоварах" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>О проданных товарах</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Про продані товари</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчет о проданных товарах</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Звіт про продані товари</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПечатьДополнительногоОтчета</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОтчетаПоДатам" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>По датам</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>За датами</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчета по датам</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Звіту за датами</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПечатьДополнительногоОтчета</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОтчетПоНомерам" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>По номерам</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>За номерами</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчет по номерам</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Звіт за номерами</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПечатьДополнительногоОтчета</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

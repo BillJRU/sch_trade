@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="Запустить" id="1">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.Запустить</CommandName>
+				<ExtendedTooltip name="ЗапуститьРасширеннаяПодсказка" id="2"/>
+			</Button>
+			<Button name="ФормаЗапуститьИнтерактивно" id="11">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ЗапуститьИнтерактивно</CommandName>
+				<ExtendedTooltip name="ФормаЗапуститьИнтерактивноРасширеннаяПодсказка" id="12"/>
+			</Button>
+			<Button name="ФормаПроверитьДоступ" id="13">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПроверитьДоступ</CommandName>
+				<ExtendedTooltip name="ФормаПроверитьДоступРасширеннаяПодсказка" id="14"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаНастройки" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры запуска</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Параметри запуску</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа настройки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Група настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ГруппаНастройкиРасширеннаяПодсказка" id="27"/>
+			<ChildItems>
+				<CheckBoxField name="ЗагружатьНормативныеВеличины" id="15">
+					<DataPath>ЗагружатьНормативныеВеличины</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЗагружатьНормативныеВеличиныКонтекстноеМеню" id="16"/>
+					<ExtendedTooltip name="ЗагружатьНормативныеВеличиныРасширеннаяПодсказка" id="17"/>
+				</CheckBoxField>
+				<CheckBoxField name="ЗагружатьКлассификаторы" id="18">
+					<DataPath>ЗагружатьКлассификаторы</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЗагружатьКлассификаторыКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="ЗагружатьКлассификаторыРасширеннаяПодсказка" id="20"/>
+				</CheckBoxField>
+				<CheckBoxField name="ЗагружатьКурсыВалют" id="21">
+					<DataPath>ЗагружатьКурсыВалют</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЗагружатьКурсыВалютКонтекстноеМеню" id="22"/>
+					<ExtendedTooltip name="ЗагружатьКурсыВалютРасширеннаяПодсказка" id="23"/>
+				</CheckBoxField>
+				<CheckBoxField name="ЗагружатьНовости" id="31">
+					<DataPath>ЗагружатьНовости</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЗагружатьНовостиКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="ЗагружатьНовостиРасширеннаяПодсказка" id="33"/>
+				</CheckBoxField>
+				<CheckBoxField name="ЗагружатьКалендарь" id="34">
+					<DataPath>ЗагружатьКалендарь</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЗагружатьКалендарьКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="ЗагружатьКалендарьРасширеннаяПодсказка" id="36"/>
+				</CheckBoxField>
+				<Button name="РедактироватьНастройки" id="24">
+					<Type>Hyperlink</Type>
+					<CommandName>Form.Command.РедактироватьНастройки</CommandName>
+					<ExtendedTooltip name="РедактироватьНастройкиРасширеннаяПодсказка" id="25"/>
+				</Button>
+				<CheckBoxField name="ВыводитьПротокол" id="28">
+					<DataPath>ВыводитьПротокол</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выводить протокол загрузки</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Виводити протокол завантаження</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВыводитьПротоколКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="ВыводитьПротоколРасширеннаяПодсказка" id="30"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаВыполнение" id="3">
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа выполнение</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Група виконання</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаВыполнениеРасширеннаяПодсказка" id="4"/>
+			<ChildItems>
+				<PictureDecoration name="КартинкаДлительнаяОперация" id="5">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Картинка длительная операция</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Картинка тривала операція</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>CommonPicture.ДлительнаяОперация48</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="КартинкаДлительнаяОперацияКонтекстноеМеню" id="6"/>
+					<ExtendedTooltip name="КартинкаДлительнаяОперацияРасширеннаяПодсказка" id="7"/>
+				</PictureDecoration>
+				<LabelDecoration name="НадписьВыполняетсяЗагрузка" id="8">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выполняется загрузка...</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Виконується завантаження...</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НадписьВыполняетсяЗагрузкаКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="НадписьВыполняетсяЗагрузкаРасширеннаяПодсказка" id="10"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.НСИСЗапускСервисов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ЗагружатьНормативныеВеличины" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загружать нормативные величины</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Завантажувати нормативні величини</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗагружатьКурсыВалют" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загружать курсы валют</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Завантажувати курси валют</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗагружатьКлассификаторы" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загружать классификаторы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Завантажувати класифікатори</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВыводитьПротокол" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выводить протокол</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Виводити протокол</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗагружатьНовости" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загружать новости</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Завантажувати новини</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗагружатьКалендарь" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загружать календарь</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Завантажувати календар</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Запустить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запустить в фоне</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Запустити у фоні</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запустить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Запустити</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Запустить</Action>
+		</Command>
+		<Command name="ЗапуститьИнтерактивно" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запустить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Запустити</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запустить интерактивно</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Запустити інтерактивно</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗапуститьИнтерактивно</Action>
+		</Command>
+		<Command name="ПроверитьДоступ" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить доступ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Перевірити доступ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить доступ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Перевірити доступ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроверитьДоступ</Action>
+		</Command>
+		<Command name="РедактироватьНастройки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Редактировать настройки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Редагувати настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Редактировать настройки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Редагувати настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РедактироватьНастройки</Action>
+		</Command>
+	</Commands>
+</Form>
