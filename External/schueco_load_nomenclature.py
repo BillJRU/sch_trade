@@ -22,7 +22,7 @@ HEADERS = {
     "Authorization": f"Basic {_auth_str}",
 }
 
-EXCEL_PATH = "/home/bill/projects/1c/schueco/schueco_trade/.claude/tasks/initial-requirements/2 part/2026-02-Ukraine-PL51.xlsx"
+EXCEL_PATH = None  # Pass via --excel argument
 
 # Row range (1-based, row 1 = header)
 FIRST_ROW = 2
@@ -455,7 +455,7 @@ def parse_args():
     parser.add_argument("--last-row", type=int, default=LAST_ROW,
                         help=f"Last Excel row (0=all, default: {LAST_ROW})")
     parser.add_argument("--excel", type=str, default=EXCEL_PATH,
-                        help="Path to PL51 Excel file")
+                        help="Path to PL51 Excel file (required for loading)")
     parser.add_argument("--vid", type=int, default=None,
                         help="ВидНоменклатуры index (skips interactive prompt)")
     parser.add_argument("--delete", action="store_true",
@@ -501,6 +501,11 @@ def main():
             return
         delete_nomenclature(producer_key, dry_run=args.dry_run)
         return
+
+    # Validate --excel is provided for load mode
+    if not args.excel:
+        print("ERROR: --excel path is required. Usage: --excel /path/to/2026-02-Ukraine-PL51.xlsx")
+        sys.exit(1)
 
     # Select ВидНоменклатуры (must be an element, NOT a folder!)
     vid_items = sorted(refs["виды"].items())
