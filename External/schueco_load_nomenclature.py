@@ -121,6 +121,7 @@ def fetch_reference_data():
         "PAK": ["паков", "упак", "упак.", "пак"],
         "PAA": ["пар", "пар."],
         "KG": ["кг", "кг."],
+        "M2": ["м2", "м²", "кв.м"],
     }
     for pl51_code, aliases in uom_aliases.items():
         for alias in aliases:
@@ -215,8 +216,8 @@ def load_nomenclature(excel_path, refs, vid_key, producer_key, parent_key=None,
     uom_map = refs["uom"]
 
     for i, row in enumerate(rows):
-        # Pad row to 22 columns
-        row = list(row) + [None] * (22 - len(row)) if len(row) < 22 else list(row)
+        # Pad row to 23 columns (A-W)
+        row = list(row) + [None] * (23 - len(row)) if len(row) < 23 else list(row)
 
         material_no = safe_str(row[0])   # A
         name_de = safe_str(row[1])       # B
@@ -232,6 +233,11 @@ def load_nomenclature(excel_path, refs, vid_key, producer_key, parent_key=None,
         prog_ind = safe_str(row[14])     # O - Program indicator
         discount_grp = safe_str(row[15]) # P
         tariff_code = safe_str(row[20])  # U
+        sales_unit = safe_str(row[21])   # V - sales unit (ST or empty)
+        name_uk = safe_str(row[22])      # W - Ukrainian name
+
+        # Storage unit: prefer sales unit (V), fall back to base UOM (D)
+        storage_unit = sales_unit if sales_unit else uom_code
 
         if not material_no:
             continue
@@ -256,7 +262,7 @@ def load_nomenclature(excel_path, refs, vid_key, producer_key, parent_key=None,
         # Build payload
         payload = {
             "Description": name_de[:100],
-            "НаименованиеПолное": name_de,
+            "НаименованиеПолное": name_uk if name_uk else name_de,
             "Артикул": material_no,
             "ВидНоменклатуры_Key": vid_key,
             "IsFolder": False,
@@ -268,8 +274,8 @@ def load_nomenclature(excel_path, refs, vid_key, producer_key, parent_key=None,
         if parent_key:
             payload["Parent_Key"] = parent_key
 
-        # UOM
-        uom_key = uom_map.get(uom_code.upper())
+        # UOM — use storage_unit (sales unit or base UOM)
+        uom_key = uom_map.get(storage_unit.upper())
         if uom_key:
             payload["ЕдиницаИзмерения_Key"] = uom_key
 
@@ -282,20 +288,26 @@ def load_nomenclature(excel_path, refs, vid_key, producer_key, parent_key=None,
             if kg_key:
                 payload["ВесЕдиницаИзмерения_Key"] = kg_key
 
-        # Length (col J) — only for profiles (UOM=M)
+        # Length (col J) — only for profiles (base UOM=M)
+        # "1 шт має довжину N м": Числитель=1, Знаменатель=N
         if uom_code.upper() == "M" and length_m > 0:
             payload["ДлинаИспользовать"] = True
-            payload["ДлинаЧислитель"] = length_m
-            payload["ДлинаЗнаменатель"] = 1
+            payload["ДлинаЧислитель"] = 1
+            payload["ДлинаЗнаменатель"] = length_m
+            payload["ДлинаМожноУказыватьВДокументах"] = True
             m_key = uom_map.get("M")
             if m_key:
                 payload["ДлинаЕдиницаИзмерения_Key"] = m_key
 
         # Circumfer area (col N) → native ПлощадьЧислитель
+        # "1 шт має площу N": Числитель=1, Знаменатель=N
         if circumfer > 0:
             payload["ПлощадьИспользовать"] = True
-            payload["ПлощадьЧислитель"] = circumfer
-            payload["ПлощадьЗнаменатель"] = 1
+            payload["ПлощадьЧислитель"] = 1
+            payload["ПлощадьЗнаменатель"] = circumfer
+            m2_key = uom_map.get("M2")
+            if m2_key:
+                payload["ПлощадьЕдиницаИзмерения_Key"] = m2_key
 
         # Discount group → ЦеноваяГруппа (col P)
         if discount_grp:
