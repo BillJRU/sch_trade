@@ -158,8 +158,8 @@ def fetch_reference_data():
     }
     print(f"  Found {len(refs['properties'])} additional properties")
     # Map our expected property names
-    PROP_NAMES = ["Наименование EN", "MS (Marktsegment)", "VS (Vertriebsschiene)",
-                  "WS (Warengruppe)", "Programmkennzeichen", "Площадь полировки"]
+    PROP_NAMES = ["Найменування (EN)", "MS (Marktsegment)", "VS (Vertriebsschiene)",
+                  "WS (Warengruppe)", "Індикатор програми", "Площа полірування"]
     for pn in PROP_NAMES:
         if pn in refs["properties"]:
             print(f"    ✓ {pn}")
@@ -279,35 +279,40 @@ def load_nomenclature(excel_path, refs, vid_key, producer_key, parent_key=None,
         if uom_key:
             payload["ЕдиницаИзмерения_Key"] = uom_key
 
+        # Measurement fields — will be set via separate PATCH after create,
+        # because ПередЗаписью on POST calls ЗаполнитьРеквизитыПоВидуНоменклатуры
+        # which overwrites measurement values
+        measure_payload = {}
+
         # Weight (col H)
         if weight > 0:
-            payload["ВесИспользовать"] = True
-            payload["ВесЧислитель"] = weight
-            payload["ВесЗнаменатель"] = 1
+            measure_payload["ВесИспользовать"] = True
+            measure_payload["ВесЧислитель"] = weight
+            measure_payload["ВесЗнаменатель"] = 1
             kg_key = uom_map.get("KG")
             if kg_key:
-                payload["ВесЕдиницаИзмерения_Key"] = kg_key
+                measure_payload["ВесЕдиницаИзмерения_Key"] = kg_key
 
         # Length (col J) — only for profiles (base UOM=M)
-        # "1 шт має довжину N м": Числитель=1, Знаменатель=N
+        # Числитель = length value, Знаменатель = piece count
         if uom_code.upper() == "M" and length_m > 0:
-            payload["ДлинаИспользовать"] = True
-            payload["ДлинаЧислитель"] = 1
-            payload["ДлинаЗнаменатель"] = length_m
-            payload["ДлинаМожноУказыватьВДокументах"] = True
+            measure_payload["ДлинаИспользовать"] = True
+            measure_payload["ДлинаЧислитель"] = length_m
+            measure_payload["ДлинаЗнаменатель"] = 1
+            measure_payload["ДлинаМожноУказыватьВДокументах"] = True
             m_key = uom_map.get("M")
             if m_key:
-                payload["ДлинаЕдиницаИзмерения_Key"] = m_key
+                measure_payload["ДлинаЕдиницаИзмерения_Key"] = m_key
 
-        # Circumfer area (col N) → native ПлощадьЧислитель
-        # "1 шт має площу N": Числитель=1, Знаменатель=N
+        # Circumfer area (col N) → native Площадь
+        # Value in ULF/m (1000 ULF = 1 m²): 341 ULF/m = 0.341 m²/m
         if circumfer > 0:
-            payload["ПлощадьИспользовать"] = True
-            payload["ПлощадьЧислитель"] = 1
-            payload["ПлощадьЗнаменатель"] = circumfer
+            measure_payload["ПлощадьИспользовать"] = True
+            measure_payload["ПлощадьЧислитель"] = circumfer / 1000
+            measure_payload["ПлощадьЗнаменатель"] = 1
             m2_key = uom_map.get("M2")
             if m2_key:
-                payload["ПлощадьЕдиницаИзмерения_Key"] = m2_key
+                measure_payload["ПлощадьЕдиницаИзмерения_Key"] = m2_key
 
         # Discount group → ЦеноваяГруппа (col P)
         if discount_grp:
@@ -332,13 +337,13 @@ def load_nomenclature(excel_path, refs, vid_key, producer_key, parent_key=None,
                 "Значение": value,
             })
 
-        add_prop("Наименование EN", name_en)
+        add_prop("Найменування (EN)", name_en)
         add_prop("MS (Marktsegment)", ms)
         add_prop("VS (Vertriebsschiene)", vs)
         add_prop("WS (Warengruppe)", ws)
-        add_prop("Programmkennzeichen", prog_ind)
+        add_prop("Індикатор програми", prog_ind)
         if polish_area > 0:
-            add_prop("Площадь полировки", polish_area)
+            add_prop("Площа полірування", polish_area / 1000)
 
         if dop_rows:
             payload["ДополнительныеРеквизиты"] = dop_rows
@@ -347,8 +352,10 @@ def load_nomenclature(excel_path, refs, vid_key, producer_key, parent_key=None,
         try:
             if existing_key:
                 # Don't change ВидНоменклатуры on update — triggers complex validation
+                # Measurements safe to include — ВидНоменклатуры unchanged, no re-fill
                 patch_payload = {k: v for k, v in payload.items()
                                  if k not in ("ВидНоменклатуры_Key", "IsFolder")}
+                patch_payload.update(measure_payload)
                 result = odata_patch("Catalog_Номенклатура", existing_key, patch_payload)
                 stats["updated"] += 1
                 if stats["updated"] % 10 == 0 or stats["updated"] <= 5:
@@ -360,13 +367,36 @@ def load_nomenclature(excel_path, refs, vid_key, producer_key, parent_key=None,
                 if stats["created"] % 10 == 0 or stats["created"] <= 5:
                     print(f"  [{stats['processed']}] Created: {material_no} '{name_de[:40]}' → {result.get('Code', '')}")
 
+                # Step 2: PATCH measurement fields (after ПередЗаписью filled defaults)
+                if measure_payload:
+                    odata_patch("Catalog_Номенклатура", ref_key, measure_payload)
+
                 # Post-create: НоменклатураГТД (col U) — only for new items
                 if tariff_code:
                     try:
-                        odata_post("Catalog_НоменклатураГТД", {
-                            "Description": tariff_code,
-                            "Owner_Key": ref_key,
-                        })
+                        # Convert "76042990" → "7604 29 90" for classifier lookup
+                        code_spaced = tariff_code[:4]
+                        if len(tariff_code) > 4:
+                            code_spaced += " " + tariff_code[4:6]
+                        if len(tariff_code) > 6:
+                            code_spaced += " " + tariff_code[6:8]
+                        # Find in КлассификаторУКТВЭД
+                        ukt_data = odata_get("Catalog_КлассификаторУКТВЭД",
+                            f"$filter=startswith(Code,'{code_spaced}')&$select=Ref_Key&$top=1")
+                        if ukt_data.get("value"):
+                            ukt_key = ukt_data["value"][0]["Ref_Key"]
+                            gtd = odata_post("Catalog_НоменклатураГТД", {
+                                "Owner_Key": ref_key,
+                                "КодУКТВЭД_Key": ukt_key,
+                            })
+                            # Link back to nomenclature
+                            gtd_key = gtd.get("Ref_Key")
+                            if gtd_key:
+                                odata_patch("Catalog_Номенклатура", ref_key, {
+                                    "НоменклатураГТД_Key": gtd_key,
+                                })
+                        else:
+                            print(f"  Warning: УКТЗЕД '{tariff_code}' ({code_spaced}) not found for {material_no}")
                     except Exception as e:
                         print(f"  Warning: GTD for {material_no}: {e}")
 
