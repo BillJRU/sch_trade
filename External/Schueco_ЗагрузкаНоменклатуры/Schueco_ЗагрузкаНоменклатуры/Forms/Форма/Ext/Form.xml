@@ -183,6 +183,69 @@
 				</InputField>
 			</ChildItems>
 		</UsualGroup>
+		<UsualGroup name="ГруппаДопРеквизиты" id="50">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дополнительные реквизиты (PL51 → ДопРеквизиты)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Додаткові реквізити (PL51 → ДодРеквізити)</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="ГруппаДопРеквизитыРасширеннаяПодсказка" id="51"/>
+			<ChildItems>
+				<InputField name="ДопРекв_НаименованиеEN" id="52">
+					<DataPath>ДопРекв_НаименованиеEN</DataPath>
+					<Title>
+						<v8:item><v8:lang>uk</v8:lang><v8:content>Найменування (EN) →</v8:content></v8:item>
+					</Title>
+					<ContextMenu name="ДопРекв_НаименованиеENКонтекстноеМеню" id="53"/>
+					<ExtendedTooltip name="ДопРекв_НаименованиеENРасширеннаяПодсказка" id="54"/>
+				</InputField>
+				<InputField name="ДопРекв_MS" id="55">
+					<DataPath>ДопРекв_MS</DataPath>
+					<Title>
+						<v8:item><v8:lang>uk</v8:lang><v8:content>MS (Marktsegment) →</v8:content></v8:item>
+					</Title>
+					<ContextMenu name="ДопРекв_MSКонтекстноеМеню" id="56"/>
+					<ExtendedTooltip name="ДопРекв_MSРасширеннаяПодсказка" id="57"/>
+				</InputField>
+				<InputField name="ДопРекв_VS" id="58">
+					<DataPath>ДопРекв_VS</DataPath>
+					<Title>
+						<v8:item><v8:lang>uk</v8:lang><v8:content>VS (Vertriebsschiene) →</v8:content></v8:item>
+					</Title>
+					<ContextMenu name="ДопРекв_VSКонтекстноеМеню" id="59"/>
+					<ExtendedTooltip name="ДопРекв_VSРасширеннаяПодсказка" id="60"/>
+				</InputField>
+				<InputField name="ДопРекв_WS" id="61">
+					<DataPath>ДопРекв_WS</DataPath>
+					<Title>
+						<v8:item><v8:lang>uk</v8:lang><v8:content>WS (Warengruppe) →</v8:content></v8:item>
+					</Title>
+					<ContextMenu name="ДопРекв_WSКонтекстноеМеню" id="62"/>
+					<ExtendedTooltip name="ДопРекв_WSРасширеннаяПодсказка" id="63"/>
+				</InputField>
+				<InputField name="ДопРекв_ПлощадьПолир" id="64">
+					<DataPath>ДопРекв_ПлощадьПолир</DataPath>
+					<Title>
+						<v8:item><v8:lang>uk</v8:lang><v8:content>Площа полірування →</v8:content></v8:item>
+					</Title>
+					<ContextMenu name="ДопРекв_ПлощадьПолирКонтекстноеМеню" id="65"/>
+					<ExtendedTooltip name="ДопРекв_ПлощадьПолирРасширеннаяПодсказка" id="66"/>
+				</InputField>
+				<InputField name="ДопРекв_ИндикаторПрограммы" id="67">
+					<DataPath>ДопРекв_ИндикаторПрограммы</DataPath>
+					<Title>
+						<v8:item><v8:lang>uk</v8:lang><v8:content>Індикатор програми →</v8:content></v8:item>
+					</Title>
+					<ContextMenu name="ДопРекв_ИндикаторПрограммыКонтекстноеМеню" id="68"/>
+					<ExtendedTooltip name="ДопРекв_ИндикаторПрограммыРасширеннаяПодсказка" id="69"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
 		<UsualGroup name="ГруппаРезультат" id="30">
 			<Title>
 				<v8:item>
@@ -480,6 +543,36 @@
 					<v8:Length>0</v8:Length>
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДопРекв_НаименованиеEN" id="13">
+			<Type>
+				<v8:Type>cfg:ChartOfCharacteristicTypesRef.ДополнительныеРеквизитыИСведения</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДопРекв_MS" id="14">
+			<Type>
+				<v8:Type>cfg:ChartOfCharacteristicTypesRef.ДополнительныеРеквизитыИСведения</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДопРекв_VS" id="15">
+			<Type>
+				<v8:Type>cfg:ChartOfCharacteristicTypesRef.ДополнительныеРеквизитыИСведения</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДопРекв_WS" id="16">
+			<Type>
+				<v8:Type>cfg:ChartOfCharacteristicTypesRef.ДополнительныеРеквизитыИСведения</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДопРекв_ПлощадьПолир" id="17">
+			<Type>
+				<v8:Type>cfg:ChartOfCharacteristicTypesRef.ДополнительныеРеквизитыИСведения</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДопРекв_ИндикаторПрограммы" id="18">
+			<Type>
+				<v8:Type>cfg:ChartOfCharacteristicTypesRef.ДополнительныеРеквизитыИСведения</v8:Type>
 			</Type>
 		</Attribute>
 	</Attributes>

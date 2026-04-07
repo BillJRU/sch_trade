@@ -151,20 +151,13 @@ def fetch_reference_data():
     # ДополнительныеРеквизитыИСведения
     print("Fetching ДополнительныеРеквизитыИСведения...")
     data = odata_get("ChartOfCharacteristicTypes_ДополнительныеРеквизитыИСведения",
-                     "$select=Ref_Key,Description")
-    refs["properties"] = {
-        item["Description"].strip(): item["Ref_Key"]
+                     "$select=Ref_Key,Description,Имя")
+    refs["properties_by_name"] = {
+        item["Имя"].strip(): item["Ref_Key"]
         for item in data["value"]
+        if item.get("Имя")
     }
-    print(f"  Found {len(refs['properties'])} additional properties")
-    # Map our expected property names
-    PROP_NAMES = ["Найменування (EN)", "MS (Marktsegment)", "VS (Vertriebsschiene)",
-                  "WS (Warengruppe)", "Індикатор програми", "Площа полірування"]
-    for pn in PROP_NAMES:
-        if pn in refs["properties"]:
-            print(f"    ✓ {pn}")
-        else:
-            print(f"    ✗ {pn} (not found — will be skipped)")
+    print(f"  Found {len(refs['properties_by_name'])} additional properties (by Имя)")
 
     return refs
 
@@ -323,13 +316,13 @@ def load_nomenclature(excel_path, refs, vid_key, producer_key, parent_key=None,
                 print(f"  Warning: Could not create price group '{discount_grp}': {e}")
 
         # ДополнительныеРеквизиты (inline tabular section)
-        props = refs.get("properties", {})
+        prop_keys = refs.get("prop_keys", {})
         dop_rows = []
 
-        def add_prop(prop_name, value):
+        def add_prop(prop_id, value):
             if not value:
                 return
-            prop_key = props.get(prop_name)
+            prop_key = prop_keys.get(prop_id)
             if not prop_key:
                 return
             dop_rows.append({
@@ -337,13 +330,13 @@ def load_nomenclature(excel_path, refs, vid_key, producer_key, parent_key=None,
                 "Значение": value,
             })
 
-        add_prop("Найменування (EN)", name_en)
-        add_prop("MS (Marktsegment)", ms)
-        add_prop("VS (Vertriebsschiene)", vs)
-        add_prop("WS (Warengruppe)", ws)
-        add_prop("Індикатор програми", prog_ind)
+        add_prop("name_en", name_en)
+        add_prop("ms", ms)
+        add_prop("vs", vs)
+        add_prop("ws", ws)
+        add_prop("prog", prog_ind)
         if polish_area > 0:
-            add_prop("Площа полірування", polish_area / 1000)
+            add_prop("polish", polish_area / 1000)
 
         if dop_rows:
             payload["ДополнительныеРеквизиты"] = dop_rows
@@ -506,6 +499,19 @@ def parse_args():
                         help="Show what would be done without making changes")
     parser.add_argument("--producer", type=str, default="Schüco International KG",
                         help="Producer name (default: 'Schüco International KG')")
+    # Additional property Имя identifiers (for ДополнительныеРеквизиты lookup by developer name)
+    parser.add_argument("--prop-name-en", type=str, default="НаименованиеАнглийское",
+                        help="Имя for EN name property")
+    parser.add_argument("--prop-ms", type=str, default="MSMarktsegment_c4d2321c4a60443b8980ed9804ae3025",
+                        help="Имя for Marktsegment property")
+    parser.add_argument("--prop-vs", type=str, default="VSVertriebsschiene_0b5f86b5c0554ba7862a65a9118c9da2",
+                        help="Имя for Vertriebsschiene property")
+    parser.add_argument("--prop-ws", type=str, default="WSWarengruppe_1d127a2e449a43659bcd3d5637926659",
+                        help="Имя for Warengruppe property")
+    parser.add_argument("--prop-polish", type=str, default="ПлощаПолірування_116e2b1378504da784f9b7fec86293c2",
+                        help="Имя for polishing area property")
+    parser.add_argument("--prop-prog", type=str, default="ІндикаторПрограми_3a234fea5983405dbd908f3c30bdd3c4",
+                        help="Имя for program indicator property")
     return parser.parse_args()
 
 
@@ -525,6 +531,25 @@ def main():
 
     # Fetch references
     refs = fetch_reference_data()
+
+    # Resolve ДопРеквізити by Имя → Ref_Key
+    props_by_name = refs.get("properties_by_name", {})
+    prop_mapping = {
+        "name_en": args.prop_name_en,
+        "ms":      args.prop_ms,
+        "vs":      args.prop_vs,
+        "ws":      args.prop_ws,
+        "polish":  args.prop_polish,
+        "prog":    args.prop_prog,
+    }
+    refs["prop_keys"] = {}
+    for prop_id, ima_value in prop_mapping.items():
+        key = props_by_name.get(ima_value)
+        if key:
+            refs["prop_keys"][prop_id] = key
+            print(f"    ✓ {prop_id} → {ima_value}")
+        else:
+            print(f"    ✗ {prop_id} → {ima_value} (not found — will be skipped)")
 
     # Ensure producer exists (only create if not dry-run)
     if args.dry_run:
