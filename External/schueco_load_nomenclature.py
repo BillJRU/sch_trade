@@ -192,7 +192,8 @@ def ensure_producer(name, refs):
 # === PHASE 3: LOAD NOMENCLATURE ===
 
 def load_nomenclature(excel_path, refs, vid_key, producer_key, parent_key=None,
-                      first_row=2, last_row=0, update_mode=False):
+                      first_row=2, last_row=0, update_mode=False,
+                      create_characteristic=False, painting_prop_key=None):
     """Read PL51 Excel and create/update Номенклатура items via OData."""
 
     print(f"\nReading Excel: {excel_path}")
@@ -393,6 +394,22 @@ def load_nomenclature(excel_path, refs, vid_key, producer_key, parent_key=None,
                     except Exception as e:
                         print(f"  Warning: GTD for {material_no}: {e}")
 
+                # Post-create: Характеристика "Без покраски"
+                if create_characteristic and painting_prop_key:
+                    try:
+                        char_payload = {
+                            "Description": "Без покраски",
+                            "Owner_Key": ref_key,
+                        }
+                        if painting_prop_key:
+                            char_payload["ДополнительныеРеквизиты"] = [{
+                                "Свойство_Key": painting_prop_key,
+                                "Значение": False,
+                            }]
+                        odata_post("Catalog_ХарактеристикиНоменклатуры", char_payload)
+                    except Exception as e:
+                        print(f"  Warning: Characteristic for {material_no}: {e}")
+
         except Exception as e:
             stats["errors"] += 1
             print(f"  [{stats['processed']}] ERROR {material_no}: {e}")
@@ -502,16 +519,20 @@ def parse_args():
     # Additional property Имя identifiers (for ДополнительныеРеквизиты lookup by developer name)
     parser.add_argument("--prop-name-en", type=str, default="НаименованиеАнглийское",
                         help="Имя for EN name property")
-    parser.add_argument("--prop-ms", type=str, default="MSMarktsegment_c4d2321c4a60443b8980ed9804ae3025",
+    parser.add_argument("--prop-ms", type=str, default="Marktsegment",
                         help="Имя for Marktsegment property")
-    parser.add_argument("--prop-vs", type=str, default="VSVertriebsschiene_0b5f86b5c0554ba7862a65a9118c9da2",
+    parser.add_argument("--prop-vs", type=str, default="Vertriebsschiene",
                         help="Имя for Vertriebsschiene property")
-    parser.add_argument("--prop-ws", type=str, default="WSWarengruppe_1d127a2e449a43659bcd3d5637926659",
+    parser.add_argument("--prop-ws", type=str, default="Warengruppe",
                         help="Имя for Warengruppe property")
-    parser.add_argument("--prop-polish", type=str, default="ПлощаПолірування_116e2b1378504da784f9b7fec86293c2",
+    parser.add_argument("--prop-polish", type=str, default="ПлощадьПолировки",
                         help="Имя for polishing area property")
-    parser.add_argument("--prop-prog", type=str, default="ІндикаторПрограми_3a234fea5983405dbd908f3c30bdd3c4",
+    parser.add_argument("--prop-prog", type=str, default="ИндикаторПрограммы",
                         help="Имя for program indicator property")
+    parser.add_argument("--create-characteristic", action="store_true",
+                        help="Create default 'Без покраски' characteristic for each new item")
+    parser.add_argument("--prop-painting", type=str, default="ЕстьПокраска",
+                        help="Имя for painting flag property on characteristics")
     return parser.parse_args()
 
 
@@ -550,6 +571,16 @@ def main():
             print(f"    ✓ {prop_id} → {ima_value}")
         else:
             print(f"    ✗ {prop_id} → {ima_value} (not found — will be skipped)")
+
+    # Resolve painting property for characteristics
+    painting_prop_key = None
+    if args.create_characteristic:
+        painting_prop_key = props_by_name.get(args.prop_painting)
+        if painting_prop_key:
+            print(f"    ✓ painting → {args.prop_painting}")
+        else:
+            print(f"    ✗ painting → {args.prop_painting} (not found — characteristics will be skipped)")
+            args.create_characteristic = False
 
     # Ensure producer exists (only create if not dry-run)
     if args.dry_run:
@@ -607,6 +638,8 @@ def main():
         first_row=args.first_row,
         last_row=args.last_row,
         update_mode=args.update,
+        create_characteristic=args.create_characteristic,
+        painting_prop_key=painting_prop_key,
     )
 
     print(f"\n{'=' * 60}")

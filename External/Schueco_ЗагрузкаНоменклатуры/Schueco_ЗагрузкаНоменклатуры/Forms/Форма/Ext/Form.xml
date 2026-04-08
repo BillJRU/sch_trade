@@ -132,6 +132,29 @@
 					<ContextMenu name="РежимОбновленияКонтекстноеМеню" id="18"/>
 					<ExtendedTooltip name="РежимОбновленияРасширеннаяПодсказка" id="19"/>
 				</CheckBoxField>
+				<CheckBoxField name="ЗавантажуватиХарактеристику" id="100">
+					<DataPath>ЗавантажуватиХарактеристику</DataPath>
+					<Title>
+						<v8:item><v8:lang>ru</v8:lang><v8:content>Загружать характеристику</v8:content></v8:item>
+						<v8:item><v8:lang>uk</v8:lang><v8:content>Завантажувати характеристику</v8:content></v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<Events>
+						<Event name="OnChange">ЗавантажуватиХарактеристикуПриИзменении</Event>
+					</Events>
+					<ContextMenu name="ЗавантажуватиХарактеристикуКонтекстноеМеню" id="101"/>
+					<ExtendedTooltip name="ЗавантажуватиХарактеристикуРасширеннаяПодсказка" id="102"/>
+				</CheckBoxField>
+				<InputField name="ДопРекв_ЕстьПокраска" id="103">
+					<DataPath>ДопРекв_ЕстьПокраска</DataPath>
+					<Title>
+						<v8:item><v8:lang>ru</v8:lang><v8:content>Доп. реквизит ЕстьПокраска →</v8:content></v8:item>
+						<v8:item><v8:lang>uk</v8:lang><v8:content>Дод. реквізит ЕстьПокраска →</v8:content></v8:item>
+					</Title>
+					<ContextMenu name="ДопРекв_ЕстьПокраскаКонтекстноеМеню" id="104"/>
+					<ExtendedTooltip name="ДопРекв_ЕстьПокраскаРасширеннаяПодсказка" id="105"/>
+				</InputField>
 			</ChildItems>
 		</UsualGroup>
 		<UsualGroup name="ГруппаДиапазон" id="20">
@@ -665,6 +688,16 @@
 		<Attribute name="ЕИ_M2" id="24">
 			<Type>
 				<v8:Type>cfg:CatalogRef.УпаковкиЕдиницыИзмерения</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗавантажуватиХарактеристику" id="26">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДопРекв_ЕстьПокраска" id="27">
+			<Type>
+				<v8:Type>cfg:ChartOfCharacteristicTypesRef.ДополнительныеРеквизитыИСведения</v8:Type>
 			</Type>
 		</Attribute>
 	</Attributes>
