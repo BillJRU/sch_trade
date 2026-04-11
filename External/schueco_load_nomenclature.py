@@ -159,6 +159,19 @@ def fetch_reference_data():
     }
     print(f"  Found {len(refs['properties_by_name'])} additional properties (by Имя)")
 
+    # НаборыУпаковок — predefined "ИндивидуальныйДляНоменклатуры"
+    print("Fetching НаборыУпаковок (individual)...")
+    try:
+        data = odata_get("Catalog_НаборыУпаковок",
+                         "$filter=PredefinedDataName eq 'ИндивидуальныйДляНоменклатуры'&$select=Ref_Key&$top=1")
+        if data.get("value"):
+            refs["individual_pack_set_key"] = data["value"][0]["Ref_Key"]
+            print(f"  Found: {refs['individual_pack_set_key'][:16]}...")
+        else:
+            print("  Not found — packaging will use default set")
+    except Exception:
+        print("  Warning: could not fetch НаборыУпаковок")
+
     return refs
 
 
@@ -209,6 +222,26 @@ def load_nomenclature(excel_path, refs, vid_key, producer_key, parent_key=None,
     stats = {"processed": 0, "created": 0, "updated": 0, "skipped": 0, "errors": 0}
     uom_map = refs["uom"]
 
+    # Create shared "Без фарбування" characteristic once for ВидНоменклатуры (not per item)
+    if create_characteristic and painting_prop_key:
+        try:
+            existing = odata_get("Catalog_ХарактеристикиНоменклатуры",
+                f"$filter=Owner_Key eq guid'{vid_key}' and Description eq 'Без фарбування'&$top=1")
+            if not existing.get("value"):
+                odata_post("Catalog_ХарактеристикиНоменклатуры", {
+                    "Description": "Без фарбування",
+                    "Owner_Key": vid_key,
+                    "ДополнительныеРеквизиты": [{
+                        "Свойство_Key": painting_prop_key,
+                        "Значение": False,
+                    }]
+                })
+                print("  Created shared characteristic 'Без фарбування' for ВидНоменклатури")
+            else:
+                print("  Shared characteristic 'Без фарбування' already exists")
+        except Exception as e:
+            print(f"  Warning: Could not create shared characteristic: {e}")
+
     for i, row in enumerate(rows):
         # Pad row to 23 columns (A-W)
         row = list(row) + [None] * (23 - len(row)) if len(row) < 23 else list(row)
@@ -221,6 +254,8 @@ def load_nomenclature(excel_path, refs, vid_key, producer_key, parent_key=None,
         vs = safe_str(row[5])            # F - Vertriebsschiene
         ws = safe_str(row[6])            # G - Warengruppe
         weight = safe_float(row[7])      # H
+        qty_pcs = safe_float(row[10])    # K - Quantity in pcs (for PAK items)
+        qty_pair = safe_float(row[11])   # L - Quantity in pair (for PAA items)
         length_m = safe_float(row[9])    # J
         polish_area = safe_float(row[12])  # M
         circumfer = safe_float(row[13])  # N
@@ -272,6 +307,13 @@ def load_nomenclature(excel_path, refs, vid_key, producer_key, parent_key=None,
         uom_key = uom_map.get(storage_unit.upper())
         if uom_key:
             payload["ЕдиницаИзмерения_Key"] = uom_key
+
+        # Packaging — for PAK or PAA items, count from K column (qty_pcs)
+        if uom_code.upper() in ("PAK", "PAA") and qty_pcs > 0:
+            payload["ИспользоватьУпаковки"] = True
+            ind_set_key = refs.get("individual_pack_set_key")
+            if ind_set_key:
+                payload["НаборУпаковок_Key"] = ind_set_key
 
         # Measurement fields — will be set via separate PATCH after create,
         # because ПередЗаписью on POST calls ЗаполнитьРеквизитыПоВидуНоменклатуры
@@ -351,6 +393,7 @@ def load_nomenclature(excel_path, refs, vid_key, producer_key, parent_key=None,
                                  if k not in ("ВидНоменклатуры_Key", "IsFolder")}
                 patch_payload.update(measure_payload)
                 result = odata_patch("Catalog_Номенклатура", existing_key, patch_payload)
+                ref_key = existing_key
                 stats["updated"] += 1
                 if stats["updated"] % 10 == 0 or stats["updated"] <= 5:
                     print(f"  [{stats['processed']}] Updated: {material_no} '{name_de[:40]}'")
@@ -365,50 +408,77 @@ def load_nomenclature(excel_path, refs, vid_key, producer_key, parent_key=None,
                 if measure_payload:
                     odata_patch("Catalog_Номенклатура", ref_key, measure_payload)
 
-                # Post-create: НоменклатураГТД (col U) — only for new items
-                if tariff_code:
-                    try:
-                        # Convert "76042990" → "7604 29 90" for classifier lookup
-                        code_spaced = tariff_code[:4]
-                        if len(tariff_code) > 4:
-                            code_spaced += " " + tariff_code[4:6]
-                        if len(tariff_code) > 6:
-                            code_spaced += " " + tariff_code[6:8]
-                        # Find in КлассификаторУКТВЭД
-                        ukt_data = odata_get("Catalog_КлассификаторУКТВЭД",
-                            f"$filter=startswith(Code,'{code_spaced}')&$select=Ref_Key&$top=1")
-                        if ukt_data.get("value"):
-                            ukt_key = ukt_data["value"][0]["Ref_Key"]
+            # Post-create OR post-update: НоменклатураГТД (find or create+update)
+            if tariff_code:
+                try:
+                    # Convert "76042990" → "7604 29 90" for classifier lookup
+                    code_spaced = tariff_code[:4]
+                    if len(tariff_code) > 4:
+                        code_spaced += " " + tariff_code[4:6]
+                    if len(tariff_code) > 6:
+                        code_spaced += " " + tariff_code[6:8]
+                    # Find in КлассификаторУКТВЭД
+                    ukt_data = odata_get("Catalog_КлассификаторУКТВЭД",
+                        f"$filter=startswith(Code,'{code_spaced}')&$select=Ref_Key&$top=1")
+                    if ukt_data.get("value"):
+                        ukt_key = ukt_data["value"][0]["Ref_Key"]
+                        # Find single existing GTD for this owner (always one record per item)
+                        existing_gtd = odata_get("Catalog_НоменклатураГТД",
+                            f"$filter=Owner_Key eq guid'{ref_key}'&$select=Ref_Key&$top=1")
+                        if existing_gtd.get("value"):
+                            gtd_key = existing_gtd["value"][0]["Ref_Key"]
+                            odata_patch("Catalog_НоменклатураГТД", gtd_key, {
+                                "КодУКТВЭД_Key": ukt_key,
+                            })
+                        else:
                             gtd = odata_post("Catalog_НоменклатураГТД", {
                                 "Owner_Key": ref_key,
                                 "КодУКТВЭД_Key": ukt_key,
                             })
-                            # Link back to nomenclature
                             gtd_key = gtd.get("Ref_Key")
-                            if gtd_key:
-                                odata_patch("Catalog_Номенклатура", ref_key, {
-                                    "НоменклатураГТД_Key": gtd_key,
-                                })
-                        else:
-                            print(f"  Warning: УКТЗЕД '{tariff_code}' ({code_spaced}) not found for {material_no}")
-                    except Exception as e:
-                        print(f"  Warning: GTD for {material_no}: {e}")
+                        # Link back to nomenclature
+                        if gtd_key:
+                            odata_patch("Catalog_Номенклатура", ref_key, {
+                                "НоменклатураГТД_Key": gtd_key,
+                            })
+                    else:
+                        print(f"  Warning: УКТЗЕД '{tariff_code}' ({code_spaced}) not found for {material_no}")
+                except Exception as e:
+                    print(f"  Warning: GTD for {material_no}: {e}")
 
-                # Post-create: Характеристика "Без покраски"
-                if create_characteristic and painting_prop_key:
-                    try:
-                        char_payload = {
-                            "Description": "Без покраски",
+            # Post-create OR post-update: Упаковка for PAK/PAA (find or create+update)
+            pack_qty = 0
+            pack_label = None
+            if qty_pcs > 0:
+                if uom_code.upper() == "PAK":
+                    pack_qty = qty_pcs
+                    pack_label = "паков"
+                elif uom_code.upper() == "PAA":
+                    pack_qty = qty_pcs
+                    pack_label = "пар"
+            if pack_qty > 0 and pack_label:
+                try:
+                    st_key = uom_map.get("ST")
+                    if st_key:
+                        # Delete ALL existing packagings for this nomenclature owner
+                        existing_packs = odata_get("Catalog_УпаковкиЕдиницыИзмерения",
+                            f"$filter=Owner eq cast(guid'{ref_key}', 'Catalog_Номенклатура')&$select=Ref_Key")
+                        for old in existing_packs.get("value", []):
+                            url = f"{BASE_URL}/Catalog_УпаковкиЕдиницыИзмерения(guid'{old['Ref_Key']}')"
+                            requests.delete(url, headers=HEADERS, timeout=30)
+                        # Create fresh
+                        odata_post("Catalog_УпаковкиЕдиницыИзмерения", {
+                            "Description": f"шт (1/{int(pack_qty)} {pack_label})",
                             "Owner_Key": ref_key,
-                        }
-                        if painting_prop_key:
-                            char_payload["ДополнительныеРеквизиты"] = [{
-                                "Свойство_Key": painting_prop_key,
-                                "Значение": False,
-                            }]
-                        odata_post("Catalog_ХарактеристикиНоменклатуры", char_payload)
-                    except Exception as e:
-                        print(f"  Warning: Characteristic for {material_no}: {e}")
+                            "ЕдиницаИзмерения_Key": st_key,
+                            "Числитель": 1,
+                            "Знаменатель": pack_qty,
+                            "ТипИзмеряемойВеличины": "Упаковка",
+                            "ТипУпаковки": "Разупаковка",
+                            "Безразмерная": True,
+                        })
+                except Exception as e:
+                    print(f"  Warning: Packaging for {material_no}: {e}")
 
         except Exception as e:
             stats["errors"] += 1
@@ -530,7 +600,7 @@ def parse_args():
     parser.add_argument("--prop-prog", type=str, default="ИндикаторПрограммы",
                         help="Имя for program indicator property")
     parser.add_argument("--create-characteristic", action="store_true",
-                        help="Create default 'Без покраски' characteristic for each new item")
+                        help="Create default 'Без фарбування' characteristic for each new item")
     parser.add_argument("--prop-painting", type=str, default="ЕстьПокраска",
                         help="Имя for painting flag property on characteristics")
     return parser.parse_args()
