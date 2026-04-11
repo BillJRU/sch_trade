@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<Title>
+		<v8:item>
+			<v8:lang>uk</v8:lang>
+			<v8:content>Schüco: Завантаження специфікації Schücal</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ЗагрузитьДанные" id="100">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ЗагрузитьДанные</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>uk</v8:lang>
+						<v8:content>Завантажити дані</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ЗагрузитьДанныеРасширеннаяПодсказка" id="101"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаФайл" id="1">
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаФайлРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<InputField name="ПутьКФайлу" id="3">
+					<DataPath>ПутьКФайлу</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Файл Excel</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="ПутьКФайлуКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="ПутьКФайлуРасширеннаяПодсказка" id="5"/>
+					<Events>
+						<Event name="StartChoice">ПутьКФайлуНачалоВыбора</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаНастройки" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Налаштування</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ГруппаНастройкиРасширеннаяПодсказка" id="7"/>
+			<ChildItems>
+				<InputField name="СсылкаНаДокумент" id="8">
+					<DataPath>СсылкаНаДокумент</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Комерційна пропозиція</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="СсылкаНаДокументКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="СсылкаНаДокументРасширеннаяПодсказка" id="10"/>
+				</InputField>
+				<CheckBoxField name="РежимДодавання" id="11">
+					<DataPath>РежимДодавання</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Додавати до існуючих рядків (інакше — замінити)</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="РежимДодаванняКонтекстноеМеню" id="12"/>
+					<ExtendedTooltip name="РежимДодаванняРасширеннаяПодсказка" id="13"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаДиапазон" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Діапазон рядків</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="ГруппаДиапазонРасширеннаяПодсказка" id="15"/>
+			<ChildItems>
+				<InputField name="НомерСтрокиЗаголовка" id="16">
+					<DataPath>НомерСтрокиЗаголовка</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Рядок заголовка</v8:content>
+						</v8:item>
+					</Title>
+					<Width>8</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="НомерСтрокиЗаголовкаКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="НомерСтрокиЗаголовкаРасширеннаяПодсказка" id="18"/>
+				</InputField>
+				<InputField name="НомерПервойСтрокиДанных" id="19">
+					<DataPath>НомерПервойСтрокиДанных</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Перший рядок даних</v8:content>
+						</v8:item>
+					</Title>
+					<Width>8</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="НомерПервойСтрокиДанныхКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="НомерПервойСтрокиДанныхРасширеннаяПодсказка" id="21"/>
+				</InputField>
+				<InputField name="НомерПоследнейСтроки" id="22">
+					<DataPath>НомерПоследнейСтроки</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Останній рядок (0=усі)</v8:content>
+						</v8:item>
+					</Title>
+					<Width>8</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="НомерПоследнейСтрокиКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="НомерПоследнейСтрокиРасширеннаяПодсказка" id="24"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаРезультат" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Результат</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ГруппаРезультатРасширеннаяПодсказка" id="31"/>
+			<ChildItems>
+				<InputField name="СтатусВыполнения" id="32">
+					<DataPath>СтатусВыполнения</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Статус</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="СтатусВыполненияКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="СтатусВыполненияРасширеннаяПодсказка" id="34"/>
+				</InputField>
+				<UsualGroup name="ГруппаСчетчики" id="35">
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСчетчикиРасширеннаяПодсказка" id="36"/>
+					<ChildItems>
+						<InputField name="КоличествоОбработано" id="37">
+							<DataPath>КоличествоОбработано</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Оброблено</v8:content>
+								</v8:item>
+							</Title>
+							<Width>8</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="КоличествоОбработаноКонтекстноеМеню" id="38"/>
+							<ExtendedTooltip name="КоличествоОбработаноРасширеннаяПодсказка" id="39"/>
+						</InputField>
+						<InputField name="КоличествоЗагружено" id="40">
+							<DataPath>КоличествоЗагружено</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Завантажено</v8:content>
+								</v8:item>
+							</Title>
+							<Width>8</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="КоличествоЗагруженоКонтекстноеМеню" id="41"/>
+							<ExtendedTooltip name="КоличествоЗагруженоРасширеннаяПодсказка" id="42"/>
+						</InputField>
+						<InputField name="КоличествоНеНайдено" id="43">
+							<DataPath>КоличествоНеНайдено</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Не знайдено</v8:content>
+								</v8:item>
+							</Title>
+							<Width>8</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="КоличествоНеНайденоКонтекстноеМеню" id="44"/>
+							<ExtendedTooltip name="КоличествоНеНайденоРасширеннаяПодсказка" id="45"/>
+						</InputField>
+						<InputField name="КоличествоОшибок" id="46">
+							<DataPath>КоличествоОшибок</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Помилок</v8:content>
+								</v8:item>
+							</Title>
+							<Width>8</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="КоличествоОшибокКонтекстноеМеню" id="47"/>
+							<ExtendedTooltip name="КоличествоОшибокРасширеннаяПодсказка" id="48"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<CommandInterface>
+		<NavigationPanel/>
+		<CommandBar/>
+	</CommandInterface>
+	<ConversationsRepresentation>Auto</ConversationsRepresentation>
+	<Attributes>
+		<Attribute name="ПутьКФайлу" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Файл Excel</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>1024</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СсылкаНаДокумент" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Комерційна пропозиція</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentRef.КоммерческоеПредложениеКлиенту</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РежимДодавання" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Режим додавання</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НомерСтрокиЗаголовка" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Рядок заголовка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НомерПервойСтрокиДанных" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Перший рядок даних</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НомерПоследнейСтроки" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Останній рядок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СтатусВыполнения" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Статус</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоОбработано" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Оброблено</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоЗагружено" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Завантажено</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоНеНайдено" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Не знайдено</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоОшибок" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Помилок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗагрузитьДанные" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Завантажити дані</v8:content>
+				</v8:item>
+			</Title>
+			<Use>
+				<xr:Use/>
+			</Use>
+			<Action>ЗагрузитьДанные</Action>
+		</Command>
+	</Commands>
+</Form>
