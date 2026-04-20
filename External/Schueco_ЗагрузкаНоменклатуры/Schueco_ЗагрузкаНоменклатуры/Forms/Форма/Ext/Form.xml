@@ -91,8 +91,15 @@
 			<ChildItems>
 				<InputField name="ВидНоменклатуры" id="8">
 					<DataPath>ВидНоменклатуры</DataPath>
+					<Title><v8:item><v8:lang>uk</v8:lang><v8:content>Вид номенклатури (з покраскою)</v8:content></v8:item></Title>
 					<ContextMenu name="ВидНоменклатурыКонтекстноеМеню" id="9"/>
 					<ExtendedTooltip name="ВидНоменклатурыРасширеннаяПодсказка" id="10"/>
+				</InputField>
+				<InputField name="ВидНоменклатурыБезПокраски" id="103">
+					<DataPath>ВидНоменклатурыБезПокраски</DataPath>
+					<Title><v8:item><v8:lang>uk</v8:lang><v8:content>Вид номенклатури (арт. 2xx, без покраски)</v8:content></v8:item></Title>
+					<ContextMenu name="ВидНоменклатурыБезПокраскиКонтекстноеМеню" id="104"/>
+					<ExtendedTooltip name="ВидНоменклатурыБезПокраскиРасширеннаяПодсказка" id="105"/>
 				</InputField>
 				<InputField name="РодительНоменклатуры" id="11">
 					<DataPath>РодительНоменклатуры</DataPath>
@@ -300,6 +307,12 @@
 							<Title><v8:item><v8:lang>uk</v8:lang><v8:content>M2 (кв. метри) →</v8:content></v8:item></Title>
 							<ContextMenu name="ЕИ_M2КонтекстноеМеню" id="88"/>
 							<ExtendedTooltip name="ЕИ_M2РасширеннаяПодсказка" id="89"/>
+						</InputField>
+						<InputField name="ЕИ_ШТАНГА" id="100">
+							<DataPath>ЕИ_ШТАНГА</DataPath>
+							<Title><v8:item><v8:lang>uk</v8:lang><v8:content>Штанга (для M+ST) →</v8:content></v8:item></Title>
+							<ContextMenu name="ЕИ_ШТАНГАКонтекстноеМеню" id="101"/>
+							<ExtendedTooltip name="ЕИ_ШТАНГАРасширеннаяПодсказка" id="102"/>
 						</InputField>
 					</ChildItems>
 				</Page>
@@ -698,6 +711,16 @@
 		<Attribute name="ДопРекв_ЕстьПокраска" id="27">
 			<Type>
 				<v8:Type>cfg:ChartOfCharacteristicTypesRef.ДополнительныеРеквизитыИСведения</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЕИ_ШТАНГА" id="28">
+			<Type>
+				<v8:Type>cfg:CatalogRef.УпаковкиЕдиницыИзмерения</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВидНоменклатурыБезПокраски" id="29">
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВидыНоменклатуры</v8:Type>
 			</Type>
 		</Attribute>
 	</Attributes>

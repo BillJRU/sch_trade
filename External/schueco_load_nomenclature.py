@@ -204,7 +204,7 @@ def ensure_producer(name, refs):
 
 # === PHASE 3: LOAD NOMENCLATURE ===
 
-def load_nomenclature(excel_path, refs, vid_key, producer_key, parent_key=None,
+def load_nomenclature(excel_path, refs, vid_key, vid_key_no_paint, producer_key, parent_key=None,
                       first_row=2, last_row=0, update_mode=False,
                       create_characteristic=False, painting_prop_key=None):
     """Read PL51 Excel and create/update Номенклатура items via OData."""
@@ -265,8 +265,8 @@ def load_nomenclature(excel_path, refs, vid_key, producer_key, parent_key=None,
         sales_unit = safe_str(row[21])   # V - sales unit (ST or empty)
         name_uk = safe_str(row[22])      # W - Ukrainian name
 
-        # Storage unit: prefer sales unit (V), fall back to base UOM (D)
-        storage_unit = sales_unit if sales_unit else uom_code
+        # UOM is always column D (base unit)
+        # sales_unit (V) is only used to detect штанга case (D=M, V=ST)
 
         if not material_no:
             continue
@@ -293,7 +293,7 @@ def load_nomenclature(excel_path, refs, vid_key, producer_key, parent_key=None,
             "Description": name_de[:100],
             "НаименованиеПолное": name_uk if name_uk else name_de,
             "Артикул": material_no,
-            "ВидНоменклатуры_Key": vid_key,
+            "ВидНоменклатуры_Key": vid_key_no_paint if (material_no[:1] == "2" and vid_key_no_paint) else vid_key,
             "IsFolder": False,
         }
 
@@ -303,13 +303,15 @@ def load_nomenclature(excel_path, refs, vid_key, producer_key, parent_key=None,
         if parent_key:
             payload["Parent_Key"] = parent_key
 
-        # UOM — use storage_unit (sales unit or base UOM)
-        uom_key = uom_map.get(storage_unit.upper())
+        # UOM — always use base unit (column D)
+        uom_key = uom_map.get(uom_code.upper())
         if uom_key:
             payload["ЕдиницаИзмерения_Key"] = uom_key
 
-        # Packaging — for PAK or PAA items, count from K column (qty_pcs)
-        if uom_code.upper() in ("PAK", "PAA") and qty_pcs > 0:
+        # Packaging — for PAK, PAA (count from K), or штанга (D=M, V=ST, J>0)
+        needs_packaging = (uom_code.upper() in ("PAK", "PAA") and qty_pcs > 0) or \
+                          (uom_code.upper() == "M" and sales_unit.upper() == "ST" and length_m > 0)
+        if needs_packaging:
             payload["ИспользоватьУпаковки"] = True
             ind_set_key = refs.get("individual_pack_set_key")
             if ind_set_key:
@@ -446,37 +448,44 @@ def load_nomenclature(excel_path, refs, vid_key, producer_key, parent_key=None,
                 except Exception as e:
                     print(f"  Warning: GTD for {material_no}: {e}")
 
-            # Post-create OR post-update: Упаковка for PAK/PAA (find or create+update)
+            # Post-create OR post-update: Упаковка for PAK/PAA/штанга
             pack_qty = 0
             pack_label = None
+            pack_uom_key = None
             if qty_pcs > 0:
                 if uom_code.upper() == "PAK":
                     pack_qty = qty_pcs
                     pack_label = "паков"
+                    pack_uom_key = uom_map.get("ST")
                 elif uom_code.upper() == "PAA":
                     pack_qty = qty_pcs
                     pack_label = "пар"
-            if pack_qty > 0 and pack_label:
+                    pack_uom_key = uom_map.get("ST")
+            # Штанга: D=M, V=ST, J>0
+            if uom_code.upper() == "M" and sales_unit.upper() == "ST" and length_m > 0:
+                pack_qty = length_m
+                pack_label = "м"
+                pack_uom_key = refs.get("shtanga_key")
+            if pack_qty > 0 and pack_label and pack_uom_key:
                 try:
-                    st_key = uom_map.get("ST")
-                    if st_key:
-                        # Delete ALL existing packagings for this nomenclature owner
-                        existing_packs = odata_get("Catalog_УпаковкиЕдиницыИзмерения",
-                            f"$filter=Owner eq cast(guid'{ref_key}', 'Catalog_Номенклатура')&$select=Ref_Key")
-                        for old in existing_packs.get("value", []):
-                            url = f"{BASE_URL}/Catalog_УпаковкиЕдиницыИзмерения(guid'{old['Ref_Key']}')"
-                            requests.delete(url, headers=HEADERS, timeout=30)
-                        # Create fresh
-                        odata_post("Catalog_УпаковкиЕдиницыИзмерения", {
-                            "Description": f"шт (1/{int(pack_qty)} {pack_label})",
-                            "Owner_Key": ref_key,
-                            "ЕдиницаИзмерения_Key": st_key,
-                            "Числитель": 1,
-                            "Знаменатель": pack_qty,
-                            "ТипИзмеряемойВеличины": "Упаковка",
-                            "ТипУпаковки": "Разупаковка",
-                            "Безразмерная": True,
-                        })
+                    # Delete ALL existing packagings for this nomenclature owner
+                    existing_packs = odata_get("Catalog_УпаковкиЕдиницыИзмерения",
+                        f"$filter=Owner eq cast(guid'{ref_key}', 'Catalog_Номенклатура')&$select=Ref_Key")
+                    for old in existing_packs.get("value", []):
+                        url = f"{BASE_URL}/Catalog_УпаковкиЕдиницыИзмерения(guid'{old['Ref_Key']}')"
+                        requests.delete(url, headers=HEADERS, timeout=30)
+                    # Create fresh
+                    odata_post("Catalog_УпаковкиЕдиницыИзмерения", {
+                        "Description": f"{pack_label} (1/{int(pack_qty)} {pack_label})" if pack_label != "м"
+                            else f"штанга (1/{int(pack_qty)} м)",
+                        "Owner_Key": ref_key,
+                        "ЕдиницаИзмерения_Key": pack_uom_key,
+                        "Числитель": 1,
+                        "Знаменатель": pack_qty,
+                        "ТипИзмеряемойВеличины": "Упаковка",
+                        "ТипУпаковки": "Разупаковка",
+                        "Безразмерная": True,
+                    })
                 except Exception as e:
                     print(f"  Warning: Packaging for {material_no}: {e}")
 
@@ -579,7 +588,11 @@ def parse_args():
     parser.add_argument("--excel", type=str, default=EXCEL_PATH,
                         help="Path to PL51 Excel file (required for loading)")
     parser.add_argument("--vid", type=int, default=None,
-                        help="ВидНоменклатуры index (skips interactive prompt)")
+                        help="ВидНоменклатуры index for painting items (skips interactive prompt)")
+    parser.add_argument("--vid-no-paint", type=int, default=None,
+                        help="ВидНоменклатуры index for articles starting with 2 (no painting)")
+    parser.add_argument("--uom-shtanga", type=str, default=None,
+                        help="Description of 'штанга' UOM in УпаковкиЕдиницыИзмерения (for M+ST profiles)")
     parser.add_argument("--delete", action="store_true",
                         help="Delete items by Производитель instead of loading")
     parser.add_argument("--dry-run", action="store_true",
@@ -699,10 +712,43 @@ def main():
             vid_name = [k for k, v in refs["виды"].items() if v == vid_key][0]
     print(f"  Selected: {vid_name} ({vid_key[:16]}...)")
 
+    # Select ВидНоменклатуры for articles starting with "2" (no painting)
+    vid_key_no_paint = None
+    if args.vid_no_paint is not None:
+        try:
+            vid_name_np, vid_key_no_paint = vid_items[args.vid_no_paint]
+            print(f"  No-paint Вид: {vid_name_np} ({vid_key_no_paint[:16]}...)")
+        except IndexError:
+            print(f"  Warning: invalid --vid-no-paint {args.vid_no_paint}, articles 2xx will use main Вид")
+
+    # Lookup штанга UOM
+    if args.uom_shtanga:
+        shtanga_data = [v for k, v in refs.get("properties_by_name", {}).items()]  # unused, look in UOMs
+        # Search by description in base UOMs
+        for name_lower, key in {k: v for k, v in zip(
+            [item["Description"].strip().lower() for item in odata_get("Catalog_УпаковкиЕдиницыИзмерения",
+                f"$filter=Owner_Key eq guid'{refs.get('individual_pack_set_key', '')}'&$select=Ref_Key,Description&$top=100").get("value", [])],
+            [item["Ref_Key"] for item in odata_get("Catalog_УпаковкиЕдиницыИзмерения",
+                f"$filter=Owner_Key eq guid'{refs.get('individual_pack_set_key', '')}'&$select=Ref_Key,Description&$top=100").get("value", [])]
+        )}.items():
+            pass  # Complex approach, simplify
+        # Simpler: search by description directly
+        try:
+            sht_data = odata_get("Catalog_УпаковкиЕдиницыИзмерения",
+                f"$filter=Description eq '{args.uom_shtanga}'&$select=Ref_Key&$top=1")
+            if sht_data.get("value"):
+                refs["shtanga_key"] = sht_data["value"][0]["Ref_Key"]
+                print(f"  Штанга UOM: {args.uom_shtanga} ({refs['shtanga_key'][:16]}...)")
+            else:
+                print(f"  Warning: UOM '{args.uom_shtanga}' not found — штанга Упаковки won't be created")
+        except Exception:
+            print(f"  Warning: could not lookup штанга UOM")
+
     # Load
     stats = load_nomenclature(
         args.excel, refs,
         vid_key=vid_key,
+        vid_key_no_paint=vid_key_no_paint,
         producer_key=producer_key,
         parent_key=None,
         first_row=args.first_row,
