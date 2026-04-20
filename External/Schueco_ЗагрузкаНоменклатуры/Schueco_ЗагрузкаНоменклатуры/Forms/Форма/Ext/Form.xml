@@ -91,15 +91,25 @@
 			<ChildItems>
 				<InputField name="ВидНоменклатуры" id="8">
 					<DataPath>ВидНоменклатуры</DataPath>
-					<Title><v8:item><v8:lang>uk</v8:lang><v8:content>Вид номенклатури (з покраскою)</v8:content></v8:item></Title>
+					<Title>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Вид номенклатури (з фарбуванням)</v8:content>
+						</v8:item>
+					</Title>
 					<ContextMenu name="ВидНоменклатурыКонтекстноеМеню" id="9"/>
 					<ExtendedTooltip name="ВидНоменклатурыРасширеннаяПодсказка" id="10"/>
 				</InputField>
-				<InputField name="ВидНоменклатурыБезПокраски" id="103">
+				<InputField name="ВидНоменклатурыБезПокраски" id="106">
 					<DataPath>ВидНоменклатурыБезПокраски</DataPath>
-					<Title><v8:item><v8:lang>uk</v8:lang><v8:content>Вид номенклатури (арт. 2xx, без покраски)</v8:content></v8:item></Title>
-					<ContextMenu name="ВидНоменклатурыБезПокраскиКонтекстноеМеню" id="104"/>
-					<ExtendedTooltip name="ВидНоменклатурыБезПокраскиРасширеннаяПодсказка" id="105"/>
+					<Title>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Вид номенклатури (без фарбування)</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ВидНоменклатурыБезПокраскиКонтекстноеМеню" id="107"/>
+					<ExtendedTooltip name="ВидНоменклатурыБезПокраскиРасширеннаяПодсказка" id="108"/>
 				</InputField>
 				<InputField name="РодительНоменклатуры" id="11">
 					<DataPath>РодительНоменклатуры</DataPath>
@@ -139,25 +149,33 @@
 					<ContextMenu name="РежимОбновленияКонтекстноеМеню" id="18"/>
 					<ExtendedTooltip name="РежимОбновленияРасширеннаяПодсказка" id="19"/>
 				</CheckBoxField>
-				<CheckBoxField name="ЗавантажуватиХарактеристику" id="100">
+				<CheckBoxField name="ЗавантажуватиХарактеристику" id="109">
 					<DataPath>ЗавантажуватиХарактеристику</DataPath>
 					<Title>
-						<v8:item><v8:lang>ru</v8:lang><v8:content>Загружать характеристику</v8:content></v8:item>
-						<v8:item><v8:lang>uk</v8:lang><v8:content>Завантажувати характеристику</v8:content></v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Завантажувати характеристику</v8:content>
+						</v8:item>
 					</Title>
 					<TitleLocation>Right</TitleLocation>
 					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЗавантажуватиХарактеристикуКонтекстноеМеню" id="110"/>
+					<ExtendedTooltip name="ЗавантажуватиХарактеристикуРасширеннаяПодсказка" id="111"/>
 					<Events>
 						<Event name="OnChange">ЗавантажуватиХарактеристикуПриИзменении</Event>
 					</Events>
-					<ContextMenu name="ЗавантажуватиХарактеристикуКонтекстноеМеню" id="101"/>
-					<ExtendedTooltip name="ЗавантажуватиХарактеристикуРасширеннаяПодсказка" id="102"/>
 				</CheckBoxField>
 				<InputField name="ДопРекв_ЕстьПокраска" id="103">
 					<DataPath>ДопРекв_ЕстьПокраска</DataPath>
 					<Title>
-						<v8:item><v8:lang>ru</v8:lang><v8:content>Доп. реквизит ЕстьПокраска →</v8:content></v8:item>
-						<v8:item><v8:lang>uk</v8:lang><v8:content>Дод. реквізит ЕстьПокраска →</v8:content></v8:item>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доп. реквизит ЕстьПокраска →</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Дод. реквізит ЕстьПокраска →</v8:content>
+						</v8:item>
 					</Title>
 					<ContextMenu name="ДопРекв_ЕстьПокраскаКонтекстноеМеню" id="104"/>
 					<ExtendedTooltip name="ДопРекв_ЕстьПокраскаРасширеннаяПодсказка" id="105"/>
@@ -215,51 +233,93 @@
 		</UsualGroup>
 		<Pages name="СтраницыМаппинг" id="90">
 			<Title>
-				<v8:item><v8:lang>ru</v8:lang><v8:content>Маппинг PL51</v8:content></v8:item>
-				<v8:item><v8:lang>uk</v8:lang><v8:content>Маппінг PL51</v8:content></v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Маппинг PL51</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Маппінг PL51</v8:content>
+				</v8:item>
 			</Title>
 			<ExtendedTooltip name="СтраницыМаппингРасширеннаяПодсказка" id="91"/>
 			<ChildItems>
 				<Page name="СтраницаДопРеквизиты" id="92">
 					<Title>
-						<v8:item><v8:lang>ru</v8:lang><v8:content>Дополнительные реквизиты</v8:content></v8:item>
-						<v8:item><v8:lang>uk</v8:lang><v8:content>Додаткові реквізити</v8:content></v8:item>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительные реквизиты</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Додаткові реквізити</v8:content>
+						</v8:item>
 					</Title>
 					<ExtendedTooltip name="СтраницаДопРеквизитыРасширеннаяПодсказка" id="93"/>
 					<ChildItems>
 						<InputField name="ДопРекв_НаименованиеEN" id="52">
 							<DataPath>ДопРекв_НаименованиеEN</DataPath>
-							<Title><v8:item><v8:lang>uk</v8:lang><v8:content>Найменування (EN) →</v8:content></v8:item></Title>
+							<Title>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Найменування (EN) →</v8:content>
+								</v8:item>
+							</Title>
 							<ContextMenu name="ДопРекв_НаименованиеENКонтекстноеМеню" id="53"/>
 							<ExtendedTooltip name="ДопРекв_НаименованиеENРасширеннаяПодсказка" id="54"/>
 						</InputField>
 						<InputField name="ДопРекв_MS" id="55">
 							<DataPath>ДопРекв_MS</DataPath>
-							<Title><v8:item><v8:lang>uk</v8:lang><v8:content>MS (Marktsegment) →</v8:content></v8:item></Title>
+							<Title>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>MS (Marktsegment) →</v8:content>
+								</v8:item>
+							</Title>
 							<ContextMenu name="ДопРекв_MSКонтекстноеМеню" id="56"/>
 							<ExtendedTooltip name="ДопРекв_MSРасширеннаяПодсказка" id="57"/>
 						</InputField>
 						<InputField name="ДопРекв_VS" id="58">
 							<DataPath>ДопРекв_VS</DataPath>
-							<Title><v8:item><v8:lang>uk</v8:lang><v8:content>VS (Vertriebsschiene) →</v8:content></v8:item></Title>
+							<Title>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>VS (Vertriebsschiene) →</v8:content>
+								</v8:item>
+							</Title>
 							<ContextMenu name="ДопРекв_VSКонтекстноеМеню" id="59"/>
 							<ExtendedTooltip name="ДопРекв_VSРасширеннаяПодсказка" id="60"/>
 						</InputField>
 						<InputField name="ДопРекв_WS" id="61">
 							<DataPath>ДопРекв_WS</DataPath>
-							<Title><v8:item><v8:lang>uk</v8:lang><v8:content>WS (Warengruppe) →</v8:content></v8:item></Title>
+							<Title>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>WS (Warengruppe) →</v8:content>
+								</v8:item>
+							</Title>
 							<ContextMenu name="ДопРекв_WSКонтекстноеМеню" id="62"/>
 							<ExtendedTooltip name="ДопРекв_WSРасширеннаяПодсказка" id="63"/>
 						</InputField>
 						<InputField name="ДопРекв_ПлощадьПолир" id="64">
 							<DataPath>ДопРекв_ПлощадьПолир</DataPath>
-							<Title><v8:item><v8:lang>uk</v8:lang><v8:content>Площа полірування →</v8:content></v8:item></Title>
+							<Title>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Площа полірування →</v8:content>
+								</v8:item>
+							</Title>
 							<ContextMenu name="ДопРекв_ПлощадьПолирКонтекстноеМеню" id="65"/>
 							<ExtendedTooltip name="ДопРекв_ПлощадьПолирРасширеннаяПодсказка" id="66"/>
 						</InputField>
 						<InputField name="ДопРекв_ИндикаторПрограммы" id="67">
 							<DataPath>ДопРекв_ИндикаторПрограммы</DataPath>
-							<Title><v8:item><v8:lang>uk</v8:lang><v8:content>Індикатор програми →</v8:content></v8:item></Title>
+							<Title>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Індикатор програми →</v8:content>
+								</v8:item>
+							</Title>
 							<ContextMenu name="ДопРекв_ИндикаторПрограммыКонтекстноеМеню" id="68"/>
 							<ExtendedTooltip name="ДопРекв_ИндикаторПрограммыРасширеннаяПодсказка" id="69"/>
 						</InputField>
@@ -267,50 +327,91 @@
 				</Page>
 				<Page name="СтраницаОВ" id="94">
 					<Title>
-						<v8:item><v8:lang>ru</v8:lang><v8:content>Единицы измерения</v8:content></v8:item>
-						<v8:item><v8:lang>uk</v8:lang><v8:content>Одиниці виміру</v8:content></v8:item>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Единицы измерения</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Одиниці виміру</v8:content>
+						</v8:item>
 					</Title>
 					<ExtendedTooltip name="СтраницаОВРасширеннаяПодсказка" id="95"/>
 					<ChildItems>
 						<InputField name="ЕИ_M" id="72">
 							<DataPath>ЕИ_M</DataPath>
-							<Title><v8:item><v8:lang>uk</v8:lang><v8:content>M (метри) →</v8:content></v8:item></Title>
+							<Title>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>M (метри) →</v8:content>
+								</v8:item>
+							</Title>
 							<ContextMenu name="ЕИ_MКонтекстноеМеню" id="73"/>
 							<ExtendedTooltip name="ЕИ_MРасширеннаяПодсказка" id="74"/>
 						</InputField>
 						<InputField name="ЕИ_ST" id="75">
 							<DataPath>ЕИ_ST</DataPath>
-							<Title><v8:item><v8:lang>uk</v8:lang><v8:content>ST (штуки) →</v8:content></v8:item></Title>
+							<Title>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>ST (штуки) →</v8:content>
+								</v8:item>
+							</Title>
 							<ContextMenu name="ЕИ_STКонтекстноеМеню" id="76"/>
 							<ExtendedTooltip name="ЕИ_STРасширеннаяПодсказка" id="77"/>
 						</InputField>
 						<InputField name="ЕИ_PAK" id="78">
 							<DataPath>ЕИ_PAK</DataPath>
-							<Title><v8:item><v8:lang>uk</v8:lang><v8:content>PAK (упаковки) →</v8:content></v8:item></Title>
+							<Title>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>PAK (упаковки) →</v8:content>
+								</v8:item>
+							</Title>
 							<ContextMenu name="ЕИ_PAKКонтекстноеМеню" id="79"/>
 							<ExtendedTooltip name="ЕИ_PAKРасширеннаяПодсказка" id="80"/>
 						</InputField>
 						<InputField name="ЕИ_PAA" id="81">
 							<DataPath>ЕИ_PAA</DataPath>
-							<Title><v8:item><v8:lang>uk</v8:lang><v8:content>PAA (пари) →</v8:content></v8:item></Title>
+							<Title>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>PAA (пари) →</v8:content>
+								</v8:item>
+							</Title>
 							<ContextMenu name="ЕИ_PAAКонтекстноеМеню" id="82"/>
 							<ExtendedTooltip name="ЕИ_PAAРасширеннаяПодсказка" id="83"/>
 						</InputField>
 						<InputField name="ЕИ_KG" id="84">
 							<DataPath>ЕИ_KG</DataPath>
-							<Title><v8:item><v8:lang>uk</v8:lang><v8:content>KG (кілограми) →</v8:content></v8:item></Title>
+							<Title>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>KG (кілограми) →</v8:content>
+								</v8:item>
+							</Title>
 							<ContextMenu name="ЕИ_KGКонтекстноеМеню" id="85"/>
 							<ExtendedTooltip name="ЕИ_KGРасширеннаяПодсказка" id="86"/>
 						</InputField>
 						<InputField name="ЕИ_M2" id="87">
 							<DataPath>ЕИ_M2</DataPath>
-							<Title><v8:item><v8:lang>uk</v8:lang><v8:content>M2 (кв. метри) →</v8:content></v8:item></Title>
+							<Title>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>M2 (кв. метри) →</v8:content>
+								</v8:item>
+							</Title>
 							<ContextMenu name="ЕИ_M2КонтекстноеМеню" id="88"/>
 							<ExtendedTooltip name="ЕИ_M2РасширеннаяПодсказка" id="89"/>
 						</InputField>
 						<InputField name="ЕИ_ШТАНГА" id="100">
 							<DataPath>ЕИ_ШТАНГА</DataPath>
-							<Title><v8:item><v8:lang>uk</v8:lang><v8:content>Штанга (для M+ST) →</v8:content></v8:item></Title>
+							<Title>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Штанга (для M+ST) →</v8:content>
+								</v8:item>
+							</Title>
 							<ContextMenu name="ЕИ_ШТАНГАКонтекстноеМеню" id="101"/>
 							<ExtendedTooltip name="ЕИ_ШТАНГАРасширеннаяПодсказка" id="102"/>
 						</InputField>
@@ -393,8 +494,14 @@
 							<DataPath>КоличествоОбновлено</DataPath>
 							<ReadOnly>true</ReadOnly>
 							<Title>
-								<v8:item><v8:lang>ru</v8:lang><v8:content>Обновлено</v8:content></v8:item>
-								<v8:item><v8:lang>uk</v8:lang><v8:content>Оновлено</v8:content></v8:item>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Обновлено</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Оновлено</v8:content>
+								</v8:item>
 							</Title>
 							<Width>8</Width>
 							<HorizontalStretch>false</HorizontalStretch>
@@ -592,8 +699,14 @@
 		</Attribute>
 		<Attribute name="КоличествоОбновлено" id="25">
 			<Title>
-				<v8:item><v8:lang>ru</v8:lang><v8:content>Обновлено</v8:content></v8:item>
-				<v8:item><v8:lang>uk</v8:lang><v8:content>Оновлено</v8:content></v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновлено</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Оновлено</v8:content>
+				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>xs:decimal</v8:Type>

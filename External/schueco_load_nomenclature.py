@@ -448,25 +448,39 @@ def load_nomenclature(excel_path, refs, vid_key, vid_key_no_paint, producer_key,
                 except Exception as e:
                     print(f"  Warning: GTD for {material_no}: {e}")
 
-            # Post-create OR post-update: Упаковка for PAK/PAA/штанга
-            pack_qty = 0
-            pack_label = None
+            # Post-create OR post-update: Упаковка for PAK/PAA (розупаковка) or штанга (кінцева)
+            create_pack = False
             pack_uom_key = None
+            pack_num = 0
+            pack_den = 0
+            pack_type = None
+            pack_name = None
             if qty_pcs > 0:
                 if uom_code.upper() == "PAK":
-                    pack_qty = qty_pcs
-                    pack_label = "паков"
+                    create_pack = True
                     pack_uom_key = uom_map.get("ST")
+                    pack_num = 1
+                    pack_den = qty_pcs
+                    pack_type = "Разупаковка"
+                    pack_name = f"шт (1/{int(qty_pcs)} паков)"
                 elif uom_code.upper() == "PAA":
-                    pack_qty = qty_pcs
-                    pack_label = "пар"
+                    create_pack = True
                     pack_uom_key = uom_map.get("ST")
-            # Штанга: D=M, V=ST, J>0
+                    pack_num = 1
+                    pack_den = qty_pcs
+                    pack_type = "Разупаковка"
+                    pack_name = f"шт (1/{int(qty_pcs)} пар)"
+            # Штанга: D=M, V=ST, J>0 → кінцева: 1 st = J м
             if uom_code.upper() == "M" and sales_unit.upper() == "ST" and length_m > 0:
-                pack_qty = length_m
-                pack_label = "м"
-                pack_uom_key = refs.get("shtanga_key")
-            if pack_qty > 0 and pack_label and pack_uom_key:
+                shtanga_key = refs.get("shtanga_key")
+                if shtanga_key:
+                    create_pack = True
+                    pack_uom_key = shtanga_key
+                    pack_num = length_m
+                    pack_den = 1
+                    pack_type = "Конечная"
+                    pack_name = f"st (1/{int(length_m)} м)"
+            if create_pack and pack_uom_key:
                 try:
                     # Delete ALL existing packagings for this nomenclature owner
                     existing_packs = odata_get("Catalog_УпаковкиЕдиницыИзмерения",
@@ -476,14 +490,13 @@ def load_nomenclature(excel_path, refs, vid_key, vid_key_no_paint, producer_key,
                         requests.delete(url, headers=HEADERS, timeout=30)
                     # Create fresh
                     odata_post("Catalog_УпаковкиЕдиницыИзмерения", {
-                        "Description": f"{pack_label} (1/{int(pack_qty)} {pack_label})" if pack_label != "м"
-                            else f"штанга (1/{int(pack_qty)} м)",
+                        "Description": pack_name,
                         "Owner_Key": ref_key,
                         "ЕдиницаИзмерения_Key": pack_uom_key,
-                        "Числитель": 1,
-                        "Знаменатель": pack_qty,
+                        "Числитель": pack_num,
+                        "Знаменатель": pack_den,
                         "ТипИзмеряемойВеличины": "Упаковка",
-                        "ТипУпаковки": "Разупаковка",
+                        "ТипУпаковки": pack_type,
                         "Безразмерная": True,
                     })
                 except Exception as e:
