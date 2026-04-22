@@ -333,7 +333,7 @@ def load_nomenclature(excel_path, refs, vid_key, vid_key_no_paint, producer_key,
 
         # Length (col J) — only for profiles (base UOM=M)
         # Числитель = length value, Знаменатель = piece count
-        if uom_code.upper() == "M" and length_m > 0:
+        if length_m > 0:
             measure_payload["ДлинаИспользовать"] = True
             measure_payload["ДлинаЧислитель"] = length_m
             measure_payload["ДлинаЗнаменатель"] = 1
