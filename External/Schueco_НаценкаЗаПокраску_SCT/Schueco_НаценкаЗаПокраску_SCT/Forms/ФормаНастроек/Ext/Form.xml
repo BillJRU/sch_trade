@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Настройка наценки за покраску</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>uk</v8:lang>
+			<v8:content>Налаштування націнки за фарбування</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="Сохранить" id="20">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.Сохранить</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>OK</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>uk</v8:lang>
+						<v8:content>OK</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="СохранитьРасширеннаяПодсказка" id="21"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Decoration name="Подсказка" id="1">
+			<Type>Label</Type>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Укажите два дополнительных реквизита Характеристики номенклатуры — цену покраски (Число, грн/м²) и признак необходимости покраски (Булево). Сохранённые здесь ссылки будут использоваться при расчёте наценки в документах продаж.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Вкажіть два додаткові реквізити Характеристики номенклатури — ціну фарбування (Число, грн/м²) та ознаку необхідності фарбування (Булево). Збережені тут посилання будуть використовуватися при розрахунку націнки в документах продажу.</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalAlign>Left</HorizontalAlign>
+			<TitleHeight>0</TitleHeight>
+			<ExtendedTooltip name="ПодсказкаРасширеннаяПодсказка" id="2"/>
+		</Decoration>
+		<InputField name="СвойствоЦеныПокраски" id="6">
+			<DataPath>СвойствоЦеныПокраски</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цена покраски без НДС (Число)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Ціна фарбування без ПДВ (Число)</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="СвойствоЦеныПокраскиКонтекстноеМеню" id="7"/>
+			<ExtendedTooltip name="СвойствоЦеныПокраскиРасширеннаяПодсказка" id="8"/>
+		</InputField>
+		<InputField name="СвойствоПризнакаПокраски" id="9">
+			<DataPath>СвойствоПризнакаПокраски</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Необходима покраска (Булево)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Необхідне фарбування (Булево)</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="СвойствоПризнакаПокраскиКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="СвойствоПризнакаПокраскиРасширеннаяПодсказка" id="11"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="СвойствоЦеныПокраски" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Свойство цены покраски</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ChartOfCharacteristicTypesRef.ДополнительныеРеквизитыИСведения</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СвойствоПризнакаПокраски" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Свойство признака покраски</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ChartOfCharacteristicTypesRef.ДополнительныеРеквизитыИСведения</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресНастроекВнешнейОбработки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес настроек внешней обработки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Сохранить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>OK</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>OK</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Сохранить</Action>
+		</Command>
+	</Commands>
+</Form>
