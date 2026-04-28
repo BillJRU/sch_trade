@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Schüco: Настройки загрузки спецификации</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>uk</v8:lang>
+			<v8:content>Schüco: Налаштування завантаження специфікації</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="Сохранить" id="100">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.Сохранить</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>OK</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>uk</v8:lang>
+						<v8:content>OK</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="СохранитьРасширеннаяПодсказка" id="101"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Decoration name="Подсказка" id="1">
+			<Type>Label</Type>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Эти настройки запоминаются для всех пользователей и подставляются при каждом открытии формы загрузки специфікації Schücal.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Ці налаштування запам'ятовуються для всіх користувачів та підставляються під час кожного відкриття форми завантаження специфікації Schücal.</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalAlign>Left</HorizontalAlign>
+			<TitleHeight>0</TitleHeight>
+			<ExtendedTooltip name="ПодсказкаРасширеннаяПодсказка" id="2"/>
+		</Decoration>
+		<UsualGroup name="ГруппаЕдиницы" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Відповідність одиниць виміру</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ГруппаЕдиницыРасширеннаяПодсказка" id="4"/>
+			<ChildItems>
+				<InputField name="ЕИ_Sta" id="10">
+					<DataPath>ЕИ_Sta</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Sta (штанги) →</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="ЕИ_StaКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ЕИ_StaРасширеннаяПодсказка" id="12"/>
+				</InputField>
+				<InputField name="ЕИ_шт" id="13">
+					<DataPath>ЕИ_шт</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>шт. →</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="ЕИ_штКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="ЕИ_штРасширеннаяПодсказка" id="15"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПокраска" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Характеристики / Фарбування</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ГруппаПокраскаРасширеннаяПодсказка" id="21"/>
+			<ChildItems>
+				<InputField name="ДопРекв_Покраска" id="22">
+					<DataPath>ДопРекв_Покраска</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Реквізит "Фарбування" характеристик</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="ДопРекв_ПокраскаКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ДопРекв_ПокраскаРасширеннаяПодсказка" id="24"/>
+				</InputField>
+				<InputField name="ХарактеристикаБезПокраски" id="25">
+					<DataPath>ХарактеристикаБезПокраски</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Характеристика "Без фарбування" →</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="ХарактеристикаБезПокраскиКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ХарактеристикаБезПокраскиРасширеннаяПодсказка" id="27"/>
+				</InputField>
+				<InputField name="ДопРекв_БазоваяНоменклатура" id="60">
+					<DataPath>ДопРекв_БазоваяНоменклатура</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Реквизит "Базовая номенклатура" (для скаток)</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Реквізит "Базова номенклатура" (для скаток)</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="ДопРекв_БазоваяНоменклатураКонтекстноеМеню" id="61"/>
+					<ExtendedTooltip name="ДопРекв_БазоваяНоменклатураРасширеннаяПодсказка" id="62"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаДиапазон" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Діапазон рядків (за замовчуванням)</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="ГруппаДиапазонРасширеннаяПодсказка" id="31"/>
+			<ChildItems>
+				<InputField name="НомерСтрокиЗаголовка" id="32">
+					<DataPath>НомерСтрокиЗаголовка</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Рядок заголовка</v8:content>
+						</v8:item>
+					</Title>
+					<Width>8</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="НомерСтрокиЗаголовкаКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="НомерСтрокиЗаголовкаРасширеннаяПодсказка" id="34"/>
+				</InputField>
+				<InputField name="НомерПервойСтрокиДанных" id="35">
+					<DataPath>НомерПервойСтрокиДанных</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Перший рядок даних</v8:content>
+						</v8:item>
+					</Title>
+					<Width>8</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="НомерПервойСтрокиДанныхКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="НомерПервойСтрокиДанныхРасширеннаяПодсказка" id="37"/>
+				</InputField>
+				<InputField name="НомерПоследнейСтроки" id="38">
+					<DataPath>НомерПоследнейСтроки</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Останній рядок (0=усі)</v8:content>
+						</v8:item>
+					</Title>
+					<Width>8</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="НомерПоследнейСтрокиКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="НомерПоследнейСтрокиРасширеннаяПодсказка" id="40"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<CheckBoxField name="РежимДодавання" id="50">
+			<DataPath>РежимДодавання</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>За замовчуванням додавати до існуючих рядків (інакше — замінити)</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="РежимДодаванняКонтекстноеМеню" id="51"/>
+			<ExtendedTooltip name="РежимДодаванняРасширеннаяПодсказка" id="52"/>
+		</CheckBoxField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ОбработкаСсылка" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ссылка на дополнительную обработку</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ДополнительныеОтчетыИОбработки</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЕИ_Sta" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Sta (штанги)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.УпаковкиЕдиницыИзмерения</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЕИ_шт" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>шт.</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.УпаковкиЕдиницыИзмерения</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДопРекв_Покраска" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Реквізит "Фарбування"</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ChartOfCharacteristicTypesRef.ДополнительныеРеквизитыИСведения</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ХарактеристикаБезПокраски" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Характеристика "Без фарбування"</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:DefinedType.ХарактеристикаНоменклатурыБЭД</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="ДопРекв_БазоваяНоменклатура" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизит "Базовая номенклатура"</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Реквізит "Базова номенклатура"</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ChartOfCharacteristicTypesRef.ДополнительныеРеквизитыИСведения</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РежимДодавання" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Режим додавання</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НомерСтрокиЗаголовка" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Рядок заголовка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НомерПервойСтрокиДанных" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Перший рядок даних</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НомерПоследнейСтроки" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Останній рядок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Сохранить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>OK</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>OK</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Сохранить</Action>
+		</Command>
+	</Commands>
+</Form>

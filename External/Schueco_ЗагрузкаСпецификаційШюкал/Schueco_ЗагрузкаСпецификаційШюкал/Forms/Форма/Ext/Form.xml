@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
 	<Title>
 		<v8:item>
@@ -7,24 +7,60 @@
 		</v8:item>
 	</Title>
 	<AutoTitle>false</AutoTitle>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
-			<Button name="ЗагрузитьДанные" id="100">
+			<Button name="ЗагрузитьИЗакрыть" id="104">
 				<Type>CommandBarButton</Type>
 				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ЗагрузитьИЗакрыть</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Загрузить и закрыть</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>uk</v8:lang>
+						<v8:content>Завантажити та закрити</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ЗагрузитьИЗакрытьРасширеннаяПодсказка" id="105"/>
+			</Button>
+			<Button name="ЗагрузитьДанные" id="100">
+				<Type>CommandBarButton</Type>
 				<CommandName>Form.Command.ЗагрузитьДанные</CommandName>
 				<Title>
 					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Загрузить</v8:content>
+					</v8:item>
+					<v8:item>
 						<v8:lang>uk</v8:lang>
-						<v8:content>Завантажити дані</v8:content>
+						<v8:content>Завантажити</v8:content>
 					</v8:item>
 				</Title>
 				<ExtendedTooltip name="ЗагрузитьДанныеРасширеннаяПодсказка" id="101"/>
+			</Button>
+			<Button name="ОткрытьНастройки" id="102">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОткрытьНастройки</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Настройки</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>uk</v8:lang>
+						<v8:content>Налаштування</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ОткрытьНастройкиРасширеннаяПодсказка" id="103"/>
 			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
 	</Events>
 	<ChildItems>
 		<UsualGroup name="ГруппаФайл" id="1">
@@ -35,11 +71,17 @@
 					<DataPath>ПутьКФайлу</DataPath>
 					<Title>
 						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Файл Excel</v8:content>
+						</v8:item>
+						<v8:item>
 							<v8:lang>uk</v8:lang>
 							<v8:content>Файл Excel</v8:content>
 						</v8:item>
 					</Title>
 					<HorizontalStretch>true</HorizontalStretch>
+					<ChoiceButton>true</ChoiceButton>
+					<ClearButton>true</ClearButton>
 					<ContextMenu name="ПутьКФайлуКонтекстноеМеню" id="4"/>
 					<ExtendedTooltip name="ПутьКФайлуРасширеннаяПодсказка" id="5"/>
 					<Events>
@@ -58,78 +100,18 @@
 			<Group>Vertical</Group>
 			<ExtendedTooltip name="ГруппаНастройкиРасширеннаяПодсказка" id="7"/>
 			<ChildItems>
-				<InputField name="СсылкаНаДокумент" id="8">
-					<DataPath>СсылкаНаДокумент</DataPath>
+				<InputField name="ИнформацияОКП" id="8">
+					<DataPath>ИнформацияОКП</DataPath>
+					<ReadOnly>true</ReadOnly>
 					<Title>
 						<v8:item>
 							<v8:lang>uk</v8:lang>
-							<v8:content>Комерційна пропозиція</v8:content>
+							<v8:content>Документ</v8:content>
 						</v8:item>
 					</Title>
 					<HorizontalStretch>true</HorizontalStretch>
-					<ContextMenu name="СсылкаНаДокументКонтекстноеМеню" id="9"/>
-					<ExtendedTooltip name="СсылкаНаДокументРасширеннаяПодсказка" id="10"/>
-				</InputField>
-				<CheckBoxField name="РежимДодавання" id="11">
-					<DataPath>РежимДодавання</DataPath>
-					<Title>
-						<v8:item>
-							<v8:lang>uk</v8:lang>
-							<v8:content>Додавати до існуючих рядків (інакше — замінити)</v8:content>
-						</v8:item>
-					</Title>
-					<ContextMenu name="РежимДодаванняКонтекстноеМеню" id="12"/>
-					<ExtendedTooltip name="РежимДодаванняРасширеннаяПодсказка" id="13"/>
-				</CheckBoxField>
-			</ChildItems>
-		</UsualGroup>
-		<UsualGroup name="ГруппаДиапазон" id="14">
-			<Title>
-				<v8:item>
-					<v8:lang>uk</v8:lang>
-					<v8:content>Діапазон рядків</v8:content>
-				</v8:item>
-			</Title>
-			<ExtendedTooltip name="ГруппаДиапазонРасширеннаяПодсказка" id="15"/>
-			<ChildItems>
-				<InputField name="НомерСтрокиЗаголовка" id="16">
-					<DataPath>НомерСтрокиЗаголовка</DataPath>
-					<Title>
-						<v8:item>
-							<v8:lang>uk</v8:lang>
-							<v8:content>Рядок заголовка</v8:content>
-						</v8:item>
-					</Title>
-					<Width>8</Width>
-					<HorizontalStretch>false</HorizontalStretch>
-					<ContextMenu name="НомерСтрокиЗаголовкаКонтекстноеМеню" id="17"/>
-					<ExtendedTooltip name="НомерСтрокиЗаголовкаРасширеннаяПодсказка" id="18"/>
-				</InputField>
-				<InputField name="НомерПервойСтрокиДанных" id="19">
-					<DataPath>НомерПервойСтрокиДанных</DataPath>
-					<Title>
-						<v8:item>
-							<v8:lang>uk</v8:lang>
-							<v8:content>Перший рядок даних</v8:content>
-						</v8:item>
-					</Title>
-					<Width>8</Width>
-					<HorizontalStretch>false</HorizontalStretch>
-					<ContextMenu name="НомерПервойСтрокиДанныхКонтекстноеМеню" id="20"/>
-					<ExtendedTooltip name="НомерПервойСтрокиДанныхРасширеннаяПодсказка" id="21"/>
-				</InputField>
-				<InputField name="НомерПоследнейСтроки" id="22">
-					<DataPath>НомерПоследнейСтроки</DataPath>
-					<Title>
-						<v8:item>
-							<v8:lang>uk</v8:lang>
-							<v8:content>Останній рядок (0=усі)</v8:content>
-						</v8:item>
-					</Title>
-					<Width>8</Width>
-					<HorizontalStretch>false</HorizontalStretch>
-					<ContextMenu name="НомерПоследнейСтрокиКонтекстноеМеню" id="23"/>
-					<ExtendedTooltip name="НомерПоследнейСтрокиРасширеннаяПодсказка" id="24"/>
+					<ContextMenu name="ИнформацияОКПКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="ИнформацияОКПРасширеннаяПодсказка" id="10"/>
 				</InputField>
 			</ChildItems>
 		</UsualGroup>
@@ -242,15 +224,19 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
-		<Attribute name="СсылкаНаДокумент" id="3">
+		<Attribute name="ИнформацияОКП" id="3">
 			<Title>
 				<v8:item>
 					<v8:lang>uk</v8:lang>
-					<v8:content>Комерційна пропозиція</v8:content>
+					<v8:content>Документ</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
-				<v8:Type>cfg:DocumentRef.КоммерческоеПредложениеКлиенту</v8:Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>200</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
 		<Attribute name="РежимДодавання" id="4">
@@ -391,19 +377,112 @@
 				</v8:NumberQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="ЕИ_Sta" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Sta (штанги)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.УпаковкиЕдиницыИзмерения</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЕИ_шт" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>шт.</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.УпаковкиЕдиницыИзмерения</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДопРекв_Покраска" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Реквізит "Фарбування"</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ChartOfCharacteristicTypesRef.ДополнительныеРеквизитыИСведения</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ХарактеристикаБезПокраски" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Характеристика "Без фарбування"</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:DefinedType.ХарактеристикаНоменклатурыБЭД</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="ДопРекв_БазоваяНоменклатура" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизит "Базовая номенклатура" (для скаток)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ChartOfCharacteristicTypesRef.ДополнительныеРеквизитыИСведения</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОбработкаСсылка" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ссылка на дополнительную обработку</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ДополнительныеОтчетыИОбработки</v8:Type>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ЗагрузитьДанные" id="1">
 			<Title>
 				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить</v8:content>
+				</v8:item>
+				<v8:item>
 					<v8:lang>uk</v8:lang>
-					<v8:content>Завантажити дані</v8:content>
+					<v8:content>Завантажити</v8:content>
 				</v8:item>
 			</Title>
-			<Use>
-				<xr:Use/>
-			</Use>
 			<Action>ЗагрузитьДанные</Action>
+		</Command>
+		<Command name="ЗагрузитьИЗакрыть" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить и закрыть</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Завантажити та закрити</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ЗагрузитьИЗакрыть</Action>
+		</Command>
+		<Command name="ОткрытьНастройки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Налаштування</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОткрытьНастройки</Action>
 		</Command>
 	</Commands>
 </Form>
