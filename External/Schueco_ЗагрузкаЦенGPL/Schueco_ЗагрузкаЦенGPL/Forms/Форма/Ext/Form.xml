@@ -65,6 +65,9 @@
 			<ChoiceButton>true</ChoiceButton>
 			<ContextMenu name="ПутьКФайлуКонтекстноеМеню" id="2"/>
 			<ExtendedTooltip name="ПутьКФайлуExtendedTooltip" id="3"/>
+			<Events>
+				<Event name="StartChoice">ПутьКФайлуНачалоВыбора</Event>
+			</Events>
 		</InputField>
 		<InputField name="ВидЦены" id="4">
 			<DataPath>ВидЦены</DataPath>
@@ -94,6 +97,45 @@
 				</Title>
 			</ExtendedTooltip>
 		</InputField>
+		<UsualGroup name="ГруппаОВ" id="50">
+			<Title>
+				<v8:item><v8:lang>ru</v8:lang><v8:content>Базовые ОИ (GPL → ОИ номенклатуры)</v8:content></v8:item>
+				<v8:item><v8:lang>uk</v8:lang><v8:content>Базові ОВ (GPL → ОВ номенклатури)</v8:content></v8:item>
+			</Title>
+			<ExtendedTooltip name="ГруппаОВExtendedTooltip" id="51"/>
+			<ChildItems>
+				<InputField name="ЕИ_M" id="52">
+					<DataPath>ЕИ_M</DataPath>
+					<Title><v8:item><v8:lang>uk</v8:lang><v8:content>M (метри) →</v8:content></v8:item></Title>
+					<ContextMenu name="ЕИ_MКонтекстноеМеню" id="53"/>
+					<ExtendedTooltip name="ЕИ_MExtendedTooltip" id="54"/>
+				</InputField>
+				<InputField name="ЕИ_ST" id="55">
+					<DataPath>ЕИ_ST</DataPath>
+					<Title><v8:item><v8:lang>uk</v8:lang><v8:content>ST (штуки) →</v8:content></v8:item></Title>
+					<ContextMenu name="ЕИ_STКонтекстноеМеню" id="56"/>
+					<ExtendedTooltip name="ЕИ_STExtendedTooltip" id="57"/>
+				</InputField>
+				<InputField name="ЕИ_ШТАНГА" id="58">
+					<DataPath>ЕИ_ШТАНГА</DataPath>
+					<Title><v8:item><v8:lang>uk</v8:lang><v8:content>ST для профілів (штанга) →</v8:content></v8:item></Title>
+					<ContextMenu name="ЕИ_ШТАНГАКонтекстноеМеню" id="59"/>
+					<ExtendedTooltip name="ЕИ_ШТАНГАExtendedTooltip" id="60"/>
+				</InputField>
+				<InputField name="ЕИ_PAK" id="61">
+					<DataPath>ЕИ_PAK</DataPath>
+					<Title><v8:item><v8:lang>uk</v8:lang><v8:content>PAK (упаковки) →</v8:content></v8:item></Title>
+					<ContextMenu name="ЕИ_PAKКонтекстноеМеню" id="62"/>
+					<ExtendedTooltip name="ЕИ_PAKExtendedTooltip" id="63"/>
+				</InputField>
+				<InputField name="ЕИ_PAA" id="64">
+					<DataPath>ЕИ_PAA</DataPath>
+					<Title><v8:item><v8:lang>uk</v8:lang><v8:content>PAA (пари) →</v8:content></v8:item></Title>
+					<ContextMenu name="ЕИ_PAAКонтекстноеМеню" id="65"/>
+					<ExtendedTooltip name="ЕИ_PAAExtendedTooltip" id="66"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
 		<UsualGroup name="ГруппаДиапазон" id="24">
 			<Title>
 				<v8:item>
@@ -238,6 +280,31 @@
 		<Attribute name="ДопРекв_ЕстьПокраска" id="10">
 			<Type>
 				<v8:Type>cfg:ChartOfCharacteristicTypesRef.ДополнительныеРеквизитыИСведения</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЕИ_M" id="11">
+			<Type>
+				<v8:Type>cfg:CatalogRef.УпаковкиЕдиницыИзмерения</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЕИ_ST" id="12">
+			<Type>
+				<v8:Type>cfg:CatalogRef.УпаковкиЕдиницыИзмерения</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЕИ_ШТАНГА" id="13">
+			<Type>
+				<v8:Type>cfg:CatalogRef.УпаковкиЕдиницыИзмерения</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЕИ_PAK" id="14">
+			<Type>
+				<v8:Type>cfg:CatalogRef.УпаковкиЕдиницыИзмерения</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЕИ_PAA" id="15">
+			<Type>
+				<v8:Type>cfg:CatalogRef.УпаковкиЕдиницыИзмерения</v8:Type>
 			</Type>
 		</Attribute>
 	</Attributes>
