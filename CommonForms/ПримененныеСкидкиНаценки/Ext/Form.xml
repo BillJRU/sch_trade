@@ -68,7 +68,98 @@
 				</LabelField>
 			</ChildItems>
 		</UsualGroup>
-		<Table name="ИнформацияОРасчетеСкидокПоСтроке" id="49">
+		<Pages name="ГруппаСтраницыСкидок" id="220">
+			<Title>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Сторінки знижок</v8:content>
+				</v8:item>
+			</Title>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаСтраницыСкидокExtendedTooltip" id="223"/>
+			<ChildItems>
+				<Page name="СтраницаСнапшот" id="221">
+					<Title>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Знижки (зі збереженого документа)</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаСнапшотExtendedTooltip" id="224"/>
+					<ChildItems>
+						<Table name="АвтоматическиеСкидкиТаблица" id="200">
+			<DataPath>АвтоматическиеСкидки</DataPath>
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<ReadOnly>true</ReadOnly>
+			<Title>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Знижки (націнки) для рядка</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скидки (наценки) по строке</v8:content>
+				</v8:item>
+			</Title>
+			<CommandSet>
+				<ExcludedCommand>Add</ExcludedCommand>
+				<ExcludedCommand>Change</ExcludedCommand>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>Delete</ExcludedCommand>
+				<ExcludedCommand>EndEdit</ExcludedCommand>
+				<ExcludedCommand>MoveDown</ExcludedCommand>
+				<ExcludedCommand>MoveUp</ExcludedCommand>
+				<ExcludedCommand>SortListAsc</ExcludedCommand>
+				<ExcludedCommand>SortListDesc</ExcludedCommand>
+			</CommandSet>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<ContextMenu name="АвтоматическиеСкидкиТаблицаКонтекстноеМеню" id="201"/>
+			<AutoCommandBar name="АвтоматическиеСкидкиТаблицаКоманднаяПанель" id="202"/>
+			<ExtendedTooltip name="АвтоматическиеСкидкиТаблицаExtendedTooltip" id="203"/>
+			<ChildItems>
+				<InputField name="АвтоматическиеСкидкиТаблицаСкидкаНаценка" id="204">
+					<DataPath>АвтоматическиеСкидки.СкидкаНаценка</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<ContextMenu name="АвтоматическиеСкидкиТаблицаСкидкаНаценкаКонтекстноеМеню" id="205"/>
+					<ExtendedTooltip name="АвтоматическиеСкидкиТаблицаСкидкаНаценкаExtendedTooltip" id="206"/>
+				</InputField>
+				<InputField name="АвтоматическиеСкидкиТаблицаПроцент" id="207">
+					<DataPath>АвтоматическиеСкидки.Процент</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Width>8</Width>
+					<Format>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>ЧЦ=15; ЧДЦ=2; ЧО=</v8:content>
+						</v8:item>
+					</Format>
+					<ContextMenu name="АвтоматическиеСкидкиТаблицаПроцентКонтекстноеМеню" id="208"/>
+					<ExtendedTooltip name="АвтоматическиеСкидкиТаблицаПроцентExtendedTooltip" id="209"/>
+				</InputField>
+				<InputField name="АвтоматическиеСкидкиТаблицаСумма" id="210">
+					<DataPath>АвтоматическиеСкидки.Сумма</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Width>10</Width>
+					<ContextMenu name="АвтоматическиеСкидкиТаблицаСуммаКонтекстноеМеню" id="211"/>
+					<ExtendedTooltip name="АвтоматическиеСкидкиТаблицаСуммаExtendedTooltip" id="212"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаTrace" id="222">
+					<Title>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Інформація про розрахунок</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаTraceExtendedTooltip" id="225"/>
+					<ChildItems>
+						<Table name="ИнформацияОРасчетеСкидокПоСтроке" id="49">
 			<Representation>Tree</Representation>
 			<ChangeRowSet>false</ChangeRowSet>
 			<ChangeRowOrder>false</ChangeRowOrder>
@@ -170,6 +261,10 @@
 				</InputField>
 			</ChildItems>
 		</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
 		<UsualGroup name="Легенда" id="80">
 			<Title>
 				<v8:item>
