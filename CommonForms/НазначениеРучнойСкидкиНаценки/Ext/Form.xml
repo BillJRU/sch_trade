@@ -37,6 +37,23 @@
 				<Event name="OnChange">ВариантПредоставленияПриИзменении</Event>
 			</Events>
 		</RadioButtonField>
+		<RadioButtonField name="БазаРасчетаРаспределения" id="135">
+			<DataPath>БазаРасчетаРаспределения</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рассчитывать скидку</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Розраховувати знижку</v8:content>
+				</v8:item>
+			</Title>
+			<TitleLocation>Top</TitleLocation>
+			<RadioButtonType>Auto</RadioButtonType>
+			<ContextMenu name="БазаРасчетаРаспределенияКонтекстноеМеню" id="136"/>
+			<ExtendedTooltip name="БазаРасчетаРаспределенияРасширеннаяПодсказка" id="137"/>
+		</RadioButtonField>
 		<Pages name="ВариантыПредоставления" id="15">
 			<Title>
 				<v8:item>
@@ -973,6 +990,45 @@
 			</Title>
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="БазаРасчетаРаспределения" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>База расчета распределения ручной скидки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>База розрахунку розподілу ручної знижки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресВПХ_SCT" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес во временном хранилище (Schueco_SCT)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Адреса в тимчасовому сховищі (Schueco_SCT)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
 	</Attributes>
