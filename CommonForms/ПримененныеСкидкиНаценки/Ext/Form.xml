@@ -88,66 +88,91 @@
 					<ExtendedTooltip name="СтраницаСнапшотExtendedTooltip" id="224"/>
 					<ChildItems>
 						<Table name="АвтоматическиеСкидкиТаблица" id="200">
-			<DataPath>АвтоматическиеСкидки</DataPath>
-			<ChangeRowSet>false</ChangeRowSet>
-			<ChangeRowOrder>false</ChangeRowOrder>
-			<ReadOnly>true</ReadOnly>
-			<Title>
-				<v8:item>
-					<v8:lang>uk</v8:lang>
-					<v8:content>Знижки (націнки) для рядка</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Скидки (наценки) по строке</v8:content>
-				</v8:item>
-			</Title>
-			<CommandSet>
-				<ExcludedCommand>Add</ExcludedCommand>
-				<ExcludedCommand>Change</ExcludedCommand>
-				<ExcludedCommand>Copy</ExcludedCommand>
-				<ExcludedCommand>Delete</ExcludedCommand>
-				<ExcludedCommand>EndEdit</ExcludedCommand>
-				<ExcludedCommand>MoveDown</ExcludedCommand>
-				<ExcludedCommand>MoveUp</ExcludedCommand>
-				<ExcludedCommand>SortListAsc</ExcludedCommand>
-				<ExcludedCommand>SortListDesc</ExcludedCommand>
-			</CommandSet>
-			<SearchStringLocation>None</SearchStringLocation>
-			<ViewStatusLocation>None</ViewStatusLocation>
-			<SearchControlLocation>None</SearchControlLocation>
-			<ContextMenu name="АвтоматическиеСкидкиТаблицаКонтекстноеМеню" id="201"/>
-			<AutoCommandBar name="АвтоматическиеСкидкиТаблицаКоманднаяПанель" id="202"/>
-			<ExtendedTooltip name="АвтоматическиеСкидкиТаблицаExtendedTooltip" id="203"/>
-			<ChildItems>
-				<InputField name="АвтоматическиеСкидкиТаблицаСкидкаНаценка" id="204">
-					<DataPath>АвтоматическиеСкидки.СкидкаНаценка</DataPath>
-					<ReadOnly>true</ReadOnly>
-					<ContextMenu name="АвтоматическиеСкидкиТаблицаСкидкаНаценкаКонтекстноеМеню" id="205"/>
-					<ExtendedTooltip name="АвтоматическиеСкидкиТаблицаСкидкаНаценкаExtendedTooltip" id="206"/>
-				</InputField>
-				<InputField name="АвтоматическиеСкидкиТаблицаПроцент" id="207">
-					<DataPath>АвтоматическиеСкидки.Процент</DataPath>
-					<ReadOnly>true</ReadOnly>
-					<Width>8</Width>
-					<Format>
-						<v8:item>
-							<v8:lang>uk</v8:lang>
-							<v8:content>ЧЦ=15; ЧДЦ=2; ЧО=</v8:content>
-						</v8:item>
-					</Format>
-					<ContextMenu name="АвтоматическиеСкидкиТаблицаПроцентКонтекстноеМеню" id="208"/>
-					<ExtendedTooltip name="АвтоматическиеСкидкиТаблицаПроцентExtendedTooltip" id="209"/>
-				</InputField>
-				<InputField name="АвтоматическиеСкидкиТаблицаСумма" id="210">
-					<DataPath>АвтоматическиеСкидки.Сумма</DataPath>
-					<ReadOnly>true</ReadOnly>
-					<Width>10</Width>
-					<ContextMenu name="АвтоматическиеСкидкиТаблицаСуммаКонтекстноеМеню" id="211"/>
-					<ExtendedTooltip name="АвтоматическиеСкидкиТаблицаСуммаExtendedTooltip" id="212"/>
-				</InputField>
-			</ChildItems>
-		</Table>
+							<ReadOnly>true</ReadOnly>
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<DataPath>АвтоматическиеСкидки</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Знижки (націнки) для рядка</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Скидки (наценки) по строке</v8:content>
+								</v8:item>
+							</Title>
+							<CommandSet>
+								<ExcludedCommand>Add</ExcludedCommand>
+								<ExcludedCommand>Change</ExcludedCommand>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>Delete</ExcludedCommand>
+								<ExcludedCommand>EndEdit</ExcludedCommand>
+								<ExcludedCommand>MoveDown</ExcludedCommand>
+								<ExcludedCommand>MoveUp</ExcludedCommand>
+								<ExcludedCommand>SortListAsc</ExcludedCommand>
+								<ExcludedCommand>SortListDesc</ExcludedCommand>
+							</CommandSet>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="АвтоматическиеСкидкиТаблицаКонтекстноеМеню" id="201"/>
+							<AutoCommandBar name="АвтоматическиеСкидкиТаблицаКоманднаяПанель" id="202"/>
+							<ExtendedTooltip name="АвтоматическиеСкидкиТаблицаExtendedTooltip" id="203"/>
+							<SearchStringAddition name="АвтоматическиеСкидкиТаблицаСтрокаПоиска" id="226">
+								<AdditionSource>
+									<Item>АвтоматическиеСкидкиТаблица</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="АвтоматическиеСкидкиТаблицаСтрокаПоискаКонтекстноеМеню" id="227"/>
+								<ExtendedTooltip name="АвтоматическиеСкидкиТаблицаСтрокаПоискаРасширеннаяПодсказка" id="228"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="АвтоматическиеСкидкиТаблицаСостояниеПросмотра" id="229">
+								<AdditionSource>
+									<Item>АвтоматическиеСкидкиТаблица</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="АвтоматическиеСкидкиТаблицаСостояниеПросмотраКонтекстноеМеню" id="230"/>
+								<ExtendedTooltip name="АвтоматическиеСкидкиТаблицаСостояниеПросмотраРасширеннаяПодсказка" id="231"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="АвтоматическиеСкидкиТаблицаУправлениеПоиском" id="232">
+								<AdditionSource>
+									<Item>АвтоматическиеСкидкиТаблица</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="АвтоматическиеСкидкиТаблицаУправлениеПоискомКонтекстноеМеню" id="233"/>
+								<ExtendedTooltip name="АвтоматическиеСкидкиТаблицаУправлениеПоискомРасширеннаяПодсказка" id="234"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="АвтоматическиеСкидкиТаблицаСкидкаНаценка" id="204">
+									<DataPath>АвтоматическиеСкидки.СкидкаНаценка</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ContextMenu name="АвтоматическиеСкидкиТаблицаСкидкаНаценкаКонтекстноеМеню" id="205"/>
+									<ExtendedTooltip name="АвтоматическиеСкидкиТаблицаСкидкаНаценкаExtendedTooltip" id="206"/>
+								</InputField>
+								<InputField name="АвтоматическиеСкидкиТаблицаПроцент" id="207">
+									<DataPath>АвтоматическиеСкидки.Процент</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Width>8</Width>
+									<Format>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2; ЧО=</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="АвтоматическиеСкидкиТаблицаПроцентКонтекстноеМеню" id="208"/>
+									<ExtendedTooltip name="АвтоматическиеСкидкиТаблицаПроцентExtendedTooltip" id="209"/>
+								</InputField>
+								<InputField name="АвтоматическиеСкидкиТаблицаСумма" id="210">
+									<DataPath>АвтоматическиеСкидки.Сумма</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Width>10</Width>
+									<ContextMenu name="АвтоматическиеСкидкиТаблицаСуммаКонтекстноеМеню" id="211"/>
+									<ExtendedTooltip name="АвтоматическиеСкидкиТаблицаСуммаExtendedTooltip" id="212"/>
+								</InputField>
+							</ChildItems>
+						</Table>
 					</ChildItems>
 				</Page>
 				<Page name="СтраницаTrace" id="222">
@@ -160,107 +185,107 @@
 					<ExtendedTooltip name="СтраницаTraceExtendedTooltip" id="225"/>
 					<ChildItems>
 						<Table name="ИнформацияОРасчетеСкидокПоСтроке" id="49">
-			<Representation>Tree</Representation>
-			<ChangeRowSet>false</ChangeRowSet>
-			<ChangeRowOrder>false</ChangeRowOrder>
-			<AutoInsertNewRow>true</AutoInsertNewRow>
-			<EnableStartDrag>true</EnableStartDrag>
-			<EnableDrag>true</EnableDrag>
-			<FileDragMode>AsFile</FileDragMode>
-			<DataPath>ИнформацияОРасчетеСкидокПоСтроке</DataPath>
-			<RowPictureDataPath>ИнформацияОРасчетеСкидокПоСтроке.ИндексКартинки</RowPictureDataPath>
-			<RowsPicture>
-				<xr:Ref>CommonPicture.СостояниеСкидкиНаценки</xr:Ref>
-				<xr:LoadTransparent>false</xr:LoadTransparent>
-			</RowsPicture>
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Информация о расчете скидок по строке</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>uk</v8:lang>
-					<v8:content>Інформація про розрахунок знижок по рядку</v8:content>
-				</v8:item>
-			</Title>
-			<CommandSet>
-				<ExcludedCommand>Add</ExcludedCommand>
-				<ExcludedCommand>Change</ExcludedCommand>
-				<ExcludedCommand>Copy</ExcludedCommand>
-				<ExcludedCommand>CopyToClipboard</ExcludedCommand>
-				<ExcludedCommand>Delete</ExcludedCommand>
-				<ExcludedCommand>EndEdit</ExcludedCommand>
-				<ExcludedCommand>HierarchicalList</ExcludedCommand>
-				<ExcludedCommand>List</ExcludedCommand>
-				<ExcludedCommand>MoveDown</ExcludedCommand>
-				<ExcludedCommand>MoveUp</ExcludedCommand>
-				<ExcludedCommand>OutputList</ExcludedCommand>
-				<ExcludedCommand>SelectAll</ExcludedCommand>
-				<ExcludedCommand>SortListAsc</ExcludedCommand>
-				<ExcludedCommand>SortListDesc</ExcludedCommand>
-				<ExcludedCommand>Tree</ExcludedCommand>
-			</CommandSet>
-			<SearchStringLocation>None</SearchStringLocation>
-			<ViewStatusLocation>None</ViewStatusLocation>
-			<SearchControlLocation>None</SearchControlLocation>
-			<ContextMenu name="ИнформацияОРасчетеСкидокПоСтрокеКонтекстноеМеню" id="50"/>
-			<AutoCommandBar name="ИнформацияОРасчетеСкидокПоСтрокеКоманднаяПанель" id="51"/>
-			<ExtendedTooltip name="ИнформацияОРасчетеСкидокПоСтрокеExtendedTooltip" id="102"/>
-			<SearchStringAddition name="ИнформацияОРасчетеСкидокПоСтрокеСтрокаПоиска" id="115">
-				<AdditionSource>
-					<Item>ИнформацияОРасчетеСкидокПоСтроке</Item>
-					<Type>SearchStringRepresentation</Type>
-				</AdditionSource>
-				<ContextMenu name="ИнформацияОРасчетеСкидокПоСтрокеСтрокаПоискаКонтекстноеМеню" id="116"/>
-				<ExtendedTooltip name="ИнформацияОРасчетеСкидокПоСтрокеСтрокаПоискаРасширеннаяПодсказка" id="117"/>
-			</SearchStringAddition>
-			<ViewStatusAddition name="ИнформацияОРасчетеСкидокПоСтрокеСостояниеПросмотра" id="118">
-				<AdditionSource>
-					<Item>ИнформацияОРасчетеСкидокПоСтроке</Item>
-					<Type>ViewStatusRepresentation</Type>
-				</AdditionSource>
-				<ContextMenu name="ИнформацияОРасчетеСкидокПоСтрокеСостояниеПросмотраКонтекстноеМеню" id="119"/>
-				<ExtendedTooltip name="ИнформацияОРасчетеСкидокПоСтрокеСостояниеПросмотраРасширеннаяПодсказка" id="120"/>
-			</ViewStatusAddition>
-			<SearchControlAddition name="ИнформацияОРасчетеСкидокПоСтрокеУправлениеПоиском" id="121">
-				<AdditionSource>
-					<Item>ИнформацияОРасчетеСкидокПоСтроке</Item>
-					<Type>SearchControl</Type>
-				</AdditionSource>
-				<ContextMenu name="ИнформацияОРасчетеСкидокПоСтрокеУправлениеПоискомКонтекстноеМеню" id="122"/>
-				<ExtendedTooltip name="ИнформацияОРасчетеСкидокПоСтрокеУправлениеПоискомРасширеннаяПодсказка" id="123"/>
-			</SearchControlAddition>
-			<Events>
-				<Event name="Selection">ИнформацияОРасчетеСкидокПоСтрокеВыбор</Event>
-			</Events>
-			<ChildItems>
-				<InputField name="ИнформацияОРасчетеСкидокПоСтрокеЗначение" id="52">
-					<DataPath>ИнформацияОРасчетеСкидокПоСтроке.Представление</DataPath>
-					<ReadOnly>true</ReadOnly>
-					<EditMode>EnterOnInput</EditMode>
-					<ChoiceButton>false</ChoiceButton>
-					<ClearButton>false</ClearButton>
-					<SpinButton>false</SpinButton>
-					<OpenButton>true</OpenButton>
-					<TextEdit>false</TextEdit>
-					<ChoiceListButton>false</ChoiceListButton>
-					<ContextMenu name="ИнформацияОРасчетеСкидокПоСтрокеЗначениеКонтекстноеМеню" id="53"/>
-					<ExtendedTooltip name="ИнформацияОРасчетеСкидокПоСтрокеЗначениеExtendedTooltip" id="103"/>
-					<Events>
-						<Event name="StartChoice">ИнформацияОРасчетеСкидокПоСтрокеЗначениеНачалоВыбора</Event>
-						<Event name="Clearing">ИнформацияОРасчетеСкидокПоСтрокеЗначениеОчистка</Event>
-					</Events>
-				</InputField>
-				<InputField name="ИнформацияОРасчетеСкидокПоСтрокеСумма" id="58">
-					<DataPath>ИнформацияОРасчетеСкидокПоСтроке.СуммаАвтоматическойСкидки</DataPath>
-					<ReadOnly>true</ReadOnly>
-					<EditMode>EnterOnInput</EditMode>
-					<Width>9</Width>
-					<ContextMenu name="ИнформацияОРасчетеСкидокПоСтрокеСуммаКонтекстноеМеню" id="59"/>
-					<ExtendedTooltip name="ИнформацияОРасчетеСкидокПоСтрокеСуммаExtendedTooltip" id="104"/>
-				</InputField>
-			</ChildItems>
-		</Table>
+							<Representation>Tree</Representation>
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>ИнформацияОРасчетеСкидокПоСтроке</DataPath>
+							<RowPictureDataPath>ИнформацияОРасчетеСкидокПоСтроке.ИндексКартинки</RowPictureDataPath>
+							<RowsPicture>
+								<xr:Ref>CommonPicture.СостояниеСкидкиНаценки</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</RowsPicture>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Информация о расчете скидок по строке</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Інформація про розрахунок знижок по рядку</v8:content>
+								</v8:item>
+							</Title>
+							<CommandSet>
+								<ExcludedCommand>Add</ExcludedCommand>
+								<ExcludedCommand>Change</ExcludedCommand>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+								<ExcludedCommand>Delete</ExcludedCommand>
+								<ExcludedCommand>EndEdit</ExcludedCommand>
+								<ExcludedCommand>HierarchicalList</ExcludedCommand>
+								<ExcludedCommand>List</ExcludedCommand>
+								<ExcludedCommand>MoveDown</ExcludedCommand>
+								<ExcludedCommand>MoveUp</ExcludedCommand>
+								<ExcludedCommand>OutputList</ExcludedCommand>
+								<ExcludedCommand>SelectAll</ExcludedCommand>
+								<ExcludedCommand>SortListAsc</ExcludedCommand>
+								<ExcludedCommand>SortListDesc</ExcludedCommand>
+								<ExcludedCommand>Tree</ExcludedCommand>
+							</CommandSet>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<ContextMenu name="ИнформацияОРасчетеСкидокПоСтрокеКонтекстноеМеню" id="50"/>
+							<AutoCommandBar name="ИнформацияОРасчетеСкидокПоСтрокеКоманднаяПанель" id="51"/>
+							<ExtendedTooltip name="ИнформацияОРасчетеСкидокПоСтрокеExtendedTooltip" id="102"/>
+							<SearchStringAddition name="ИнформацияОРасчетеСкидокПоСтрокеСтрокаПоиска" id="115">
+								<AdditionSource>
+									<Item>ИнформацияОРасчетеСкидокПоСтроке</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ИнформацияОРасчетеСкидокПоСтрокеСтрокаПоискаКонтекстноеМеню" id="116"/>
+								<ExtendedTooltip name="ИнформацияОРасчетеСкидокПоСтрокеСтрокаПоискаРасширеннаяПодсказка" id="117"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ИнформацияОРасчетеСкидокПоСтрокеСостояниеПросмотра" id="118">
+								<AdditionSource>
+									<Item>ИнформацияОРасчетеСкидокПоСтроке</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ИнформацияОРасчетеСкидокПоСтрокеСостояниеПросмотраКонтекстноеМеню" id="119"/>
+								<ExtendedTooltip name="ИнформацияОРасчетеСкидокПоСтрокеСостояниеПросмотраРасширеннаяПодсказка" id="120"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ИнформацияОРасчетеСкидокПоСтрокеУправлениеПоиском" id="121">
+								<AdditionSource>
+									<Item>ИнформацияОРасчетеСкидокПоСтроке</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ИнформацияОРасчетеСкидокПоСтрокеУправлениеПоискомКонтекстноеМеню" id="122"/>
+								<ExtendedTooltip name="ИнформацияОРасчетеСкидокПоСтрокеУправлениеПоискомРасширеннаяПодсказка" id="123"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ИнформацияОРасчетеСкидокПоСтрокеВыбор</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="ИнформацияОРасчетеСкидокПоСтрокеЗначение" id="52">
+									<DataPath>ИнформацияОРасчетеСкидокПоСтроке.Представление</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ChoiceButton>false</ChoiceButton>
+									<ClearButton>false</ClearButton>
+									<SpinButton>false</SpinButton>
+									<OpenButton>true</OpenButton>
+									<TextEdit>false</TextEdit>
+									<ChoiceListButton>false</ChoiceListButton>
+									<ContextMenu name="ИнформацияОРасчетеСкидокПоСтрокеЗначениеКонтекстноеМеню" id="53"/>
+									<ExtendedTooltip name="ИнформацияОРасчетеСкидокПоСтрокеЗначениеExtendedTooltip" id="103"/>
+									<Events>
+										<Event name="StartChoice">ИнформацияОРасчетеСкидокПоСтрокеЗначениеНачалоВыбора</Event>
+										<Event name="Clearing">ИнформацияОРасчетеСкидокПоСтрокеЗначениеОчистка</Event>
+									</Events>
+								</InputField>
+								<InputField name="ИнформацияОРасчетеСкидокПоСтрокеСумма" id="58">
+									<DataPath>ИнформацияОРасчетеСкидокПоСтроке.СуммаАвтоматическойСкидки</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>9</Width>
+									<ContextMenu name="ИнформацияОРасчетеСкидокПоСтрокеСуммаКонтекстноеМеню" id="59"/>
+									<ExtendedTooltip name="ИнформацияОРасчетеСкидокПоСтрокеСуммаExtendedTooltip" id="104"/>
+								</InputField>
+							</ChildItems>
+						</Table>
 					</ChildItems>
 				</Page>
 			</ChildItems>
